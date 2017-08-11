@@ -1,0 +1,188 @@
+include _mixins.pug
+.header-mainwrap
+	.header-row-top
+		.box
+			.header-row-top-left
+				.lang-wrap
+					.lang-item.active.top-link
+						| Ru
+					a(href="#").lang-item.top-link
+						| En
+				.nav-wrap
+					a(href="#").top-link О клинике 
+					a(href="#").top-link Новости
+					a(href="#").top-link Акции
+			.header-row-top-right
+				.soc-wrap
+					a(href="#").soc-item.vk
+						.soc-item-inner
+							svg(class="icon icon-drop")
+								use(xlink:href="#vk" xmlns:xlink="http://www.w3.org/1999/xlink")
+					a(href="#").soc-item.fb
+						.soc-item-inner
+							svg(class="icon icon-drop")
+								use(xlink:href="#fb" xmlns:xlink="http://www.w3.org/1999/xlink")
+					a(href="#").soc-item.inst
+						.soc-item-inner
+							svg(class="icon icon-drop")
+								use(xlink:href="#ok" xmlns:xlink="http://www.w3.org/1999/xlink")
+				a(href="#").top-link.login
+					svg(class="icon icon-drop")
+						use(xlink:href="#login" xmlns:xlink="http://www.w3.org/1999/xlink")
+					span Личный кабинет
+				a(href="#").top-link.bold Как вызвать врача
+				.top-link.primary(onclick='') Записаться на приём
+					.dropdown-target
+						.dropdown-inner.spec
+							.dropdown-content
+								a(href="#").spec-link
+									.spec-link-title.dropdown Записаться online
+									.text Записаться на прием самостоятельно, выбрав врача и удобное время в личном кабинете
+								.spec-link.js-popup-button(data-modal='zayavka')
+									.spec-link-title.dropdown Оставить заявку
+									.text Оставить заявку на приём через форму на сайте (вам перезвонят, чтобы уточнить детали)
+
+
+	.header-row-bottom
+		.box
+			.logo-wrapper
+				a(href="#").logo-inner
+					.logo
+					.logo-inner-text
+						.text-top Медицинский центр
+						.text-bottom Моситалмед
+			nav.header-row-nav
+				a(href="#").nav-item.dropdown
+					.nav-item-inner
+						span Отделения
+				a(href="#").nav-item
+					.nav-item-inner
+						span Услуги
+				a(href="#").nav-item
+					.nav-item-inner
+						span Врачи
+				a(href="#").nav-item
+					.nav-item-inner
+						span Контакты
+			.header-row-tels
+				.top-link.primary(onclick='') Записаться на приём
+					.dropdown-target
+						.dropdown-inner.spec
+							.dropdown-content
+								a(href="#").spec-link
+									.spec-link-title.dropdown Записаться online
+									.text Записаться на прием самостоятельно, выбрав врача и удобное время в личном кабинете
+								.spec-link.js-popup-button(data-modal='zayavka')
+									.spec-link-title.dropdown Оставить заявку
+									.text Оставить заявку на приём через форму на сайте (вам перезвонят, чтобы уточнить детали)
+				.tel-wrap
+					.tel-wrap-inner
+						.tel-item
+							.text-sm Стоматология
+							a(href="tel:+7 (495) 956-60-95").tel-item-tel +7 (495) 956-60-95
+					.tel-wrap-inner(onclick='')
+						.tel-item.main
+							svg(class="icon icon-phone")
+								use(xlink:href="#phone" xmlns:xlink="http://www.w3.org/1999/xlink")
+							.text-sm Регистратура
+							a(href="tel:+7 (495) 956-60-95").tel-item-tel +7 (495) 956-17-67
+
+						.dropdown-target
+							.dropdown-inner
+								.dropdown-content
+									.content-block
+										.text-sm Режим работы
+										.time-blk
+											span Пн–Сб: 8:30–21:00
+											span Вс: 9:00–20:00
+										.link.js-popup-buttom(data-modal='callback') Обратный звонок
+									.content-block
+										.text-sm Регистратура
+										a(href="tel:").tel-item-tel 8 (495) 956-60-95
+										a(href="tel:").tel-item-tel 8 (495) 956-60-95
+				.header-bottom-mobnav
+					.header-bottom-mobnav-btn.js-menu(data-menu='.main-content')
+						.header-btn-inner
+							.navTrigger
+								i
+								i
+								i
+	.mainmenu
+		.mainmenu-inner
+			.box
+				.footer-links
+					.footer-links-main
+						ul
+							li 
+								a(href="#").text.blk Услуги
+							li 
+								a(href="#").text.blk Врачи
+							li 
+								a(href="#").text.blk Новости
+							li 
+								a(href="#").text.blk Акции
+							li 
+								a(href="#").text.blk Контакты
+					.footer-links-add
+						a(href="#").text.blk Отделения
+						ul
+							li 
+								a(href="#").text Оториноларингологии
+							li 
+								a(href="#").text Офтальмологии
+							li 
+								a(href="#").text Неврологии
+							li 
+								a(href="#").text Терапии
+							li 
+								a(href="#").text Хирургии
+							li 
+								a(href="#").text Стоматологии
+							li 
+								a(href="#").text Физиотерапии
+						ul
+							li 
+								a(href="#").text Гинекологии
+							li 
+								a(href="#").text Урологии
+							li 
+								a(href="#").text Клинико-диагностическая лаборатория
+							li 
+								a(href="#").text Рентгенодиагностики
+							li 
+								a(href="#").text Дерматокосметологии
+							li 
+								a(href="#").text УЗ-диагностики
+				.footer-right
+					a(href="#").text.blk Контакты
+					.tel-wrap
+						.tel-item
+							a(href="tel:84959561767").text-sm.text-sm Регистратура
+							a(href="tel:84959561767").tel-item-tel +7 (495) 956-17-67
+							a(href="tel:84959561767").tel-item-tel +7 (495) 956-17-67
+							a(href="tel:84959561767").tel-item-tel +7 (495) 956-17-67
+
+						.tel-item
+							.text-sm Стоматология
+							a(href="tel:84959561767").tel-item-tel 8 (495) 956-60-95
+					.link.js-popup-buttom(data-modal='callback') Обратный звонок
+					.time-blk
+						.text-sm Режим работы
+						span Пн–Сб: 8:30–21:00
+						span Вс: 9:00–20:00
+					.soc-wrap
+						a(href="#").soc-item.vk
+							.soc-item-inner
+								svg(class="icon icon-drop")
+									use(xlink:href="#vk" xmlns:xlink="http://www.w3.org/1999/xlink")
+						a(href="#").soc-item.fb
+							.soc-item-inner
+								svg(class="icon icon-drop")
+									use(xlink:href="#fb" xmlns:xlink="http://www.w3.org/1999/xlink")
+						a(href="#").soc-item.inst
+							.soc-item-inner
+								svg(class="icon icon-drop")
+									use(xlink:href="#ok" xmlns:xlink="http://www.w3.org/1999/xlink")
+
+
+	
