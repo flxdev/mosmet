@@ -157,6 +157,11 @@ body, .out
 	display: inline-block
 .wrapper
 	width: 100%
+	overflow: hidden
+	
+	&.gray 
+		background-color: color(bggray)
+
 .box
 	display: block
 	margin: 0 auto
@@ -621,6 +626,8 @@ body, .out
 			+rem(height,109px)
 			+rem(margin-left,-1px)
 			+tr(height .3s)
+			position: relative
+			z-index: 2
 			+r(480)
 				+rem(width,55px)
 				+rem(height,80px)
@@ -774,7 +781,7 @@ body, .out
 					+rem(width,12px)
 					+rem(height,8px)
 					+rem(top,47px)
-				&:hover
+				&:hover,&.active
 					&:after
 						transform: scale(1,-1) rotate(90deg)
 			&-inner
@@ -799,7 +806,7 @@ body, .out
 					width: 0;
 					left: auto;
 					right: 0;
-			&:hover
+			&:hover,&.active
 				span 
 					&:before
 						width: 100%;
@@ -998,8 +1005,10 @@ body, .out
 					+padlr(15px)
 					&:after
 						right: 0
-		.tel-wrap-inner
-
+		.page__header-drop-cont
+			+rem(padding-left,270px)
+			+r(1140)
+				+rem(padding-left,120px)
 		.logo-inner-text
 			+r(1130)
 				display: none
@@ -1219,3 +1228,408 @@ body, .out
 							width: 50%
 							vertical-align: top
 							
+.page__header
+	&-drop
+		display: block
+		width: 100%
+		position: absolute
+		top: calc(100% + 1px)
+		left: 0
+		right: 0
+		margin-top: -1px
+		min-height: 0px
+		// overflow: hidden
+		
+		max-height: 0
+		+gpu
+		will-change: max-height
+		transition:  max-height .25s ,border-color .25s, padding .25s
+		+r(820)
+			display: none
+			
+		&.is-shown
+			+rem(padding-bottom,15px)
+			+rem(padding-top,15px)
+			+rem(max-height,550px)
+			// transition-delay: .1s
+			.page__header-drop-cont:after
+				opacity: 1
+				// transition-delay: 0s
+			.page__header-drop-cont:before
+				background-color: #e9e9e3
+		&-cont
+			+rem(max-width, 1210px)
+			width: 100%
+			display: flex
+			flex-flow: column nowrap
+			+rem(margin, 0 auto)
+			background-color: #fff
+			+rem(padding-left, 280px)
+			+r(1220)
+				+rem(padding-left, 240px)
+			&:before
+				content: ''
+				position: absolute
+				height: 1px
+				top: 0
+				right: 0
+				left: 0
+				background-color: transparent
+				display: block
+				+tr(background-color .2s)
+			&:after
+				content: ''
+				position: absolute
+				left: 0
+				right: 0
+				bottom: 0
+				height: 100%
+				background-color: color(white)
+				z-index: -1
+				box-shadow: 0px 10px 20px 0px rgba(133, 177, 166, 0.07);
+				opacity: 0
+				transition: opacity .15s, max-height .15s
+				// transition-delay: 0s
+				+gpu
+				will-change: opacity, height
+		&-item
+			font-size: 0
+			position: relative
+			max-height: 0
+			overflow: hidden
+			opacity: 0
+			+rem(max-width,700px)
+			&.is-shown
+				+rem(max-height,532px)
+				// transition: max-height 0s .25s, padding 0s .25s, opacity .1s .25s
+				+tr(all .3s)
+				opacity: 1
+				+rem(padding, 20px 0)
+		.footer-links-add
+			display: inline-block
+			vertical-align: top
+			width: 33.33% !important
+			a 
+				+rem(padding,10px 0)
+				line-height: 1.5
+.page-head
+	+rem(padding-top,140px)
+	+r(960)
+		+rem(padding-top,100px)
+	+r(820)
+		+rem(padding-top,77px)
+.index-slider
+	position: relative
+	+rem(margin-right,-100px)
+	+r(1100)
+		+rem(margin-right,-200px)
+	+r(900)
+		+rem(margin-right,-300px)
+	+r(600)
+		+rem(margin,0 -15px)
+	.arr-wrap
+		position: absolute
+		+rem(bottom,80px)
+		+rem(right,200px)
+		+r(1100)
+			+rem(right,250px)
+		+r(900)
+			+rem(right,300px)
+	&-inner
+		.slick-track
+			position: static
+		&:not(.slick-initialized)
+			white-space: nowrap
+			overflow: hidden
+			&>div
+				display: inline-block
+				opacity: 0
+	&-item
+		position: relative
+		z-index: 1
+		+tr(opacity .3s)
+		&:before,&:after
+			display: inline-block
+			content: ''
+			position: absolute
+			top: 0
+			bottom: 0
+			z-index: 0
+		&:before
+			width: 40%
+			left: 0
+			background: linear-gradient(to right, color(bggray) 0%,color(bggray) 58%,rgba(255,255,255,0) 100%)
+			+r(600)
+				width: 100%
+				right: 0
+				background: linear-gradient(to bottom, color(bggray) 0%,color(bggray) 30%,rgba(255,255,255,0) 100%)
+		&:after
+			width: 25%
+			right: 0
+			background: linear-gradient(to left, color(bggray) 0%,color(bggray) 15%,rgba(255,255,255,.8) 30%,rgba(255,255,255,0) 100%)
+			+r(600)
+				display: none
+				
+		&-inner
+			+rem(padding-top,40px)
+			+rem(padding-bottom,70px)
+			+vertical
+			background-position: right center
+			text-align: left
+			position: relative
+			overflow: hidden
+			+rem(height,515px)
+			+r(600)
+				+padlr(15px)
+				height: auto
+				+rem(padding-top,40px)
+				+rem(padding-bottom,100px)
+			img 
+				position: absolute
+				top: 0
+				width: 100%
+				bottom: 0
+				z-index: -1
+				// +rem(right,-200px)
+				object-fit: contain
+				object-position: right center
+				height: 100%
+				width: 100%
+				+r(600)
+					bottom: 0
+					right: 0
+					left: 0
+					object-fit: cover
+					object-position: 0 0
+	&-content
+		+rem(max-width,490px)
+		display: inline-block
+		vertical-align: middle
+		position: relative
+		z-index: 3
+		.title
+			+rem(margin-bottom,20px)
+		.text.primary
+			+rem(margin-top,20px)
+			+rem(margin-bottom,60px)
+			+rem(max-width,360px)
+.title
+	font-family: $o
+	color: color(textblk)
+	line-height: 1.16;
+	font-weight: 700
+	&.h1 
+		+rem(font-size,50px)
+	&.h2
+		+rem(font-size,36px)
+	&.h3 
+		+rem(font-size,18px)
+		line-height: 1.556;
+.text
+	&.primary
+		+rem(font-size,18px)
+		line-height: 1.556;
+		color: color(textblk)
+
+
+.arr-wrap
+	display: inline-block
+	+nosel
+	&-inner
+		text-align: center
+		
+		.slider-counter
+			font-size: 0
+			+padlr(14px)
+			display: inline-block
+			vertical-align: middle
+			position: relative
+			z-index: 0
+			&:before
+				position: absolute
+				left: 0
+				right: 0
+				top: 0
+				bottom: 0
+				// background-color: color(white)
+				background: radial-gradient(ellipse at center, rgba(255,255,255,1) 26%,rgba(255,255,255,0) 100%);
+				border-radius: 50%
+				filter: blur(5px)
+				z-index: -1
+				transform: scaleY(2)
+				content: ''
+
+			&>div
+				display: inline-block
+				vertical-align: middle
+				+rem(font-size,16px)
+				color: color(textblk)
+				text-align: center
+			.slider-curr
+				font-weight: 600
+			.slider-divider
+				+padlr(5px)
+		.slick-arrow
+			display: inline-block
+			vertical-align: middle
+			+rem(width,47px)
+			+rem(height,47px)
+			.icon
+				display: inline-block
+				width: 100%
+				height: 100%
+				+vertical
+				border-radius: 50%
+				background-color: color(white)
+				+rem(padding-left,1px)
+				box-shadow: 0px 5px 22px 0px rgba(133, 177, 166, 0.12);
+				transition: box-shadow .25s, background-color .25s
+				svg
+					display: inline-block
+					vertical-align: middle
+					+rem(width,8px)
+					+rem(height,14px)
+					overflow: visible
+					stroke: color(textblk)
+			&:hover
+				.icon
+					box-shadow: 0px 5px 12px 0px rgba(133, 177, 166, 0.15);
+			&:active
+				svg 
+					stroke: color(secondary) 
+			&.slick-disabled
+				pointer-events: none
+				opacity: .95
+				.icon
+					background-color: #f4f4f4
+					svg 
+						stroke: #b7b7b7 
+		.slick-prev
+			transform: scale(-1,1)
+.otdel
+	&-slider
+		&-wrap
+			+rem(margin-right,-31px)
+.vrach
+	&-wrap
+		display: inline-block
+		vertical-align: top
+		+rem(padding-right,31px)
+		+rem(margin-top,25px)
+		+rem(margin-bottom,25px)
+	&-inner
+		display: block
+		+rem(height,360px)
+		position: relative
+		z-index: 0	
+		&:after
+			content: ''
+			+coverdiv
+			z-index: -1
+			opacity: 0
+			box-shadow: 0px 10px 22px 0px rgba(68, 97, 119, 0.2);
+			+tr(opacity .3s)
+		&:hover
+			+notouch
+				&:after
+					opacity: 1
+				.vrach-inner-block
+					&:before,&:after
+						transform: none
+					&:before
+						transition-delay: .2s;
+				.vrach-vrach-name
+					opacity: 0
+				.vrach-inner-title,.text
+					color: color(white)
+				.vrach-inner-add-item
+					opacity: 1
+					transform: none
+					&:nth-child(1)
+						transition-delay: .55s
+					&:nth-child(2)
+						transition-delay: .45s
+					&:nth-child(3)
+						transition-delay: .35s
+					&:nth-child(4)
+						transition-delay: .25s
+					&:nth-child(5)
+						transition-delay: .15s
+
+	&-vrach
+		position: absolute
+		+coverdiv
+		background-color: color(secondarybg)
+		z-index: -1
+		overflow: hidden
+		&-inner
+			height: 100%
+			width: 100%
+			position: relative
+			+vertical
+			text-align: right
+			img
+				display: inline-block
+				vertical-align: bottom
+				+rem(max-height,305px)
+				+rem(max-width,210px)
+				filter: grayscale(100)
+		&-name
+			position: absolute
+			+rem(font-size,13px)
+			color: color(textblk)
+			line-height: 1.385;
+			+rem(left,30px)
+			+rem(bottom,27px)
+			+rem(max-width,150px)
+			text-align: left
+			+tr(color .3s)
+	&-inner
+		&-block
+			width: 100%
+			height: 100%
+			display: flex
+			flex-flow: column nowrap
+			justify-content: space-between
+			position: relative
+			overflow: hidden
+			+padlr(30px)
+			+rem(padding-top,20px)
+			+rem(padding-bottom,27px)
+			&:before,&:after
+				content: ''
+				+coverdiv
+				display: inline-block
+				z-index: -1
+				transform: translateX(-100%)
+				background-color: rgb(213, 108, 114)
+				+tr(transform .35s cubic-bezier(.75,0,.125,1))
+				opacity: .7
+
+
+		&-title
+			color: color(textblk)
+			font-weight: 600
+			+rem(font-size,18px)
+			line-height: 1.556;
+			+tr(color .3s)
+		&-wrap
+			.text
+				color: color(secondary)
+				+tr(color .3s)
+				+rem(margin-top,7px)
+				font-weight: 600
+		&-add
+			&-item
+				+rem(padding-top,18px)
+				+rem(font-size,14px)
+				color: color(white)
+				transition: transform .25s, opacity .25s
+				transform: translateX(-10px)
+				opacity: 0
+				&:nth-child(6+n)
+					display: none
+					
+
+
+	

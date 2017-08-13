@@ -52,7 +52,7 @@ include _mixins.pug
 						.text-top Медицинский центр
 						.text-bottom Моситалмед
 			nav.header-row-nav
-				a(href="#").nav-item.dropdown
+				a(href="#", data-id='1').nav-item.dropdown
 					.nav-item-inner
 						span Отделения
 				a(href="#").nav-item
@@ -107,6 +107,36 @@ include _mixins.pug
 								i
 								i
 								i
+	.page__header-drop
+		.page__header-drop-cont
+			.page__header-drop-item(data-id='1')
+				ul.footer-links-add
+					li
+						a(href='#').text Оториноларингологии
+					li
+						a(href='#').text Офтальмологии
+					li
+						a(href='#').text Неврологии
+					li
+						a(href='#').text Терапии
+					li
+						a(href='#').text Хирургии
+				ul.footer-links-add
+					li
+						a(href='#').text Стоматологии
+					li
+						a(href='#').text Физиотерапии
+					li
+						a(href='#').text Гинекологии
+					li
+						a(href='#').text Урологии
+					li
+						a(href='#').text Клинико-диагностическая лаборатория
+				ul.footer-links-add
+					li
+						a(href='#').text Дерматокосметологии
+					li
+						a(href='#').text УЗ-диагностики
 	.mainmenu
 		.mainmenu-inner
 			.box

@@ -8,7 +8,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		header: $('.page__header'),
 		html: $('html'),
 		hidden: 'is-hidden',
-		wrpr: $('.wrapper')
+		wrpr: $('.wrapper'),
+		arnextcontent: '<button type="button" class="slick-next slick-arrow"><div class="icon"><svg class="icon icon-drop"><use xlink:href="#smallarr" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></div></button>',
+		arnprevcontent: '<button type="button" class="slick-prev slick-arrow"><div class="icon"><svg class="icon icon-drop"><use xlink:href="#smallarr" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></div></button>',
 	};
 	(function() {
 		var mainHeader = document.querySelector('.cd-auto-hide-header');
@@ -71,8 +73,219 @@ document.addEventListener("DOMContentLoaded", function() {
 		});
 	}
 	Menu();
-});
+	function DesktopMenu(){
+		var mainCont = $('.header-row-nav'),
+			items = mainCont.find('.dropdown'),
+			targetWrap = $('.page__header-drop'),
+			blocks = $('.page__header-drop-item'),
+			shown = 'is-shown',
+			current = 'is-shown';
 
+		items.each(function(){
+			var _ = $(this),
+				id = parseInt(_.data('id'));
+			_.on('mouseenter touchstart',function(){
+				if(targetWrap.find("[data-id="+ id +"]").length){
+					_.addClass('active').siblings().removeClass('active');
+
+					targetWrap.addClass(shown);
+					targetWrap.find("[data-id="+ id +"]").addClass(current).siblings().removeClass(current);
+					// var h = targetWrap.find("[data-id="+ id +"]").find('.page__header-drop-item').outerHeight();
+					// targetWrap.css('height',h + 65);
+				}else{
+					targetWrap.removeClass(shown);
+					items.removeClass('active')
+				}
+			})
+		});
+		items.add(targetWrap).on('mouseleave touchstart',function(){
+			setTimeout(function(){
+				if ($('.page__header-drop:hover').length != 1 && !$('.dropdown:hover').length != 0 ) {
+					targetWrap.removeClass(shown).attr('style','');
+					blocks.removeClass(current);
+					items.removeClass('active');
+				}
+			},1)
+
+		})
+	}DesktopMenu();
+	function indexslider(){
+		$(".js-indexSlider").each(function() {
+			var _this = $(this),
+					parent = _this.parent();
+			slidesCount(_this)
+			_this.slick({
+				accessibility: false,
+				lazyLoad: 'ondemand',
+				arrows: true,
+				dots: false,
+				fade: true,
+				touchMove: false,
+				dragable: false,
+				infinite: false,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				adaptiveHeight: true,
+				appendArrows: parent.find('.arr-wrap-inner'),
+				prevArrow: conf.arnprevcontent,
+				nextArrow: conf.arnextcontent,
+			})
+		});
+	}indexslider();
+	function otdelslider(){
+		$(".js-otdel").each(function() {
+			var _this = $(this),
+					parent = _this.parent();
+			_this.slick({
+				accessibility: false,
+				lazyLoad: 'ondemand',
+				arrows: false,
+				dots: true,
+				touchMove: false,
+				dragable: false,
+				infinite: false,
+				slidesToShow: 4,
+				slidesToScroll: 4,
+				appendDots: parent.find('.dots-wrap')
+			})
+		});
+	}otdelslider();
+	lazyImage();
+});
+		function lazyImage(){
+			// Get all of the images that are marked up to lazy load
+			var images = document.querySelectorAll('.js-image');
+			var config = {
+				// If the image gets within 50px in the Y axis, start the download.
+				rootMargin: '50px 0px',
+				threshold: 0.01
+			};
+
+			var imageCount = images.length;
+			var observer = void 0;
+
+			// If we don't have support for intersection observer, loads the images immediately
+			if (!('IntersectionObserver' in window)) {
+				Array.from(images).forEach(function (image) {
+					return preloadImage(image);
+				});
+			} else {
+				// It is supported, load the images
+				observer = new IntersectionObserver(onIntersection, config);
+				images.forEach(function (image) {
+					if (image.classList.contains('js-image-handled')) {
+						return;
+					}
+
+					observer.observe(image);
+				});
+			}
+
+			/**
+			 * Fetchs the image for the given URL
+			 * @param {string} url 
+			 */
+			function fetchImage(url) {
+				return new Promise(function (resolve, reject) {
+					var image = new Image();
+					image.src = url;
+					image.onload = resolve;
+					image.onerror = reject;
+				});
+			}
+
+			/**
+			 * Preloads the image
+			 * @param {object} image 
+			 */
+			function preloadImage(image) {
+				var src = image.dataset.src;
+				if (!src) {
+					return;
+				}
+
+				return fetchImage(src).then(function () {
+					applyImage(image, src);
+				});
+			}
+
+			/**
+			 * Load all of the images immediately
+			 * @param {array} images 
+			 */
+			function loadImagesImmediately(images) {
+				Array.from(images).forEach(function (image) {
+					return preloadImage(image);
+				});
+			}
+
+			/**
+			 * Disconnect the observer
+			 */
+			function disconnect() {
+				if (!observer) {
+					return;
+				}
+
+				observer.disconnect();
+			}
+
+			/**
+			 * On intersection
+			 * @param {array} entries 
+			 */
+			function onIntersection(entries) {
+				// Disconnect if we've already loaded all of the images
+				if (imageCount === 0) {
+					observer.disconnect();
+				}
+
+				// Loop through the entries
+				entries.forEach(function (entry) {
+					// Are we in viewport?
+					if (entry.intersectionRatio > 0) {
+						imageCount--;
+
+						// Stop watching and load the image
+						observer.unobserve(entry.target);
+						preloadImage(entry.target);
+					}
+				});
+			}
+
+			/**
+			 * Apply the image
+			 * @param {object} img 
+			 * @param {string} src 
+			 */
+		function applyImage(img, src) {
+			// Prevent this from being lazy loaded a second time.
+			img.classList.add('js-image-handled');
+			if(img.classList.contains('bg')){
+				img.style.backgroundImage = "url("+src+")";
+			}else{
+				img.src = src;
+			}
+			img.classList.add('fade-in');
+		}	
+	}
+function slidesCount(elem){
+	var container = elem.parent().find('.slider-counter'),
+		curSlideCont = container.find('.slider-curr'),
+		totatSlideCont= container.find('.slider-total'),
+		pages;
+
+	elem.on('init reInit breakpoint beforeChange', function (event, slick, currentSlide, nextSlide) {
+		var slidesShown = parseInt(slick.slickGetOption('slidesToShow')),
+			slidesScroll = parseInt(slick.slickGetOption('slidesToScroll')),
+			slidesNext = parseInt(nextSlide),
+			totalSlides = parseInt(slick.slideCount),
+			totalPages = Math.ceil(totalSlides / slidesShown),
+			curPage = event.type == 'init' || event.type == 'reInit' || event.type == 'breakpoint'? 0 : parseInt(slidesNext/slidesScroll);
+			totatSlideCont.text(slidesShown == 1 ? totalSlides : totalPages)
+			curSlideCont.text(curPage + 1)
+	});
+}
 jQuery.fn.toggleText = function() {
 	var altText = this.data("alt-text"),
 		target = this.find('span');

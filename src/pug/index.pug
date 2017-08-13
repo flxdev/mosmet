@@ -5,7 +5,79 @@ block title
 block config
 	- var main = true
 block content
+	.wrapper.gray.page-head
+		.box
+			.index-slider
+				.index-slider-inner.js-indexSlider
+					.index-slider-item
+						.index-slider-item-inner
+							img(data-lazy="img/index/1.jpg", alt="Новое отделение стоматологии")
+							.index-slider-content
+								.title.h1 Новое отделение стоматологии
+								.text.primary Полноценная стоматологическая клиника европейского уровня
+								a(href="#").btn
+									span Подробнее
+					.index-slider-item
+						.index-slider-item-inner
+							img(data-lazy="img/slideradd/1.jpg", alt="Новое отделение стоматологии")
+							.index-slider-content
+								.title.h1 Новое отделение стоматологии2
+								.text.primary Полноценная стомат 42342 4234 234ологическая клиника европейского уровня
+								a(href="#").btn
+									span Подробнее
+					.index-slider-item
+						.index-slider-item-inner
+							img(data-lazy="img/index/1.jpg", alt="Новое отделение стоматологии")
+							.index-slider-content
+								.title.h1 Новое отделение2
+								.text.primary Полноценная стоматологич34234324 еская клиника европейского уровня
+								a(href="#").btn
+									span Подробнее
+				.arr-wrap
+					.arr-wrap-inner
+						.slider-counter
+							.slider-curr
+							.slider-divider /
+							.slider-total
 	.wrapper
+		.box
+			.otdel
+				.otdel-head
+					.otdel-head-title
+						h2.title.h2 Отделения
+						.arr-wrap-inner
+					.otdel-head-search
+				.otdel-slider-wrap
+					.otdel-slider.js-otdel
+						mixin vrach(img,title,name)
+							.vrach-wrap
+								a(href="#").vrach-inner
+									.vrach-vrach
+										.vrach-vrach-inner
+											img(data-lazy="img/doctor/"+img+".png", alt=""+name+"")
+											.vrach-vrach-name #{name}
+									.vrach-inner-block
+										.vrach-inner-wrap
+											.vrach-inner-title #{title}
+											.text 118 услуг
+										.vrach-inner-add
+											.vrach-inner-add-item.text TENS-терапия
+											.vrach-inner-add-item.text Магнитотерапия
+											.vrach-inner-add-item.text СМТ-терапия
+											.vrach-inner-add-item.text Ультразвуковая терапия
+											.vrach-inner-add-item.text Фонофорез
+						+vrach(1,'Клинико-диагностическая лаборатория','Ирина Владимировна Мусатова')
+						+vrach(1,'Физиотерапия','Ирина Владимировна Мусатова')
+						+vrach(2,'Гинекология','Стелла Олеговна Солнцева')
+						+vrach(3,'Стоматология','Ирина Владимировна Мусатова')
+						+vrach(4,'Стоматолfsdf  fs огия','Ирина Владимировна Мусатова')
+						+vrach(4,'Стоматолfsdf  fs огия','Ирина Владимировна Мусатова')
+						+vrach(2,'Гинекология','Стелла Олеговна Солнцева')
+						+vrach(3,'Стоматология','Ирина Владимировна Мусатова')
+						+vrach(4,'Стоматолfsdf  fs огия','Ирина Владимировна Мусатова')
+						+vrach(4,'Стоматолfsdf  fs огия','Ирина Владимировна Мусатова')
+					.dots-wrap
+
 		p.text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?
 		p.text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?
 		p.text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?
