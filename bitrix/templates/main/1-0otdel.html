@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Отделения</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta content="True" name="HandheldFriendly">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#80baa6">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#d56c72">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <link rel="shortcut icon" href="img/fav/48x48.png" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/fav/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/fav/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/fav/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/fav/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/fav/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/fav/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/fav/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/fav/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/fav/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="194x194" href="img/fav/favicon-194x194.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/fav/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/fav/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#d56c72">
+    <meta name="msapplication-TileImage" content="img/fav/mstile-144x144.png">
+    <link rel="stylesheet" media="all" href="css/screen.min.css">
+  </head>
+  <body>
+    <script type="text/javascript">!function(e){function t(o){if(n[o])return n[o].exports;var c=n[o]={exports:{},id:o,loaded:!1};return e[o].call(c.exports,c,c.exports,t),c.loaded=!0,c.exports}var n={};return t.m=e,t.c=n,t.p="/assets/",t(0)}({0:function(e,t,n){n(18),n(19)},18:function(e,t){!function(){"use strict";function e(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.attachEvent("on"+t,n)}function t(e){return window.localStorage&&localStorage.font_css_cache}function n(){if(window.localStorage&&window.XMLHttpRequest)if(t(c))o(localStorage.font_css_cache);else{var e=new XMLHttpRequest;e.open("GET",c,!0),e.onreadystatechange=function(){4===e.readyState&&(o(e.responseText),localStorage.font_css_cache=e.responseText,localStorage.font_css_cache_file=c)},e.send()}else{var n=document.createElement("link");n.href=c,n.rel="stylesheet",n.type="text/css",document.getElementsByTagName("head")[0].appendChild(n),document.cookie="font_css_cache"}}function o(e){var t=document.createElement("style");t.setAttribute("type","text/css"),t.styleSheet?t.styleSheet.cssText=e:t.innerHTML=e,document.getElementsByTagName("head")[0].appendChild(t),window.onFontLoad&&window.onFontLoad()}var c=window.fonts_href||"../css/font.css";window.localStorage&&localStorage.font_css_cache||document.cookie.indexOf("font_css_cache")>-1?n():e(window,"load",n)}()},19:function(e,t){}});</script>
+    <div class="svg-defs-container" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="a" d="M0 0h7.1v13.4H0z"/></defs><symbol id="fb" viewBox="0 0 8.2 17"><path fill="currentcolor" d="M0 5.6h1.8V3.9c0-.8 0-1.9.6-2.6C2.9.5 3.7 0 5.1 0c2.2 0 3.2.3 3.2.3l-.5 2.6s-.7-.2-1.4-.2-1.3.3-1.3.9v2h2.8l-.2 2.6H5.1V17H1.8V8.2H0V5.6z" class="st0"/></symbol><symbol id="login" viewBox="0 0 26.3 25.5"><path d="M19.8 8.8h-.7c0 2.1-.7 4-1.8 5.4-1.1 1.4-2.6 2.2-4.2 2.2s-3.1-.8-4.2-2.2c-1-1.3-1.7-3.2-1.7-5.4 0-2.1.7-4 1.8-5.4 1.1-1.4 2.6-2.2 4.2-2.2s3.1.8 4.2 2.2c1.1 1.4 1.8 3.3 1.8 5.4h1.2c0-2.4-.8-4.6-2.1-6.2C17 1 15.2 0 13.2 0 11.1 0 9.3 1 8 2.6 6.7 4.2 5.9 6.4 5.9 8.8c0 2.4.8 4.6 2.1 6.2 1.3 1.6 3.1 2.6 5.2 2.6s3.9-1 5.2-2.6c1.3-1.6 2.1-3.8 2.1-6.2h-.7z"/><path d="M19.7 17.7c.3.1 1.7.4 3 1.2.6.4 1.2.9 1.7 1.6.4.7.7 1.4.7 2.4 0 .7-.6 1.3-1.3 1.3H2.7c-.7 0-1.3-.6-1.4-1.3 0-1.1.3-1.9.8-2.5.7-1 1.9-1.7 2.8-2.1.5-.2.9-.4 1.2-.4.2 0 .3-.1.4-.1h.1c.4-.1.6-.4.5-.8-.1-.4-.4-.6-.8-.5 0 0-1.6.3-3.1 1.2-.8.5-1.6 1.1-2.2 2-.6.9-1 2-1 3.3 0 1.5 1.2 2.6 2.7 2.6h21c1.5 0 2.6-1.2 2.6-2.6 0-1.3-.4-2.4-1-3.3-.9-1.3-2.3-2.1-3.4-2.6s-2-.6-2-.6c-.4-.1-.7.2-.8.5 0 .3.2.6.6.7z"/></symbol><symbol id="logof" viewBox="0 0 55.4 54.7"><path d="M55.3 51.2V3.9c-.2-.8.3-6.4-4.8-2.7-5 3.3-18.6 12.4-18.6 12.4s-3.5 3.3-8.5 0C16.8 9.3 4.5 1.2 4.5 1.2S.2-2.3 0 3.6v48s0 4.1 3.7 2.8C5.4 53.3 7.3 52 8.9 51c2.6-2.2 2.6-5.5 2.6-5.5v-5.4c0-6 4-1.8 4-1.8s5.4 3.6 7.8 5.3c4.8 2.5 8 .2 8 .2s6.9-4.6 9.5-6.4c3.2-2.5 3 2.6 3 2.6v3.8s-.4 3.9 2.6 6.5c1.5 1.2 3.3 2.6 4.9 3.9 4.8 2.1 4-3 4-3zM41.2 26l-10.5 7s-3 1.9-6.5 0c-3.2-2.2-10.8-7.2-10.8-7.2s-2-.6-2-3.6v-2.6s-.2-3.9 2.8-1.5l9.9 6.6c3.1 2.4 6.7 0 6.7 0s6.8-4.6 11.1-7.5c1.9-1.4 1.6 1.1 1.6 1.1v3.2c0 .2.4 2.6-2.3 4.5z" class="flex"/></symbol><symbol id="ok" viewBox="0 0 7.9 13.5"><path fill="currentcolor" d="M4 0C2.1 0 .5 1.6.5 3.5S2.1 7 4 7s3.5-1.6 3.5-3.5S5.9 0 4 0zm0 5c-.8 0-1.5-.7-1.5-1.5S3.2 2.1 4 2.1s1.4.6 1.4 1.4S4.8 5 4 5zm1.2 4.8c1.4-.3 2.2-1 2.3-1 .4-.3.5-.9.2-1.3-.4-.4-1-.5-1.4-.2 0 0-.9.7-2.3.7-1.5 0-2.4-.7-2.4-.7-.5-.3-1.1-.2-1.4.2-.3.4-.3 1 .1 1.3 0 0 .9.7 2.4 1l-2 2.1c-.4.4-.4 1 0 1.3.2.2.4.3.7.3.2 0 .5-.1.7-.3l1.9-2 2.1 2c.4.4 1 .4 1.3 0 .4-.4.4-1 0-1.3L5.2 9.8zM4 8c-.1 0 0 0 0 0-.1 0 0 0 0 0z" class="st0"/></symbol><symbol id="phone" viewBox="0 0 336.2 335.7"><style>.stphoone0{fill:#010101}</style><path d="M238.9 335.1s26.6 4.6 60.4-12.8c.7-.4 1.4-.8 2.2-1.1.5-.3 1-.5 1.5-.8 7.9-4.4 15.1-9.2 21.2-13.7.8-.6 4.5-3.2 5.4-3.9 4.1-3.4 6.7-8.4 6.7-14.2 0-5.4-2.4-10.4-6.2-13.6l-75-61.8c-3.1-2.5-7.1-4.1-11.4-4.1-4.9 0-9.4 1.9-12.6 5-1.3 1.3-12.5 12.8-12.5 12.8-7.8 7.8-20.4 7.8-28.3 0l-76.5-76.6c-7.8-7.8-7.8-20.5 0-28.3l12.4-12.4c3.3-3.3 5.2-7.8 5.2-12.7 0-4.9-1.9-9.3-5-12.5L62.1 6.6C58.7 2.6 53.6 0 48 0c-6 0-11.3 2.9-14.6 7.4l-1.1 1.4C18.3 27.7 0 57.7 0 85.9 0 160 157.8 320.8 238.9 335.1z" class="stphoone0"/></symbol><symbol id="search" viewBox="0 0 34.9 34.9"><path d="M34.7 31.8L27.9 25c2-2.6 3.3-5.9 3.3-9.5C31.2 7 24.2 0 15.6 0S0 7 0 15.6s7 15.6 15.6 15.6c3.6 0 6.9-1.2 9.5-3.3l6.8 6.8c.3.3.7.3 1 0l1.8-1.8c.2-.3.2-.8 0-1.1zm-27.3-8c-2.1-2.1-3.4-5-3.4-8.2 0-3.2 1.3-6.1 3.4-8.2 2.1-2.1 5-3.4 8.2-3.4 3.2 0 6.1 1.3 8.2 3.4 2.1 2.1 3.4 5 3.4 8.2 0 3.2-1.3 6.1-3.4 8.2-2.1 2.1-5 3.4-8.2 3.4-3.2 0-6.1-1.3-8.2-3.4z" class="stsearch0"/></symbol><symbol id="smallarr" viewBox="0 0 7.1 13.4"><clipPath id="b"><use xlink:href="#a" overflow="visible"/></clipPath><path fill="none" stroke-width="2" stroke-miterlimit="10" d="M.8.6l5 6.1-5 6" clip-path="url(#b)"/></symbol><symbol id="vk" viewBox="0 0 10.1 14.7"><path d="M9.6 3.5c0 .4 0 .7-.1 1.1-.1.3-.3.7-.5 1s-.4.5-.8.7c-.3.3-.7.4-1.1.5V7c.4 0 .8.1 1.1.3s.7.4 1 .7.5.6.6 1c.2.4.2.9.2 1.4 0 .7-.2 1.4-.5 1.9s-.7 1-1.3 1.3c-.5.3-1.1.6-1.8.8-.7.2-1.4.2-2.1.2H2.2s-.8-.1-1.3-.1c-.4 0-.8-.1-1.2-.2V.3C0 .3.3.2.6.2.9.2 1.3.1 1.7.1c.4 0 .8 0 1.2-.1h1.2c.7 0 1.3.1 2 .2S7.5.4 8 .7s.9.6 1.2 1.1c.3.4.4 1 .4 1.7zm-6 2.7h.7s.5 0 .6-.1c.5-.2 1-.4 1.4-.7s.6-.7.6-1.3c0-.4-.1-.6-.2-.9-.2-.2-.4-.4-.6-.5-.3-.1-.5-.2-.8-.3-.3 0-.6-.1-.9-.1h-1c-.3 0-.5 0-.7.1v3.8h.9zm.9 6.1c.3 0 .7 0 1-.1.3-.1.6-.2.8-.4l.6-.6c.1-.2.2-.5.2-.9s-.1-.8-.3-1.1-.3-.4-.6-.5c-.3-.1-.6-.2-1-.3-.4 0-.7-.1-1.1-.1H2.7v3.9c.1 0 .2 0 .3.1h1.5z"/></symbol></svg></div>
+    <!--BEGIN out-->
+    <div class="out">
+      <div class="page__outer">
+        <div class="page__wrapper">
+          <header class="page__header--wrap">
+            <div class="page__header cd-auto-hide-header">
+              <div class="header-mainwrap">
+                <div class="header-row-top">
+                  <div class="box">
+                    <div class="header-row-top-left">
+                      <div class="lang-wrap">
+                        <div class="lang-item active top-link">Ru</div><a class="lang-item top-link" href="#">En</a>
+                      </div>
+                      <div class="nav-wrap"><a class="top-link" href="#">О клинике </a><a class="top-link" href="#">Новости</a><a class="top-link" href="#">Акции</a></div>
+                    </div>
+                    <div class="header-row-top-right">
+                      <div class="soc-wrap"><a class="soc-item vk" href="#">
+                          <div class="soc-item-inner">
+                            <svg class="icon icon-drop">
+                              <use xlink:href="#vk" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                            </svg>
+                          </div></a><a class="soc-item fb" href="#">
+                          <div class="soc-item-inner">
+                            <svg class="icon icon-drop">
+                              <use xlink:href="#fb" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                            </svg>
+                          </div></a><a class="soc-item inst" href="#">
+                          <div class="soc-item-inner">
+                            <svg class="icon icon-drop">
+                              <use xlink:href="#ok" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                            </svg>
+                          </div></a></div><a class="top-link login" href="#">
+                        <svg class="icon icon-drop">
+                          <use xlink:href="#login" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                        </svg><span>Личный кабинет</span></a><a class="top-link bold" href="#">Как вызвать врача</a>
+                      <div class="top-link primary" onclick="">Записаться на приём
+                        <div class="dropdown-target">
+                          <div class="dropdown-inner spec">
+                            <div class="dropdown-content"><a class="spec-link" href="#">
+                                <div class="spec-link-title dropdown">Записаться online</div>
+                                <div class="text">Записаться на прием самостоятельно, выбрав врача и удобное время в личном кабинете</div></a>
+                              <div class="spec-link js-popup-button" data-modal="zayavka">
+                                <div class="spec-link-title dropdown">Оставить заявку</div>
+                                <div class="text">Оставить заявку на приём через форму на сайте (вам перезвонят, чтобы уточнить детали)</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="header-row-bottom">
+                  <div class="box">
+                    <div class="logo-wrapper"><a class="logo-inner" href="#">
+                        <div class="logo"></div>
+                        <div class="logo-inner-text">
+                          <div class="text-top">Медицинский центр</div>
+                          <div class="text-bottom">Моситалмед</div>
+                        </div></a></div>
+                    <nav class="header-row-nav"><a class="nav-item dropdown" href="#" data-id="1">
+                        <div class="nav-item-inner"><span>Отделения</span></div></a><a class="nav-item" href="#">
+                        <div class="nav-item-inner"><span>Услуги</span></div></a><a class="nav-item" href="#">
+                        <div class="nav-item-inner"><span>Врачи</span></div></a><a class="nav-item" href="#">
+                        <div class="nav-item-inner"><span>Контакты</span></div></a></nav>
+                    <div class="header-row-tels">
+                      <div class="top-link primary" onclick="">Записаться на приём
+                        <div class="dropdown-target">
+                          <div class="dropdown-inner spec">
+                            <div class="dropdown-content"><a class="spec-link" href="#">
+                                <div class="spec-link-title dropdown">Записаться online</div>
+                                <div class="text">Записаться на прием самостоятельно, выбрав врача и удобное время в личном кабинете</div></a>
+                              <div class="spec-link js-popup-button" data-modal="zayavka">
+                                <div class="spec-link-title dropdown">Оставить заявку</div>
+                                <div class="text">Оставить заявку на приём через форму на сайте (вам перезвонят, чтобы уточнить детали)</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tel-wrap">
+                        <div class="tel-wrap-inner">
+                          <div class="tel-item">
+                            <div class="text-sm">Стоматология</div><a class="tel-item-tel" href="tel:+7 (495) 956-60-95">+7 (495) 956-60-95</a>
+                          </div>
+                        </div>
+                        <div class="tel-wrap-inner" onclick="">
+                          <div class="tel-item main">
+                            <svg class="icon icon-phone">
+                              <use xlink:href="#phone" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                            </svg>
+                            <div class="text-sm">Регистратура</div><a class="tel-item-tel" href="tel:+7 (495) 956-60-95">+7 (495) 956-17-67</a>
+                          </div>
+                          <div class="dropdown-target">
+                            <div class="dropdown-inner">
+                              <div class="dropdown-content">
+                                <div class="content-block">
+                                  <div class="text-sm">Режим работы</div>
+                                  <div class="time-blk"><span>Пн–Сб: 8:30–21:00</span><span>Вс: 9:00–20:00</span></div>
+                                  <div class="link js-popup-buttom" data-modal="callback">Обратный звонок</div>
+                                </div>
+                                <div class="content-block">
+                                  <div class="text-sm">Регистратура</div><a class="tel-item-tel" href="tel:">8 (495) 956-60-95</a><a class="tel-item-tel" href="tel:">8 (495) 956-60-95</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="header-bottom-mobnav">
+                        <div class="header-bottom-mobnav-btn js-menu" data-menu=".main-content">
+                          <div class="header-btn-inner">
+                            <div class="navTrigger"><i></i><i></i><i></i></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="page__header-drop">
+                  <div class="page__header-drop-cont">
+                    <div class="page__header-drop-item" data-id="1">
+                      <ul class="footer-links-add">
+                        <li><a class="text" href="#">Оториноларингологии</a></li>
+                        <li><a class="text" href="#">Офтальмологии</a></li>
+                        <li><a class="text" href="#">Неврологии</a></li>
+                        <li><a class="text" href="#">Терапии</a></li>
+                        <li><a class="text" href="#">Хирургии</a></li>
+                      </ul>
+                      <ul class="footer-links-add">
+                        <li><a class="text" href="#">Стоматологии</a></li>
+                        <li><a class="text" href="#">Физиотерапии</a></li>
+                        <li><a class="text" href="#">Гинекологии</a></li>
+                        <li><a class="text" href="#">Урологии</a></li>
+                        <li><a class="text" href="#">Клинико-диагностическая лаборатория</a></li>
+                      </ul>
+                      <ul class="footer-links-add">
+                        <li><a class="text" href="#">Дерматокосметологии</a></li>
+                        <li><a class="text" href="#">УЗ-диагностики</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="mainmenu">
+                  <div class="mainmenu-inner">
+                    <div class="box">
+                      <div class="footer-links">
+                        <div class="footer-links-main">
+                          <ul>
+                            <li> <a class="text blk" href="#">Услуги</a></li>
+                            <li> <a class="text blk" href="#">Врачи</a></li>
+                            <li> <a class="text blk" href="#">Новости</a></li>
+                            <li> <a class="text blk" href="#">Акции</a></li>
+                            <li> <a class="text blk" href="#">Контакты</a></li>
+                          </ul>
+                        </div>
+                        <div class="footer-links-add"><a class="text blk" href="#">Отделения</a>
+                          <ul>
+                            <li> <a class="text" href="#">Оториноларингологии</a></li>
+                            <li> <a class="text" href="#">Офтальмологии</a></li>
+                            <li> <a class="text" href="#">Неврологии</a></li>
+                            <li> <a class="text" href="#">Терапии</a></li>
+                            <li> <a class="text" href="#">Хирургии</a></li>
+                            <li> <a class="text" href="#">Стоматологии</a></li>
+                            <li> <a class="text" href="#">Физиотерапии</a></li>
+                          </ul>
+                          <ul>
+                            <li> <a class="text" href="#">Гинекологии</a></li>
+                            <li> <a class="text" href="#">Урологии</a></li>
+                            <li> <a class="text" href="#">Клинико-диагностическая лаборатория</a></li>
+                            <li> <a class="text" href="#">Рентгенодиагностики</a></li>
+                            <li> <a class="text" href="#">Дерматокосметологии</a></li>
+                            <li> <a class="text" href="#">УЗ-диагностики</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="footer-right"><a class="text blk" href="#">Контакты</a>
+                        <div class="tel-wrap">
+                          <div class="tel-item"><a class="text-sm text-sm" href="tel:84959561767">Регистратура</a><a class="tel-item-tel" href="tel:84959561767">+7 (495) 956-17-67</a><a class="tel-item-tel" href="tel:84959561767">+7 (495) 956-17-67</a><a class="tel-item-tel" href="tel:84959561767">+7 (495) 956-17-67</a></div>
+                          <div class="tel-item">
+                            <div class="text-sm">Стоматология</div><a class="tel-item-tel" href="tel:84959561767">8 (495) 956-60-95</a>
+                          </div>
+                        </div>
+                        <div class="link js-popup-buttom" data-modal="callback">Обратный звонок</div>
+                        <div class="time-blk">
+                          <div class="text-sm">Режим работы</div><span>Пн–Сб: 8:30–21:00</span><span>Вс: 9:00–20:00</span>
+                        </div>
+                        <div class="soc-wrap"><a class="soc-item vk" href="#">
+                            <div class="soc-item-inner">
+                              <svg class="icon icon-drop">
+                                <use xlink:href="#vk" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                              </svg>
+                            </div></a><a class="soc-item fb" href="#">
+                            <div class="soc-item-inner">
+                              <svg class="icon icon-drop">
+                                <use xlink:href="#fb" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                              </svg>
+                            </div></a><a class="soc-item inst" href="#">
+                            <div class="soc-item-inner">
+                              <svg class="icon icon-drop">
+                                <use xlink:href="#ok" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                              </svg>
+                            </div></a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </header>
+          <main class="page__content">
+            <div class="wrapper gray page-head">
+              <div class="box">
+                <div class="page-head-content">
+                  <div class="page-head-bg">
+                    <div class="page-head-bg-inner"><img class="js-image" data-src="img/head/1.jpg" alt=""></div>
+                  </div>
+                  <div class="page-head-inner">
+                    <h1 class="title h1">Отделения</h1>
+                    <div class="bread-cont"><a class="bread-item" href="#">Главная</a><a class="bread-item" href="#">Отделения</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="box">
+                <div class="content-element">
+                  <div class="aside-wrapp">
+                    <aside class="aside-menu" data-sticky_parent>
+                      <div class="aside-menu-inner">
+                        <!-- есди элемент стикается - кладем его в этот контейнер,-->
+                        <div class="aside-menu-stick js-stick">
+                          <!-- модификатор .nav для ссылок на страницы и .scroll для ссылок скролящих-->
+                          <ul class="aside-nav nav">
+                            <li class="aside-nav-item"><a class="aside-nav-link" href="#">Клинико-диагностическая лаборатория</a></li>
+                            <li class="aside-nav-item"><a class="aside-nav-link" href="#">УЗ-диагностика</a></li>
+                            <li class="aside-nav-item"><a class="aside-nav-link" href="#">Рентгенодиагностика</a></li>
+                            <li class="aside-nav-item"><a class="aside-nav-link" href="#">Хирургия</a></li>
+                            <li class="aside-nav-item"><a class="aside-nav-link" href="#">Стоматология</a></li>
+                            <li class="aside-nav-item"><a class="aside-nav-link" href="#">Дермотокосметология</a></li>
+                            <li class="aside-nav-item"><a class="aside-nav-link" href="#">Гинекология</a></li>
+                            <li class="aside-nav-item"><a class="aside-nav-link" href="#">Урология</a></li>
+                            <li class="aside-nav-item"><a class="aside-nav-link" href="#">Терапия</a></li>
+                            <li class="aside-nav-item"><a class="aside-nav-link" href="#">Офтальмология</a></li>
+                            <li class="aside-nav-item"><a class="aside-nav-link" href="#">Неврология</a></li>
+                            <li class="aside-nav-item"><a class="aside-nav-link" href="#">Оториноларингология</a></li>
+                            <li class="aside-nav-item"><a class="aside-nav-link" href="#">ФизИотерапия</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </aside>
+                    <div class="aside-content">
+                      <div class="text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores numquam adipisci officia temporibus sint, quae eligendi sequi sapiente, rem cumque at autem, ullam dicta magnam! Corrupti expedita, molestiae cum numquam!</div>
+                      <div class="text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores numquam adipisci officia temporibus sint, quae eligendi sequi sapiente, rem cumque at autem, ullam dicta magnam! Corrupti expedita, molestiae cum numquam!</div>
+                      <div class="text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores numquam adipisci officia temporibus sint, quae eligendi sequi sapiente, rem cumque at autem, ullam dicta magnam! Corrupti expedita, molestiae cum numquam!</div>
+                      <div class="text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores numquam adipisci officia temporibus sint, quae eligendi sequi sapiente, rem cumque at autem, ullam dicta magnam! Corrupti expedita, molestiae cum numquam!</div>
+                      <div class="text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores numquam adipisci officia temporibus sint, quae eligendi sequi sapiente, rem cumque at autem, ullam dicta magnam! Corrupti expedita, molestiae cum numquam!</div>
+                      <div class="text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores numquam adipisci officia temporibus sint, quae eligendi sequi sapiente, rem cumque at autem, ullam dicta magnam! Corrupti expedita, molestiae cum numquam!</div>
+                      <div class="text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores numquam adipisci officia temporibus sint, quae eligendi sequi sapiente, rem cumque at autem, ullam dicta magnam! Corrupti expedita, molestiae cum numquam!</div>
+                      <div class="text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores numquam adipisci officia temporibus sint, quae eligendi sequi sapiente, rem cumque at autem, ullam dicta magnam! Corrupti expedita, molestiae cum numquam!</div>
+                      <div class="text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores numquam adipisci officia temporibus sint, quae eligendi sequi sapiente, rem cumque at autem, ullam dicta magnam! Corrupti expedita, molestiae cum numquam!</div>
+                      <div class="text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores numquam adipisci officia temporibus sint, quae eligendi sequi sapiente, rem cumque at autem, ullam dicta magnam! Corrupti expedita, molestiae cum numquam!</div>
+                      <div class="text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores numquam adipisci officia temporibus sint, quae eligendi sequi sapiente, rem cumque at autem, ullam dicta magnam! Corrupti expedita, molestiae cum numquam!</div>
+                      <div class="text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores numquam adipisci officia temporibus sint, quae eligendi sequi sapiente, rem cumque at autem, ullam dicta magnam! Corrupti expedita, molestiae cum numquam!</div>
+                      <div class="text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores numquam adipisci officia temporibus sint, quae eligendi sequi sapiente, rem cumque at autem, ullam dicta magnam! Corrupti expedita, molestiae cum numquam!</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="wrapper gray">
+              <div class="box">
+                <div class="promoslider-wrap">
+                  <div class="index-slider">
+                    <div class="index-slider-inner js-indexSlider">
+                      <div class="index-slider-item">
+                        <div class="index-slider-item-inner"><img data-lazy="img/slideradd/1.jpg" alt="Новое отделение стоматологии">
+                          <div class="index-slider-content">
+                            <div class="title h2">Программа ведения беременности</div>
+                            <div class="text primary">Полноценная стомат 42342 4234 234ологическая клиника европейского уровня</div>
+                            <div class="index-slider-btns-wrap"><a class="btn" href="#"><span>Узнать больше</span></a><a class="btn secondary" href="#"><span>Все программы</span></a></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="index-slider-item">
+                        <div class="index-slider-item-inner"><img data-lazy="img/index/1.jpg" alt="Новое отделение стоматологии">
+                          <div class="index-slider-content">
+                            <div class="title h2">Программа ведения беременности2</div>
+                            <div class="text primary">Полноценная стоматологическая клиника европейского уровня</div>
+                            <div class="index-slider-btns-wrap"><a class="btn" href="#"><span>Узнать больше</span></a><a class="btn secondary" href="#"><span>Все программы</span></a></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="index-slider-item">
+                        <div class="index-slider-item-inner"><img data-lazy="img/index/clinic.jpg" alt="Новое отделение стоматологии">
+                          <div class="index-slider-content">
+                            <div class="title h2">Новое отделение2</div>
+                            <div class="text primary">Полноценная стоматологич34234324 еская клиника европейского уровня</div>
+                            <div class="index-slider-btns-wrap"><a class="btn" href="#"><span>Узнать больше</span></a><a class="btn secondary" href="#"><span>Все программы</span></a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="arr-wrap">
+                      <div class="arr-wrap-inner">
+                        <div class="slider-counter">
+                          <div class="slider-curr"></div>
+                          <div class="slider-divider">/</div>
+                          <div class="slider-total"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </main>
+          <footer class="page__footer">
+            <div class="wrapper footer">
+              <div class="box">
+                <div class="footer-left">
+                  <div class="footer-head">
+                    <div class="logo-wrap"><a class="logo" href="#"></a></div>
+                    <div class="search-wrap">
+                      <div class="search-wrapper">
+                        <form class="search-inner">
+                          <input class="search-input" type="text" placeholder="Поиск по сайту" required="required">
+                          <button class="search-submit" type="submit">
+                            <svg class="icon icon-search">
+                              <use xlink:href="#search" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                            </svg>
+                          </button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="footer-links">
+                    <div class="footer-links-main">
+                      <ul>
+                        <li> <a class="text blk" href="#">Главная</a></li>
+                        <li> <a class="text blk" href="#">Услуги</a></li>
+                        <li> <a class="text blk" href="#">Врачи</a></li>
+                        <li> <a class="text blk" href="#">Новости</a></li>
+                        <li> <a class="text blk" href="#">Акции</a></li>
+                        <li> <a class="text blk" href="#">Контакты</a></li>
+                      </ul>
+                    </div>
+                    <div class="footer-links-add"><a class="text blk" href="#"> О клинике</a>
+                      <ul>
+                        <li> <a class="text" href="#">Медицинский центр</a></li>
+                        <li> <a class="text" href="#">Руководство</a></li>
+                        <li> <a class="text" href="#">Партнёры</a></li>
+                        <li> <a class="text" href="#">Вакансии</a></li>
+                        <li> <a class="text" href="#">Лицензии</a></li>
+                        <li> <a class="text" href="#">Органы власти</a></li>
+                        <li> <a class="text" href="#">Вопрос-ответ</a></li>
+                        <li> <a class="text" href="#">Отзывы</a></li>
+                        <li> <a class="text" href="#">Аптека</a></li>
+                      </ul>
+                    </div>
+                    <div class="footer-links-add"><a class="text blk" href="#">Отделения</a>
+                      <ul>
+                        <li> <a class="text" href="#">Оториноларингологии</a></li>
+                        <li> <a class="text" href="#">Офтальмологии</a></li>
+                        <li> <a class="text" href="#">Неврологии</a></li>
+                        <li> <a class="text" href="#">Терапии</a></li>
+                        <li> <a class="text" href="#">Хирургии</a></li>
+                        <li> <a class="text" href="#">Стоматологии</a></li>
+                        <li> <a class="text" href="#">Физиотерапии</a></li>
+                      </ul>
+                      <ul>
+                        <li> <a class="text" href="#">Гинекологии</a></li>
+                        <li> <a class="text" href="#">Урологии</a></li>
+                        <li> <a class="text" href="#">Клинико-диагностическая лаборатория</a></li>
+                        <li> <a class="text" href="#">Рентгенодиагностики</a></li>
+                        <li> <a class="text" href="#">Дерматокосметологии</a></li>
+                        <li> <a class="text" href="#">УЗ-диагностики</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="footer-right">
+                  <div class="btn-wrap"><a class="btn primary js-popup-button" href="#" data-modal="priem"><span>Записаться на приём</span></a></div>
+                  <div class="tel-wrap">
+                    <div class="tel-item main">
+                      <div class="text-sm">Регистратура</div><a class="tel-item-tel" href="tel:84959561767">8 (495) 956-17-67</a>
+                    </div>
+                    <div class="tel-item">
+                      <div class="text-sm">Стоматология</div><a class="tel-item-tel" href="tel:84959566095">8 (495) 956-60-95</a>
+                    </div>
+                  </div>
+                  <div class="link js-popup-buttom" data-modal="callback">Обратный звонок</div>
+                  <div class="time-blk"><span>Пн–Сб: 8:30–21:00</span><span>Вс: 9:00–20:00</span></div>
+                  <div class="soc-wrap"><a class="soc-item vk" href="#">
+                      <div class="soc-item-inner">
+                        <svg class="icon icon-drop">
+                          <use xlink:href="#vk" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                        </svg>
+                      </div></a><a class="soc-item fb" href="#">
+                      <div class="soc-item-inner">
+                        <svg class="icon icon-drop">
+                          <use xlink:href="#fb" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                        </svg>
+                      </div></a><a class="soc-item inst" href="#">
+                      <div class="soc-item-inner">
+                        <svg class="icon icon-drop">
+                          <use xlink:href="#ok" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                        </svg>
+                      </div></a></div>
+                </div>
+                <div class="footer-footer">
+                  <div class="footer-footer-inner">
+                    <div class="footer-footer-desc">
+                      <div class="text-light">© 2003–2017 ОАО «Моситалмед»</div>
+                    </div>
+                    <div class="footer-footer-map"><a class="map-link text-light" href="#">
+                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14px" height="13px" x="0px" y="0px" viewBox="0 0 595.3 595.3" enable-background="new 0 0 595.3 595.3" xml:space="preserve"><path d="M595.3,413.3v105.4c0,10.2-3.4,17-10.2,23.8c-6.8,6.8-13.6,10.2-20.4,10.2H459.2c-10.2,0-17-3.4-23.8-10.2 c-6.8-6.8-10.2-13.6-10.2-23.8V413.3c0-10.2,3.4-17,10.2-23.8s13.6-10.2,23.8-10.2h30.6V318H319.8v64.6h30.6 c10.2,0,17,3.4,23.8,10.2s10.2,13.6,10.2,23.8v105.4c0,10.2-3.4,17-10.2,23.8c-6.8,6.8-13.6,6.8-23.8,6.8H244.9 c-10.2,0-17-3.4-23.8-10.2c-6.8-6.8-10.2-13.6-10.2-23.8V413.3c0-10.2,3.4-17,10.2-23.8s13.6-6.8,23.8-6.8h30.6V318H105.4v64.6h30.6 c10.2,0,17,3.4,23.8,10.2c6.8,6.8,10.2,13.6,10.2,20.4v105.4c0,10.2-3.4,17-10.2,23.8c-6.8,6.8-13.6,10.2-20.4,10.2H30.6 c-10.2,0-17-3.4-23.8-10.2C0,535.8,0,528.9,0,522.1V416.7c0-10.2,3.4-17,10.2-23.8s13.6-10.2,20.4-10.2h30.6V318 c0-10.2,3.4-20.4,13.6-30.6s17-13.6,30.6-13.6h170.1v-61.2h-30.6c-10.2,0-17-3.4-23.8-10.2c-6.8-6.8-6.8-13.6-6.8-20.4V73.1 c0-10.2,3.4-17,10.2-23.8s10.2-6.8,20.4-6.8h105.4c10.2,0,17,3.4,23.8,10.2s10.2,13.6,10.2,23.8V182c0,10.2-3.4,17-10.2,23.8 s-13.6,6.8-23.8,6.8h-30.6v64.6h170.1c10.2,0,20.4,3.4,30.6,13.6s13.6,17,13.6,30.6v61.2h30.6c10.2,0,17,3.4,23.8,10.2 S595.3,406.5,595.3,413.3z"/></svg><span>Карта сайта</span></a></div>
+                    <div class="footer-footer-dev"><a class="dev-link" href="#">
+                        <div class="text-light">Разработка сайта: </div>
+                        <div class="dev-link-logo"><svg xmlns="http://www.w3.org/2000/svg" width="22.5px" height="22.5px" viewBox="0 0 55.4 54.7"><path d="M55.3 51.2V3.9c-.2-.8.3-6.4-4.8-2.7-5 3.3-18.6 12.4-18.6 12.4s-3.5 3.3-8.5 0C16.8 9.3 4.5 1.2 4.5 1.2S.2-2.3 0 3.6v48s0 4.1 3.7 2.8C5.4 53.3 7.3 52 8.9 51c2.6-2.2 2.6-5.5 2.6-5.5v-5.4c0-6 4-1.8 4-1.8s5.4 3.6 7.8 5.3c4.8 2.5 8 .2 8 .2s6.9-4.6 9.5-6.4c3.2-2.5 3 2.6 3 2.6v3.8s-.4 3.9 2.6 6.5c1.5 1.2 3.3 2.6 4.9 3.9 4.8 2.1 4-3 4-3zM41.2 26l-10.5 7s-3 1.9-6.5 0c-3.2-2.2-10.8-7.2-10.8-7.2s-2-.6-2-3.6v-2.6s-.2-3.9 2.8-1.5l9.9 6.6c3.1 2.4 6.7 0 6.7 0s6.8-4.6 11.1-7.5c1.9-1.4 1.6 1.1 1.6 1.1v3.2c0 .2.4 2.6-2.3 4.5z" class="flex"/></svg>
+                          <div class="text bold">FLEX.MEDIA</div>
+                        </div></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <div class="modals">
+      <div class="modal-layout js-popup-container" data-modal="callback">
+        <div class="modal-container">
+          <div class="modal-container-inner">
+            <div class="modal-container-header"></div>
+            <div class="modal-container-content"></div>
+          </div>
+        </div>
+        <!--контейнер ответа модалки -->
+        <div class="modal-container response" style="display: none;">
+          <div class="modal-container-inner">
+            <div class="modal-container-header"></div>
+            <div class="modal-container-content"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--END out-->
+    <script src="js/lib.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.60/jquery.form-validator.min.js"></script>
+    <script src="js/common.min.js"></script>
+  </body>
+</html>

@@ -288,11 +288,30 @@
               <div class="box">
                 <div class="otdel">
                   <div class="otdel-head">
+                    <div class="otdel-head-search">
+                      <!--не более 1го на страницу-->
+                      <!--suggest component without logic-->
+                      <!--когда в инпут введено больше 3 симолов на .search-wrapper вешаем класс .focus-->
+                      <div class="search-wrapper suggest-wrapper">
+                        <div class="suggest-wrapper-inner">
+                          <form class="search-inner search-suggest">
+                            <input class="search-input biginput" type="text" placeholder="1000 и одна услуга" required="required" autocomplete="off" aria-owns="res" aria-autocomplete="both">
+                            <button class="search-submit" type="submit">
+                              <svg class="icon icon-search">
+                                <use xlink:href="#search" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                              </svg>
+                            </button>
+                          </form>
+                          <div class="suggest-list">
+                            <div class="suggest-list-inner"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                     <div class="otdel-head-title">
                       <h2 class="title h2">Отделения</h2>
                       <div class="arr-wrap-inner"></div>
                     </div>
-                    <div class="otdel-head-search"></div>
                   </div>
                   <div class="otdel-slider-wrap">
                     <div class="otdel-slider js-otdel">
@@ -304,7 +323,11 @@
                                                 </div>
                                                 <div class="vrach-inner-block">
                                                   <div class="vrach-inner-wrap">
-                                                    <div class="vrach-inner-title">Клинико-диагностическая лаборатория</div>
+                                                    <div class="vrach-inner-title">Клинико-диагностическая лаборатория 
+                                                      <svg class="icon">
+                                                        <use xlink:href="#smallarr" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                                      </svg>
+                                                    </div>
                                                     <div class="text">118 услуг</div>
                                                   </div>
                                                   <div class="vrach-inner-add">
@@ -323,7 +346,11 @@
                                                 </div>
                                                 <div class="vrach-inner-block">
                                                   <div class="vrach-inner-wrap">
-                                                    <div class="vrach-inner-title">Физиотерапия</div>
+                                                    <div class="vrach-inner-title">Физиотерапия
+                                                      <svg class="icon">
+                                                        <use xlink:href="#smallarr" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                                      </svg>
+                                                    </div>
                                                     <div class="text">118 услуг</div>
                                                   </div>
                                                   <div class="vrach-inner-add">
@@ -342,7 +369,11 @@
                                                 </div>
                                                 <div class="vrach-inner-block">
                                                   <div class="vrach-inner-wrap">
-                                                    <div class="vrach-inner-title">Гинекология</div>
+                                                    <div class="vrach-inner-title">Гинекология
+                                                      <svg class="icon">
+                                                        <use xlink:href="#smallarr" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                                      </svg>
+                                                    </div>
                                                     <div class="text">118 услуг</div>
                                                   </div>
                                                   <div class="vrach-inner-add">
@@ -361,7 +392,11 @@
                                                 </div>
                                                 <div class="vrach-inner-block">
                                                   <div class="vrach-inner-wrap">
-                                                    <div class="vrach-inner-title">Стоматология</div>
+                                                    <div class="vrach-inner-title">Стоматология
+                                                      <svg class="icon">
+                                                        <use xlink:href="#smallarr" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                                      </svg>
+                                                    </div>
                                                     <div class="text">118 услуг</div>
                                                   </div>
                                                   <div class="vrach-inner-add">
@@ -380,7 +415,11 @@
                                                 </div>
                                                 <div class="vrach-inner-block">
                                                   <div class="vrach-inner-wrap">
-                                                    <div class="vrach-inner-title">Стоматолfsdf  fs огия</div>
+                                                    <div class="vrach-inner-title">Стоматолfsdf  fs огия
+                                                      <svg class="icon">
+                                                        <use xlink:href="#smallarr" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                                      </svg>
+                                                    </div>
                                                     <div class="text">118 услуг</div>
                                                   </div>
                                                   <div class="vrach-inner-add">
@@ -399,7 +438,11 @@
                                                 </div>
                                                 <div class="vrach-inner-block">
                                                   <div class="vrach-inner-wrap">
-                                                    <div class="vrach-inner-title">Стоматолfsdf  fs огия</div>
+                                                    <div class="vrach-inner-title">Стоматолfsdf  fs огия
+                                                      <svg class="icon">
+                                                        <use xlink:href="#smallarr" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                                      </svg>
+                                                    </div>
                                                     <div class="text">118 услуг</div>
                                                   </div>
                                                   <div class="vrach-inner-add">
@@ -418,7 +461,80 @@
                                                 </div>
                                                 <div class="vrach-inner-block">
                                                   <div class="vrach-inner-wrap">
-                                                    <div class="vrach-inner-title">Гинекология</div>
+                                                    <div class="vrach-inner-title">Гинекология
+                                                      <svg class="icon">
+                                                        <use xlink:href="#smallarr" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                                      </svg>
+                                                    </div>
+                                                    <div class="text">118 услуг</div>
+                                                  </div>
+                                                  <div class="vrach-inner-add">
+                                                    <div class="vrach-inner-add-item text">TENS-терапия</div>
+                                                    <div class="vrach-inner-add-item text">Магнитотерапия</div>
+                                                    <div class="vrach-inner-add-item text">СМТ-терапия</div>
+                                                    <div class="vrach-inner-add-item text">Ультразвуковая терапия</div>
+                                                    <div class="vrach-inner-add-item text">Фонофорез</div>
+                                                  </div>
+                                                </div></a></div>
+                                            <div class="vrach-wrap"><a class="vrach-inner" href="#">
+                                                <div class="vrach-vrach">
+                                                  <div class="vrach-vrach-inner"><img data-lazy="img/doctor/2.png" alt="Стелла Олеговна Солнцева">
+                                                    <div class="vrach-vrach-name">Стелла Олеговна Солнцева</div>
+                                                  </div>
+                                                </div>
+                                                <div class="vrach-inner-block">
+                                                  <div class="vrach-inner-wrap">
+                                                    <div class="vrach-inner-title">Гинекология
+                                                      <svg class="icon">
+                                                        <use xlink:href="#smallarr" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                                      </svg>
+                                                    </div>
+                                                    <div class="text">118 услуг</div>
+                                                  </div>
+                                                  <div class="vrach-inner-add">
+                                                    <div class="vrach-inner-add-item text">TENS-терапия</div>
+                                                    <div class="vrach-inner-add-item text">Магнитотерапия</div>
+                                                    <div class="vrach-inner-add-item text">СМТ-терапия</div>
+                                                    <div class="vrach-inner-add-item text">Ультразвуковая терапия</div>
+                                                    <div class="vrach-inner-add-item text">Фонофорез</div>
+                                                  </div>
+                                                </div></a></div>
+                                            <div class="vrach-wrap"><a class="vrach-inner" href="#">
+                                                <div class="vrach-vrach">
+                                                  <div class="vrach-vrach-inner"><img data-lazy="img/doctor/2.png" alt="Стелла Олеговна Солнцева">
+                                                    <div class="vrach-vrach-name">Стелла Олеговна Солнцева</div>
+                                                  </div>
+                                                </div>
+                                                <div class="vrach-inner-block">
+                                                  <div class="vrach-inner-wrap">
+                                                    <div class="vrach-inner-title">Гинекология
+                                                      <svg class="icon">
+                                                        <use xlink:href="#smallarr" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                                      </svg>
+                                                    </div>
+                                                    <div class="text">118 услуг</div>
+                                                  </div>
+                                                  <div class="vrach-inner-add">
+                                                    <div class="vrach-inner-add-item text">TENS-терапия</div>
+                                                    <div class="vrach-inner-add-item text">Магнитотерапия</div>
+                                                    <div class="vrach-inner-add-item text">СМТ-терапия</div>
+                                                    <div class="vrach-inner-add-item text">Ультразвуковая терапия</div>
+                                                    <div class="vrach-inner-add-item text">Фонофорез</div>
+                                                  </div>
+                                                </div></a></div>
+                                            <div class="vrach-wrap"><a class="vrach-inner" href="#">
+                                                <div class="vrach-vrach">
+                                                  <div class="vrach-vrach-inner"><img data-lazy="img/doctor/2.png" alt="Стелла Олеговна Солнцева">
+                                                    <div class="vrach-vrach-name">Стелла Олеговна Солнцева</div>
+                                                  </div>
+                                                </div>
+                                                <div class="vrach-inner-block">
+                                                  <div class="vrach-inner-wrap">
+                                                    <div class="vrach-inner-title">Гинекология
+                                                      <svg class="icon">
+                                                        <use xlink:href="#smallarr" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                                      </svg>
+                                                    </div>
                                                     <div class="text">118 услуг</div>
                                                   </div>
                                                   <div class="vrach-inner-add">
@@ -437,7 +553,11 @@
                                                 </div>
                                                 <div class="vrach-inner-block">
                                                   <div class="vrach-inner-wrap">
-                                                    <div class="vrach-inner-title">Стоматология</div>
+                                                    <div class="vrach-inner-title">Стоматология
+                                                      <svg class="icon">
+                                                        <use xlink:href="#smallarr" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                                      </svg>
+                                                    </div>
                                                     <div class="text">118 услуг</div>
                                                   </div>
                                                   <div class="vrach-inner-add">
@@ -456,7 +576,11 @@
                                                 </div>
                                                 <div class="vrach-inner-block">
                                                   <div class="vrach-inner-wrap">
-                                                    <div class="vrach-inner-title">Стоматолfsdf  fs огия</div>
+                                                    <div class="vrach-inner-title">Стоматолfsdf  fs огия
+                                                      <svg class="icon">
+                                                        <use xlink:href="#smallarr" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                                      </svg>
+                                                    </div>
                                                     <div class="text">118 услуг</div>
                                                   </div>
                                                   <div class="vrach-inner-add">
@@ -475,7 +599,11 @@
                                                 </div>
                                                 <div class="vrach-inner-block">
                                                   <div class="vrach-inner-wrap">
-                                                    <div class="vrach-inner-title">Стоматолfsdf  fs огия</div>
+                                                    <div class="vrach-inner-title">Стоматолfsdf  fs огия
+                                                      <svg class="icon">
+                                                        <use xlink:href="#smallarr" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                                      </svg>
+                                                    </div>
                                                     <div class="text">118 услуг</div>
                                                   </div>
                                                   <div class="vrach-inner-add">
@@ -488,43 +616,238 @@
                                                 </div></a></div>
                     </div>
                     <div class="dots-wrap"></div>
+                    <div class="slider-counter">
+                      <div class="slider-curr"></div>
+                      <div class="slider-divider">/</div>
+                      <div class="slider-total"></div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <p class="text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?</p>
-              <p class="text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?</p>
-              <p class="text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?</p>
-              <p class="text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?</p>
-              <p class="text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?</p>
-              <p class="text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?</p>
-              <p class="text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?</p>
-              <p class="text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?</p>
-              <p class="text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?</p>
-              <p class="text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?</p>
-              <p class="text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?</p>
-              <p class="text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?</p>
-              <p class="text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?</p>
-              <p class="text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?</p>
-              <p class="text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?</p>
-              <p class="text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?</p>
-              <p class="text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?</p>
-              <p class="text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?</p>
-              <p class="text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?</p>
-              <p class="text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?</p>
-              <p class="text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?</p>
-              <p class="text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?</p>
-              <p class="text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?</p>
-              <p class="text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?</p>
-              <p class="text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?</p>
-              <p class="text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?</p>
-              <p class="text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?</p>
-              <p class="text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?</p>
-              <p class="text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?</p>
-              <p class="text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?</p>
-              <p class="text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?</p>
-              <p class="text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?</p>
-              <p class="text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?</p><a href="#"></a>
-              <div class="box"><a class="btn" href="#"><span>Подробнее о клинике</span></a><a class="btn secondary" href="#"><span>Подробнее о клинике</span></a><a class="btn primary" href="#"><span>Подробнее о клинике</span></a></div>
+            </div>
+            <div class="wrapper gray special">
+              <div class="box">
+                <div class="about-wrapper">
+                  <div class="about-inner">
+                    <div class="about-about">
+                      <div class="about-about-inner">
+                        <div class="about-about-text">
+                          <h2 class="title h2">О нас</h2>
+                          <p class="text primary">Наш главный принцип — поставить на службу здоровья профессионализм врача, достижения современной медицинской науки с учетом финансовых возможностей пациента</p>
+                        </div>
+                        <div class="about-about-items">
+                                                    <div class="about-item">
+                                                      <div class="about-item-inner">
+                                                        <div class="about-item-num">13</div>
+                                                        <div class="about-item-text text">Отделений</div>
+                                                      </div>
+                                                    </div>
+                                                    <div class="about-item">
+                                                      <div class="about-item-inner">
+                                                        <div class="about-item-num">19</div>
+                                                        <div class="about-item-text text">Лет практики</div>
+                                                      </div>
+                                                    </div>
+                                                    <div class="about-item">
+                                                      <div class="about-item-inner">
+                                                        <div class="about-item-num">118</div>
+                                                        <div class="about-item-text text">Врачей</div>
+                                                      </div>
+                                                    </div>
+                                                    <div class="about-item">
+                                                      <div class="about-item-inner">
+                                                        <div class="about-item-num">1 390</div>
+                                                        <div class="about-item-text text">Услуг</div>
+                                                      </div>
+                                                    </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="about-img">
+                      <div class="video-container">
+                        <!--если видоса нету .video-container-inner удаляем-->
+                        <!-- картинка нижде обязательна всегда, т.к. выводится на мобильных устройствах-->
+                        <div class="video-container-inner">
+                          <video class="fillWidth" autoplay="" loop="">
+                            <source src="img/index/video/clouds.mp4" type="video/mp4">Your browser does not support the video tag. I suggest you upgrade your browser.
+                            <source src="img/index/video/clouds.webm" type="video/webm">Your browser does not support the video tag. I suggest you upgrade your browser.
+                          </video>
+                        </div>
+                        <div class="poster"><img class="js-image" data-src="img/index/clinic.jpg" alt=""></div>
+                      </div>
+                    </div>
+                    <div class="about-btn"><a class="btn" href="#"><span>Подробнее о клинике</span></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="box">
+                <div class="wide-slider-wrap">
+                  <div class="otdel-head-title">
+                    <h2 class="title h2">Новости</h2>
+                    <div class="arr-wrap-inner"></div>
+                  </div>
+                  <div class="wide-slider">
+                    <div class="wide-slider-inner js-wide">
+                                            <div class="news-item"><a class="news-item-inner" href="#">
+                                                <div class="news-item-image">
+                                                  <div class="news-item-image-inner"><img data-lazy="img/news/1.jpg" alt="Первый визит в подарок!"></div>
+                                                  <div class="news-type"><span>Новость</span></div>
+                                                </div>
+                                                <div class="news-item-content">
+                                                  <div class="news-item-content-inner">
+                                                    <div class="text-sm">25 июня 2017</div>
+                                                    <div class="title h3">Первый визит в подарок!</div>
+                                                    <div class="text">При оплате первого визита, сумма оплаченная Вами, зачисляется на Ваш лицевой</div>
+                                                  </div>
+                                                </div></a></div>
+                                            <div class="news-item"><a class="news-item-inner" href="#">
+                                                <div class="news-item-image">
+                                                  <div class="news-item-image-inner"><img data-lazy="img/news/2.jpg" alt="Лазерная коррекция зрения"></div>
+                                                  <div class="news-type sale"><span>Акция	</span></div>
+                                                </div>
+                                                <div class="news-item-content">
+                                                  <div class="news-item-content-inner">
+                                                    <div class="text-sm">25 июня 2017</div>
+                                                    <div class="title h3">Лазерная коррекция зрения</div>
+                                                    <div class="text">Определения критической нагрузки на сердце</div>
+                                                  </div>
+                                                </div></a></div>
+                                            <div class="news-item"><a class="news-item-inner" href="#">
+                                                <div class="news-item-image">
+                                                  <div class="news-item-image-inner"><img data-lazy="img/news/3.jpg" alt="Стресс-тест"></div>
+                                                  <div class="news-type dvij"><span>Мероприятие</span></div>
+                                                </div>
+                                                <div class="news-item-content">
+                                                  <div class="news-item-content-inner">
+                                                    <div class="text-sm">25 июня 2017</div>
+                                                    <div class="title h3">Стресс-тест</div>
+                                                    <div class="text">Определения критической нагрузки на сердце</div>
+                                                  </div>
+                                                </div></a></div>
+                                            <div class="news-item"><a class="news-item-inner" href="#">
+                                                <div class="news-item-image">
+                                                  <div class="news-item-image-inner"><img data-lazy="img/news/3.jpg" alt="Стресс-тест"></div>
+                                                  <div class="news-type dvij"><span>Мероприятие</span></div>
+                                                </div>
+                                                <div class="news-item-content">
+                                                  <div class="news-item-content-inner">
+                                                    <div class="text-sm">25 июня 2017</div>
+                                                    <div class="title h3">Стресс-тест</div>
+                                                    <div class="text">Определения критической нагрузки на сердце</div>
+                                                  </div>
+                                                </div></a></div>
+                                            <div class="news-item"><a class="news-item-inner" href="#">
+                                                <div class="news-item-image">
+                                                  <div class="news-item-image-inner"><img data-lazy="img/news/3.jpg" alt="Стресс-тест"></div>
+                                                  <div class="news-type dvij"><span>Мероприятие</span></div>
+                                                </div>
+                                                <div class="news-item-content">
+                                                  <div class="news-item-content-inner">
+                                                    <div class="text-sm">25 июня 2017</div>
+                                                    <div class="title h3">Стресс-тест</div>
+                                                    <div class="text">Определения критической нагрузки на сердце</div>
+                                                  </div>
+                                                </div></a></div>
+                                            <div class="news-item"><a class="news-item-inner" href="#">
+                                                <div class="news-item-image">
+                                                  <div class="news-item-image-inner"><img data-lazy="img/news/3.jpg" alt="Стресс-тест"></div>
+                                                  <div class="news-type dvij"><span>Мероприятие</span></div>
+                                                </div>
+                                                <div class="news-item-content">
+                                                  <div class="news-item-content-inner">
+                                                    <div class="text-sm">25 июня 2017</div>
+                                                    <div class="title h3">Стресс-тест</div>
+                                                    <div class="text">Определения критической нагрузки на сердце</div>
+                                                  </div>
+                                                </div></a></div>
+                                            <div class="news-item"><a class="news-item-inner" href="#">
+                                                <div class="news-item-image">
+                                                  <div class="news-item-image-inner"><img data-lazy="img/news/3.jpg" alt="Стресс-тест"></div>
+                                                  <div class="news-type dvij"><span>Мероприятие</span></div>
+                                                </div>
+                                                <div class="news-item-content">
+                                                  <div class="news-item-content-inner">
+                                                    <div class="text-sm">25 июня 2017</div>
+                                                    <div class="title h3">Стресс-тест</div>
+                                                    <div class="text">Определения критической нагрузки на сердце</div>
+                                                  </div>
+                                                </div></a></div>
+                                            <div class="news-item"><a class="news-item-inner" href="#">
+                                                <div class="news-item-image">
+                                                  <div class="news-item-image-inner"><img data-lazy="img/news/3.jpg" alt="Стресс-тест"></div>
+                                                  <div class="news-type dvij"><span>Мероприятие</span></div>
+                                                </div>
+                                                <div class="news-item-content">
+                                                  <div class="news-item-content-inner">
+                                                    <div class="text-sm">25 июня 2017</div>
+                                                    <div class="title h3">Стресс-тест</div>
+                                                    <div class="text">Определения критической нагрузки на сердце</div>
+                                                  </div>
+                                                </div></a></div>
+                                            <div class="news-item"><a class="news-item-inner" href="#">
+                                                <div class="news-item-image">
+                                                  <div class="news-item-image-inner"><img data-lazy="img/news/3.jpg" alt="Стресс-тест"></div>
+                                                  <div class="news-type dvij"><span>Мероприятие</span></div>
+                                                </div>
+                                                <div class="news-item-content">
+                                                  <div class="news-item-content-inner">
+                                                    <div class="text-sm">25 июня 2017</div>
+                                                    <div class="title h3">Стресс-тест</div>
+                                                    <div class="text">Определения критической нагрузки на сердце</div>
+                                                  </div>
+                                                </div></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="wrapper gray">
+              <div class="box">
+                <div class="promoslider-wrap">
+                  <div class="index-slider">
+                    <div class="index-slider-inner js-indexSlider">
+                      <div class="index-slider-item">
+                        <div class="index-slider-item-inner"><img data-lazy="img/slideradd/1.jpg" alt="Новое отделение стоматологии">
+                          <div class="index-slider-content">
+                            <div class="title h2">Программа ведения беременности</div>
+                            <div class="text primary">Полноценная стомат 42342 4234 234ологическая клиника европейского уровня</div>
+                            <div class="index-slider-btns-wrap"><a class="btn" href="#"><span>Узнать больше</span></a><a class="btn secondary" href="#"><span>Все программы</span></a></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="index-slider-item">
+                        <div class="index-slider-item-inner"><img data-lazy="img/index/1.jpg" alt="Новое отделение стоматологии">
+                          <div class="index-slider-content">
+                            <div class="title h2">Программа ведения беременности2</div>
+                            <div class="text primary">Полноценная стоматологическая клиника европейского уровня</div>
+                            <div class="index-slider-btns-wrap"><a class="btn" href="#"><span>Узнать больше</span></a><a class="btn secondary" href="#"><span>Все программы</span></a></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="index-slider-item">
+                        <div class="index-slider-item-inner"><img data-lazy="img/index/clinic.jpg" alt="Новое отделение стоматологии">
+                          <div class="index-slider-content">
+                            <div class="title h2">Новое отделение2</div>
+                            <div class="text primary">Полноценная стоматологич34234324 еская клиника европейского уровня</div>
+                            <div class="index-slider-btns-wrap"><a class="btn" href="#"><span>Узнать больше</span></a><a class="btn secondary" href="#"><span>Все программы</span></a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="arr-wrap">
+                      <div class="arr-wrap-inner">
+                        <div class="slider-counter">
+                          <div class="slider-curr"></div>
+                          <div class="slider-divider">/</div>
+                          <div class="slider-total"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </main>
           <footer class="page__footer">

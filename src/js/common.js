@@ -1,5 +1,14 @@
 $(window).on('load', function() {
-
+	function stickinit() {
+		setTimeout(function() {
+			$(".js-stick").stick_in_parent({
+				parent: ".aside-menu",
+				offset_top: 110,
+				// recalc_every: 1
+			});
+		}, 1)
+	}
+	stickinit();
 });
 document.addEventListener("DOMContentLoaded", function() {
 
@@ -31,6 +40,21 @@ document.addEventListener("DOMContentLoaded", function() {
 			}
 		}
 	})();
+	function focusInp(){
+		var inp = $('.biginput');
+		inp.each(function(){
+			var _ = $(this);
+				parent = _.closest('.suggest-wrapper')
+			_.on('input',function(){
+				var len = _.val().length;
+				if(len > 3){
+					parent.addClass('focus');
+				}else{
+					parent.removeClass('focus');
+				}
+			});
+		});
+	}focusInp();
 	function Menu() {
 		var trigger = $('.js-menu'),
 			target = $('.mainmenu'),
@@ -90,8 +114,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 					targetWrap.addClass(shown);
 					targetWrap.find("[data-id="+ id +"]").addClass(current).siblings().removeClass(current);
-					// var h = targetWrap.find("[data-id="+ id +"]").find('.page__header-drop-item').outerHeight();
-					// targetWrap.css('height',h + 65);
 				}else{
 					targetWrap.removeClass(shown);
 					items.removeClass('active')
@@ -136,22 +158,172 @@ document.addEventListener("DOMContentLoaded", function() {
 		$(".js-otdel").each(function() {
 			var _this = $(this),
 					parent = _this.parent();
+			slidesCount(_this)
 			_this.slick({
 				accessibility: false,
-				lazyLoad: 'ondemand',
-				arrows: false,
+				lazyLoad: 'progressive',
+				arrows: true,
 				dots: true,
 				touchMove: false,
 				dragable: false,
 				infinite: false,
 				slidesToShow: 4,
 				slidesToScroll: 4,
-				appendDots: parent.find('.dots-wrap')
+				appendDots: parent.find('.dots-wrap'),
+				appendArrows: parent.parent().find('.arr-wrap-inner'),
+				prevArrow: conf.arnprevcontent,
+				nextArrow: conf.arnextcontent,
+				responsive: [
+					{
+						breakpoint: 996,
+						settings: {
+							slidesToShow: 3,
+							slidesToScroll: 3,
+						}
+					},
+					{
+						breakpoint: 675,
+						settings: {
+							slidesToShow: 2,
+							slidesToScroll: 2,
+							lazyLoad: 'ondemand',
+						}
+					},
+					{
+						breakpoint: 490,
+						settings: {
+							slidesToShow: 1,
+							slidesToScroll: 1,
+
+						}
+					},
+				]
 			})
 		});
 	}otdelslider();
+	function wideslider(){
+		$(".js-wide").each(function() {
+			var _this = $(this),
+					parent = _this.parent();
+			_this.slick({
+				accessibility: false,
+				lazyLoad: 'ondemand',
+				arrows: true,
+				dots: false,
+				touchMove: false,
+				dragable: false,
+				infinite: true,
+				slidesToShow: 5,
+				slidesToScroll: 1,
+				appendDots: parent.find('.dots-wrap'),
+				appendArrows: parent.parent().find('.arr-wrap-inner'),
+				prevArrow: conf.arnprevcontent,
+				nextArrow: conf.arnextcontent,
+				responsive: [
+					{
+						breakpoint: 1980,
+						settings: {
+							slidesToShow: 4,
+						}
+
+					},
+					{
+						breakpoint: 996,
+						settings: {
+							slidesToShow: 3,
+						}
+					},
+					{
+						breakpoint: 675,
+						settings: {
+							slidesToShow: 2,
+						}
+					},
+					{
+						breakpoint: 490,
+						settings: {
+							slidesToShow: 1,
+						}
+					},
+				]
+			})
+		});
+	}wideslider();
 	lazyImage();
+	function scaleVideo(){
+		if($('.video-container').length){
+			if(isMobile()){
+				$('.video-container').find('.video-container-inner').remove();
+			}
+			scaleVideoContainer();
+			initBannerVideoSize('.video-container .poster img');
+			initBannerVideoSize('.video-container .filter');
+			initBannerVideoSize('.video-container video');
+
+			$(window).on('resize', function() {
+				scaleVideoContainer();
+				scaleBannerVideoSize('.video-container .poster img');
+				scaleBannerVideoSize('.video-container .filter');
+				scaleBannerVideoSize('.video-container video');
+			});
+		}
+	}
+	scaleVideo();
+
+	var suggestin = document.querySelectorAll('.js-suggest');
+	suggesinput = new suggest(suggestin);
 });
+function scaleVideoContainer() {
+
+    var height = $('.video-container').height() + 5;
+    var unitHeight = parseInt(height) + 'px';
+    $('.homepage-hero-module').css('height',unitHeight);
+
+}
+
+function initBannerVideoSize(element){
+
+    $(element).each(function(){
+        $(this).data('height', $(this).height());
+        $(this).data('width', $(this).width());
+    });
+
+    scaleBannerVideoSize(element);
+
+}
+
+function scaleBannerVideoSize(element){
+
+    var windowWidth = $('.video-container').width(),
+    windowHeight = $('.video-container').height() + 5,
+    videoWidth,
+    videoHeight;
+
+    // console.log(windowHeight);
+
+    $(element).each(function(){
+        var videoAspectRatio = $(this).data('height')/$(this).data('width');
+
+        $(this).width(windowWidth);
+
+        if(windowWidth < 1000){
+            videoHeight = windowHeight;
+            videoWidth = videoHeight / videoAspectRatio;
+            $(this).css({'margin-top' : 0, 'margin-left' : -(videoWidth - windowWidth) / 2 + 'px'});
+
+            $(this).width(videoWidth).height(videoHeight);
+        }
+
+        $('.homepage-hero-module .video-container video').addClass('fadeIn animated');
+
+    });
+}
+
+
+
+
+
+
 		function lazyImage(){
 			// Get all of the images that are marked up to lazy load
 			var images = document.querySelectorAll('.js-image');
@@ -163,7 +335,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 			var imageCount = images.length;
 			var observer = void 0;
-
 			// If we don't have support for intersection observer, loads the images immediately
 			if (!('IntersectionObserver' in window)) {
 				Array.from(images).forEach(function (image) {
@@ -205,6 +376,7 @@ document.addEventListener("DOMContentLoaded", function() {
 				}
 
 				return fetchImage(src).then(function () {
+
 					applyImage(image, src);
 				});
 			}
@@ -422,4 +594,165 @@ function formResponse(form) {
 function isMobile()
 {
 	 return (/Android|webOS|iPhone|iPod|BlackBerry|Windows Phone|iemobile/i.test(navigator.userAgent) );
+}
+
+var suburbs = ["Aberfeldy Township", "Altona", "Arthurs Creek", "Arthurs Seat", "Ashwood", "Bacchus Marsh Werribee River", "Ballan", "Beaconsfield Upper", "Beenak", "Berwick", "Blackburn", "Blackburn North", "Blue Mountain", "Box Hill", "Braeside", "Braeside Park", "Broadmeadows", "Brooklyn", "Bulla", "Bulla North", "Bulleen", "Bundoora", "Burnley", "Burwood East", "Cambarville", "Cardinia", "Caulfield", "Caulfield North", "Cement Creek", "Christmas Hills", "Clarkefield", "Clarkefield", "Clayton", "Clearwater Aqueduct", "Coburg", "Coldstream", "Collingwood", "Craigieburn", "Craigieburn East", "Cranbourne", "Dandenong", "Dandenong South", "Dandenong West", "Darraweit", "Deer Park", "Devilbend Reservoir", "Diggers Rest", "Dixons Creek", "Doncaster", "Doncaster East", "Drouin West", "Durdidwarrah", "Eastern G.C. Doncaster", "Elsternwick", "Eltham", "Emerald", "Epping", "Essendon", "Fairfield", "Fawkner", "Fiskville", "Flemington", "Footscray", "Frankston North", "Frankston Pier", "Gardiner", "Glen Forbes South", "Glen Waverley", "Graceburn", "Graceburn Creek Aqueduct", "Greensborough", "Greenvale Reservoir", "Groom's Hill", "Hampton", "Hampton Park", "Hawthorn", "Headworks", "Healesville", "Heathmont", "Heidelberg", "Hurstbridge", "Iona", "Ivanhoe", "Kangaroo Ground", "Keilor", "Keilor North", "Kew", "Keysborough", "Kinglake", "Knox", "Konagaderra", "Kooweerup", "Lake Borrie", "Lancefield", "Lancefield North", "Launching Place", "Lilydale Lake", "Little River", "Loch", "Longwarry North", "Lower Plenty", "Lyndhurst", "Lysterfield", "Maribyrnong", "Maroondah Reservoir", "Melton Reservoir", "Melton Sth Toolern Creek", "Mentone", "Mernda", "Millgrove", "Mitcham", "Montrose", "Mooroolbark", "Mornington", "Mount Dandenong", "Mount Evelyn", "Mount View", "Mt Blackwood", "Mt Bullengarook", "Mt Donna Buang", "Mt Evelyn Stringybark Creek", "Mt Gregory", "Mt Hope", "Mt Horsfall", "Mt Juliet", "Mt Macedon", "Mt St Gwinear", "Mt St Leonard", "Mt Waverley", "Myrrhee", "Narre Warren North", "Nayook", "Neerim South", "Neerim-Elton Rd", "Neerim-Neerim Creek", "Neerim-Tarago East Branch", "Neerim-Tarago West Branch", "North Wharf", "Northcote", "Notting Hill", "Nutfield", "O'Shannassy Reservoir", "Oakleigh South", "Officer", "Officer South", "Olinda", "Pakenham", "Pakenham East", "Pakenham West", "Parwon Parwan Creek", "Poley Tower", "Preston", "Reservoir", "Ringwood", "Rockbank", "Romsey", "Rosslynne Reservoir", "Rowville", "Sandringham", "Scoresby", "Seaford", "Seaford North", "Seville East", "Silvan", "Smiths Gully", "Somerton", "Southbank", "Spotswood", "Springvale", "St Albans", "St Kilda Marina", "Sunbury", "Sunshine", "Surrey Hills", "Tarago Reservoir", "Tarrawarra", "Templestowe", "The Basin", "Thomson Dam", "Tonimbuk", "Toolern Vale", "Torourrong Reservoir", "U/S Goodman Creek Lerderderg River", "Upper Lang Lang", "Upper Pakenham", "Upper Yarra Dam", "Wallaby Creek", "Wallan", "Wantirna South", "Warrandyte", "Williamstown", "Woori Yallock", "Woori Yallock Creek", "Wyndham Vale", "Yallock outflow Cora Lyn", "Yannathan", "Yarra Glen", "Yarra Glen Steels Creek", "Yarra Junction", "Yarra River downstream Doctors Creek", "Yellingbo", "Yering"];
+function suggest(el){
+	this.el = el;
+	this.options = {
+		input: '.biginput',
+		sugglist: '.js-suggest-list',
+		focus: 'focus',
+	};
+	this.keys ={
+		ESC: 27,
+		TAB: 9,
+		RETURN: 13,
+		LEFT: 37,
+		UP: 38,
+		RIGHT: 39,
+		DOWN: 40
+	};
+	this.counter = 1;
+	this.init();
+
+
+}
+suggest.prototype = {
+	init: function(){
+		this.elements = this.el;
+		this.findelements();
+	},
+	findelements: function(){
+		var self = this;
+		var lng = this.elements.length;
+		for(i = 0; i < lng; i++){
+			this.search = this.elements[i].querySelectorAll(this.options.input);
+			this.suggest = this.elements[i].querySelectorAll(this.options.sugglist);
+			this.seggestInner = this.elements[i].querySelectorAll('.suggest-list-inner');
+			$(this.suggest[0]).slideUp();
+			this.search[0].addEventListener('input', function(event){
+				self.dosearch(suburbs)
+			});
+			this.search[0].addEventListener('keydown', function(event){
+				self.doKeypress(this.keys, event);
+			});
+		}
+	},
+	dosearch: function(array){
+		var query = this.search[0].value;
+		if(query.length >= 3){
+			var results = $.grep(suburbs, function(item) {
+				return item.search(RegExp("^" + query, "i")) != -1;
+			});
+			if (results.length >= 1) {
+				/*Start things fresh by removing the suggestions div and emptying the live region before we start*/
+				this.removeChildren();
+				console.log($(this.suggest).length)
+				$(this.suggest[0]).slideDown();
+				counter = 1;
+			}
+
+			for (term in results) {
+				$(this.seggestInner).append("<div role='option' tabindex='-1' class='autocomplete-suggestion' id='suggestion-" + counter + "'>" + results[term] + "</div>");
+				counter = counter + 1;
+			}
+		}else{
+			this.removeChildren();
+			$(this.suggest[0]).slideUp();
+		}
+		this.addClickToItem();
+	},
+	addClickToItem: function(){
+		var self = this;
+		this.seggestInner[0].addEventListener('click',function(e){
+			if (e.target.matches('div')) {
+				var elem = e.target;
+				var val = elem.textContent;
+				self.search[0].value = val;
+				self.removeChildren();
+				$(self.suggest[0]).slideUp();
+			}
+		});
+	},
+	removeChildren: function(){
+		while(this.seggestInner[0].firstChild) this.seggestInner[0].removeChild(this.seggestInner[0].firstChild)
+	},
+	doKeypress: function(keys, event){
+		var self = this;
+		var highligted = false;
+		highligted = $(this.seggestInner[0]).children('div').hasClass('highligt');
+		switch (event.which) {
+
+			case this.keys.ESC:
+				self.removeChildren();
+				$(this.suggest[0]).slideUp();
+				break;
+
+			case this.keys.RIGHT:
+
+				return self.selectOption(highligted)
+				break;
+
+			case this.keys.TAB:
+				self.removeChildren();
+				$(this.suggest[0]).slideUp()
+				break;
+
+			case this.keys.RETURN:
+				if (highligted) {
+					event.preventDefault();
+					event.stopPropagation();
+					return self.selectOption(highligted)
+				}
+
+			case this.keys.UP:
+				event.preventDefault();
+				event.stopPropagation();
+				return self.moveUp(highligted);
+				break;
+
+			case this.keys.DOWN:
+				event.preventDefault();
+				event.stopPropagation();
+
+				return self.moveDown(highligted);
+				break;
+			default:
+				return;
+		}
+	},
+	moveUp: function(highligted){
+		var current;
+		if (highligted) {
+			current = $(this.seggestInner[0]).find('.highligt');
+			current.removeClass('highligt').prev('div').addClass('highligt');
+			highligted = false;
+		} else {
+			current = $(this.seggestInner[0]).children().last('div');
+			current.addClass('highligt');
+		}
+	},
+	moveDown: function(highligted){
+		var current;
+		if (highligted) {
+			current = $(this.seggestInner[0]).find('.highligt');
+			current.removeClass('highligt').next('div').addClass('highligt');
+			highligted = false;
+		} else {
+			current = $(this.seggestInner[0]).children().first('div');
+			current.addClass('highligt');
+		}
+	},
+	selectOption: function(highligted){
+		var self = this;
+		if (highligted) {
+			$(this.search[0]).val($(this.seggestInner[0]).find('.highligt').text()).focus();
+			self.removeChildren();
+			$(this.suggest[0]).slideUp();
+		} else {
+			return;
+		}
+	}
+
 }

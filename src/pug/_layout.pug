@@ -1,6 +1,6 @@
 mixin icon(name)
-	svg(class="icon icon-" + name)
-		use(xlink:href="#icon-" + name)
+	svg(class="icon")
+		use(xlink:href="#" + name+"" xmlns:xlink="http://www.w3.org/1999/xlink")
 	//- include includes/_mixins.pug
 doctype html
 html(lang="ru")

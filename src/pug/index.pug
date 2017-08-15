@@ -43,10 +43,13 @@ block content
 		.box
 			.otdel
 				.otdel-head
+					.otdel-head-search
+						//не более 1го на страницу
+						include includes/_formdropdown.pug
 					.otdel-head-title
 						h2.title.h2 Отделения
 						.arr-wrap-inner
-					.otdel-head-search
+
 				.otdel-slider-wrap
 					.otdel-slider.js-otdel
 						mixin vrach(img,title,name)
@@ -59,6 +62,7 @@ block content
 									.vrach-inner-block
 										.vrach-inner-wrap
 											.vrach-inner-title #{title}
+												+icon('smallarr')
 											.text 118 услуг
 										.vrach-inner-add
 											.vrach-inner-add-item.text TENS-терапия
@@ -66,59 +70,107 @@ block content
 											.vrach-inner-add-item.text СМТ-терапия
 											.vrach-inner-add-item.text Ультразвуковая терапия
 											.vrach-inner-add-item.text Фонофорез
-						+vrach(1,'Клинико-диагностическая лаборатория','Ирина Владимировна Мусатова')
+						+vrach(1,'Клинико-диагностическая лаборатория ','Ирина Владимировна Мусатова')
 						+vrach(1,'Физиотерапия','Ирина Владимировна Мусатова')
 						+vrach(2,'Гинекология','Стелла Олеговна Солнцева')
 						+vrach(3,'Стоматология','Ирина Владимировна Мусатова')
 						+vrach(4,'Стоматолfsdf  fs огия','Ирина Владимировна Мусатова')
 						+vrach(4,'Стоматолfsdf  fs огия','Ирина Владимировна Мусатова')
 						+vrach(2,'Гинекология','Стелла Олеговна Солнцева')
+						+vrach(2,'Гинекология','Стелла Олеговна Солнцева')
+						+vrach(2,'Гинекология','Стелла Олеговна Солнцева')
+						+vrach(2,'Гинекология','Стелла Олеговна Солнцева')
 						+vrach(3,'Стоматология','Ирина Владимировна Мусатова')
 						+vrach(4,'Стоматолfsdf  fs огия','Ирина Владимировна Мусатова')
 						+vrach(4,'Стоматолfsdf  fs огия','Ирина Владимировна Мусатова')
 					.dots-wrap
-
-		p.text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?
-		p.text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?
-		p.text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?
-		p.text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?
-		p.text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?
-		p.text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?
-		p.text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?
-		p.text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?
-		p.text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?
-		p.text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?
-		p.text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?
-		p.text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?
-		p.text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?
-		p.text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?
-		p.text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?
-		p.text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?
-		p.text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?
-		p.text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?
-		p.text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?
-		p.text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?
-		p.text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?
-		p.text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?
-		p.text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?
-		p.text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?
-		p.text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?
-		p.text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?
-		p.text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?
-		p.text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?
-		p.text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?
-		p.text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?
-		p.text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?
-		p.text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?
-		p.text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius facilis, maiores beatae eum! Pariatur ipsam aut repellat, asperiores dolores. Natus neque facilis aliquid voluptatibus voluptate cum nobis reiciendis officiis adipisci?
-		a(href="#")
+					.slider-counter
+						.slider-curr
+						.slider-divider /
+						.slider-total
+	.wrapper.gray.special
 		.box
-			a(href="#").btn
-				span Подробнее о клинике
-			a(href="#").btn.secondary
-				span Подробнее о клинике
-			a(href="#").btn.primary
-				span Подробнее о клинике
+			.about-wrapper
+				.about-inner
+					.about-about
+						.about-about-inner
+							.about-about-text
+								h2.title.h2 О нас
+								p.text.primary Наш главный принцип — поставить на службу здоровья профессионализм врача, достижения современной медицинской науки с учетом финансовых возможностей пациента
+							.about-about-items
+								mixin aboutitem(num,text)
+									.about-item
+										.about-item-inner
+											.about-item-num #{num}
+											.about-item-text.text #{text}
+								+aboutitem('13','Отделений')
+								+aboutitem('19','Лет практики')
+								+aboutitem('118','Врачей')
+								+aboutitem('1 390','Услуг')
+
+
+					.about-img
+
+						.video-container
+							//если видоса нету .video-container-inner удаляем
+							// картинка нижде обязательна всегда, т.к. выводится на мобильных устройствах
+							.video-container-inner
+								video.fillWidth(autoplay='', loop='')
+									source(src='img/index/video/clouds.mp4', type='video/mp4')
+									| Your browser does not support the video tag. I suggest you upgrade your browser.
+									source(src='img/index/video/clouds.webm', type='video/webm')
+									| Your browser does not support the video tag. I suggest you upgrade your browser.
+							.poster
+								img(data-src='img/index/clinic.jpg', alt='').js-image
+					.about-btn
+						a(href="#").btn
+							span Подробнее о клинике
+	.wrapper
+		.box
+			.wide-slider-wrap
+				.otdel-head-title
+					h2.title.h2 Новости
+					.arr-wrap-inner
+				.wide-slider
+					.wide-slider-inner.js-wide
+						mixin news(img,type,title,text)
+							.news-item
+								a(href="#").news-item-inner
+									.news-item-image
+										.news-item-image-inner
+											img(data-lazy="img/news/"+img+".jpg", alt=""+title+"")
+										if type == 1
+											.news-type
+												span Новость
+										if type == 2
+											.news-type.sale
+												span Акция	
+										if type == 3
+											.news-type.dvij
+												span Мероприятие
+									.news-item-content
+										.news-item-content-inner
+											.text-sm 25 июня 2017
+											.title.h3 #{title}
+											.text #{text}
+						+news(1,1,'Первый визит в подарок!','При оплате первого визита, сумма оплаченная Вами, зачисляется на Ваш лицевой')
+						+news(2,2,'Лазерная коррекция зрения','Определения критической нагрузки на сердце')
+						+news(3,3,'Стресс-тест','Определения критической нагрузки на сердце')
+						+news(3,3,'Стресс-тест','Определения критической нагрузки на сердце')
+						+news(3,3,'Стресс-тест','Определения критической нагрузки на сердце')
+						+news(3,3,'Стресс-тест','Определения критической нагрузки на сердце')
+						+news(3,3,'Стресс-тест','Определения критической нагрузки на сердце')
+						+news(3,3,'Стресс-тест','Определения критической нагрузки на сердце')
+						+news(3,3,'Стресс-тест','Определения критической нагрузки на сердце')
+	include includes/_slider.pug
+
+		//- .box
+		//- 	a(href="#").btn
+		//- 		span Подробнее о клинике
+		//- 	a(href="#").btn.secondary
+		//- 		span Подробнее о клинике
+		//- 	a(href="#").btn.primary
+		//- 		span Подробнее о клинике
 
 
 
