@@ -1,0 +1,130 @@
+extends _layout
+
+block title
+	title Отделения внутренняя
+block config
+	- var main = false
+block content
+	.wrapper.gray.page-head
+		.box
+			.page-head-content
+				// картинки на внутрнней странице нету, т.к. есть фотка врача
+				//- .page-head-bg
+				//- 	.page-head-bg-inner
+				//- 		img(data-src="img/head/1.jpg", alt="").js-image
+			.page-head-container
+				.page-head-inner
+					h1.title.h1 Клинико-диагностическая лаборатория
+					.bread-cont
+						a(href="#").bread-item Главная
+						a(href="#").bread-item Отделения
+						a(href="#").bread-item Клинико-диагностическая лаборатория
+				.page-head-vrach
+					.vrach-vrach
+						a(href="#").vrach-vrach-inner
+							img(data-src="img/doctor/1.png", alt="Ирина Владимировна Мусатова").js-image
+							.content-block
+								.text-sm Зав. отделением
+								.vrach-vrach-name Ирина Владимировна Мусатова
+	.wrapper
+		.box
+			.content-element
+				.aside-wrapp
+					aside.aside-menu(data-sticky_parent)
+						.aside-menu-inner
+							// есди элемент стикается - кладем его в этот контейнер,
+							.aside-menu-stick.js-stick.js-dropdown-parent
+								// модификатор .nav для ссылок на страницы и .scroll для ссылок скролящих
+								.aside-title.title.h3.js-dropdown.dropdown Отделения
+								ul.aside-nav.nav.js-dropdown-target
+									li.aside-nav-item
+										a.aside-nav-link(href="#") Клинико-диагностическая лаборатория
+									li.aside-nav-item
+										a.aside-nav-link(href="#") УЗ-диагностика
+									li.aside-nav-item
+										a.aside-nav-link(href="#") Рентгенодиагностика
+									li.aside-nav-item.js-aside-drop
+										span.aside-nav-link.dropdown Хирургия
+										ul
+											li.aside-nav-item
+												a(href="#").aside-nav-link Хирургия
+											li.aside-nav-item
+												a(href="#").aside-nav-link Травматология
+											li.aside-nav-item
+												a(href="#").aside-nav-link Онкология
+											li.aside-nav-item
+												a(href="#").aside-nav-link Эндоскопия
+									li.aside-nav-item
+										a.aside-nav-link(href="#") Стоматология
+									li.aside-nav-item
+										a.aside-nav-link(href="#") Дермотокосметология
+									li.aside-nav-item
+										a.aside-nav-link(href="#") Гинекология
+									li.aside-nav-item
+										a.aside-nav-link(href="#") Урология
+									li.aside-nav-item.js-aside-drop
+										span.aside-nav-link.dropdown Терапия
+										ul 
+											li.aside-nav-item
+												a(href="#").aside-nav-link Хирургия
+											li.aside-nav-item
+												a(href="#").aside-nav-link Травматология
+											li.aside-nav-item
+												a(href="#").aside-nav-link Онкология
+											li.aside-nav-item
+												a(href="#").aside-nav-link Эндоскопия
+									li.aside-nav-item
+										a.aside-nav-link(href="#") Офтальмология
+									li.aside-nav-item
+										a.aside-nav-link(href="#") Неврология
+									li.aside-nav-item
+										a.aside-nav-link(href="#") Оториноларингология
+									li.aside-nav-item
+										a.aside-nav-link(href="#") ФизИотерапия
+								a(href="#").link-back.dropdown Отделения
+
+					.aside-content
+						.service-wrapper
+							.service-head
+								.service-title
+									.title.h2 Услуги отделения
+								.service-search 
+									include includes/_suggest.pug
+
+						
+	include includes/_slider.pug
+
+		//- .box
+		//- 	a(href="#").btn
+		//- 		span Подробнее о клинике
+		//- 	a(href="#").btn.secondary
+		//- 		span Подробнее о клинике
+		//- 	a(href="#").btn.primary
+		//- 		span Подробнее о клинике
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	

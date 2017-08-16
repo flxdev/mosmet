@@ -584,7 +584,11 @@ body, .out
 			fill: color(secondarya)		
 			&:after
 				background-color: color(secondarya)
-
+.js-image
+	+tr(opacity .3s)
+	opacity: 0
+	&.fade-in
+		opacity: 1
 .header-row-top,.header-row-bottom
 	width: 100%
 .header-row-top
@@ -593,6 +597,8 @@ body, .out
 	+clr
 	border-bottom: 1px solid color(hborder)
 	white-space: nowrap
+	position: relative
+	z-index: 4
 	+r(960)
 		display: none
 		
@@ -1262,7 +1268,7 @@ body, .out
 		margin-top: -1px
 		min-height: 0px
 		// overflow: hidden
-		
+		background-color: color(white)
 		max-height: 0
 		+gpu
 		will-change: max-height
@@ -1449,7 +1455,9 @@ body, .out
 	&.h1 
 		+rem(font-size,50px)
 		+r(600)
-			font-size: 11vw
+			font-size: 9.8vw
+			word-wrap: break-word
+			
 	&.h2
 		+rem(font-size,36px)
 	&.h3 
@@ -2190,13 +2198,61 @@ body, .out
 			margin: auto auto 0
 			width: 100%
 			filter: grayscale(100)
-			opacity: .2
+			// opacity: .2
 			object-fit: cover
+			&.fade-in 
+				opacity: .2
 	&-inner
 		position: relative
-		z-index: 1
+		z-index: 2
 		+rem(padding-top,81px)
 		+rem(padding-bottom,41px)
+		&:not(:only-child)
+			width: 65%
+			padding-right: 5%
+			+r(600)
+				width: 100%
+				padding-right: 0
+	&-container
+		font-size: 0
+		&>div
+			display: inline-block
+			vertical-align: bottom
+			+r(600)
+				display: block
+	&-vrach
+		+rem(max-width,304px)
+		+rem(height,247px)
+		position: relative
+		z-index: 1
+		// margin-left: 5%
+		width: 30%
+		+r(600)
+			margin-left: auto
+			width: 60%
+			+rem(margin-top,-100px)
+		.vrach-vrach-name
+			position: static
+		.vrach-vrach-inner
+			display: block
+			&:hover
+				+notouch
+					img
+						filter: none
+			img 
+				+tr(filter .3s)
+				height: 100%
+		.content-block
+			position: absolute
+			+rem(bottom,40px)
+			+rem(left,20px)
+			text-align: left
+		.vrach-vrach
+			background: 0 0
+
+
+			
+		
 .bread
 	&-cont
 		+rem(margin-top,50px)
@@ -2218,15 +2274,278 @@ body, .out
 
 .content-element
 	+rem(padding-top,50px)
+	+rem(padding-bottom,55px)
+	+r(600)
+		+rem(padding-bottom,35px)
 .aside
+	&-title
+		display: block
+		+rem(padding,11px 23px 9px 13px)
+		font-weight: 600
+		font-size: 12px!important
+		text-transform: uppercase
+		position: relative
+		border-top: 1px solid color(hborder)
+		border-bottom: 1px solid color(hborder)
+		cursor: pointer
+		+nosel
+		+rm(901)
+			display: none
+			
+		&:after
+			+rem(width,8px)
+			+rem(height,12px)
+			position: absolute
+			+rem(right,13px)
+			top: calc(50% - .5rem)
+		&.active
+			border-bottom-color: transparent
+			&:after
+				transform: scale(1,-1) rotate(90deg);
+
 	&-wrapp
 		display: flex 
 		flex-flow: row wrap
 		align-items: stretch
+		position: relative
+		+r(900)
+			display: block
+
 	&-menu
 		+rem(width,303px)
+		+r(1040)
+			+rem(width,273px)
+		+r(900)
+			width: 100%
+			+rem(margin-bottom,30px)
 		&-inner
 			+rem(max-width,247px)
+			+r(900)
+				+rem(max-width,350px)
+				display: block
+				margin: 0 auto
+		&-stick
+			+r(900)
+				position: static !important
 	&-content
 		width: calc(100% -  18.9375rem)
+		+r(1040)
+			width: calc(100% - 17.0625rem)
+		+r(900)
+		 	width: 100%
+	&-nav
+		+r(900)
+			max-height: 0
+			overflow: hidden
+			+tr(max-height .3s ease-in-out)
+		&.active
+			max-height: 1000px
+		&.nav
+			.aside-nav-item
+				border-left: 1px solid color(hborder)
+				border-right: 1px solid color(hborder)
+				border-top: 1px solid color(hborder)
+				display: block
+				+tr(border-color .3s)
+				&>ul 
+					+tr(max-height .3s ease-in-out)
+					// transform: translateX(0)
+					// will-change: max-height
+					overflow: hidden
+					+rem(padding-left,20px)
+					max-height: 0
+				.aside-nav-item
+					border: none !important
+					&:last-child
+						+rem(padding-bottom,15px)
+					.aside-nav-link
+						font-weight: 400
+						+rem(padding,7px 20px 7px 23px)
+				&.active
+					&:not(.js-aside-drop)
+						border-left-color: color(primary)
+					&:not(.js-aside-drop)
+						pointer-events: none
+					&>.aside-nav-link
+						border-left-color: color(primary)
+						background-color: color(bggray)
+					.dropdown
+						&:after
+							transform: scale(1,-1) rotate(90deg);
+						+ ul
+							+rem(max-height,600px)
+				&:not(.active):hover
+					+notouch
+						border-left-color: color(primary)
+						border-right-color: color(primary)
+						border-top-color: color(primary)
+						// border-bottom-color: color(primary)
+						&+.aside-nav-item
+							border-top-color: color(primary)
+				&:last-child
+					border-bottom: 1px solid color(hborder)
+					&:hover
+						+notouch
+							border-bottom-color: color(primary)
 
+						
+			.aside-nav-link
+				text-transform: uppercase;
+				line-height: 2;
+				+rem(font-size,12px)
+				color: color(textblk)
+				display: block
+				+rem(padding,12px 23px)
+				+r(600)
+					+rem(padding,13px 23px 11px)
+				font-weight: 600
+				border-left: 2px solid transparent
+				transition: background-color .3s ,border-color .3s
+				&.dropdown
+					position: relative
+					cursor: pointer
+					&:after
+						+rem(width,8px)
+						+rem(height,12px)
+						position: absolute
+						+rem(right,20px)
+						top: calc(50% - .5rem)
+
+
+
+.section
+	+rem(margin-bottom,35px)
+	&-inner
+		+rem(padding,21px 30px 30px)
+		+r(330)
+			+rem(padding,21px 20px 20px)
+		.tabs
+			font-size: 0
+			&-left,&-right
+				display: inline-block
+				vertical-align: top
+			&-left
+				width: 33.5%
+				+rem(min-width,215px)
+				+rem(padding-right,25px)
+				+r(600)
+					width: 80%
+					+rem(min-height,170px)
+				.text
+					margin-top: .4375rem;
+					font-weight: 600;
+					color: color(secondary)
+				.tabs-item
+					cursor: pointer
+					+rem(margin-bottom,15px)
+					+nosel
+					+r(600)
+						pointer-events: none
+					&:not(.active)
+						.title
+							+rem(font-size,14px)
+							display: inline-block
+							position: relative
+							&:before
+								content: ''
+								position: absolute
+								height: 1px
+								left: 0
+								right: 0
+								bottom: -3px
+								background-image: linear-gradient(90deg,color(textblk),hsla(0,0%,100%,0) 30%);
+								background-position: bottom;
+								background-size: 6px 2px;
+								background-repeat: repeat-x;
+			&-right
+				width: 66.5%
+				max-width: calc( 100% - 13.4375rem)
+				+r(600)
+					display: none
+					
+				.footer-links-add
+					display: block
+					width: 100% !important
+					+rem(margin-top,-9px)
+				ul 
+					width: auto
+					max-width: initial
+					+rem(margin-right,-30px)
+					display: block
+					column-count: 2
+					
+					li 
+						+rem(padding-right,30px)
+						+rem(margin-bottom,4px)
+						display: table
+						break-inside: avoid-column;
+						-webkit-column-break-inside: avoid;
+						a 
+							padding-right: 0
+							line-height: 1.714;
+
+
+			&-bottom
+				display: flex 
+				flex-flow: row nowrap
+				justify-content: space-between
+				align-items: flex-end
+				+rem(margin-top,65px)
+				.btn 
+					span 
+						+rem(font-size,13px)
+						+padlr(18px)
+						+rem(padding-top,14px)
+						+rem(padding-bottom,14px)
+						+r(600)
+							font-size: 0
+							&:before
+								content: attr(data-text)
+								+rem(font-size,13px)
+				.vrach-vrach-name
+					position: static
+					+rem(margin-bottom,-5px)
+															
+.bg-secondary
+	background-color: color(secondarybg)
+	&.bg-secondary-hover
+		position: relative
+		z-index: 0
+		&:hover
+			+notouch
+				&:after
+					opacity: 1
+		&:after
+			content: ''
+			display: inline-block
+			+coverdiv
+			z-index: -1
+			box-shadow: 0px 10px 22px 0px rgba(68, 97, 119, 0.2)
+			opacity: 0
+			+tr(opacity .3s)
+.link-back
+	display: block
+	+rem(margin,45px 0 25px)
+	text-transform: uppercase;
+	line-height: 2;
+	+rem(font-size,12px)
+	color: color(textblk)
+	display: block
+	+rem(padding,12px 23px 12px 55px)
+	font-weight: 600
+	border: 1px solid color(hborder)
+	+tr(border-color .3s)
+	transition: background-color .3s ,border-color .3s
+	position: relative
+	+r(600)
+		+rem(margin,20px 0)
+	&:after
+		+rem(width,8px)
+		+rem(height,12px)
+		transform: scale(-1,1)
+		position: absolute
+		+rem(left,23px)
+		top: calc(50% - .5rem);
+	&:hover
+		+notouch
+			border-color: color(primary)

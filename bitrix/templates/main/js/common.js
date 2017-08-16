@@ -1,14 +1,6 @@
 $(window).on('load', function() {
-	function stickinit() {
-		setTimeout(function() {
-			$(".js-stick").stick_in_parent({
-				parent: ".aside-menu",
-				offset_top: 110,
-				// recalc_every: 1
-			});
-		}, 1)
-	}
 	stickinit();
+	lazyImage();
 });
 document.addEventListener("DOMContentLoaded", function() {
 
@@ -18,8 +10,10 @@ document.addEventListener("DOMContentLoaded", function() {
 		html: $('html'),
 		hidden: 'is-hidden',
 		wrpr: $('.wrapper'),
+		stick: $('.js-stick'),
 		arnextcontent: '<button type="button" class="slick-next slick-arrow"><div class="icon"><svg class="icon icon-drop"><use xlink:href="#smallarr" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></div></button>',
 		arnprevcontent: '<button type="button" class="slick-prev slick-arrow"><div class="icon"><svg class="icon icon-drop"><use xlink:href="#smallarr" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></div></button>',
+
 	};
 	(function() {
 		var mainHeader = document.querySelector('.cd-auto-hide-header');
@@ -47,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			parent = _.closest('.suggest-wrapper')
 			_.on('input',function(){
 				var len = _.val().length;
-				if(len > 3){
+				if(len >= 3){
 					parent.addClass('focus');
 				}else{
 					parent.removeClass('focus');
@@ -154,6 +148,81 @@ document.addEventListener("DOMContentLoaded", function() {
 			})
 		});
 	}indexslider();
+	function asideDrop(){
+		var elem = document.querySelectorAll('.js-aside-drop');
+		for(i=0; i<elem.length;i++){
+			elem[i].addEventListener('click',function(e){
+				if(e.target.classList.contains('aside-nav-link') && e.target.classList.contains('dropdown')) {
+					e.preventDefault();
+					var _ = this;
+					if(_.classList.contains('active')){
+						_.classList.remove('active');
+					}else{
+						for(i=0; i<elem.length;i++){
+							elem[i].classList.remove('active');
+						}
+						_.classList.add('active');
+					}
+					setTimeout(function(){
+						conf.stick.trigger("sticky_kit:recalc");
+					},302)
+				}
+			});
+		}
+	}asideDrop();
+
+
+	function MobileDropdown(trigger, parent, target) {
+		var trg = $(trigger),
+			prnt = trg.closest(parent),
+			trgt = prnt.find(target);
+		trg.each(function() {
+			$(this).on('click', function() {
+
+				var item = prnt.find(trgt);
+				if (item.hasClass('active')) {
+
+					item.add($(this)).removeClass('active');
+				} else {
+					prnt.siblings().find(trgt).removeClass('active');
+					item.add($(this)).addClass('active');
+				}
+			});
+		});
+	}
+	MobileDropdown('.js-dropdown', '.js-dropdown-parent', '.js-dropdown-target');
+
+	function Tabs() {
+		if ($('.js-tabs-wrap').length) {
+
+			var parent = $('.js-tabs-wrap');
+			parent.each(function() {
+				var _ = $(this),
+					trigger = _.find('.js-tab-trigger'),
+					tabbody = _.find('.tabs-body'),
+					tabcont = tabbody.find('.tabs-cont'),
+					triggerCur = _.find(trigger).filter('.active'),
+					triggerIndex = triggerCur.index();
+
+				if (!triggerCur.length) {
+					tabcont.not(':first').hide();
+					trigger.first().addClass('active');
+				} else {
+					tabcont.hide().eq(triggerIndex).show();
+				}
+				trigger.on('click', function(e) {
+					var _ = $(this);
+					e.preventDefault();
+					if (!_.hasClass('active')) {
+						_.addClass('active').siblings().removeClass('active');
+						var triggerA = parent.find(trigger).filter('.active');
+						tabcont.hide().eq($(triggerA).index()).fadeIn();
+					}
+				});
+			});
+		}
+	}Tabs();
+
 	function otdelslider(){
 		$(".js-otdel").each(function() {
 			var _this = $(this),
@@ -249,7 +318,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			})
 		});
 	}wideslider();
-	lazyImage();
+
 	function scaleVideo(){
 		if($('.video-container').length){
 			if(isMobile()){
@@ -299,7 +368,7 @@ function scaleBannerVideoSize(element){
 		videoWidth,
 		videoHeight;
 
-    // console.log(windowHeight);
+	// console.log(windowHeight);
 
 	$(element).each(function(){
 		var videoAspectRatio = $(this).data('height')/$(this).data('width');
@@ -318,45 +387,55 @@ function scaleBannerVideoSize(element){
 
 	});
 }
+function stickinit() {
+	setTimeout(function() {
+		$(".js-stick").stick_in_parent({
+			parent: ".aside-menu",
+			offset_top: 110,
+			// recalc_every: 1
+		});
+	}, 1)
+}
 
 
-
-
+if (!window.Promise) {
+	window.Promise = Promise;
+}
 
 
 function lazyImage(){
-			// Get all of the images that are marked up to lazy load
+	// Get all of the images that are marked up to lazy load
 	var images = document.querySelectorAll('.js-image');
 	var config = {
-				// If the image gets within 50px in the Y axis, start the download.
+		// If the image gets within 50px in the Y axis, start the download.
 		rootMargin: '50px 0px',
 		threshold: 0.01
 	};
 
 	var imageCount = images.length;
 	var observer = void 0;
-			// If we don't have support for intersection observer, loads the images immediately
+	// If we don't have support for intersection observer, loads the images immediately
 	if (!('IntersectionObserver' in window)) {
-		Array.from(images).forEach(function (image) {
-			return preloadImage(image);
-		});
+		for(var i = 0; i< images.length; i++){
+			return preloadImage(images[i]);
+		}
 	} else {
-				// It is supported, load the images
+		// It is supported, load the images
 		observer = new IntersectionObserver(onIntersection, config);
-		images.forEach(function (image) {
-			if (image.classList.contains('js-image-handled')) {
+		for(var i = 0; i< images.length; i++){
+			if (images[i].classList.contains('js-image-handled')) {
 				return;
 			}
-
-			observer.observe(image);
-		});
+			observer.observe(images[i]);
+		}
 	}
 
-			/**
-			 * Fetchs the image for the given URL
-			 * @param {string} url
-			 */
+	/**
+	 * Fetchs the image for the given URL
+	 * @param {string} url
+	 */
 	function fetchImage(url) {
+
 		return new Promise(function (resolve, reject) {
 			var image = new Image();
 			image.src = url;
@@ -365,10 +444,10 @@ function lazyImage(){
 		});
 	}
 
-			/**
-			 * Preloads the image
-			 * @param {object} image
-			 */
+	/**
+	 * Preloads the image
+	 * @param {object} image
+	 */
 	function preloadImage(image) {
 		var src = image.dataset.src;
 		if (!src) {
@@ -376,24 +455,26 @@ function lazyImage(){
 		}
 
 		return fetchImage(src).then(function () {
-
 			applyImage(image, src);
 		});
 	}
 
-			/**
-			 * Load all of the images immediately
-			 * @param {array} images
-			 */
+	/**
+	 * Load all of the images immediately
+	 * @param {array} images
+	 */
 	function loadImagesImmediately(images) {
-		Array.from(images).forEach(function (image) {
-			return preloadImage(image);
-		});
+		for(var i = 0; i< images.length; i++){
+			return preloadImage(images[i]);
+		}
+		// Array.from(images).forEach(function (image) {
+		// 	return preloadImage(image);
+		// });
 	}
 
-			/**
-			 * Disconnect the observer
-			 */
+	/**
+	 * Disconnect the observer
+	 */
 	function disconnect() {
 		if (!observer) {
 			return;
@@ -402,36 +483,37 @@ function lazyImage(){
 		observer.disconnect();
 	}
 
-			/**
-			 * On intersection
-			 * @param {array} entries
-			 */
+	/**
+	 * On intersection
+	 * @param {array} entries
+	 */
 	function onIntersection(entries) {
-				// Disconnect if we've already loaded all of the images
+		// Disconnect if we've already loaded all of the images
 		if (imageCount === 0) {
 			observer.disconnect();
 		}
 
-				// Loop through the entries
+		// Loop through the entries
+
 		entries.forEach(function (entry) {
-					// Are we in viewport?
+			// Are we in viewport?
 			if (entry.intersectionRatio > 0) {
 				imageCount--;
 
-						// Stop watching and load the image
+				// Stop watching and load the image
 				observer.unobserve(entry.target);
 				preloadImage(entry.target);
 			}
 		});
 	}
 
-			/**
-			 * Apply the image
-			 * @param {object} img
-			 * @param {string} src
-			 */
+	/**
+	 * Apply the image
+	 * @param {object} img
+	 * @param {string} src
+	 */
 	function applyImage(img, src) {
-			// Prevent this from being lazy loaded a second time.
+		// Prevent this from being lazy loaded a second time.
 		img.classList.add('js-image-handled');
 		if(img.classList.contains('bg')){
 			img.style.backgroundImage = "url("+src+")";
