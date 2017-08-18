@@ -237,6 +237,7 @@ body, .out
 	font-weight: 600
 	text-align: center
 	overflow: hidden
+	cursor: pointer
 	+nosel
 	line-height: 1
 	+rem(border-radius,4px)
@@ -2327,6 +2328,9 @@ body, .out
 		&-stick
 			+r(900)
 				position: static !important
+				&+ div
+					display: none
+					
 	&-content
 		width: calc(100% -  18.9375rem)
 		+r(1040)
@@ -2549,3 +2553,105 @@ body, .out
 	&:hover
 		+notouch
 			border-color: color(primary)
+.service
+	&-wrapper
+		+rem(margin-bottom,120px)
+		.btn 
+			width: 100%
+	&-head
+		font-size: 0
+		+rem(margin-top,5px)
+		display: flex 
+		flex-flow: row wrap
+		align-items: center
+		+r(700)
+			&>div 
+				width: 100%
+			.service-search
+				order: 1
+				padding: 0
+				+rem(margin,0 -10px)
+			.service-title
+				order: 2
+				+rem(margin-top,15px)
+		&>div
+			width: 50%	
+	&-search
+		+rem(padding-left,20px)
+		.search-wrapper 
+			+rem(margin-right,-10px)
+	&-letters
+		+rem(margin-top,25px)
+		+r(700)
+			overflow-x: auto
+			+rem(margin-top,10px)
+		&-inner
+			display: flex 
+			flex-flow: row nowrap
+			justify-content: space-between
+			border-bottom: 2px solid color(primary)
+			+rem(min-width,670px)
+	&-letter
+		&-inner
+			+rem(font-size,15px)
+			color: #cdcdcd
+			text-transform: uppercase
+			+rem(padding-top,30px)
+			+rem(padding-bottom,30px)
+		&.selected
+			color: color(textblk)
+			cursor: pointer
+			&.active
+				color: color(primary)
+		&:not(.selecte)
+			pointer-events: none
+
+	&-item
+		display: block
+		&-container
+			+rem(margin,45px 0)
+		&-title
+			+rem(margin-bottom,60px)
+			+rem(margin-top,45px)
+		&-subtitle
+			+rem(margin,-20px 0 35px)
+			.title 
+				+rem(font-size,22px)
+		&-item
+			display: flex
+			flex-flow: row nowrap
+			align-items: stretch
+			+rem(margin-right,-30px)
+			&:not(:last-child)
+				+rem(margin-bottom,50px)
+		&-letter
+			+rem(width,70px)
+			+rem(font-size,18px)
+			font-weight: 700
+			+rem(padding-left,15px)
+			+r(600)
+				+rem(width,50px)
+		&-links
+			font-size: 0
+			+rem(margin-top,-13px)
+			width: calc(100% - 4.375rem)
+			+r(600)
+				width: calc(100% - 3.125rem)
+			li
+				display: inline-block
+				width: 33%
+				vertical-align: top
+				+rem(padding-right,30px)
+				line-height: 1.7
+				+r(800)
+					width: 50%
+				+r(600)
+					width: 100%
+				a 
+					+rem(padding,13px 0)
+					&:hover
+						+notouch
+							color: color(secondary)
+
+
+
