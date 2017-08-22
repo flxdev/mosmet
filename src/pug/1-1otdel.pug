@@ -245,8 +245,132 @@ block content
 							//- 						a(href="#").text Акустическая терапия почек и верхних мочевых путей
 							//- 					li
 							//- 						a(href="#").text Акустическая терапия мочевого пузыря и предстательной железы
+	.wrapper.gray.special
+		.box
+			.about-wrapper
+				.about-inner
+					.about-about
+						.about-about-inner
+							.about-about-col
+								.about-about-text
+									h2.title.h2 Об отделении
+									p.text.primary Отделение предлагает широкий спектр эффективного немедикаментозного лечения, которое проводят специалисты высокого класса. А современное, последнего поколения оборудование помогает успешно справляться с задачей и быстро восстанавливать утраченные функции.
+							.about-about-col
+								.about-about-items
+									mixin aboutitem(num,text)
+										.about-item
+											.about-item-inner
+												.about-item-num #{num}
+												.about-item-text.text #{text}
+									+aboutitem('13','Отделений')
+									+aboutitem('19','Врачей')
+								.about-img
+									.video-container
+										.video-container-inner
+											//в этотм блоке может быть: видос <video>, айфрейм с ютуба,слайдер и просто картинка
+											.video-container-slider
+												.video-container-slider-inner.js-sideslider
+													.video-container-slider-item
+														.video-container-slider-img
+															img(data-lazy="img/index/slide.jpg", alt="")
+														.video-container-slider-text
+															.text Концентратор кислорода "Armed" 7F-3A
+													.video-container-slider-item
+														.video-container-slider-img
+															img(data-lazy="img/index/slide.jpg", alt="")
+														.video-container-slider-text
+															.text Концентратор кислорода "Armed" 7F-3A
+													.video-container-slider-item
+														.video-container-slider-img
+															img(data-lazy="img/index/slide.jpg", alt="")
+														.video-container-slider-text
+															.text Концентратор кислорода "Armed" 7F-3A
+													.video-container-slider-item
+														.video-container-slider-img
+															img(data-lazy="img/index/slide.jpg", alt="")
+														.video-container-slider-text
+															.text Концентратор кислорода "Armed" 7F-3A
+												.dots-wrap
+						.about-about-dopcontent
+							.about-about-dopcontent-inner.js-showmore-target
+								.aside-wrapp
+									.aside-menu
+										.aside-menu-inner
+											.diplom-slider-content
+												.diplom-slider-inner
+													a(href="img/big.jpg",data-sub-html='<div class="text bold">Сертификат качества3</div><p class="text2">Выдан специалисту высшего разряда</p>').diplom-slider-inner-img
+														img(data-lazy="img/document.jpg", alt="fsdfsd")
+														.text-sm Лицензия на предоставление медицинских услуг
+													a(href="img/big.jpg",data-sub-html='<div class="text bold">Сертификат качества1</div><p class="text2">Выдан специалисту высшего разряда</p>').diplom-slider-inner-img
+														img(data-lazy="img/document.jpg", alt="fsdfsd")
+														.text-sm Лицензия на предоставление медицинских услуг
+													a(href="img/big.jpg",data-sub-html='<div class="text bold">Сертификат качества31</div><p class="text2">Выдан специалисту высшего разряда</p>').diplom-slider-inner-img
+														img(data-lazy="img/document.jpg", alt="fsdfsd")
+														.text-sm Лицензия на предоставление медицинских услуг
+												.arr-wrap
+													.arr-wrap-inner
+														.slider-counter
+															.slider-curr
+															.slider-divider /
+															.slider-total
 
-						
+									.aside-content
+										.title.h2 Дополнительная информация
+										.content-wrapper
+											p В отделении успешно проводится лечение весьма распространённого в наши дни синдрома хронической усталости. Применение физиотерапевтических методик существенно расширяет диапозон лечебных возможностей и сокращает сроки лечения. Лечиться у нас - эффективное восстановление утраченного здоровья. отделении успешно проводится лечение весьма распространённого в наши дни синдрома хронической усталости.
+											p Применение физиотерапевтических методик существенно расширяет диапозон лечебных возможностей и сокращает сроки лечения. Лечиться у нас - эффективное восстановление утраченного здоровья.
+											h4 По проектам Анатолия Остроградского были созданы
+											ul 
+												li В неорусском стиле древнегреческих теремов Городское учреждение попечителей на ул. Пироговская, 9а (1909г.)
+												li Сооружение павильона гигиенической выставки в Санкт-Петербурге (1919г.)
+												li Доходные дома: ул. Старый Арбат, 28 (1903г.), ул. Пушечная, 4 (1902г.), Ул. Пречистенка, 39 (1905г.), ул. Мамонтова, 14 (1911г.)
+												li Особняки: ул. Садово-Спасская, 2 (1898), Мерзляковский пер., 20 (1902г.)
+							.link-dotted.js-showmore(data-alt-text='Свернуть описание') Подробнее об отделении
+	.wrapper
+		.box
+			.wide-slider-wrap.specialist-wrap
+				.otdel-head-title
+					.title.h2 Специалисты
+					.arr-wrap-inner
+				.wide-slider
+					.wide-slider-inner.js-specialist
+						mixin vrach2(img,title,name)
+							.vrach-wrap
+								a(href="#").vrach-inner
+									.vrach-vrach
+										.vrach-vrach-inner
+											img(data-lazy="img/doctor/"+img+".png", alt=""+name+"")
+											.vrach-vrach-name #{name}
+									.vrach-inner-block
+										.vrach-inner-wrap
+											.text-sm #{title}
+						+vrach2(1,'Невролог ','Ирина Владимировна Мусатова')
+						+vrach2(1,'Терапевт','Ирина Владимировна Мусатова')
+						+vrach2(2,'Окулист','Стелла Олеговна Солнцева')
+						+vrach2(3,'Стоматология','Ирина Владимировна Мусатова')
+						+vrach2(4,'Стоматолfsdf  fs огия','Ирина Владимировна Мусатова')
+						+vrach2(4,'Стоматолfsdf  fs огия','Ирина Владимировна Мусатова')
+						+vrach2(2,'Гинекология','Стелла Олеговна Солнцева')
+						+vrach2(2,'Гинекология','Стелла Олеговна Солнцева')
+						+vrach2(2,'Гинекология','Стелла Олеговна Солнцева')
+						+vrach2(2,'Гинекология','Стелла Олеговна Солнцева')
+						+vrach2(3,'Стоматология','Ирина Владимировна Мусатова')
+						+vrach2(4,'Стоматолfsdf','Ирина Владимировна Мусатова')
+						+vrach2(4,'Стоматолfsdf ','Ирина Владимировна Мусатова')
+						+vrach2(4,'Стоматолfsdf ','Ирина Владимировна Мусатова')
+						+vrach2(4,'Стоматолfsdf ','Ирина Владимировна Мусатова')
+						+vrach2(4,'Стоматолfsdf ','Ирина Владимировна Мусатова')
+						+vrach2(4,'Стоматолfsdf ','Ирина Владимировна Мусатова')
+						+vrach2(4,'Стоматолfsdf ','Ирина Владимировна Мусатова')
+						+vrach2(4,'Стоматолfsdf ','Ирина Владимировна Мусатова')
+						+vrach2(4,'Стоматолfsdf ','Ирина Владимировна Мусатова')
+						+vrach2(4,'Стоматолfsdf ','Ирина Владимировна Мусатова')
+						+vrach2(4,'Стоматолfsdf ','Ирина Владимировна Мусатова')
+					.dots-wrap
+					.slider-counter
+						.slider-curr
+						.slider-divider /
+						.slider-total
 	include includes/_slider.pug
 
 		//- .box

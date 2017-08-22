@@ -1,0 +1,187 @@
+extends _layout
+
+block title
+	title Лазер точечного воздействия «Лазерная ручка»
+block config
+	- var main = false
+block content
+	.wrapper.gray.page-head
+		.box
+			.page-head-content
+				.page-head-bg
+					.page-head-bg-inner
+						img(data-src="img/head/2.jpg", alt="").js-image
+				.page-head-container
+					.page-head-inner
+						h1.title.h1 Лазер точечного воздействия «Лазерная ручка»
+						.bread-cont
+							a(href="#").bread-item Главная
+							a(href="#").bread-item Услуги
+							a(href="#").bread-item Лазер точечного воздействия «Лазерная ручка»
+	.wrapper
+		.box
+			.content-element
+				.aside-wrapp
+					aside.aside-menu(data-sticky_parent)
+						.aside-menu-inner
+							.aside-menu-stick.js-stick
+								.offer-wrapper
+									.offer-wrapper-head
+										img(src="img/offer.jpg", alt="",onload='$(".js-stick").trigger("sticky_kit:recalc")')
+									.offer-wrapper-content
+										.offer-wrapper-content-inner
+											.offer-item.sale
+												.offer-item-inner
+													.offer-item-head
+														.offer-item-head-left
+															.offer-item-price 
+																span 95 000
+															.offer-item-price.small
+																span 105 000
+														.offer-item-head-right
+															.news-type.sale
+																span Акция
+															.text по 20.08
+													.offer-item-content
+														.text Первичный приём врача–кардиолога 
+											.offer-item 
+												.offer-item-inner
+													.offer-item-head
+														.offer-item-head-left
+															.offer-item-price 
+																span 2 100
+														.offer-item-head-right
+													.offer-item-content
+														.text Первичный приём врача–кардиолога
+											.offer-item 
+												.offer-item-inner
+													.offer-item-head
+														.offer-item-head-left
+															.offer-item-price 
+																span 2 100
+														.offer-item-head-right
+													.offer-item-content
+														.text Первичный приём врача–кардиолога
+											.offer-item 
+												.offer-item-inner
+													.offer-item-head
+														.offer-item-head-left
+															.offer-item-price 
+																span 2 100
+														.offer-item-head-right
+													.offer-item-content
+														.text Первичный приём врача–кардиолога
+									.offer-footer
+										a(href="#").btn.primary
+											span Записаться online
+										a(href="#",data-modal='offer').text.js-popup-button Заявка на приём
+								a(href="#").link-back.dropdown Физиотерапия
+								a(href="#").download-link
+									.download-link-icon
+										svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px',width='20px',height='25px', viewbox='0 0 23 31.8', style='enable-background:new 0 0 23 31.8;', xml:space='preserve')
+											style(type='text/css').
+												.stpdf0{fill:none;stroke:#000000;stroke-width:1.5;stroke-miterlimit:10;}
+												.stpdf2{font-size:8.5213px;}
+											g
+												path.stpdf0(d='M20.7,31.1H2.3c-0.8,0-1.5-0.7-1.5-1.5V2.3c0-0.8,0.7-1.5,1.5-1.5h9.7c0.4,0,0.8,0.2,1.1,0.4l8.8,8.8\
+												c0.3,0.3,0.4,0.7,0.4,1.1v18.6C22.2,30.4,21.5,31.1,20.7,31.1z')
+												polyline.stpdf0(points='12.6,0.8 12.6,10.4 22.2,10.4 	')
+												text.stpdf1.stpdf2(transform='matrix(1.1391 0 0 1 3.6906 25.6917)') PDF
+									.download-link-text
+										.text.primary Скачать прайс-лист
+										.text PDF, 675 Кб
+					.aside-content
+						.section.bg-secondary
+							.section-inner
+								.sectiom-inner-add-wrap
+									h2.title.h2 Избавьтесь от синдрома хронической усталости
+									.text.primary В отделении успешно проводится лечение весьма распространённого в наши дни синдрома хронической усталости. Применение физиотерапевтических методик существенно расширяет диапозон лечебных возможностей и сокращает сроки лечения.
+									.link-dotted.js-scroll-to(data-href='#content') Подробнее об услуге
+						.need-wrap
+							.title.h2 Показания к назначению 
+							hr
+							ul 
+								li В неврологии (невриты, невралгии, неврозы, астенические состояния, мигрень, вегетососудистая дистония)
+								li В неврологии (невриты, невралгии, неврозы, астенические состояния, мигрень, вегетососудистая дистония)
+								li В патологии опорно-двигательного аппарата (остеохондроз, спондилез, грыжа диска, артрозы, артриты, бурситы);
+								li В патологии опорно-двигательного аппарата (остеохондроз, спондилез, грыжа диска, артрозы, артриты, бурситы);
+								li В оториноларингологии (риниты, гаймориты, фарингиты, бронхиты, нейросенсорная тугоухость, экзема наружного слухового прохода, поллиноз);
+								li В оториноларингологии (риниты, гаймориты, фарингиты, бронхиты, нейросенсорная тугоухость, экзема наружного слухового прохода, поллиноз);
+								li В гастроэнтерологии (язвенная болезнь желудка и 12-перстной кишки, гастриты, колиты, дискинезии желчных путей);
+						.wide-slider-wrap.specialist-wrap
+							.otdel-head-title
+								.title.h2 Специалисты
+								.arr-wrap-inner
+							.wide-slider
+								//модификатор .inner
+								.wide-slider-inner.js-specialist.inner
+									mixin vrach2(img,title,name)
+										.vrach-wrap
+											a(href="#").vrach-inner
+												.vrach-vrach
+													.vrach-vrach-inner
+														img(data-lazy="img/doctor/"+img+".png", alt=""+name+"")
+														.vrach-vrach-name #{name}
+												.vrach-inner-block
+													.vrach-inner-wrap
+														.text-sm #{title}
+									+vrach2(1,'Невролог ','Ирина Владимировна Мусатова')
+									+vrach2(1,'Терапевт','Ирина Владимировна Мусатова')
+									+vrach2(2,'Окулист','Стелла Олеговна Солнцева')
+						.content-wrapper(data-id='#content')
+							h3 Описание услуги
+							p В отделении успешно проводится лечение весьма распространённого в наши дни синдрома хронической усталости. Применение физиотерапевтических методик существенно расширяет диапозон лечебных возможностей и сокращает сроки лечения. Лечиться у нас - эффективное восстановление утраченного здоровья. отделении успешно проводится лечение весьма распространённого в наши дни синдрома хронической усталости.
+							p Применение физиотерапевтических методик существенно расширяет диапозон лечебных возможностей и сокращает сроки лечения. Лечиться у нас - эффективное восстановление утраченного здоровья.
+							.content-slider
+								.content-slider-inner.js-contentslider
+									.content-slider-item
+										img(data-lazy="img/slideradd/1.jpg", alt="")
+									.content-slider-item
+										img(data-lazy="img/index/1.jpg", alt="")
+									.content-slider-item
+										img(data-lazy="img/index/slide.jpg", alt="")
+								.arr-wrap
+									.arr-wrap-inner
+										.slider-counter
+											.slider-curr
+											.slider-divider /
+											.slider-total
+							blockquote В отделении успешно проводится лечение весьма распространённого в наши дни синдрома хронической усталости. Применение физиотерапевтических методик существенно расширяет диапозон лечебных возможностей и сокращает сроки лечения. Лечиться у нас - эффективное восстановление утраченного здоровья. отделении успешно проводится лечение весьма распространённого.
+
+
+	include includes/_slider.pug
+
+		//- .box
+		//- 	a(href="#").btn
+		//- 		span Подробнее о клинике
+		//- 	a(href="#").btn.secondary
+		//- 		span Подробнее о клинике
+		//- 	a(href="#").btn.primary
+		//- 		span Подробнее о клинике
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	

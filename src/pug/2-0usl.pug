@@ -1,0 +1,357 @@
+extends _layout
+
+block title
+	title Услуги
+block config
+	- var main = false
+block content
+	.wrapper.gray.page-head
+		.box
+			.page-head-content
+				.page-head-bg
+					.page-head-bg-inner
+						img(data-src="img/head/1.jpg", alt="").js-image
+				.page-head-container
+					.page-head-inner
+						h1.title.h1 Услуги
+						.bread-cont
+							a(href="#").bread-item Главная
+							a(href="#").bread-item Услуги
+	.wrapper
+		.box
+			.content-element
+				.aside-wrapp
+					aside.aside-menu(data-sticky_parent)
+						.aside-menu-inner
+							// есди элемент стикается - кладем его в этот контейнер,
+							.aside-menu-stick.js-stick.js-dropdown-parent
+								// модификатор .nav для ссылок на страницы и .scroll для ссылок скролящих
+								.aside-title.title.h3.js-dropdown.dropdown Услуги
+								ul.aside-nav.scroll.js-dropdown-target
+									li.aside-nav-item
+										a.aside-nav-link.js-scroll-to(data-href='#1' href="#") Клинико-диагностическая лаборатория
+									li.aside-nav-item
+										a.aside-nav-link.js-scroll-to(data-href='#2' href="#") УЗ-диагностика
+									li.aside-nav-item
+										a.aside-nav-link.js-scroll-to(data-href='#3' href="#") Рентгенодиагностика
+									li.aside-nav-item
+										a.aside-nav-link.js-scroll-to(data-href='#4' href="#") Хирургия
+									li.aside-nav-item
+										a.aside-nav-link.js-scroll-to(data-href='#5' href="#") Стоматология
+									li.aside-nav-item
+										a.aside-nav-link.js-scroll-to(data-href='#6' href="#") Дерматокосметология
+									li.aside-nav-item
+										a.aside-nav-link.js-scroll-to(data-href='#7' href="#") Гинекология
+									li.aside-nav-item
+										a.aside-nav-link.js-scroll-to(data-href='#8' href="#") Урология
+									li.aside-nav-item
+										a.aside-nav-link.js-scroll-to(data-href='#9' href="#") Терапия
+									li.aside-nav-item
+										a.aside-nav-link.js-scroll-to(data-href='#10' href="#") Офтальмология
+									li.aside-nav-item
+										a.aside-nav-link.js-scroll-to(data-href='#11' href="#") Неврология
+									li.aside-nav-item
+										a.aside-nav-link.js-scroll-to(data-href='#12' href="#") Оториноларингология
+									li.aside-nav-item
+										a.aside-nav-link.js-scroll-to(data-href='#13' href="#") Физиотерапия
+									li.aside-nav-item
+										a.aside-nav-link.js-scroll-to(data-href='#14' href="#") Программы
+
+					.aside-content
+						.service-wrapper
+							.service-head
+								.service-search 
+									include includes/_suggest.pug
+							.service-letters
+								.service-letters-inner
+									- var letters = ['а','б','в','г','д','е','Ё','Ж','з','и','й','к','л','м','н','о','п','р','с','т','у','ф','х','ц','ч','ш','щ','ъ','ы','ь','э','ю','я']
+									each letter in letters
+										.service-letter.js-filter-letter(data-letter=letter)
+											.service-letter-inner= letter
+							.service-items
+
+								.service-item(data-id='#1')
+									.service-item-title
+										.title.h2 Клинико-диагностическая лаборатория
+									.service-item-container
+										.service-item-item
+											.service-item-letter
+												|A
+											ul.service-item-links
+												li
+													a(href="#").text Аэрозольтерапия через небулайзер (без препарата)
+												li
+													a(href="#").text Аэрозольтерапия Пульмикортом через небулайзер
+												li
+													a(href="#").text Аэрозольтерапия Вентолином через небулайзер
+												li
+													a(href="#").text Акустическая терапия почек и верхних мочевых путей
+												li
+													a(href="#").text Акустическая терапия мочевого пузыря и предстательной железы
+										.service-item-item
+											.service-item-letter
+												|Д
+											ul.service-item-links
+												li
+													a(href="#").text Аэрозольтерапия через небулайзер (без препарата)
+												li
+													a(href="#").text Аэрозольтерапия Пульмикортом через небулайзер
+												li
+													a(href="#").text Аэрозольтерапия Вентолином через небулайзер
+												li
+													a(href="#").text Акустическая терапия почек и верхних мочевых путей
+												li
+													a(href="#").text Акустическая терапия мочевого пузыря и предстательной железы
+										.service-item-item
+											.service-item-letter
+												|М
+											ul.service-item-links
+												li
+													a(href="#").text Аэрозольтерапия через небулайзер (без препарата)
+												li
+													a(href="#").text Аэрозольтерапия Пульмикортом через небулайзер
+												li
+													a(href="#").text Аэрозольтерапия Вентолином через небулайзер
+												li
+													a(href="#").text Акустическая терапия почек и верхних мочевых путей
+												li
+													a(href="#").text Акустическая терапия мочевого пузыря и предстательной железы
+												li
+													a(href="#").text Магнитно-резонансная ангиография интракраниальных сосудов
+												li
+													a(href="#").text Магнитно-резонансная томография всего позвоночника (всех отделов)
+												li
+													a(href="#").text Магнитно-резонансная томография головного мозгаs
+								.service-item(data-id='#2')
+									.service-item-title
+										.title.h2 УЗ-диагностика
+									.service-item-container
+										.service-item-item
+											.service-item-letter
+												|A
+											ul.service-item-links
+												li
+													a(href="#").text Аэрозольтерапия через небулайзер (без препарата)
+												li
+													a(href="#").text Аэрозольтерапия Пульмикортом через небулайзер
+												li
+													a(href="#").text Аэрозольтерапия Вентолином через небулайзер
+												li
+													a(href="#").text Акустическая терапия почек и верхних мочевых путей
+												li
+													a(href="#").text Акустическая терапия мочевого пузыря и предстательной железы
+										.service-item-item
+											.service-item-letter
+												|Д
+											ul.service-item-links
+												li
+													a(href="#").text Аэрозольтерапия через небулайзер (без препарата)
+												li
+													a(href="#").text Аэрозольтерапия Пульмикортом через небулайзер
+												li
+													a(href="#").text Аэрозольтерапия Вентолином через небулайзер
+												li
+													a(href="#").text Акустическая терапия почек и верхних мочевых путей
+												li
+													a(href="#").text Акустическая терапия мочевого пузыря и предстательной железы
+										.service-item-item
+											.service-item-letter
+												|М
+											ul.service-item-links
+												li
+													a(href="#").text Аэрозольтерапия через небулайзер (без препарата)
+												li
+													a(href="#").text Аэрозольтерапия Пульмикортом через небулайзер
+												li
+													a(href="#").text Аэрозольтерапия Вентолином через небулайзер
+												li
+													a(href="#").text Акустическая терапия почек и верхних мочевых путей
+												li
+													a(href="#").text Акустическая терапия мочевого пузыря и предстательной железы
+												li
+													a(href="#").text Магнитно-резонансная ангиография интракраниальных сосудов
+												li
+													a(href="#").text Магнитно-резонансная томография всего позвоночника (всех отделов)
+												li
+													a(href="#").text Магнитно-резонансная томография головного мозгаs
+								.service-item(data-id='#3')
+									.service-item-title
+										.title.h2 Рентгенодиагностика
+									.service-item-container
+										.service-item-item
+											.service-item-letter
+												|A
+											ul.service-item-links
+												li
+													a(href="#").text Аэрозольтерапия через небулайзер (без препарата)
+												li
+													a(href="#").text Аэрозольтерапия Пульмикортом через небулайзер
+												li
+													a(href="#").text Аэрозольтерапия Вентолином через небулайзер
+												li
+													a(href="#").text Акустическая терапия почек и верхних мочевых путей
+												li
+													a(href="#").text Акустическая терапия мочевого пузыря и предстательной железы
+										.service-item-item
+											.service-item-letter
+												|Д
+											ul.service-item-links
+												li
+													a(href="#").text Аэрозольтерапия через небулайзер (без препарата)
+												li
+													a(href="#").text Аэрозольтерапия Пульмикортом через небулайзер
+												li
+													a(href="#").text Аэрозольтерапия Вентолином через небулайзер
+												li
+													a(href="#").text Акустическая терапия почек и верхних мочевых путей
+												li
+													a(href="#").text Акустическая терапия мочевого пузыря и предстательной железы
+										.service-item-item
+											.service-item-letter
+												|М
+											ul.service-item-links
+												li
+													a(href="#").text Аэрозольтерапия через небулайзер (без препарата)
+												li
+													a(href="#").text Аэрозольтерапия Пульмикортом через небулайзер
+												li
+													a(href="#").text Аэрозольтерапия Вентолином через небулайзер
+												li
+													a(href="#").text Акустическая терапия почек и верхних мочевых путей
+												li
+													a(href="#").text Акустическая терапия мочевого пузыря и предстательной железы
+												li
+													a(href="#").text Магнитно-резонансная ангиография интракраниальных сосудов
+												li
+													a(href="#").text Магнитно-резонансная томография всего позвоночника (всех отделов)
+												li
+													a(href="#").text Магнитно-резонансная томография головного мозгаs
+								.service-item(data-id='#4')
+									.service-item-title
+										.title.h2 Хирургия
+									.service-item-container
+										.service-item-subtitle
+											.title.h3 Травматология
+										.service-item-item
+											.service-item-letter
+												|A
+											ul.service-item-links
+												li
+													a(href="#").text Аэрозольтерапия через небулайзер (без препарата)
+												li
+													a(href="#").text Аэрозольтерапия Пульмикортом через небулайзер
+												li
+													a(href="#").text Аэрозольтерапия Вентолином через небулайзер
+												li
+													a(href="#").text Акустическая терапия почек и верхних мочевых путей
+												li
+													a(href="#").text Акустическая терапия мочевого пузыря и предстательной железы
+										.service-item-item
+											.service-item-letter
+												|Д
+											ul.service-item-links
+												li
+													a(href="#").text Аэрозольтерапия через небулайзер (без препарата)
+												li
+													a(href="#").text Аэрозольтерапия Пульмикортом через небулайзер
+												li
+													a(href="#").text Аэрозольтерапия Вентолином через небулайзер
+												li
+													a(href="#").text Акустическая терапия почек и верхних мочевых путей
+												li
+													a(href="#").text Акустическая терапия мочевого пузыря и предстательной железы
+										.service-item-item
+											.service-item-letter
+												|Д
+											ul.service-item-links
+												li
+													a(href="#").text Аэрозольтерапия через небулайзер (без препарата)
+												li
+													a(href="#").text Аэрозольтерапия Пульмикортом через небулайзер
+												li
+													a(href="#").text Аэрозольтерапия Вентолином через небулайзер
+												li
+													a(href="#").text Акустическая терапия почек и верхних мочевых путей
+												li
+													a(href="#").text Акустическая терапия мочевого пузыря и предстательной железы
+									.service-item-container
+										.service-item-subtitle
+											.title.h3 Онкология
+										.service-item-item
+											.service-item-letter
+												|A
+											ul.service-item-links
+												li
+													a(href="#").text Аэрозольтерапия через небулайзер (без препарата)
+												li
+													a(href="#").text Аэрозольтерапия Пульмикортом через небулайзер
+												li
+													a(href="#").text Аэрозольтерапия Вентолином через небулайзер
+												li
+													a(href="#").text Акустическая терапия почек и верхних мочевых путей
+												li
+													a(href="#").text Акустическая терапия мочевого пузыря и предстательной железы
+										.service-item-item
+											.service-item-letter
+												|Д
+											ul.service-item-links
+												li
+													a(href="#").text Аэрозольтерапия через небулайзер (без препарата)
+												li
+													a(href="#").text Аэрозольтерапия Пульмикортом через небулайзер
+												li
+													a(href="#").text Аэрозольтерапия Вентолином через небулайзер
+												li
+													a(href="#").text Акустическая терапия почек и верхних мочевых путей
+												li
+													a(href="#").text Акустическая терапия мочевого пузыря и предстательной железы
+										.service-item-item
+											.service-item-letter
+												|Д
+											ul.service-item-links
+												li
+													a(href="#").text Аэрозольтерапия через небулайзер (без препарата)
+												li
+													a(href="#").text Аэрозольтерапия Пульмикортом через небулайзер
+												li
+													a(href="#").text Аэрозольтерапия Вентолином через небулайзер
+												li
+													a(href="#").text Акустическая терапия почек и верхних мочевых путей
+												li
+													a(href="#").text Акустическая терапия мочевого пузыря и предстательной железы
+	include includes/_slider.pug
+
+		//- .box
+		//- 	a(href="#").btn
+		//- 		span Подробнее о клинике
+		//- 	a(href="#").btn.secondary
+		//- 		span Подробнее о клинике
+		//- 	a(href="#").btn.primary
+		//- 		span Подробнее о клинике
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	

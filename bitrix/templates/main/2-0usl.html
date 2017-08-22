@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Отделения внутренняя</title>
+    <title>Услуги</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <meta content="True" name="HandheldFriendly">
@@ -246,19 +246,14 @@
             <div class="wrapper gray page-head">
               <div class="box">
                 <div class="page-head-content">
-                  <!-- картинки на внутрнней странице нету, т.к. есть фотка врача-->
-                </div>
-                <div class="page-head-container">
-                  <div class="page-head-inner">
-                    <h1 class="title h1">Клинико-диагностическая лаборатория</h1>
-                    <div class="bread-cont"><a class="bread-item" href="#">Главная</a><a class="bread-item" href="#">Отделения</a><a class="bread-item" href="#">Клинико-диагностическая лаборатория</a></div>
+                  <div class="page-head-bg">
+                    <div class="page-head-bg-inner"><img class="js-image" data-src="img/head/1.jpg" alt=""></div>
                   </div>
-                  <div class="page-head-vrach">
-                    <div class="vrach-vrach"><a class="vrach-vrach-inner" href="#"><img class="js-image" data-src="img/doctor/1.png" alt="Ирина Владимировна Мусатова">
-                        <div class="content-block">
-                          <div class="text-sm">Зав. отделением</div>
-                          <div class="vrach-vrach-name">Ирина Владимировна Мусатова</div>
-                        </div></a></div>
+                  <div class="page-head-container">
+                    <div class="page-head-inner">
+                      <h1 class="title h1">Услуги</h1>
+                      <div class="bread-cont"><a class="bread-item" href="#">Главная</a><a class="bread-item" href="#">Услуги</a></div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -272,45 +267,29 @@
                         <!-- есди элемент стикается - кладем его в этот контейнер,-->
                         <div class="aside-menu-stick js-stick js-dropdown-parent">
                           <!-- модификатор .nav для ссылок на страницы и .scroll для ссылок скролящих-->
-                          <div class="aside-title title h3 js-dropdown dropdown">Отделения</div>
-                          <ul class="aside-nav nav js-dropdown-target">
-                            <li class="aside-nav-item"><a class="aside-nav-link" href="#">Клинико-диагностическая лаборатория</a></li>
-                            <li class="aside-nav-item"><a class="aside-nav-link" href="#">УЗ-диагностика</a></li>
-                            <li class="aside-nav-item"><a class="aside-nav-link" href="#">Рентгенодиагностика</a></li>
-                            <li class="aside-nav-item js-aside-drop"><span class="aside-nav-link dropdown">Хирургия</span>
-                              <ul>
-                                <li class="aside-nav-item"><a class="aside-nav-link" href="#">Хирургия</a></li>
-                                <li class="aside-nav-item"><a class="aside-nav-link" href="#">Травматология</a></li>
-                                <li class="aside-nav-item"><a class="aside-nav-link" href="#">Онкология</a></li>
-                                <li class="aside-nav-item"><a class="aside-nav-link" href="#">Эндоскопия</a></li>
-                              </ul>
-                            </li>
-                            <li class="aside-nav-item"><a class="aside-nav-link" href="#">Стоматология</a></li>
-                            <li class="aside-nav-item"><a class="aside-nav-link" href="#">Дермотокосметология</a></li>
-                            <li class="aside-nav-item"><a class="aside-nav-link" href="#">Гинекология</a></li>
-                            <li class="aside-nav-item"><a class="aside-nav-link" href="#">Урология</a></li>
-                            <li class="aside-nav-item js-aside-drop"><span class="aside-nav-link dropdown">Терапия</span>
-                              <ul> 
-                                <li class="aside-nav-item"><a class="aside-nav-link" href="#">Хирургия</a></li>
-                                <li class="aside-nav-item"><a class="aside-nav-link" href="#">Травматология</a></li>
-                                <li class="aside-nav-item"><a class="aside-nav-link" href="#">Онкология</a></li>
-                                <li class="aside-nav-item"><a class="aside-nav-link" href="#">Эндоскопия</a></li>
-                              </ul>
-                            </li>
-                            <li class="aside-nav-item"><a class="aside-nav-link" href="#">Офтальмология</a></li>
-                            <li class="aside-nav-item"><a class="aside-nav-link" href="#">Неврология</a></li>
-                            <li class="aside-nav-item"><a class="aside-nav-link" href="#">Оториноларингология</a></li>
-                            <li class="aside-nav-item"><a class="aside-nav-link" href="#">ФизИотерапия</a></li>
-                          </ul><a class="link-back dropdown" href="#">Отделения</a>
+                          <div class="aside-title title h3 js-dropdown dropdown">Услуги</div>
+                          <ul class="aside-nav scroll js-dropdown-target">
+                            <li class="aside-nav-item"><a class="aside-nav-link js-scroll-to" data-href="#1" href="#">Клинико-диагностическая лаборатория</a></li>
+                            <li class="aside-nav-item"><a class="aside-nav-link js-scroll-to" data-href="#2" href="#">УЗ-диагностика</a></li>
+                            <li class="aside-nav-item"><a class="aside-nav-link js-scroll-to" data-href="#3" href="#">Рентгенодиагностика</a></li>
+                            <li class="aside-nav-item"><a class="aside-nav-link js-scroll-to" data-href="#4" href="#">Хирургия</a></li>
+                            <li class="aside-nav-item"><a class="aside-nav-link js-scroll-to" data-href="#5" href="#">Стоматология</a></li>
+                            <li class="aside-nav-item"><a class="aside-nav-link js-scroll-to" data-href="#6" href="#">Дерматокосметология</a></li>
+                            <li class="aside-nav-item"><a class="aside-nav-link js-scroll-to" data-href="#7" href="#">Гинекология</a></li>
+                            <li class="aside-nav-item"><a class="aside-nav-link js-scroll-to" data-href="#8" href="#">Урология</a></li>
+                            <li class="aside-nav-item"><a class="aside-nav-link js-scroll-to" data-href="#9" href="#">Терапия</a></li>
+                            <li class="aside-nav-item"><a class="aside-nav-link js-scroll-to" data-href="#10" href="#">Офтальмология</a></li>
+                            <li class="aside-nav-item"><a class="aside-nav-link js-scroll-to" data-href="#11" href="#">Неврология</a></li>
+                            <li class="aside-nav-item"><a class="aside-nav-link js-scroll-to" data-href="#12" href="#">Оториноларингология</a></li>
+                            <li class="aside-nav-item"><a class="aside-nav-link js-scroll-to" data-href="#13" href="#">Физиотерапия</a></li>
+                            <li class="aside-nav-item"><a class="aside-nav-link js-scroll-to" data-href="#14" href="#">Программы</a></li>
+                          </ul>
                         </div>
                       </div>
                     </aside>
                     <div class="aside-content">
                       <div class="service-wrapper">
                         <div class="service-head">
-                          <div class="service-title">
-                            <div class="title h2">Услуги отделения</div>
-                          </div>
                           <div class="service-search"> 
                             <!--suggest component-->
                             <div class="search-wrapper suggest-wrapper js-suggest">
@@ -434,7 +413,10 @@
                           </div>
                         </div>
                         <div class="service-items">
-                          <div class="service-item">
+                          <div class="service-item" data-id="#1">
+                            <div class="service-item-title">
+                              <div class="title h2">Клинико-диагностическая лаборатория</div>
+                            </div>
                             <div class="service-item-container">
                               <div class="service-item-item">
                                 <div class="service-item-letter">A</div>
@@ -466,386 +448,168 @@
                                   <li><a class="text" href="#">Акустическая терапия мочевого пузыря и предстательной железы</a></li>
                                   <li><a class="text" href="#">Магнитно-резонансная ангиография интракраниальных сосудов</a></li>
                                   <li><a class="text" href="#">Магнитно-резонансная томография всего позвоночника (всех отделов)</a></li>
-                                  <li><a class="text" href="#">Магнитно-резонансная томография головного мозга</a></li>
-                                </ul>
-                              </div>
-                            </div>
-                            <div class="btn js-expand"><span>Смотреть все 118 услуг</span></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="wrapper gray special">
-              <div class="box">
-                <div class="about-wrapper">
-                  <div class="about-inner">
-                    <div class="about-about">
-                      <div class="about-about-inner">
-                        <div class="about-about-col">
-                          <div class="about-about-text">
-                            <h2 class="title h2">Об отделении</h2>
-                            <p class="text primary">Отделение предлагает широкий спектр эффективного немедикаментозного лечения, которое проводят специалисты высокого класса. А современное, последнего поколения оборудование помогает успешно справляться с задачей и быстро восстанавливать утраченные функции.</p>
-                          </div>
-                        </div>
-                        <div class="about-about-col">
-                          <div class="about-about-items">
-                                                        <div class="about-item">
-                                                          <div class="about-item-inner">
-                                                            <div class="about-item-num">13</div>
-                                                            <div class="about-item-text text">Отделений</div>
-                                                          </div>
-                                                        </div>
-                                                        <div class="about-item">
-                                                          <div class="about-item-inner">
-                                                            <div class="about-item-num">19</div>
-                                                            <div class="about-item-text text">Врачей</div>
-                                                          </div>
-                                                        </div>
-                          </div>
-                          <div class="about-img">
-                            <div class="video-container">
-                              <div class="video-container-inner">
-                                <!--в этотм блоке может быть: видос <video>, айфрейм с ютуба,слайдер и просто картинка-->
-                                <div class="video-container-slider">
-                                  <div class="video-container-slider-inner js-sideslider">
-                                    <div class="video-container-slider-item">
-                                      <div class="video-container-slider-img"><img data-lazy="img/index/slide.jpg" alt=""></div>
-                                      <div class="video-container-slider-text">
-                                        <div class="text">Концентратор кислорода "Armed" 7F-3A</div>
-                                      </div>
-                                    </div>
-                                    <div class="video-container-slider-item">
-                                      <div class="video-container-slider-img"><img data-lazy="img/index/slide.jpg" alt=""></div>
-                                      <div class="video-container-slider-text">
-                                        <div class="text">Концентратор кислорода "Armed" 7F-3A</div>
-                                      </div>
-                                    </div>
-                                    <div class="video-container-slider-item">
-                                      <div class="video-container-slider-img"><img data-lazy="img/index/slide.jpg" alt=""></div>
-                                      <div class="video-container-slider-text">
-                                        <div class="text">Концентратор кислорода "Armed" 7F-3A</div>
-                                      </div>
-                                    </div>
-                                    <div class="video-container-slider-item">
-                                      <div class="video-container-slider-img"><img data-lazy="img/index/slide.jpg" alt=""></div>
-                                      <div class="video-container-slider-text">
-                                        <div class="text">Концентратор кислорода "Armed" 7F-3A</div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="dots-wrap"></div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="about-about-dopcontent">
-                        <div class="about-about-dopcontent-inner js-showmore-target">
-                          <div class="aside-wrapp">
-                            <div class="aside-menu">
-                              <div class="aside-menu-inner">
-                                <div class="diplom-slider-content">
-                                  <div class="diplom-slider-inner"><a class="diplom-slider-inner-img" href="img/big.jpg" data-sub-html="&lt;div class=&quot;text bold&quot;&gt;Сертификат качества3&lt;/div&gt;&lt;p class=&quot;text2&quot;&gt;Выдан специалисту высшего разряда&lt;/p&gt;"><img data-lazy="img/document.jpg" alt="fsdfsd">
-                                      <div class="text-sm">Лицензия на предоставление медицинских услуг</div></a><a class="diplom-slider-inner-img" href="img/big.jpg" data-sub-html="&lt;div class=&quot;text bold&quot;&gt;Сертификат качества1&lt;/div&gt;&lt;p class=&quot;text2&quot;&gt;Выдан специалисту высшего разряда&lt;/p&gt;"><img data-lazy="img/document.jpg" alt="fsdfsd">
-                                      <div class="text-sm">Лицензия на предоставление медицинских услуг</div></a><a class="diplom-slider-inner-img" href="img/big.jpg" data-sub-html="&lt;div class=&quot;text bold&quot;&gt;Сертификат качества31&lt;/div&gt;&lt;p class=&quot;text2&quot;&gt;Выдан специалисту высшего разряда&lt;/p&gt;"><img data-lazy="img/document.jpg" alt="fsdfsd">
-                                      <div class="text-sm">Лицензия на предоставление медицинских услуг</div></a></div>
-                                  <div class="arr-wrap">
-                                    <div class="arr-wrap-inner">
-                                      <div class="slider-counter">
-                                        <div class="slider-curr"></div>
-                                        <div class="slider-divider">/</div>
-                                        <div class="slider-total"></div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="aside-content">
-                              <div class="title h2">Дополнительная информация</div>
-                              <div class="content-wrapper">
-                                <p>В отделении успешно проводится лечение весьма распространённого в наши дни синдрома хронической усталости. Применение физиотерапевтических методик существенно расширяет диапозон лечебных возможностей и сокращает сроки лечения. Лечиться у нас - эффективное восстановление утраченного здоровья. отделении успешно проводится лечение весьма распространённого в наши дни синдрома хронической усталости.</p>
-                                <p>Применение физиотерапевтических методик существенно расширяет диапозон лечебных возможностей и сокращает сроки лечения. Лечиться у нас - эффективное восстановление утраченного здоровья.</p>
-                                <h4>По проектам Анатолия Остроградского были созданы</h4>
-                                <ul> 
-                                  <li>В неорусском стиле древнегреческих теремов Городское учреждение попечителей на ул. Пироговская, 9а (1909г.)</li>
-                                  <li>Сооружение павильона гигиенической выставки в Санкт-Петербурге (1919г.)</li>
-                                  <li>Доходные дома: ул. Старый Арбат, 28 (1903г.), ул. Пушечная, 4 (1902г.), Ул. Пречистенка, 39 (1905г.), ул. Мамонтова, 14 (1911г.)</li>
-                                  <li>Особняки: ул. Садово-Спасская, 2 (1898), Мерзляковский пер., 20 (1902г.)</li>
+                                  <li><a class="text" href="#">Магнитно-резонансная томография головного мозгаs</a></li>
                                 </ul>
                               </div>
                             </div>
                           </div>
+                          <div class="service-item" data-id="#2">
+                            <div class="service-item-title">
+                              <div class="title h2">УЗ-диагностика</div>
+                            </div>
+                            <div class="service-item-container">
+                              <div class="service-item-item">
+                                <div class="service-item-letter">A</div>
+                                <ul class="service-item-links">
+                                  <li><a class="text" href="#">Аэрозольтерапия через небулайзер (без препарата)</a></li>
+                                  <li><a class="text" href="#">Аэрозольтерапия Пульмикортом через небулайзер</a></li>
+                                  <li><a class="text" href="#">Аэрозольтерапия Вентолином через небулайзер</a></li>
+                                  <li><a class="text" href="#">Акустическая терапия почек и верхних мочевых путей</a></li>
+                                  <li><a class="text" href="#">Акустическая терапия мочевого пузыря и предстательной железы</a></li>
+                                </ul>
+                              </div>
+                              <div class="service-item-item">
+                                <div class="service-item-letter">Д</div>
+                                <ul class="service-item-links">
+                                  <li><a class="text" href="#">Аэрозольтерапия через небулайзер (без препарата)</a></li>
+                                  <li><a class="text" href="#">Аэрозольтерапия Пульмикортом через небулайзер</a></li>
+                                  <li><a class="text" href="#">Аэрозольтерапия Вентолином через небулайзер</a></li>
+                                  <li><a class="text" href="#">Акустическая терапия почек и верхних мочевых путей</a></li>
+                                  <li><a class="text" href="#">Акустическая терапия мочевого пузыря и предстательной железы</a></li>
+                                </ul>
+                              </div>
+                              <div class="service-item-item">
+                                <div class="service-item-letter">М</div>
+                                <ul class="service-item-links">
+                                  <li><a class="text" href="#">Аэрозольтерапия через небулайзер (без препарата)</a></li>
+                                  <li><a class="text" href="#">Аэрозольтерапия Пульмикортом через небулайзер</a></li>
+                                  <li><a class="text" href="#">Аэрозольтерапия Вентолином через небулайзер</a></li>
+                                  <li><a class="text" href="#">Акустическая терапия почек и верхних мочевых путей</a></li>
+                                  <li><a class="text" href="#">Акустическая терапия мочевого пузыря и предстательной железы</a></li>
+                                  <li><a class="text" href="#">Магнитно-резонансная ангиография интракраниальных сосудов</a></li>
+                                  <li><a class="text" href="#">Магнитно-резонансная томография всего позвоночника (всех отделов)</a></li>
+                                  <li><a class="text" href="#">Магнитно-резонансная томография головного мозгаs</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="service-item" data-id="#3">
+                            <div class="service-item-title">
+                              <div class="title h2">Рентгенодиагностика</div>
+                            </div>
+                            <div class="service-item-container">
+                              <div class="service-item-item">
+                                <div class="service-item-letter">A</div>
+                                <ul class="service-item-links">
+                                  <li><a class="text" href="#">Аэрозольтерапия через небулайзер (без препарата)</a></li>
+                                  <li><a class="text" href="#">Аэрозольтерапия Пульмикортом через небулайзер</a></li>
+                                  <li><a class="text" href="#">Аэрозольтерапия Вентолином через небулайзер</a></li>
+                                  <li><a class="text" href="#">Акустическая терапия почек и верхних мочевых путей</a></li>
+                                  <li><a class="text" href="#">Акустическая терапия мочевого пузыря и предстательной железы</a></li>
+                                </ul>
+                              </div>
+                              <div class="service-item-item">
+                                <div class="service-item-letter">Д</div>
+                                <ul class="service-item-links">
+                                  <li><a class="text" href="#">Аэрозольтерапия через небулайзер (без препарата)</a></li>
+                                  <li><a class="text" href="#">Аэрозольтерапия Пульмикортом через небулайзер</a></li>
+                                  <li><a class="text" href="#">Аэрозольтерапия Вентолином через небулайзер</a></li>
+                                  <li><a class="text" href="#">Акустическая терапия почек и верхних мочевых путей</a></li>
+                                  <li><a class="text" href="#">Акустическая терапия мочевого пузыря и предстательной железы</a></li>
+                                </ul>
+                              </div>
+                              <div class="service-item-item">
+                                <div class="service-item-letter">М</div>
+                                <ul class="service-item-links">
+                                  <li><a class="text" href="#">Аэрозольтерапия через небулайзер (без препарата)</a></li>
+                                  <li><a class="text" href="#">Аэрозольтерапия Пульмикортом через небулайзер</a></li>
+                                  <li><a class="text" href="#">Аэрозольтерапия Вентолином через небулайзер</a></li>
+                                  <li><a class="text" href="#">Акустическая терапия почек и верхних мочевых путей</a></li>
+                                  <li><a class="text" href="#">Акустическая терапия мочевого пузыря и предстательной железы</a></li>
+                                  <li><a class="text" href="#">Магнитно-резонансная ангиография интракраниальных сосудов</a></li>
+                                  <li><a class="text" href="#">Магнитно-резонансная томография всего позвоночника (всех отделов)</a></li>
+                                  <li><a class="text" href="#">Магнитно-резонансная томография головного мозгаs</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="service-item" data-id="#4">
+                            <div class="service-item-title">
+                              <div class="title h2">Хирургия</div>
+                            </div>
+                            <div class="service-item-container">
+                              <div class="service-item-subtitle">
+                                <div class="title h3">Травматология</div>
+                              </div>
+                              <div class="service-item-item">
+                                <div class="service-item-letter">A</div>
+                                <ul class="service-item-links">
+                                  <li><a class="text" href="#">Аэрозольтерапия через небулайзер (без препарата)</a></li>
+                                  <li><a class="text" href="#">Аэрозольтерапия Пульмикортом через небулайзер</a></li>
+                                  <li><a class="text" href="#">Аэрозольтерапия Вентолином через небулайзер</a></li>
+                                  <li><a class="text" href="#">Акустическая терапия почек и верхних мочевых путей</a></li>
+                                  <li><a class="text" href="#">Акустическая терапия мочевого пузыря и предстательной железы</a></li>
+                                </ul>
+                              </div>
+                              <div class="service-item-item">
+                                <div class="service-item-letter">Д</div>
+                                <ul class="service-item-links">
+                                  <li><a class="text" href="#">Аэрозольтерапия через небулайзер (без препарата)</a></li>
+                                  <li><a class="text" href="#">Аэрозольтерапия Пульмикортом через небулайзер</a></li>
+                                  <li><a class="text" href="#">Аэрозольтерапия Вентолином через небулайзер</a></li>
+                                  <li><a class="text" href="#">Акустическая терапия почек и верхних мочевых путей</a></li>
+                                  <li><a class="text" href="#">Акустическая терапия мочевого пузыря и предстательной железы</a></li>
+                                </ul>
+                              </div>
+                              <div class="service-item-item">
+                                <div class="service-item-letter">Д</div>
+                                <ul class="service-item-links">
+                                  <li><a class="text" href="#">Аэрозольтерапия через небулайзер (без препарата)</a></li>
+                                  <li><a class="text" href="#">Аэрозольтерапия Пульмикортом через небулайзер</a></li>
+                                  <li><a class="text" href="#">Аэрозольтерапия Вентолином через небулайзер</a></li>
+                                  <li><a class="text" href="#">Акустическая терапия почек и верхних мочевых путей</a></li>
+                                  <li><a class="text" href="#">Акустическая терапия мочевого пузыря и предстательной железы</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="service-item-container">
+                              <div class="service-item-subtitle">
+                                <div class="title h3">Онкология</div>
+                              </div>
+                              <div class="service-item-item">
+                                <div class="service-item-letter">A</div>
+                                <ul class="service-item-links">
+                                  <li><a class="text" href="#">Аэрозольтерапия через небулайзер (без препарата)</a></li>
+                                  <li><a class="text" href="#">Аэрозольтерапия Пульмикортом через небулайзер</a></li>
+                                  <li><a class="text" href="#">Аэрозольтерапия Вентолином через небулайзер</a></li>
+                                  <li><a class="text" href="#">Акустическая терапия почек и верхних мочевых путей</a></li>
+                                  <li><a class="text" href="#">Акустическая терапия мочевого пузыря и предстательной железы</a></li>
+                                </ul>
+                              </div>
+                              <div class="service-item-item">
+                                <div class="service-item-letter">Д</div>
+                                <ul class="service-item-links">
+                                  <li><a class="text" href="#">Аэрозольтерапия через небулайзер (без препарата)</a></li>
+                                  <li><a class="text" href="#">Аэрозольтерапия Пульмикортом через небулайзер</a></li>
+                                  <li><a class="text" href="#">Аэрозольтерапия Вентолином через небулайзер</a></li>
+                                  <li><a class="text" href="#">Акустическая терапия почек и верхних мочевых путей</a></li>
+                                  <li><a class="text" href="#">Акустическая терапия мочевого пузыря и предстательной железы</a></li>
+                                </ul>
+                              </div>
+                              <div class="service-item-item">
+                                <div class="service-item-letter">Д</div>
+                                <ul class="service-item-links">
+                                  <li><a class="text" href="#">Аэрозольтерапия через небулайзер (без препарата)</a></li>
+                                  <li><a class="text" href="#">Аэрозольтерапия Пульмикортом через небулайзер</a></li>
+                                  <li><a class="text" href="#">Аэрозольтерапия Вентолином через небулайзер</a></li>
+                                  <li><a class="text" href="#">Акустическая терапия почек и верхних мочевых путей</a></li>
+                                  <li><a class="text" href="#">Акустическая терапия мочевого пузыря и предстательной железы</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                        <div class="link-dotted js-showmore" data-alt-text="Свернуть описание">Подробнее об отделении</div>
                       </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="wrapper">
-              <div class="box">
-                <div class="wide-slider-wrap specialist-wrap">
-                  <div class="otdel-head-title">
-                    <div class="title h2">Специалисты</div>
-                    <div class="arr-wrap-inner"></div>
-                  </div>
-                  <div class="wide-slider">
-                    <div class="wide-slider-inner js-specialist">
-                                            <div class="vrach-wrap"><a class="vrach-inner" href="#">
-                                                <div class="vrach-vrach">
-                                                  <div class="vrach-vrach-inner"><img data-lazy="img/doctor/1.png" alt="Ирина Владимировна Мусатова">
-                                                    <div class="vrach-vrach-name">Ирина Владимировна Мусатова</div>
-                                                  </div>
-                                                </div>
-                                                <div class="vrach-inner-block">
-                                                  <div class="vrach-inner-wrap">
-                                                    <div class="text-sm">Невролог </div>
-                                                  </div>
-                                                </div></a></div>
-                                            <div class="vrach-wrap"><a class="vrach-inner" href="#">
-                                                <div class="vrach-vrach">
-                                                  <div class="vrach-vrach-inner"><img data-lazy="img/doctor/1.png" alt="Ирина Владимировна Мусатова">
-                                                    <div class="vrach-vrach-name">Ирина Владимировна Мусатова</div>
-                                                  </div>
-                                                </div>
-                                                <div class="vrach-inner-block">
-                                                  <div class="vrach-inner-wrap">
-                                                    <div class="text-sm">Терапевт</div>
-                                                  </div>
-                                                </div></a></div>
-                                            <div class="vrach-wrap"><a class="vrach-inner" href="#">
-                                                <div class="vrach-vrach">
-                                                  <div class="vrach-vrach-inner"><img data-lazy="img/doctor/2.png" alt="Стелла Олеговна Солнцева">
-                                                    <div class="vrach-vrach-name">Стелла Олеговна Солнцева</div>
-                                                  </div>
-                                                </div>
-                                                <div class="vrach-inner-block">
-                                                  <div class="vrach-inner-wrap">
-                                                    <div class="text-sm">Окулист</div>
-                                                  </div>
-                                                </div></a></div>
-                                            <div class="vrach-wrap"><a class="vrach-inner" href="#">
-                                                <div class="vrach-vrach">
-                                                  <div class="vrach-vrach-inner"><img data-lazy="img/doctor/3.png" alt="Ирина Владимировна Мусатова">
-                                                    <div class="vrach-vrach-name">Ирина Владимировна Мусатова</div>
-                                                  </div>
-                                                </div>
-                                                <div class="vrach-inner-block">
-                                                  <div class="vrach-inner-wrap">
-                                                    <div class="text-sm">Стоматология</div>
-                                                  </div>
-                                                </div></a></div>
-                                            <div class="vrach-wrap"><a class="vrach-inner" href="#">
-                                                <div class="vrach-vrach">
-                                                  <div class="vrach-vrach-inner"><img data-lazy="img/doctor/4.png" alt="Ирина Владимировна Мусатова">
-                                                    <div class="vrach-vrach-name">Ирина Владимировна Мусатова</div>
-                                                  </div>
-                                                </div>
-                                                <div class="vrach-inner-block">
-                                                  <div class="vrach-inner-wrap">
-                                                    <div class="text-sm">Стоматолfsdf  fs огия</div>
-                                                  </div>
-                                                </div></a></div>
-                                            <div class="vrach-wrap"><a class="vrach-inner" href="#">
-                                                <div class="vrach-vrach">
-                                                  <div class="vrach-vrach-inner"><img data-lazy="img/doctor/4.png" alt="Ирина Владимировна Мусатова">
-                                                    <div class="vrach-vrach-name">Ирина Владимировна Мусатова</div>
-                                                  </div>
-                                                </div>
-                                                <div class="vrach-inner-block">
-                                                  <div class="vrach-inner-wrap">
-                                                    <div class="text-sm">Стоматолfsdf  fs огия</div>
-                                                  </div>
-                                                </div></a></div>
-                                            <div class="vrach-wrap"><a class="vrach-inner" href="#">
-                                                <div class="vrach-vrach">
-                                                  <div class="vrach-vrach-inner"><img data-lazy="img/doctor/2.png" alt="Стелла Олеговна Солнцева">
-                                                    <div class="vrach-vrach-name">Стелла Олеговна Солнцева</div>
-                                                  </div>
-                                                </div>
-                                                <div class="vrach-inner-block">
-                                                  <div class="vrach-inner-wrap">
-                                                    <div class="text-sm">Гинекология</div>
-                                                  </div>
-                                                </div></a></div>
-                                            <div class="vrach-wrap"><a class="vrach-inner" href="#">
-                                                <div class="vrach-vrach">
-                                                  <div class="vrach-vrach-inner"><img data-lazy="img/doctor/2.png" alt="Стелла Олеговна Солнцева">
-                                                    <div class="vrach-vrach-name">Стелла Олеговна Солнцева</div>
-                                                  </div>
-                                                </div>
-                                                <div class="vrach-inner-block">
-                                                  <div class="vrach-inner-wrap">
-                                                    <div class="text-sm">Гинекология</div>
-                                                  </div>
-                                                </div></a></div>
-                                            <div class="vrach-wrap"><a class="vrach-inner" href="#">
-                                                <div class="vrach-vrach">
-                                                  <div class="vrach-vrach-inner"><img data-lazy="img/doctor/2.png" alt="Стелла Олеговна Солнцева">
-                                                    <div class="vrach-vrach-name">Стелла Олеговна Солнцева</div>
-                                                  </div>
-                                                </div>
-                                                <div class="vrach-inner-block">
-                                                  <div class="vrach-inner-wrap">
-                                                    <div class="text-sm">Гинекология</div>
-                                                  </div>
-                                                </div></a></div>
-                                            <div class="vrach-wrap"><a class="vrach-inner" href="#">
-                                                <div class="vrach-vrach">
-                                                  <div class="vrach-vrach-inner"><img data-lazy="img/doctor/2.png" alt="Стелла Олеговна Солнцева">
-                                                    <div class="vrach-vrach-name">Стелла Олеговна Солнцева</div>
-                                                  </div>
-                                                </div>
-                                                <div class="vrach-inner-block">
-                                                  <div class="vrach-inner-wrap">
-                                                    <div class="text-sm">Гинекология</div>
-                                                  </div>
-                                                </div></a></div>
-                                            <div class="vrach-wrap"><a class="vrach-inner" href="#">
-                                                <div class="vrach-vrach">
-                                                  <div class="vrach-vrach-inner"><img data-lazy="img/doctor/3.png" alt="Ирина Владимировна Мусатова">
-                                                    <div class="vrach-vrach-name">Ирина Владимировна Мусатова</div>
-                                                  </div>
-                                                </div>
-                                                <div class="vrach-inner-block">
-                                                  <div class="vrach-inner-wrap">
-                                                    <div class="text-sm">Стоматология</div>
-                                                  </div>
-                                                </div></a></div>
-                                            <div class="vrach-wrap"><a class="vrach-inner" href="#">
-                                                <div class="vrach-vrach">
-                                                  <div class="vrach-vrach-inner"><img data-lazy="img/doctor/4.png" alt="Ирина Владимировна Мусатова">
-                                                    <div class="vrach-vrach-name">Ирина Владимировна Мусатова</div>
-                                                  </div>
-                                                </div>
-                                                <div class="vrach-inner-block">
-                                                  <div class="vrach-inner-wrap">
-                                                    <div class="text-sm">Стоматолfsdf</div>
-                                                  </div>
-                                                </div></a></div>
-                                            <div class="vrach-wrap"><a class="vrach-inner" href="#">
-                                                <div class="vrach-vrach">
-                                                  <div class="vrach-vrach-inner"><img data-lazy="img/doctor/4.png" alt="Ирина Владимировна Мусатова">
-                                                    <div class="vrach-vrach-name">Ирина Владимировна Мусатова</div>
-                                                  </div>
-                                                </div>
-                                                <div class="vrach-inner-block">
-                                                  <div class="vrach-inner-wrap">
-                                                    <div class="text-sm">Стоматолfsdf </div>
-                                                  </div>
-                                                </div></a></div>
-                                            <div class="vrach-wrap"><a class="vrach-inner" href="#">
-                                                <div class="vrach-vrach">
-                                                  <div class="vrach-vrach-inner"><img data-lazy="img/doctor/4.png" alt="Ирина Владимировна Мусатова">
-                                                    <div class="vrach-vrach-name">Ирина Владимировна Мусатова</div>
-                                                  </div>
-                                                </div>
-                                                <div class="vrach-inner-block">
-                                                  <div class="vrach-inner-wrap">
-                                                    <div class="text-sm">Стоматолfsdf </div>
-                                                  </div>
-                                                </div></a></div>
-                                            <div class="vrach-wrap"><a class="vrach-inner" href="#">
-                                                <div class="vrach-vrach">
-                                                  <div class="vrach-vrach-inner"><img data-lazy="img/doctor/4.png" alt="Ирина Владимировна Мусатова">
-                                                    <div class="vrach-vrach-name">Ирина Владимировна Мусатова</div>
-                                                  </div>
-                                                </div>
-                                                <div class="vrach-inner-block">
-                                                  <div class="vrach-inner-wrap">
-                                                    <div class="text-sm">Стоматолfsdf </div>
-                                                  </div>
-                                                </div></a></div>
-                                            <div class="vrach-wrap"><a class="vrach-inner" href="#">
-                                                <div class="vrach-vrach">
-                                                  <div class="vrach-vrach-inner"><img data-lazy="img/doctor/4.png" alt="Ирина Владимировна Мусатова">
-                                                    <div class="vrach-vrach-name">Ирина Владимировна Мусатова</div>
-                                                  </div>
-                                                </div>
-                                                <div class="vrach-inner-block">
-                                                  <div class="vrach-inner-wrap">
-                                                    <div class="text-sm">Стоматолfsdf </div>
-                                                  </div>
-                                                </div></a></div>
-                                            <div class="vrach-wrap"><a class="vrach-inner" href="#">
-                                                <div class="vrach-vrach">
-                                                  <div class="vrach-vrach-inner"><img data-lazy="img/doctor/4.png" alt="Ирина Владимировна Мусатова">
-                                                    <div class="vrach-vrach-name">Ирина Владимировна Мусатова</div>
-                                                  </div>
-                                                </div>
-                                                <div class="vrach-inner-block">
-                                                  <div class="vrach-inner-wrap">
-                                                    <div class="text-sm">Стоматолfsdf </div>
-                                                  </div>
-                                                </div></a></div>
-                                            <div class="vrach-wrap"><a class="vrach-inner" href="#">
-                                                <div class="vrach-vrach">
-                                                  <div class="vrach-vrach-inner"><img data-lazy="img/doctor/4.png" alt="Ирина Владимировна Мусатова">
-                                                    <div class="vrach-vrach-name">Ирина Владимировна Мусатова</div>
-                                                  </div>
-                                                </div>
-                                                <div class="vrach-inner-block">
-                                                  <div class="vrach-inner-wrap">
-                                                    <div class="text-sm">Стоматолfsdf </div>
-                                                  </div>
-                                                </div></a></div>
-                                            <div class="vrach-wrap"><a class="vrach-inner" href="#">
-                                                <div class="vrach-vrach">
-                                                  <div class="vrach-vrach-inner"><img data-lazy="img/doctor/4.png" alt="Ирина Владимировна Мусатова">
-                                                    <div class="vrach-vrach-name">Ирина Владимировна Мусатова</div>
-                                                  </div>
-                                                </div>
-                                                <div class="vrach-inner-block">
-                                                  <div class="vrach-inner-wrap">
-                                                    <div class="text-sm">Стоматолfsdf </div>
-                                                  </div>
-                                                </div></a></div>
-                                            <div class="vrach-wrap"><a class="vrach-inner" href="#">
-                                                <div class="vrach-vrach">
-                                                  <div class="vrach-vrach-inner"><img data-lazy="img/doctor/4.png" alt="Ирина Владимировна Мусатова">
-                                                    <div class="vrach-vrach-name">Ирина Владимировна Мусатова</div>
-                                                  </div>
-                                                </div>
-                                                <div class="vrach-inner-block">
-                                                  <div class="vrach-inner-wrap">
-                                                    <div class="text-sm">Стоматолfsdf </div>
-                                                  </div>
-                                                </div></a></div>
-                                            <div class="vrach-wrap"><a class="vrach-inner" href="#">
-                                                <div class="vrach-vrach">
-                                                  <div class="vrach-vrach-inner"><img data-lazy="img/doctor/4.png" alt="Ирина Владимировна Мусатова">
-                                                    <div class="vrach-vrach-name">Ирина Владимировна Мусатова</div>
-                                                  </div>
-                                                </div>
-                                                <div class="vrach-inner-block">
-                                                  <div class="vrach-inner-wrap">
-                                                    <div class="text-sm">Стоматолfsdf </div>
-                                                  </div>
-                                                </div></a></div>
-                                            <div class="vrach-wrap"><a class="vrach-inner" href="#">
-                                                <div class="vrach-vrach">
-                                                  <div class="vrach-vrach-inner"><img data-lazy="img/doctor/4.png" alt="Ирина Владимировна Мусатова">
-                                                    <div class="vrach-vrach-name">Ирина Владимировна Мусатова</div>
-                                                  </div>
-                                                </div>
-                                                <div class="vrach-inner-block">
-                                                  <div class="vrach-inner-wrap">
-                                                    <div class="text-sm">Стоматолfsdf </div>
-                                                  </div>
-                                                </div></a></div>
-                    </div>
-                    <div class="dots-wrap"></div>
-                    <div class="slider-counter">
-                      <div class="slider-curr"></div>
-                      <div class="slider-divider">/</div>
-                      <div class="slider-total"></div>
                     </div>
                   </div>
                 </div>

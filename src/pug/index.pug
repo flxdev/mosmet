@@ -94,37 +94,59 @@ block content
 				.about-inner
 					.about-about
 						.about-about-inner
-							.about-about-text
-								h2.title.h2 О нас
-								p.text.primary Наш главный принцип — поставить на службу здоровья профессионализм врача, достижения современной медицинской науки с учетом финансовых возможностей пациента
-							.about-about-items
-								mixin aboutitem(num,text)
-									.about-item
-										.about-item-inner
-											.about-item-num #{num}
-											.about-item-text.text #{text}
-								+aboutitem('13','Отделений')
-								+aboutitem('19','Лет практики')
-								+aboutitem('118','Врачей')
-								+aboutitem('1 390','Услуг')
+							.about-about-col
+								.about-about-text
+									h2.title.h2 О нас
+									p.text.primary Наш главный принцип — поставить на службу здоровья профессионализм врача, достижения современной медицинской науки с учетом финансовых возможностей пациента
+									a(href="#").btn
+										span Подробнее о клинике
+							.about-about-col
+								.about-about-items
+									mixin aboutitem(num,text)
+										.about-item
+											.about-item-inner
+												.about-item-num #{num}
+												.about-item-text.text #{text}
+									+aboutitem('13','Отделений')
+									+aboutitem('19','Лет практики')
+									+aboutitem('118','Врачей')
+									+aboutitem('1 390','Услуг')
+								.about-img
+									.video-container
+										.video-container-inner
+											//в этотм блоке может быть: видос <video>, айфрейм с ютуба,слайдер и просто картинка
+											//video.fillWidth(autoplay='', loop='')
+												source(src='img/index/video/clouds.mp4', type='video/mp4')
+												source(src='img/index/video/clouds.webm', type='video/webm').
+											//.video-wrap
+												.video-wrap-cover(style='background-image: url(img/index/1.jpg)')
+												iframe(width='100%', height='100%', src='https://www.youtube.com/embed/rU701oPa2cE', frameborder='0', allowfullscreen='')
+											//.video-container-slider
+												.video-container-slider-inner.js-sideslider
+													.video-container-slider-item
+														.video-container-slider-img
+															img(data-lazy="img/index/slide.jpg", alt="")
+														.video-container-slider-text
+															.text Концентратор кислорода "Armed" 7F-3A
+													.video-container-slider-item
+														.video-container-slider-img
+															img(data-lazy="img/index/slide.jpg", alt="")
+														.video-container-slider-text
+															.text Концентратор кислорода "Armed" 7F-3A
+													.video-container-slider-item
+														.video-container-slider-img
+															img(data-lazy="img/index/slide.jpg", alt="")
+														.video-container-slider-text
+															.text Концентратор кислорода "Armed" 7F-3A
+													.video-container-slider-item
+														.video-container-slider-img
+															img(data-lazy="img/index/slide.jpg", alt="")
+														.video-container-slider-text
+															.text Концентратор кислорода "Armed" 7F-3A
+												.dots-wrap
+											img(data-src="img/index/slide.jpg", alt="").js-image
 
 
-					.about-img
-
-						.video-container
-							//если видоса нету .video-container-inner удаляем
-							// картинка нижде обязательна всегда, т.к. выводится на мобильных устройствах
-							.video-container-inner
-								video.fillWidth(autoplay='', loop='')
-									source(src='img/index/video/clouds.mp4', type='video/mp4')
-									| Your browser does not support the video tag. I suggest you upgrade your browser.
-									source(src='img/index/video/clouds.webm', type='video/webm')
-									| Your browser does not support the video tag. I suggest you upgrade your browser.
-							.poster
-								img(data-src='img/index/clinic.jpg', alt='').js-image
-					.about-btn
-						a(href="#").btn
-							span Подробнее о клинике
 	.wrapper
 		.box
 			.wide-slider-wrap

@@ -1,12 +1,100 @@
-.modal-layout(data-modal='callback').js-popup-container
+.modal-layout(data-modal='offer').js-popup-container
 	.modal-container
 		.modal-container-inner
 			.modal-container-header
-
+				.title.h2 Заявка на приём
+				i.small-link.pop-close.closePopup
 			.modal-container-content
+				form.form.js-validate
+					.input-item.s-100
+						.input-wrapper.req
+							.label Специальность врача
+							.select-check.js-select-custom
+								button.selects.dropdown(data-placeholder='Специальность')
+									span.btn-text Специальность
+								.dropdown-target
+									.dropdown-inner
+										.dropdown-content
+											.select-u-body.select-list
+												label.option
+													input(type='radio', name='group4', value='val1')
+													span Специалист1
+												label.option
+													input(type='radio', name='group4', value='val2')
+													span Специалист2
+												label.option
+													input(type='radio', name='group4', value='val3')
+													span Специалист 3
+												label.option
+													input(type='radio', name='group4', value='val4')
+													span GHJGHJ
+												label.option
+													input(type='radio', name='group4', value='val5')
+													span GHJ
+												label.option
+													input(type='radio', name='group4', value='val6')
+													span HGJGHJ
+												label.option
+													input(type='radio', name='group4', value='val7')
+													span GHJHG
+												label.option
+													input(type='radio', name='group4', value='val8')
+													span HGJG
+												label.option
+													input(type='radio', name='group4', value='val9')
+													span 3HGJ
+												label.option
+													input(type='radio', name='group4', value='val10')
+													span 3HGJ
+												label.option
+													input(type='radio', name='group4', value='val11')
+													span 3HGJ
+												label.option
+													input(type='radio', name='group4', value='val12')
+													span 3HGJ
+					.input-item.s-50
+						.input-wrapper.req
+							label Ваше имя
+							input.input-main(type="text",placeholder='Имя',data-validation="length",data-validation-length='min2',data-validation-error-msg="Не заполнено")
+					.input-item.s-50
+						.input-wrapper.req
+							label Фамилия
+							input.input-main(type="text",placeholder='Фамилия',data-validation="length",data-validation-length='min2',data-validation-error-msg="Не заполнено")
+					.input-item.s-50
+						.input-wrapper.req
+							label Отчество
+							input.input-main(type="text",placeholder='Отчество',data-validation="length",data-validation-length='min2',data-validation-error-msg="Не заполнено")
+					//- .input-item.s-50
+					//- 	.input-wrapper.req
+					//- 		label E-mail
+					//- 		input.input-main(type="email",placeholder='example@mail.com',data-validation="email",data-validation-error-msg="Не заполнено")
+					.input-item.s-50
+						.input-wrapper.req
+							label Телефон
+							input.input-main(type="tel",placeholder='Телефон',data-validation="custom",data-validation-regexp="^[-0-9()+ ]+$",data-validation-error-msg="Не заполнено")
+					.input-item.s-100
+						.input-wrapper
+							label Ваш комментарий
+							textarea.input-main(rows='5',placeholder='Комментарий')
+					.input-item.s-100
+						.input-wrapper.req
+							.select-u-item
+								label.input_label
+									span.input_main
+										input.input-real(type="checkbox",name='rules',value = 'y',data-validation="required",data-validation-error-msg="Это обязательное поле")
+										span.input-checked
+									span.input-text Даю согласие на обработку моих 
+										a(href="#") персональных данных
+					.form-footer
+						.form-footer-notify
+							.text Поля обязательные для заполнения
+						button(type='submit').btn.secondary
+							span Оставить заявку
 	//контейнер ответа модалки 
 	.modal-container.response(style='display: none')
 		.modal-container-inner
 			.modal-container-header
-
+				.title.h2 Спасибо за обращение!
+				i.small-link.pop-close.closePopup
 			.modal-container-content
+				.text Ваше сообщение успешно отправлено. Наш оператор свяжется с вами в ближайшее время для уточнения деталей.
