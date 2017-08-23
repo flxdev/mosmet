@@ -1,0 +1,148 @@
+extends _layout
+
+block title
+	title Врачи
+block config
+	- var main = false
+block content
+	.wrapper.gray.page-head
+		.box
+			.page-head-content
+				.page-head-bg
+					.page-head-bg-inner
+						img(data-src="img/head/1.jpg", alt="").js-image
+				.page-head-container
+					.page-head-inner
+						h1.title.h1 Врачи
+						.bread-cont
+							a(href="#").bread-item Главная
+							a(href="#").bread-item Врачи
+	.wrapper
+		.box
+			.content-element
+				.docsearch-wrap
+					.docsearch-inner
+						form.docsearch-head
+							.docsearch-col
+								.input-item.s-100
+									.input-wrapper.req
+										.select-check.js-select-custom
+											button.selects.dropdown(data-placeholder='Выберите отделение')
+												span.btn-text Выберите отделение
+											.dropdown-target
+												.dropdown-inner
+													.dropdown-content
+														.select-u-body.select-list
+															label.option
+																input(type='radio', name='group42', value='val1')
+																span Специалист1
+															label.option
+																input(type='radio', name='group42', value='val2')
+																span Специалист2
+															label.option
+																input(type='radio', name='group42', value='val3')
+																span Специалист 3
+															label.option
+																input(type='radio', name='group42', value='val4')
+																span GHJGHJ
+															label.option
+																input(type='radio', name='group42', value='val5')
+																span GHJ
+															label.option
+																input(type='radio', name='group42', value='val6')
+																span HGJGHJ
+															label.option
+																input(type='radio', name='group42', value='val7')
+																span GHJHG
+															label.option
+																input(type='radio', name='group42', value='val8')
+																span HGJG
+															label.option
+																input(type='radio', name='group42', value='val9')
+																span 3HGJ
+															label.option
+																input(type='radio', name='group42', value='val10')
+																span 3HGJ
+															label.option
+																input(type='radio', name='group42', value='val11')
+																span 3HGJ
+															label.option
+																input(type='radio', name='group42', value='val12')
+																span 3HGJ
+							.docsearch-col
+								include includes/_suggest.pug
+						.docsearch-body
+							.docsearch-container
+								mixin vrach3(img,title,name,rait)
+									.vrach-wrap
+										.vrach-inner
+											.vrach-vrach
+												.vrach-vrach-inner
+													img(data-src="img/doctor/"+img+".png", alt=""+name+"").js-image
+													.vrach-vrach-name #{title}
+											.vrach-inner-block
+												a(href="#").vrach-inner-wrap
+													.vrach-inner-title #{name}
+													.vrach-raiting.js-vrach-rait(data-raiting=''+rait+'').start
+														svg(width='41', height='41', viewport='0 0 41 41', version='1.1', xmlns='http://www.w3.org/2000/svg')
+															circle(r='20', cx='20', cy='20', fill='transparent', stroke-dasharray='125.66', stroke-dashoffset='0')
+															circle.bar(r='20', cx='20', cy='20', fill='transparent', stroke-dasharray='125.66', stroke-dashoffset='0')
+												.vrach-inner-add
+													.offer-footer
+														a(href="#", title='Запись к конкретному врачу напрямую').btn.primary
+															span Записаться online
+														// data-spec  определяет специальность, которая будет передаваться в модальное окно, работает не только здесь, но и на всех модалках data-modal='offer'
+														a(href="#",data-modal='offer',data-spec='val4', title='Запись к специалисту через форму на сайте').text.js-popup-button Заявка на приём
+								+vrach3(1,'Клинико-диагностическая лаборатория ','Ирина Владимировна Мусатова','4.8')
+								+vrach3(1,'Физиотерапия','Ирина Владимировна Мусатова','5.0')
+								+vrach3(2,'Гинекология','Стелла Олеговна Солнцева','2.1')
+								+vrach3(3,'Стоматология','Ирина Владимировна Мусатова','1.5')
+								+vrach3(4,'Стоматолfsdf  fs огия','Ирина Владимировна Мусатова','3.5')
+								+vrach3(4,'Стоматолfsdf  fs огия','Ирина Владимировна Мусатова','3.8')
+								+vrach3(2,'Гинекология','Стелла Олеговна Солнцева','4.5')
+								+vrach3(2,'Гинекология','Стелла Олеговна Солнцева','4.1')
+								+vrach3(2,'Гинекология','Стелла Олеговна Солнцева','2.5')
+								+vrach3(2,'Гинекология','Стелла Олеговна Солнцева','2.6')
+								+vrach3(3,'Стоматология','Ирина Владимировна Мусатова','2.7')
+								+vrach3(4,'Стоматолfsdf  fs огия','Ирина Владимировна Мусатова','3.0')
+								+vrach3(4,'Стоматолfsdf  fs огия','Ирина Владимировна Мусатова','0.5')
+							// с ромой вроде как решили, что подрузка вачей будет как новости на институте, если тебе это облегчит работу конечно., после аякса вызывай lazyImage() и vrachRait();
+							.btn.light.js-expand
+								span Смотреть всех 118 врачей
+
+	include includes/_slider.pug
+
+		//- .box
+		//- 	a(href="#").btn
+		//- 		span Подробнее о клинике
+		//- 	a(href="#").btn.secondary
+		//- 		span Подробнее о клинике
+		//- 	a(href="#").btn.primary
+		//- 		span Подробнее о клинике
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	

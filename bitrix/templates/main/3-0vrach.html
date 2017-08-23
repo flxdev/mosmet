@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Отделения</title>
+    <title>Врачи</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <meta content="True" name="HandheldFriendly">
@@ -251,8 +251,8 @@
                   </div>
                   <div class="page-head-container">
                     <div class="page-head-inner">
-                      <h1 class="title h1">Отделения</h1>
-                      <div class="bread-cont"><a class="bread-item" href="#">Главная</a><a class="bread-item" href="#">Отделения</a></div>
+                      <h1 class="title h1">Врачи</h1>
+                      <div class="bread-cont"><a class="bread-item" href="#">Главная</a><a class="bread-item" href="#">Врачи</a></div>
                     </div>
                   </div>
                 </div>
@@ -261,226 +261,385 @@
             <div class="wrapper">
               <div class="box">
                 <div class="content-element">
-                  <div class="aside-wrapp">
-                    <aside class="aside-menu" data-sticky_parent>
-                      <div class="aside-menu-inner">
-                        <!-- есди элемент стикается - кладем его в этот контейнер,-->
-                        <div class="aside-menu-stick js-stick js-dropdown-parent">
-                          <!-- модификатор .nav для ссылок на страницы и .scroll для ссылок скролящих-->
-                          <div class="aside-title title h3 js-dropdown dropdown">Отделения</div>
-                          <ul class="aside-nav nav js-dropdown-target">
-                            <li class="aside-nav-item"><a class="aside-nav-link" href="#">Клинико-диагностическая лаборатория</a></li>
-                            <li class="aside-nav-item"><a class="aside-nav-link" href="#">УЗ-диагностика</a></li>
-                            <li class="aside-nav-item"><a class="aside-nav-link" href="#">Рентгенодиагностика</a></li>
-                            <li class="aside-nav-item js-aside-drop"><span class="aside-nav-link dropdown">Хирургия</span>
-                              <ul>
-                                <li class="aside-nav-item"><a class="aside-nav-link" href="#">Хирургия</a></li>
-                                <li class="aside-nav-item"><a class="aside-nav-link" href="#">Травматология</a></li>
-                                <li class="aside-nav-item"><a class="aside-nav-link" href="#">Онкология</a></li>
-                                <li class="aside-nav-item"><a class="aside-nav-link" href="#">Эндоскопия</a></li>
-                              </ul>
-                            </li>
-                            <li class="aside-nav-item"><a class="aside-nav-link" href="#">Стоматология</a></li>
-                            <li class="aside-nav-item"><a class="aside-nav-link" href="#">Дермотокосметология</a></li>
-                            <li class="aside-nav-item"><a class="aside-nav-link" href="#">Гинекология</a></li>
-                            <li class="aside-nav-item"><a class="aside-nav-link" href="#">Урология</a></li>
-                            <li class="aside-nav-item js-aside-drop"><span class="aside-nav-link dropdown">Терапия</span>
-                              <ul> 
-                                <li class="aside-nav-item"><a class="aside-nav-link" href="#">Хирургия</a></li>
-                                <li class="aside-nav-item"><a class="aside-nav-link" href="#">Травматология</a></li>
-                                <li class="aside-nav-item"><a class="aside-nav-link" href="#">Онкология</a></li>
-                                <li class="aside-nav-item"><a class="aside-nav-link" href="#">Эндоскопия</a></li>
-                              </ul>
-                            </li>
-                            <li class="aside-nav-item"><a class="aside-nav-link" href="#">Офтальмология</a></li>
-                            <li class="aside-nav-item"><a class="aside-nav-link" href="#">Неврология</a></li>
-                            <li class="aside-nav-item"><a class="aside-nav-link" href="#">Оториноларингология</a></li>
-                            <li class="aside-nav-item"><a class="aside-nav-link" href="#">ФизИотерапия</a></li>
-                          </ul>
+                  <div class="docsearch-wrap">
+                    <div class="docsearch-inner">
+                      <form class="docsearch-head">
+                        <div class="docsearch-col">
+                          <div class="input-item s-100">
+                            <div class="input-wrapper req">
+                              <div class="select-check js-select-custom">
+                                <button class="selects dropdown" data-placeholder="Выберите отделение"><span class="btn-text">Выберите отделение</span></button>
+                                <div class="dropdown-target">
+                                  <div class="dropdown-inner">
+                                    <div class="dropdown-content">
+                                      <div class="select-u-body select-list">
+                                        <label class="option">
+                                          <input type="radio" name="group42" value="val1"><span>Специалист1</span>
+                                        </label>
+                                        <label class="option">
+                                          <input type="radio" name="group42" value="val2"><span>Специалист2</span>
+                                        </label>
+                                        <label class="option">
+                                          <input type="radio" name="group42" value="val3"><span>Специалист 3</span>
+                                        </label>
+                                        <label class="option">
+                                          <input type="radio" name="group42" value="val4"><span>GHJGHJ</span>
+                                        </label>
+                                        <label class="option">
+                                          <input type="radio" name="group42" value="val5"><span>GHJ</span>
+                                        </label>
+                                        <label class="option">
+                                          <input type="radio" name="group42" value="val6"><span>HGJGHJ</span>
+                                        </label>
+                                        <label class="option">
+                                          <input type="radio" name="group42" value="val7"><span>GHJHG</span>
+                                        </label>
+                                        <label class="option">
+                                          <input type="radio" name="group42" value="val8"><span>HGJG</span>
+                                        </label>
+                                        <label class="option">
+                                          <input type="radio" name="group42" value="val9"><span>3HGJ</span>
+                                        </label>
+                                        <label class="option">
+                                          <input type="radio" name="group42" value="val10"><span>3HGJ</span>
+                                        </label>
+                                        <label class="option">
+                                          <input type="radio" name="group42" value="val11"><span>3HGJ</span>
+                                        </label>
+                                        <label class="option">
+                                          <input type="radio" name="group42" value="val12"><span>3HGJ</span>
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                      </div>
-                    </aside>
-                    <div class="aside-content">
-                      <div class="section-wrapper">
-                                                <div class="section bg-secondary bg-secondary-hover">
-                                                  <div class="section-inner">
-                                                    <div class="tabs-wrapper">
-                                                      <div class="tabs js-tabs-wrap">
-                                                        <div class="tabs-left">
-                                                          <div class="tabs-head">
-                                                            <div class="tabs-item js-tab-trigger active"><span class="title h3">Клинико-диагностическая лаборатория</span></div>
+                        <div class="docsearch-col">
+                          <!--suggest component-->
+                          <div class="search-wrapper suggest-wrapper js-suggest">
+                            <div class="suggest-wrapper-inner">
+                              <form class="search-inner search-suggest">
+                                <input class="search-input biginput" type="text" placeholder="1000 и одна услуга" required="required" autocomplete="off" aria-owns="res" aria-autocomplete="both">
+                                <button class="search-submit" type="submit">
+                                  <svg class="icon icon-search">
+                                    <use xlink:href="#search" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                  </svg>
+                                </button>
+                              </form>
+                              <div class="suggest-list js-suggest-list">
+                                <div class="suggest-list-inner"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                      <div class="docsearch-body">
+                        <div class="docsearch-container">
+                                                    <div class="vrach-wrap">
+                                                      <div class="vrach-inner">
+                                                        <div class="vrach-vrach">
+                                                          <div class="vrach-vrach-inner"><img class="js-image" data-src="img/doctor/1.png" alt="Ирина Владимировна Мусатова">
+                                                            <div class="vrach-vrach-name">Клинико-диагностическая лаборатория </div>
                                                           </div>
-                                                          <div class="text">118 услуг</div>
                                                         </div>
-                                                        <div class="tabs-right">
-                                                          <div class="tabs-body">
-                                                            <div class="tabs-cont">
-                                                              <div class="footer-links-add">
-                                                                <ul>
-                                                                  <li> <a class="text" href="#">Магнитно-резонансная томография головного мозга, ангиография интракраниальных сосудов и всего позвоночника</a></li>
-                                                                  <li> <a class="text" href="#">Магнитно-резонансная томография одного плечевого сустава</a></li>
-                                                                  <li> <a class="text" href="#">Магнитно-резонансная томография одного тазобедренного сустава</a></li>
-                                                                  <li> <a class="text" href="#">УЗИ мочевого пузыря (через брюшную стенку)</a></li>
-                                                                  <li> <a class="text" href="#">УЗИ мочевого пузыря с остаточной мочой</a></li>
-                                                                  <li> <a class="text" href="#">УЗИ - контроль и наведение при полифокальной пункционной биопсии предстательной железы</a></li>
-                                                                </ul>
-                                                              </div>
+                                                        <div class="vrach-inner-block"><a class="vrach-inner-wrap" href="#">
+                                                            <div class="vrach-inner-title">Ирина Владимировна Мусатова</div>
+                                                            <div class="vrach-raiting js-vrach-rait start" data-raiting="4.8">
+                                                              <svg width="41" height="41" viewport="0 0 41 41" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                                                <circle r="20" cx="20" cy="20" fill="transparent" stroke-dasharray="125.66" stroke-dashoffset="0"></circle>
+                                                                <circle class="bar" r="20" cx="20" cy="20" fill="transparent" stroke-dasharray="125.66" stroke-dashoffset="0"></circle>
+                                                              </svg>
+                                                            </div></a>
+                                                          <div class="vrach-inner-add">
+                                                            <div class="offer-footer"><a class="btn primary" href="#" title="Запись к конкретному врачу напрямую"><span>Записаться online</span></a>
+                                                              <!-- data-spec  определяет специальность, которая будет передаваться в модальное окно, работает не только здесь, но и на всех модалках data-modal='offer'--><a class="text js-popup-button" href="#" data-modal="offer" data-spec="val4" title="Запись к специалисту через форму на сайте">Заявка на приём</a>
                                                             </div>
                                                           </div>
                                                         </div>
-                                                      </div>
-                                                      <div class="tabs-bottom">	
-                                                        <div class="content-block">
-                                                          <div class="text-sm">Зав. отделением</div>
-                                                          <div class="vrach-vrach-name">Зоя Григорьевна Бочкарева</div>
-                                                        </div><a class="btn" href="#"><span data-text="Все услуги">Смотреть все 212 услуг</span></a>
                                                       </div>
                                                     </div>
-                                                  </div>
-                                                </div>
-                                                <div class="section bg-secondary bg-secondary-hover">
-                                                  <div class="section-inner">
-                                                    <div class="tabs-wrapper">
-                                                      <div class="tabs js-tabs-wrap">
-                                                        <div class="tabs-left">
-                                                          <div class="tabs-head">
-                                                            <div class="tabs-item js-tab-trigger active"><span class="title h3">УЗ-диагностика</span></div>
+                                                    <div class="vrach-wrap">
+                                                      <div class="vrach-inner">
+                                                        <div class="vrach-vrach">
+                                                          <div class="vrach-vrach-inner"><img class="js-image" data-src="img/doctor/1.png" alt="Ирина Владимировна Мусатова">
+                                                            <div class="vrach-vrach-name">Физиотерапия</div>
                                                           </div>
-                                                          <div class="text">212 услуг</div>
                                                         </div>
-                                                        <div class="tabs-right">
-                                                          <div class="tabs-body">
-                                                            <div class="tabs-cont">
-                                                              <div class="footer-links-add">
-                                                                <ul>
-                                                                  <li> <a class="text" href="#">УЗИ мочевого пузыря с остаточной мочой</a></li>
-                                                                  <li> <a class="text" href="#">Эпиляция воском обработка области губ (в т.ч. н.д.с. 18%)</a></li>
-                                                                  <li> <a class="text" href="#">УЗИ предстательной железы (через брюшную стенку)</a></li>
-                                                                  <li> <a class="text" href="#">Эпиляция воском обработка бровей (в т.ч. н.д.с. 18%)</a></li>
-                                                                  <li> <a class="text" href="#">УЗИ предстательной железы (ректальным датчиком) - ТРУЗИ</a></li>
-                                                                  <li> <a class="text" href="#">Эпиляция воском обработка щек (в т.ч. н.д.с. 18%)</a></li>
-                                                                </ul>
-                                                              </div>
+                                                        <div class="vrach-inner-block"><a class="vrach-inner-wrap" href="#">
+                                                            <div class="vrach-inner-title">Ирина Владимировна Мусатова</div>
+                                                            <div class="vrach-raiting js-vrach-rait start" data-raiting="5.0">
+                                                              <svg width="41" height="41" viewport="0 0 41 41" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                                                <circle r="20" cx="20" cy="20" fill="transparent" stroke-dasharray="125.66" stroke-dashoffset="0"></circle>
+                                                                <circle class="bar" r="20" cx="20" cy="20" fill="transparent" stroke-dasharray="125.66" stroke-dashoffset="0"></circle>
+                                                              </svg>
+                                                            </div></a>
+                                                          <div class="vrach-inner-add">
+                                                            <div class="offer-footer"><a class="btn primary" href="#" title="Запись к конкретному врачу напрямую"><span>Записаться online</span></a>
+                                                              <!-- data-spec  определяет специальность, которая будет передаваться в модальное окно, работает не только здесь, но и на всех модалках data-modal='offer'--><a class="text js-popup-button" href="#" data-modal="offer" data-spec="val4" title="Запись к специалисту через форму на сайте">Заявка на приём</a>
                                                             </div>
                                                           </div>
                                                         </div>
-                                                      </div>
-                                                      <div class="tabs-bottom">	
-                                                        <div class="content-block">
-                                                          <div class="text-sm">Зав. отделением</div>
-                                                          <div class="vrach-vrach-name">Зоя Григорьевна Бочкарева</div>
-                                                        </div><a class="btn" href="#"><span data-text="Все услуги">Смотреть все 212 услуг</span></a>
                                                       </div>
                                                     </div>
-                                                  </div>
-                                                </div>
-                                                <div class="section bg-secondary bg-secondary-hover">
-                                                  <div class="section-inner">
-                                                    <div class="tabs-wrapper">
-                                                      <div class="tabs js-tabs-wrap">
-                                                        <div class="tabs-left">
-                                                          <div class="tabs-head">
-                                                            <div class="tabs-item js-tab-trigger active"><span class="title h3">Рентгенодиагностика</span></div>
+                                                    <div class="vrach-wrap">
+                                                      <div class="vrach-inner">
+                                                        <div class="vrach-vrach">
+                                                          <div class="vrach-vrach-inner"><img class="js-image" data-src="img/doctor/2.png" alt="Стелла Олеговна Солнцева">
+                                                            <div class="vrach-vrach-name">Гинекология</div>
                                                           </div>
-                                                          <div class="text">212 услуг</div>
                                                         </div>
-                                                        <div class="tabs-right">
-                                                          <div class="tabs-body">
-                                                            <div class="tabs-cont">
-                                                              <div class="footer-links-add">
-                                                                <ul>
-                                                                  <li> <a class="text" href="#">Магнитно-резонансная томография головного мозга, ангиография интракраниальных сосудов и всего позвоночника</a></li>
-                                                                  <li> <a class="text" href="#">УЗИ мочевого пузыря (через брюшную стенку)</a></li>
-                                                                  <li> <a class="text" href="#">Магнитно-резонансная томография одного плечевого сустава</a></li>
-                                                                  <li> <a class="text" href="#">УЗИ мочевого пузыря с остаточной мочой</a></li>
-                                                                  <li> <a class="text" href="#">Магнитно-резонансная томография одного тазобедренного сустава</a></li>
-                                                                  <li> <a class="text" href="#">УЗИ - контроль и наведение при полифокальной пункционной биопсии предстательной железы</a></li>
-                                                                </ul>
-                                                              </div>
+                                                        <div class="vrach-inner-block"><a class="vrach-inner-wrap" href="#">
+                                                            <div class="vrach-inner-title">Стелла Олеговна Солнцева</div>
+                                                            <div class="vrach-raiting js-vrach-rait start" data-raiting="2.1">
+                                                              <svg width="41" height="41" viewport="0 0 41 41" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                                                <circle r="20" cx="20" cy="20" fill="transparent" stroke-dasharray="125.66" stroke-dashoffset="0"></circle>
+                                                                <circle class="bar" r="20" cx="20" cy="20" fill="transparent" stroke-dasharray="125.66" stroke-dashoffset="0"></circle>
+                                                              </svg>
+                                                            </div></a>
+                                                          <div class="vrach-inner-add">
+                                                            <div class="offer-footer"><a class="btn primary" href="#" title="Запись к конкретному врачу напрямую"><span>Записаться online</span></a>
+                                                              <!-- data-spec  определяет специальность, которая будет передаваться в модальное окно, работает не только здесь, но и на всех модалках data-modal='offer'--><a class="text js-popup-button" href="#" data-modal="offer" data-spec="val4" title="Запись к специалисту через форму на сайте">Заявка на приём</a>
                                                             </div>
                                                           </div>
                                                         </div>
-                                                      </div>
-                                                      <div class="tabs-bottom">	
-                                                        <div class="content-block">
-                                                          <div class="text-sm">Зав. отделением</div>
-                                                          <div class="vrach-vrach-name">Зоя Григорьевна Бочкарева</div>
-                                                        </div><a class="btn" href="#"><span data-text="Все услуги">Смотреть все 212 услуг</span></a>
                                                       </div>
                                                     </div>
-                                                  </div>
-                                                </div>
-                                                <div class="section bg-secondary bg-secondary-hover">
-                                                  <div class="section-inner">
-                                                    <div class="tabs-wrapper">
-                                                      <div class="tabs js-tabs-wrap">
-                                                        <div class="tabs-left">
-                                                          <div class="tabs-head">
-                                                            <div class="tabs-item js-tab-trigger active"><span class="title h3">Хирургия</span></div>
-                                                            <div class="tabs-item js-tab-trigger"><span class="title h3">Травматология</span></div>
-                                                            <div class="tabs-item js-tab-trigger"><span class="title h3">Онкология</span></div>
-                                                            <div class="tabs-item js-tab-trigger"><span class="title h3">Эндоскопия</span></div>
+                                                    <div class="vrach-wrap">
+                                                      <div class="vrach-inner">
+                                                        <div class="vrach-vrach">
+                                                          <div class="vrach-vrach-inner"><img class="js-image" data-src="img/doctor/3.png" alt="Ирина Владимировна Мусатова">
+                                                            <div class="vrach-vrach-name">Стоматология</div>
                                                           </div>
-                                                          <div class="text">212 услуг</div>
                                                         </div>
-                                                        <div class="tabs-right">
-                                                          <div class="tabs-body">
-                                                            <div class="tabs-cont">
-                                                              <div class="footer-links-add">
-                                                                <ul>
-                                                                  <li> <a class="text" href="#">Магнитно-резонансная томография головного мозга, ангиография интракраниальных сосудов и всего позвоночника</a></li>
-                                                                  <li> <a class="text" href="#">УЗИ мочевого пузыря (через брюшную стенку)</a></li>
-                                                                  <li> <a class="text" href="#">Магнитно-резонансная томография одного плечевого сустава</a></li>
-                                                                  <li> <a class="text" href="#">УЗИ мочевого пузыря с остаточной мочой</a></li>
-                                                                  <li> <a class="text" href="#">Магнитно-резонансная томография одного тазобедренного сустава</a></li>
-                                                                  <li> <a class="text" href="#">УЗИ - контроль и наведение при полифокальной пункционной биопсии предстательной железы</a></li>
-                                                                </ul>
-                                                              </div>
-                                                            </div>
-                                                            <div class="tabs-cont">
-                                                              <div class="footer-links-add">
-                                                                <ul>
-                                                                  <li> <a class="text" href="#">УЗИ мочевого пузыря (через брюшную стенку)</a></li>
-                                                                  <li> <a class="text" href="#">Магнитно-резонансная томография одного плечевого сустава</a></li>
-                                                                  <li> <a class="text" href="#">УЗИ мочевого пузыря с остаточной мочой</a></li>
-                                                                  <li> <a class="text" href="#">Магнитно-резонансная томография одного тазобедренного сустава</a></li>
-                                                                  <li> <a class="text" href="#">УЗИ - контроль и наведение при полифокальной пункционной биопсии предстательной железы</a></li>
-                                                                </ul>
-                                                              </div>
-                                                            </div>
-                                                            <div class="tabs-cont">
-                                                              <div class="footer-links-add">
-                                                                <ul>
-                                                                  <li> <a class="text" href="#">Магнитно</a></li>
-                                                                  <li> <a class="text" href="#">УЗИ </a></li>
-                                                                  <li> <a class="text" href="#">Магнитно-резонансная плечевого сустава</a></li>
-                                                                  <li> <a class="text" href="#">УЗИ </a></li>
-                                                                  <li> <a class="text" href="#">Магнитно-</a></li>
-                                                                  <li> <a class="text" href="#">УЗИ - контроль и наведение при полифокальной пункционной биопсии предстательной железы</a></li>
-                                                                </ul>
-                                                              </div>
-                                                            </div>
-                                                            <div class="tabs-cont">
-                                                              <div class="footer-links-add">
-                                                                <ul>
-                                                                  <li> <a class="text" href="#"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat voluptatum inventore quas nostrum, rerum exercitationem dolorem sit recusandae explicabo, saepe.</a></li>
-                                                                  <li> <a class="text" href="#">УЗИ мочевого пузыря (через брюшную стенку)</a></li>
-                                                                  <li> <a class="text" href="#">Магнитно-резонансная томография одного плечевого сустава</a></li>
-                                                                </ul>
-                                                              </div>
+                                                        <div class="vrach-inner-block"><a class="vrach-inner-wrap" href="#">
+                                                            <div class="vrach-inner-title">Ирина Владимировна Мусатова</div>
+                                                            <div class="vrach-raiting js-vrach-rait start" data-raiting="1.5">
+                                                              <svg width="41" height="41" viewport="0 0 41 41" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                                                <circle r="20" cx="20" cy="20" fill="transparent" stroke-dasharray="125.66" stroke-dashoffset="0"></circle>
+                                                                <circle class="bar" r="20" cx="20" cy="20" fill="transparent" stroke-dasharray="125.66" stroke-dashoffset="0"></circle>
+                                                              </svg>
+                                                            </div></a>
+                                                          <div class="vrach-inner-add">
+                                                            <div class="offer-footer"><a class="btn primary" href="#" title="Запись к конкретному врачу напрямую"><span>Записаться online</span></a>
+                                                              <!-- data-spec  определяет специальность, которая будет передаваться в модальное окно, работает не только здесь, но и на всех модалках data-modal='offer'--><a class="text js-popup-button" href="#" data-modal="offer" data-spec="val4" title="Запись к специалисту через форму на сайте">Заявка на приём</a>
                                                             </div>
                                                           </div>
                                                         </div>
-                                                      </div>
-                                                      <div class="tabs-bottom">	
-                                                        <div class="content-block">
-                                                          <div class="text-sm">Зав. отделением</div>
-                                                          <div class="vrach-vrach-name">Зоя Григорьевна Бочкарева</div>
-                                                        </div><a class="btn" href="#"><span data-text="Все услуги">Смотреть все 212 услуг</span></a>
                                                       </div>
                                                     </div>
-                                                  </div>
-                                                </div>
+                                                    <div class="vrach-wrap">
+                                                      <div class="vrach-inner">
+                                                        <div class="vrach-vrach">
+                                                          <div class="vrach-vrach-inner"><img class="js-image" data-src="img/doctor/4.png" alt="Ирина Владимировна Мусатова">
+                                                            <div class="vrach-vrach-name">Стоматолfsdf  fs огия</div>
+                                                          </div>
+                                                        </div>
+                                                        <div class="vrach-inner-block"><a class="vrach-inner-wrap" href="#">
+                                                            <div class="vrach-inner-title">Ирина Владимировна Мусатова</div>
+                                                            <div class="vrach-raiting js-vrach-rait start" data-raiting="3.5">
+                                                              <svg width="41" height="41" viewport="0 0 41 41" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                                                <circle r="20" cx="20" cy="20" fill="transparent" stroke-dasharray="125.66" stroke-dashoffset="0"></circle>
+                                                                <circle class="bar" r="20" cx="20" cy="20" fill="transparent" stroke-dasharray="125.66" stroke-dashoffset="0"></circle>
+                                                              </svg>
+                                                            </div></a>
+                                                          <div class="vrach-inner-add">
+                                                            <div class="offer-footer"><a class="btn primary" href="#" title="Запись к конкретному врачу напрямую"><span>Записаться online</span></a>
+                                                              <!-- data-spec  определяет специальность, которая будет передаваться в модальное окно, работает не только здесь, но и на всех модалках data-modal='offer'--><a class="text js-popup-button" href="#" data-modal="offer" data-spec="val4" title="Запись к специалисту через форму на сайте">Заявка на приём</a>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                    <div class="vrach-wrap">
+                                                      <div class="vrach-inner">
+                                                        <div class="vrach-vrach">
+                                                          <div class="vrach-vrach-inner"><img class="js-image" data-src="img/doctor/4.png" alt="Ирина Владимировна Мусатова">
+                                                            <div class="vrach-vrach-name">Стоматолfsdf  fs огия</div>
+                                                          </div>
+                                                        </div>
+                                                        <div class="vrach-inner-block"><a class="vrach-inner-wrap" href="#">
+                                                            <div class="vrach-inner-title">Ирина Владимировна Мусатова</div>
+                                                            <div class="vrach-raiting js-vrach-rait start" data-raiting="3.8">
+                                                              <svg width="41" height="41" viewport="0 0 41 41" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                                                <circle r="20" cx="20" cy="20" fill="transparent" stroke-dasharray="125.66" stroke-dashoffset="0"></circle>
+                                                                <circle class="bar" r="20" cx="20" cy="20" fill="transparent" stroke-dasharray="125.66" stroke-dashoffset="0"></circle>
+                                                              </svg>
+                                                            </div></a>
+                                                          <div class="vrach-inner-add">
+                                                            <div class="offer-footer"><a class="btn primary" href="#" title="Запись к конкретному врачу напрямую"><span>Записаться online</span></a>
+                                                              <!-- data-spec  определяет специальность, которая будет передаваться в модальное окно, работает не только здесь, но и на всех модалках data-modal='offer'--><a class="text js-popup-button" href="#" data-modal="offer" data-spec="val4" title="Запись к специалисту через форму на сайте">Заявка на приём</a>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                    <div class="vrach-wrap">
+                                                      <div class="vrach-inner">
+                                                        <div class="vrach-vrach">
+                                                          <div class="vrach-vrach-inner"><img class="js-image" data-src="img/doctor/2.png" alt="Стелла Олеговна Солнцева">
+                                                            <div class="vrach-vrach-name">Гинекология</div>
+                                                          </div>
+                                                        </div>
+                                                        <div class="vrach-inner-block"><a class="vrach-inner-wrap" href="#">
+                                                            <div class="vrach-inner-title">Стелла Олеговна Солнцева</div>
+                                                            <div class="vrach-raiting js-vrach-rait start" data-raiting="4.5">
+                                                              <svg width="41" height="41" viewport="0 0 41 41" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                                                <circle r="20" cx="20" cy="20" fill="transparent" stroke-dasharray="125.66" stroke-dashoffset="0"></circle>
+                                                                <circle class="bar" r="20" cx="20" cy="20" fill="transparent" stroke-dasharray="125.66" stroke-dashoffset="0"></circle>
+                                                              </svg>
+                                                            </div></a>
+                                                          <div class="vrach-inner-add">
+                                                            <div class="offer-footer"><a class="btn primary" href="#" title="Запись к конкретному врачу напрямую"><span>Записаться online</span></a>
+                                                              <!-- data-spec  определяет специальность, которая будет передаваться в модальное окно, работает не только здесь, но и на всех модалках data-modal='offer'--><a class="text js-popup-button" href="#" data-modal="offer" data-spec="val4" title="Запись к специалисту через форму на сайте">Заявка на приём</a>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                    <div class="vrach-wrap">
+                                                      <div class="vrach-inner">
+                                                        <div class="vrach-vrach">
+                                                          <div class="vrach-vrach-inner"><img class="js-image" data-src="img/doctor/2.png" alt="Стелла Олеговна Солнцева">
+                                                            <div class="vrach-vrach-name">Гинекология</div>
+                                                          </div>
+                                                        </div>
+                                                        <div class="vrach-inner-block"><a class="vrach-inner-wrap" href="#">
+                                                            <div class="vrach-inner-title">Стелла Олеговна Солнцева</div>
+                                                            <div class="vrach-raiting js-vrach-rait start" data-raiting="4.1">
+                                                              <svg width="41" height="41" viewport="0 0 41 41" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                                                <circle r="20" cx="20" cy="20" fill="transparent" stroke-dasharray="125.66" stroke-dashoffset="0"></circle>
+                                                                <circle class="bar" r="20" cx="20" cy="20" fill="transparent" stroke-dasharray="125.66" stroke-dashoffset="0"></circle>
+                                                              </svg>
+                                                            </div></a>
+                                                          <div class="vrach-inner-add">
+                                                            <div class="offer-footer"><a class="btn primary" href="#" title="Запись к конкретному врачу напрямую"><span>Записаться online</span></a>
+                                                              <!-- data-spec  определяет специальность, которая будет передаваться в модальное окно, работает не только здесь, но и на всех модалках data-modal='offer'--><a class="text js-popup-button" href="#" data-modal="offer" data-spec="val4" title="Запись к специалисту через форму на сайте">Заявка на приём</a>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                    <div class="vrach-wrap">
+                                                      <div class="vrach-inner">
+                                                        <div class="vrach-vrach">
+                                                          <div class="vrach-vrach-inner"><img class="js-image" data-src="img/doctor/2.png" alt="Стелла Олеговна Солнцева">
+                                                            <div class="vrach-vrach-name">Гинекология</div>
+                                                          </div>
+                                                        </div>
+                                                        <div class="vrach-inner-block"><a class="vrach-inner-wrap" href="#">
+                                                            <div class="vrach-inner-title">Стелла Олеговна Солнцева</div>
+                                                            <div class="vrach-raiting js-vrach-rait start" data-raiting="2.5">
+                                                              <svg width="41" height="41" viewport="0 0 41 41" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                                                <circle r="20" cx="20" cy="20" fill="transparent" stroke-dasharray="125.66" stroke-dashoffset="0"></circle>
+                                                                <circle class="bar" r="20" cx="20" cy="20" fill="transparent" stroke-dasharray="125.66" stroke-dashoffset="0"></circle>
+                                                              </svg>
+                                                            </div></a>
+                                                          <div class="vrach-inner-add">
+                                                            <div class="offer-footer"><a class="btn primary" href="#" title="Запись к конкретному врачу напрямую"><span>Записаться online</span></a>
+                                                              <!-- data-spec  определяет специальность, которая будет передаваться в модальное окно, работает не только здесь, но и на всех модалках data-modal='offer'--><a class="text js-popup-button" href="#" data-modal="offer" data-spec="val4" title="Запись к специалисту через форму на сайте">Заявка на приём</a>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                    <div class="vrach-wrap">
+                                                      <div class="vrach-inner">
+                                                        <div class="vrach-vrach">
+                                                          <div class="vrach-vrach-inner"><img class="js-image" data-src="img/doctor/2.png" alt="Стелла Олеговна Солнцева">
+                                                            <div class="vrach-vrach-name">Гинекология</div>
+                                                          </div>
+                                                        </div>
+                                                        <div class="vrach-inner-block"><a class="vrach-inner-wrap" href="#">
+                                                            <div class="vrach-inner-title">Стелла Олеговна Солнцева</div>
+                                                            <div class="vrach-raiting js-vrach-rait start" data-raiting="2.6">
+                                                              <svg width="41" height="41" viewport="0 0 41 41" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                                                <circle r="20" cx="20" cy="20" fill="transparent" stroke-dasharray="125.66" stroke-dashoffset="0"></circle>
+                                                                <circle class="bar" r="20" cx="20" cy="20" fill="transparent" stroke-dasharray="125.66" stroke-dashoffset="0"></circle>
+                                                              </svg>
+                                                            </div></a>
+                                                          <div class="vrach-inner-add">
+                                                            <div class="offer-footer"><a class="btn primary" href="#" title="Запись к конкретному врачу напрямую"><span>Записаться online</span></a>
+                                                              <!-- data-spec  определяет специальность, которая будет передаваться в модальное окно, работает не только здесь, но и на всех модалках data-modal='offer'--><a class="text js-popup-button" href="#" data-modal="offer" data-spec="val4" title="Запись к специалисту через форму на сайте">Заявка на приём</a>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                    <div class="vrach-wrap">
+                                                      <div class="vrach-inner">
+                                                        <div class="vrach-vrach">
+                                                          <div class="vrach-vrach-inner"><img class="js-image" data-src="img/doctor/3.png" alt="Ирина Владимировна Мусатова">
+                                                            <div class="vrach-vrach-name">Стоматология</div>
+                                                          </div>
+                                                        </div>
+                                                        <div class="vrach-inner-block"><a class="vrach-inner-wrap" href="#">
+                                                            <div class="vrach-inner-title">Ирина Владимировна Мусатова</div>
+                                                            <div class="vrach-raiting js-vrach-rait start" data-raiting="2.7">
+                                                              <svg width="41" height="41" viewport="0 0 41 41" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                                                <circle r="20" cx="20" cy="20" fill="transparent" stroke-dasharray="125.66" stroke-dashoffset="0"></circle>
+                                                                <circle class="bar" r="20" cx="20" cy="20" fill="transparent" stroke-dasharray="125.66" stroke-dashoffset="0"></circle>
+                                                              </svg>
+                                                            </div></a>
+                                                          <div class="vrach-inner-add">
+                                                            <div class="offer-footer"><a class="btn primary" href="#" title="Запись к конкретному врачу напрямую"><span>Записаться online</span></a>
+                                                              <!-- data-spec  определяет специальность, которая будет передаваться в модальное окно, работает не только здесь, но и на всех модалках data-modal='offer'--><a class="text js-popup-button" href="#" data-modal="offer" data-spec="val4" title="Запись к специалисту через форму на сайте">Заявка на приём</a>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                    <div class="vrach-wrap">
+                                                      <div class="vrach-inner">
+                                                        <div class="vrach-vrach">
+                                                          <div class="vrach-vrach-inner"><img class="js-image" data-src="img/doctor/4.png" alt="Ирина Владимировна Мусатова">
+                                                            <div class="vrach-vrach-name">Стоматолfsdf  fs огия</div>
+                                                          </div>
+                                                        </div>
+                                                        <div class="vrach-inner-block"><a class="vrach-inner-wrap" href="#">
+                                                            <div class="vrach-inner-title">Ирина Владимировна Мусатова</div>
+                                                            <div class="vrach-raiting js-vrach-rait start" data-raiting="3.0">
+                                                              <svg width="41" height="41" viewport="0 0 41 41" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                                                <circle r="20" cx="20" cy="20" fill="transparent" stroke-dasharray="125.66" stroke-dashoffset="0"></circle>
+                                                                <circle class="bar" r="20" cx="20" cy="20" fill="transparent" stroke-dasharray="125.66" stroke-dashoffset="0"></circle>
+                                                              </svg>
+                                                            </div></a>
+                                                          <div class="vrach-inner-add">
+                                                            <div class="offer-footer"><a class="btn primary" href="#" title="Запись к конкретному врачу напрямую"><span>Записаться online</span></a>
+                                                              <!-- data-spec  определяет специальность, которая будет передаваться в модальное окно, работает не только здесь, но и на всех модалках data-modal='offer'--><a class="text js-popup-button" href="#" data-modal="offer" data-spec="val4" title="Запись к специалисту через форму на сайте">Заявка на приём</a>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                    <div class="vrach-wrap">
+                                                      <div class="vrach-inner">
+                                                        <div class="vrach-vrach">
+                                                          <div class="vrach-vrach-inner"><img class="js-image" data-src="img/doctor/4.png" alt="Ирина Владимировна Мусатова">
+                                                            <div class="vrach-vrach-name">Стоматолfsdf  fs огия</div>
+                                                          </div>
+                                                        </div>
+                                                        <div class="vrach-inner-block"><a class="vrach-inner-wrap" href="#">
+                                                            <div class="vrach-inner-title">Ирина Владимировна Мусатова</div>
+                                                            <div class="vrach-raiting js-vrach-rait start" data-raiting="0.5">
+                                                              <svg width="41" height="41" viewport="0 0 41 41" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                                                <circle r="20" cx="20" cy="20" fill="transparent" stroke-dasharray="125.66" stroke-dashoffset="0"></circle>
+                                                                <circle class="bar" r="20" cx="20" cy="20" fill="transparent" stroke-dasharray="125.66" stroke-dashoffset="0"></circle>
+                                                              </svg>
+                                                            </div></a>
+                                                          <div class="vrach-inner-add">
+                                                            <div class="offer-footer"><a class="btn primary" href="#" title="Запись к конкретному врачу напрямую"><span>Записаться online</span></a>
+                                                              <!-- data-spec  определяет специальность, которая будет передаваться в модальное окно, работает не только здесь, но и на всех модалках data-modal='offer'--><a class="text js-popup-button" href="#" data-modal="offer" data-spec="val4" title="Запись к специалисту через форму на сайте">Заявка на приём</a>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                        </div>
+                        <!-- с ромой вроде как решили, что подрузка вачей будет как новости на институте, если тебе это облегчит работу конечно., после аякса вызывай lazyImage() и vrachRait();-->
+                        <div class="btn light js-expand"><span>Смотреть всех 118 врачей</span></div>
                       </div>
                     </div>
                   </div>

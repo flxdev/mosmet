@@ -1,6 +1,7 @@
 $(window).on('load', function() {
 	stickinit();
 	lazyImage();
+	vrachRait();
 });
 document.addEventListener("DOMContentLoaded", function() {
 	var elems = {
@@ -76,7 +77,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		}
 
 		function checkSimpleNavigation(currentTop) {
-			console.log(currentTop)
 			if (currentTop <= 100) {
 				mainHeader.classList.remove(conf.hidden);
 			} else {
@@ -590,6 +590,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	popUpsInit();
 	initCustomSelectList();
 	validateForms();
+	comenthide();
 //end of document.ready
 });
 //end of document.ready
@@ -646,7 +647,27 @@ function stickinit() {
 	}, 1)
 }
 
+function vrachRait(){
+	var rait = $('.js-vrach-rait.start');
+	rait.each(function(){
+		var _ = $(this);
+		var svg = _.find('svg .bar');
+		var data = parseFloat(_.data('raiting'));
+		var raiting = (100 * data) / 5;
+		if (isNaN(raiting)) {
+			raiting = 0;
+		}else{
+			var r = svg.attr('r');
+			var c = Math.PI*(r*2);
+			if (raiting < 0) { raiting = 0;}
+			if (raiting > 100) { raiting = 100;}
 
+			var pct = ((100-raiting)/100)*c;
+			svg.css({ strokeDashoffset: pct});
+			rait.removeClass('start')
+		}
+	});
+}
 if (!window.Promise) {
 	window.Promise = Promise;
 }
@@ -654,10 +675,15 @@ if (!window.Promise) {
 
 function lazyImage(){
 	// Get all of the images that are marked up to lazy load
-	var images = document.querySelectorAll('.js-image');
+	var arr = document.querySelectorAll('.js-image');
+	var images = [];
+
+	for(var i = 0; i < arr.length; i++){
+		images.push(arr[i]);
+	}
+
 	var config = {
-		// If the image gets within 50px in the Y axis, start the download.
-		rootMargin: '0px 0px',
+		rootMargin: '-100px 0px',
 		threshold: 0.01
 	};
 
@@ -665,13 +691,15 @@ function lazyImage(){
 	var observer = void 0;
 	// If we don't have support for intersection observer, loads the images immediately
 	if (!('IntersectionObserver' in window)) {
-		for(var i = 0; i< images.length; i++){
-			return preloadImage(images[i]);
+		for(var i = 0; i < imageCount; i++){
+			preloadImage(images[i]);
 		}
+
 	} else {
 		// It is supported, load the images
 		observer = new IntersectionObserver(onIntersection, config);
-		for(var i = 0; i< images.length; i++){
+
+		for(var i = 0; i< imageCount; i++){
 			if (images[i].classList.contains('js-image-handled')) {
 				return;
 			}
@@ -698,8 +726,11 @@ function lazyImage(){
 	 * @param {object} image
 	 */
 	function preloadImage(image) {
+
 		var src = image.dataset.src;
+
 		if (!src) {
+
 			return;
 		}
 
@@ -853,7 +884,46 @@ jQuery.fn.toggleText = function() {
 		this.text(altText);
 	}
 };
+function comenthide(){
+	var target = $('.js-coment');
+	target.each(function(){
+		var _ = $(this),
+			len = _.height(),
+			item = _.find('.feedback-item-content-inner').height(),
+			trigger = _.parent().find('.js-list-more');
+		console.log(len)
+		console.log(item)
+		$(window).on('resize', function(){
+			setTimeout(function(){
+				item = _.find('.feedback-item-content-inner').height();
+				Checkh();
 
+			},600)
+		});
+		function Checkh(){
+			if(len >= item){
+				trigger.css('display', 'none');
+			}else{
+				trigger.removeAttr('style');
+				initclick();
+			}
+		}Checkh();
+		function initclick(){
+			trigger.off('click').on('click', function(e){
+				if(_.attr('style')){
+					// len.removeAtttr('style');
+					_.css('max-height', '');
+					$(this).toggleText();
+				}else{
+					_.css('max-height', item);
+					$(this).toggleText();
+				}
+
+				// $(".aside-stick").trigger("sticky_kit:recalc");
+			});
+		}
+	})
+}
 
 
 function validateForms() {
@@ -938,13 +1008,16 @@ function popUpsInit() {
 			_cont = _popup.find('.modal-container-content:not(.response)')
 		_response = _popup.find('.response');
 		if (!_res > 0) _this.c.header.removeClass(_this.conf.header_class);
-
 		_popup.removeClass(_this.conf.active_class);
 		_this.c.body.removeClass(_this.conf.body_class).removeAttr('style');
 		$(window).scrollTop(_res);
 		setTimeout(function() {
 			_cont.removeAttr('style');
 			_response.removeClass('visible');
+			var _select = _popup.find('.js-select-custom'),
+				_input = _popup.find('input');
+			_input.prop('checked', false);
+			_select.trigger('reinit');
 		}, 500);
 	};
 	_this.f.openPopup = function(_popup) {
@@ -973,7 +1046,16 @@ function popUpsInit() {
 	_this.b.open.off('click.popup').on('click.popup', function(e) {
 		e.preventDefault();
 		var _b = $(this),
-			_popup = _this.c.popup.filter('[data-modal="' + _b.data('modal') + '"]');
+			_popup = _this.c.popup.filter('[data-modal="' + _b.data('modal') + '"]'),
+			_spec = _b.data('spec');
+		if(_spec.length){
+			_select = _popup.find('.js-select-custom'),
+				_input = _popup.find('input[value="'+_spec+'"]');
+			_input.prop('checked', true);
+			_select.trigger('reinit');
+		}
+
+
 		_this.f.openPopup(_popup);
 		return false;
 	});
@@ -1049,7 +1131,6 @@ suggest.prototype = {
 			if (results.length >= 1) {
 				/*Start things fresh by removing the suggestions div and emptying the live region before we start*/
 				this.removeChildren();
-				console.log($(this.suggest).length)
 				$(this.suggest[0]).slideDown();
 				counter = 1;
 			}

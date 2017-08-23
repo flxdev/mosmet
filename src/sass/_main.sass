@@ -188,7 +188,7 @@ body, .out
 		+padlr(15px)	
 .search
 	&-wrapper
-
+		position: relative
 	&-inner
 		display: block
 		width: 100%
@@ -272,6 +272,12 @@ body, .out
 		&:hover
 			+notouch
 				background-color: color(secondarya)
+	&.light 
+		&:hover
+			+notouch
+				background-color: color(secondarybg)
+				span 
+					color: color(secondary)
 	&.primary
 		border-color: color(primary)
 		background-color: color(primary)
@@ -1828,6 +1834,8 @@ body, .out
 		+rem(height,70px)
 		position: relative
 		z-index: 2
+		.search-submit
+			+rem(right,10px)
 		&.focus
 			.suggest-wrapper-inner
 				box-shadow: 0px 5px 22px 0px rgba(68, 97, 119, 0.12);
@@ -1955,7 +1963,7 @@ body, .out
 	&-inner
 		font-size: 0
 		+rem(padding-top,45px)
-		+rem(padding-bottom,100px)
+		+rem(padding-bottom,70px)
 		position: relative
 		+r(991)
 			+rem(padding-bottom,30px)
@@ -2035,7 +2043,9 @@ body, .out
 				white-space: nowrap
 				opacity: 0
 		&-wrap 
-			+rem(padding-top,20px)
+			+rem(padding-top,50px)
+			+r(600)
+				+rem(padding-top,20px)
 			.otdel-head-title
 				+rem(padding-bottom,60px)
 				+r(600)
@@ -2231,13 +2241,14 @@ body, .out
 			object-fit: cover
 			&.fade-in 
 				opacity: .2
+
 	&-inner
 		position: relative
 		z-index: 2
 		+rem(padding-top,81px)
 		+rem(padding-bottom,41px)
 		&:not(:only-child)
-			width: 65%
+			width: 60%
 			padding-right: 5%
 			+r(600)
 				width: 100%
@@ -2255,12 +2266,26 @@ body, .out
 		position: relative
 		z-index: 1
 		width: 30%
+		&.page-vrach
+			img
+				filter: none
+		.vrach-raiting
+			width: 60px
+			height: 60px
+			&:after
+				+rem(font-size,24px)
+				padding-top: 0
+			&.start
+				.bar
+					stroke-dashoffset: 188.5 !important
+
 		+r(600)
 			margin-left: auto
 			width: 60%
 			+rem(margin-top,-100px)
 		.vrach-vrach-name
 			position: static
+
 		.vrach-vrach-inner
 			display: block
 			&:hover
@@ -2268,7 +2293,7 @@ body, .out
 					img
 						filter: none
 			img 
-				+tr(filter .3s)
+				transition: filter .3s, opacity .3s
 				height: 100%
 		.content-block
 			position: absolute
@@ -2605,6 +2630,12 @@ body, .out
 			+rem(margin-bottom,30px)
 		.btn 
 			width: 100%
+		&:not(:first-child)
+			+rem(margin-top,90px)
+			+r(1024)
+				+rem(margin-top,60px)
+			+r(600)
+				+rem(margin-top,30px)
 	&-head
 		font-size: 0
 		+rem(margin-top,5px)
@@ -2623,12 +2654,16 @@ body, .out
 				+rem(margin-top,15px)
 		&>div
 			width: 50%	
+	&-title
+		&:only-child
+			width: 100%
 	&-search
 		+rem(padding-left,20px)
 		&:only-child
 			width: 100%
 			padding-left: 0
 		.search-wrapper 
+			position: relative
 			+rem(margin-right,-10px)
 	&-letters
 		+rem(margin-top,25px)
@@ -3467,3 +3502,218 @@ a.text
   	white-space: nowrap
   	color: color(error)
   	top: 100%
+
+.docsearch
+	&-wrap
+	&-inner
+		+rem(padding-bottom,70px)
+		+r(800)
+			+rem(padding-bottom,35px)
+	&-col 
+		width: 50%
+		+rem(padding-right,30px)
+		display: inline-block
+		vertical-align: middle
+		.input-wrapper
+			margin-bottom: 0
+			+r(800)
+				+rem(margin-bottom,20px)
+		+r(800)
+			width: 100%
+			.input-item
+				padding-right: 0
+			.suggest-wrapper
+				+rem(margin-left,-10px)
+				+rem(margin-right,-10px)
+				z-index: 0
+	&-head
+		font-size: 0
+		+rem(margin-right,-30px)
+		+rem(margin-bottom,50px)
+		+r(800)
+			+rem(margin-bottom,20px)	
+	&-body
+		&>.btn 
+			width: 100%
+	&-container
+		+rem(margin-right,-30px)
+		+rem(padding-bottom,55px)
+		.vrach-wrap
+			width: 25%
+			+rem(margin-top,15px)
+			+rem(margin-bottom,15px)
+			+r(1024)
+				width: 33.33%
+			+r(768)
+				width: 50%
+			+r(550)
+				width: 100%
+			img 
+				&:not(.fade-in)
+					height: 100%
+				transition: filter .3s, opacity .3s .2s!important
+			.btn
+				
+				width: 100%
+				+rem(max-width,198px)
+				span 
+					+padlr(0)
+			.offer-footer
+				+tr(transform .3s ease-in-out)
+				+rem(margin-bottom,-30px)
+				+padlr(0)
+				background: radial-gradient(ellipse at bottom, rgba(255,255,255,1) 0% ,rgba(255,255,255,0) 80% ,rgba(255,255,255,0) 100%);
+				background-position: bottom -20% center
+			.vrach-inner-title
+				display: block
+				+rem(margin-right,-5px)
+		.vrach-inner-block
+			&:before,&:after
+				display: none
+		.vrach-inner
+			&:hover
+				.vrach-vrach-name,.vrach-inner-title,.text 
+					color: color(textblk)
+				img
+					filter: none
+				.vrach-inner-wrap
+					&:hover
+						.vrach-inner-title
+							color: color(secondary)
+			&:not(:hover)
+				.offer-footer
+					transform: translateY(120%)
+.vrach
+	&-raiting
+		+vertical
+		+rem(width,41px)
+		+rem(height,41px)
+		font-size: 0
+		position: relative
+		z-index: 0
+		+rem(margin-top,15px)
+		&.start
+			.bar
+				stroke-dashoffset: 125.66 !important
+		&:after
+			content: attr(data-raiting);
+			font-family: $o 
+			color: color(textblk)
+			font-weight: 700
+			border-radius: 100%;
+			+rem(font-size,14px)
+			display: inline-block
+			vertical-align: middle
+			+rm(601)
+				+rem(padding-top,1px)
+		svg 
+			+coverdiv
+			z-index: -1
+			width: 100%
+			height: 100%
+			display: inline-block
+			overflow: visible
+			transform: rotate(-90deg)
+			.bar 
+				stroke: color(secondary)
+			circle
+				stroke-dashoffset: 0;
+				transition: stroke-dashoffset 1s linear;
+				stroke: #dcdcdc;
+				+rem(stroke-width,2px)
+	
+.desc
+	&-wrap
+		font-size: 0
+		+rem(margin-right,-20px)
+	&-item
+		+rem(padding-right,20px)
+		display: inline-block
+		vertical-align: top
+		+rem(margin-top,7px)
+		+rem(margin-bottom,25px)
+		&.s33
+			width: 33.33%
+		&.s50
+			width: 50%
+		&.s66
+			width: 66.66%
+		&.s100
+			width: 100%
+		.text
+			+rem(font-size,13px)
+			&.primary
+				+rem(font-size,16px)
+				font-weight: 600
+				+rem(margin-top,15px)
+				margin-bottom: 0
+				&:not(:nth-child(2))
+					+rem(margin-top,10px)
+.feedback
+	&-wrapper
+		+rem(max-width,740px)
+		&>.title
+			+rem(margin-bottom,22px)
+	&-item
+		+rem(padding,30px 0 50px)
+		font-size: 0
+		&-raiting
+			+rem(width,70px)
+			.vrach-raiting
+				+rem(margin-top,-5px)
+		&-raiting,&-elem
+			display: inline-block
+			vertical-align: top
+		&-elem 
+			width: calc(100% - 4.375rem)
+		&:not(:last-child)
+			border-bottom: 1px solid color(hborder)
+		.menu-nav-item
+			cursor: pointer
+			+rem(margin, 25px 0)
+		&-head
+			display: table
+			width: 100%
+			+rem(margin-bottom,15px)
+			.text2
+				color: #bfbfbf
+				+rem(font-size,14px)
+			.title
+				+rem(margin-bottom,0px)
+		&-who
+			.who-line
+				+rem(font-size,14px)
+			.text.bold
+				+rem(font-size,14px)
+				display: inline-block
+				+rem(padding-right,5px)
+				font-weight: 600 !important
+				color: color(textblk)
+		&-content
+			+rem(margin-top,25px)
+			overflow: hidden
+			+rem(max-height,96px)
+			+tr(max-height .3s)
+			.text
+				line-height: 1.7
+		&-reply
+			position: relative
+			+rem(padding-left,25px)
+			color: #6d6d6d
+			+rem(font-size,15.5px)
+			+rem(margin-top,25px)
+			.reply-content
+				line-height: 1.5
+			.text
+				&.bold
+					font-weight: 600
+					color: color(textblk)
+					+rem(margin-bottom,10px)
+			&:before
+				content: ''
+				position: absolute
+				left: 0
+				top: 0
+				bottom: 0
+				width: 1px
+				background-color: color(secondary)
