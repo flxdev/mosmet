@@ -210,7 +210,7 @@
                       </div>
                       <div class="footer-right"><a class="text blk" href="#">Контакты</a>
                         <div class="tel-wrap">
-                          <div class="tel-item"><a class="text-sm text-sm" href="tel:84959561767">Регистратура</a><a class="tel-item-tel" href="tel:84959561767">+7 (495) 956-17-67</a><a class="tel-item-tel" href="tel:84959561767">+7 (495) 956-17-67</a><a class="tel-item-tel" href="tel:84959561767">+7 (495) 956-17-67</a></div>
+                          <div class="tel-item"><a class="text-sm" href="tel:84959561767">Регистратура</a><a class="tel-item-tel" href="tel:84959561767">+7 (495) 956-17-67</a><a class="tel-item-tel" href="tel:84959561767">+7 (495) 956-17-67</a><a class="tel-item-tel" href="tel:84959561767">+7 (495) 956-17-67</a></div>
                           <div class="tel-item">
                             <div class="text-sm">Стоматология</div><a class="tel-item-tel" href="tel:84959561767">8 (495) 956-60-95</a>
                           </div>
@@ -927,9 +927,108 @@
           </div>
         </div>
       </div>
+      <div class="modal-layout js-popup-container" data-modal="feedback">
+        <div class="modal-container">
+          <div class="modal-container-inner">
+            <div class="modal-container-header">
+              <div class="title h2">Оставить отзыв о клинике</div><i class="small-link pop-close closePopup"></i>
+            </div>
+            <div class="modal-container-content">
+              <form class="form js-validate">
+                <div class="input-item s-100">
+                  <div class="input-wrapper req">
+                    <label>Заголовок</label>
+                    <input class="input-main" type="text" placeholder="Имя" data-validation="length" data-validation-length="min2" data-validation-error-msg="Не заполнено">
+                  </div>
+                </div>
+                <div class="input-item s-50">
+                  <div class="input-wrapper req">
+                    <label>Ваше имя</label>
+                    <input class="input-main" type="text" placeholder="Имя" data-validation="length" data-validation-length="min2" data-validation-error-msg="Не заполнено">
+                  </div>
+                </div>
+                <div class="input-item s-50">
+                  <div class="input-wrapper req">
+                    <label>Фамилия</label>
+                    <input class="input-main" type="text" placeholder="Фамилия" data-validation="length" data-validation-length="min2" data-validation-error-msg="Не заполнено">
+                  </div>
+                </div>
+                <div class="input-item s-50">
+                  <div class="input-wrapper req">
+                    <label>Отчество</label>
+                    <input class="input-main" type="text" placeholder="Отчество" data-validation="length" data-validation-length="min2" data-validation-error-msg="Не заполнено">
+                  </div>
+                </div>
+                <div class="input-item s-50">
+                  <div class="input-wrapper req">
+                    <label>Телефон</label>
+                    <input class="input-main" type="tel" placeholder="Телефон" data-validation="custom" data-validation-regexp="^[-0-9()+ ]+$" data-validation-error-msg="Не заполнено">
+                  </div>
+                </div>
+                <div class="input-item s-50">
+                  <div class="input-wrapper req">
+                    <label>E-mail</label>
+                    <input class="input-main" type="email" placeholder="example@mail.com" data-validation="email" data-validation-error-msg="Не заполнено">
+                  </div>
+                </div>
+                <div class="input-item s-50">
+                  <div class="input-wrapper req">
+                    <div class="label">Оценка</div>
+                    <div class="input-main raiting">
+                      <label class="input-raiting"><span class="input-raiting-main">
+                          <input class="input-raiting-real" type="radio" name="raiting" value="1" data-validation="required" data-validation-error-msg="Это обязательное поле"><span class="input-raiting-checked" data-text="1"></span></span></label>
+                      <label class="input-raiting"><span class="input-raiting-main">
+                          <input class="input-raiting-real" type="radio" name="raiting" value="2" data-validation="required" data-validation-error-msg="Это обязательное поле"><span class="input-raiting-checked" data-text="2"></span></span></label>
+                      <label class="input-raiting"><span class="input-raiting-main">
+                          <input class="input-raiting-real" type="radio" name="raiting" value="3" data-validation="required" data-validation-error-msg="Это обязательное поле"><span class="input-raiting-checked" data-text="3"></span></span></label>
+                      <label class="input-raiting"><span class="input-raiting-main">
+                          <input class="input-raiting-real" type="radio" name="raiting" value="4" data-validation="required" data-validation-error-msg="Это обязательное поле"><span class="input-raiting-checked" data-text="4"></span></span></label>
+                      <label class="input-raiting"><span class="input-raiting-main">
+                          <input class="input-raiting-real" type="radio" name="raiting" value="5" data-validation="required" data-validation-error-msg="Это обязательное поле"><span class="input-raiting-checked" data-text="5"></span></span></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="input-item s-100">
+                  <div class="input-wrapper">
+                    <label>Отзыв</label>
+                    <textarea class="input-main" rows="5" placeholder="Ваш отзыв"></textarea>
+                  </div>
+                </div>
+                <div class="input-item s-100">
+                  <div class="input-wrapper req">
+                    <div class="select-u-item">
+                      <label class="input_label"><span class="input_main">
+                          <input class="input-real" type="checkbox" name="rules" value="y" data-validation="required" data-validation-error-msg="Это обязательное поле"><span class="input-checked"></span></span><span class="input-text">Даю согласие на обработку моих <a href="#">персональных данных</a></span></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-footer">
+                  <div class="form-footer-notify">
+                    <div class="text">Поля обязательные для заполнения</div>
+                  </div>
+                  <button class="btn secondary" type="submit"><span>Оставить отзыв</span></button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!--контейнер ответа модалки -->
+        <div class="modal-container response" style="display: none;">
+          <div class="modal-container-inner">
+            <div class="modal-container-header">
+              <div class="title h2">Спасибо за обращение!</div><i class="small-link pop-close closePopup"></i>
+            </div>
+            <div class="modal-container-content">
+              <div class="text">Ваше сообщение успешно отправлено. Наш оператор свяжется с вами в ближайшее время для уточнения деталей.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-layout js-popup-container special" data-modal="diplom"></div>
     </div>
     <!--END out-->
     <script src="js/lib.min.js"></script>
+    <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcFkgUmSnM7fy40cDnRn8BB_xu1cp7Ros&amp;callback=initMap"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.60/jquery.form-validator.min.js"></script>
     <script src="js/common.min.js"></script>
   </body>

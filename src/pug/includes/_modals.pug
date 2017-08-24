@@ -98,3 +98,86 @@
 				i.small-link.pop-close.closePopup
 			.modal-container-content
 				.text Ваше сообщение успешно отправлено. Наш оператор свяжется с вами в ближайшее время для уточнения деталей.
+.modal-layout(data-modal='feedback').js-popup-container
+	.modal-container
+		.modal-container-inner
+			.modal-container-header
+				.title.h2 Оставить отзыв о клинике
+				i.small-link.pop-close.closePopup
+			.modal-container-content
+				form.form.js-validate
+					.input-item.s-100
+						.input-wrapper.req
+							label Заголовок
+							input.input-main(type="text",placeholder='Имя',data-validation="length",data-validation-length='min2',data-validation-error-msg="Не заполнено")
+					.input-item.s-50
+						.input-wrapper.req
+							label Ваше имя
+							input.input-main(type="text",placeholder='Имя',data-validation="length",data-validation-length='min2',data-validation-error-msg="Не заполнено")
+					.input-item.s-50
+						.input-wrapper.req
+							label Фамилия
+							input.input-main(type="text",placeholder='Фамилия',data-validation="length",data-validation-length='min2',data-validation-error-msg="Не заполнено")
+					.input-item.s-50
+						.input-wrapper.req
+							label Отчество
+							input.input-main(type="text",placeholder='Отчество',data-validation="length",data-validation-length='min2',data-validation-error-msg="Не заполнено")
+					.input-item.s-50
+						.input-wrapper.req
+							label Телефон
+							input.input-main(type="tel",placeholder='Телефон',data-validation="custom",data-validation-regexp="^[-0-9()+ ]+$",data-validation-error-msg="Не заполнено")
+					.input-item.s-50
+						.input-wrapper.req
+							label E-mail
+							input.input-main(type="email",placeholder='example@mail.com',data-validation="email",data-validation-error-msg="Не заполнено")
+					.input-item.s-50
+						.input-wrapper.req
+							.label Оценка
+							.input-main.raiting
+								label.input-raiting
+									span.input-raiting-main
+										input.input-raiting-real(type="radio",name='raiting',value = '1',data-validation="required",data-validation-error-msg="Это обязательное поле")
+										span.input-raiting-checked(data-text='1')
+								label.input-raiting
+									span.input-raiting-main
+										input.input-raiting-real(type="radio",name='raiting',value = '2',data-validation="required",data-validation-error-msg="Это обязательное поле")
+										span.input-raiting-checked(data-text='2')
+								label.input-raiting
+									span.input-raiting-main
+										input.input-raiting-real(type="radio",name='raiting',value = '3',data-validation="required",data-validation-error-msg="Это обязательное поле")
+										span.input-raiting-checked(data-text='3')
+								label.input-raiting
+									span.input-raiting-main
+										input.input-raiting-real(type="radio",name='raiting',value = '4',data-validation="required",data-validation-error-msg="Это обязательное поле")
+										span.input-raiting-checked(data-text='4')
+								label.input-raiting
+									span.input-raiting-main
+										input.input-raiting-real(type="radio",name='raiting',value = '5',data-validation="required",data-validation-error-msg="Это обязательное поле")
+										span.input-raiting-checked(data-text='5')
+					.input-item.s-100
+						.input-wrapper
+							label Отзыв
+							textarea.input-main(rows='5',placeholder='Ваш отзыв')
+					.input-item.s-100
+						.input-wrapper.req
+							.select-u-item
+								label.input_label
+									span.input_main
+										input.input-real(type="checkbox",name='rules',value = 'y',data-validation="required",data-validation-error-msg="Это обязательное поле")
+										span.input-checked
+									span.input-text Даю согласие на обработку моих 
+										a(href="#") персональных данных
+					.form-footer
+						.form-footer-notify
+							.text Поля обязательные для заполнения
+						button(type='submit').btn.secondary
+							span Оставить отзыв
+	//контейнер ответа модалки 
+	.modal-container.response(style='display: none')
+		.modal-container-inner
+			.modal-container-header
+				.title.h2 Спасибо за обращение!
+				i.small-link.pop-close.closePopup
+			.modal-container-content
+				.text Ваше сообщение успешно отправлено. Наш оператор свяжется с вами в ближайшее время для уточнения деталей.
+.modal-layout(data-modal='diplom').js-popup-container.special

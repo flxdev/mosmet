@@ -52,7 +52,7 @@ ul
 html
 	font-size: 16px
 	line-height: 1
-	overflow-x: hidden
+	// overflow-x: hidden
 	+r(1150)
 		font-size: 15px
 body
@@ -477,8 +477,9 @@ body, .out
 				+rem(padding-left,10px)
 .text-sm
 	display: block
-	text-transform: uppercase
-	+rem(font-size,10px)
+	// text-transform: uppercase
+	// +rem(font-size,10px)
+	+rem(font-size,13px)
 	color: color(textlight)
 	+rem(margin-bottom,7px)
 .tel
@@ -2253,6 +2254,17 @@ body, .out
 			+r(600)
 				width: 100%
 				padding-right: 0
+	&-button
+		vertical-align: top !important
+		width: 40%
+		text-align: right
+		+rem(padding-top,86px)
+		+r(600)
+			+rem(padding-top,15px)
+			+rem(padding-bottom,25px)
+			width: auto
+
+		
 	&-container
 		font-size: 0
 		&>div
@@ -2377,6 +2389,8 @@ body, .out
 				+rem(max-width,350px)
 				display: block
 				margin: 0 auto
+			.tel-wrap
+				+rem(margin-bottom,30px)
 		&-stick
 			+r(900)
 				position: static !important
@@ -2761,6 +2775,36 @@ body, .out
 		height: 6px;
 		background-repeat: repeat-x;
 		background-image: radial-gradient(circle, color(secondary) 1px, transparent 1.5px);
+	&.metro
+		font-size: 0
+		&:before
+			display: none
+			
+		i,span 
+			display: inline-block
+			vertical-align: bottom
+		i 
+			+rem(width,19px)
+			+rem(height,13px)
+			+contain
+			background-position: bottom center
+			background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAbCAMAAADMMLbsAAAApVBMVEVHcEzVbHLVbHLVbHLVbHLVbHLVbHLVbHLVbHLVbHLVbHLVbHLVbHLVbHLVbHLVbHLVbHLVbHLVbHLVbHLVbHLVbHLVbHLVbHLVbHLVbHLVbHLVbHLVbHLVbHLVbHLVbHLVbHLVbHLVbHLVbHLVbHLVbHLVbHLVbHLVbHLVbHLVbHLVbHLVbHLVbHLVbHLVbHLVbHLVbHLVbHLVbHLVbHLVbHLVbHIeouD1AAAANnRSTlMAgL2C9CeH4DAE/K5y5wz+GglrGPIBAqg2mEXF1FxTIdo7+EzplwgWefmlojhfzskRKs1PcDIGXAl8AAABHklEQVR4AXXR15qqQAAD4CCdXQqiW+y9dz15/0c7MAMMOu5/l+/LVYIGH1rS2QaaDBvvOFYGJbMcvOGHXEJZMvShm5OBjYodkHPoPkh+vE/KOmBuCmnKXLDGq08W+hC6fRY+8WpAYYTCiMIAL34oTXwA/oTSD579stQG0GbpF0/SDkuLCNGCpU6KpiFrJkzWhmhqsWb9s1hroWEcU+lQicdQTP7FRO3LpbDbsrLdUXC/UOlRsh1WHJtSD5VvCidEIaUwwonCN0qXGavbjpSO1bGcXSC1KcQJ0D2zcO4CSazOKNwa2xxYODQ2vCGXeXdKjpcC2JPcA0g9h9Ldy2BQ8QAkFq0EgEfF0FrYcAOt9XCVK3Kr1gq5q6s8oPOh+Q9LjVg08nTwBAAAAABJRU5ErkJggg==);
+		span 
+			position: relative
+			+rem(font-size,16px)
+			&:before
+
+				content: ''
+				display: inline-block
+				width: 100%
+				height: 4px
+				position: absolute
+				top: 100%
+				left: 0
+				background-size: 6px 6px;
+				height: 6px;
+				background-repeat: repeat-x;
+				background-image: radial-gradient(circle, color(secondary) 1px, transparent 1.5px);
 .diplom-slider
 	&-content
 		text-align: left
@@ -3088,6 +3132,10 @@ a.text
 		display: block
 		font-size: 0
 		+rem(padding,0 0 20px)
+		&.print
+			+rem(padding-top,20px)
+			.download-link-text
+				+rem(padding-top,0px)
 		&:hover
 			+notouch
 				.text.primary
@@ -3632,12 +3680,20 @@ a.text
 		vertical-align: top
 		+rem(margin-top,7px)
 		+rem(margin-bottom,25px)
+		+r(600)
+			+rem(margin-bottom,15px)
 		&.s33
 			width: 33.33%
+			+r(600)
+				width: 100%
 		&.s50
 			width: 50%
+			+r(600)
+				width: 100%
 		&.s66
 			width: 66.66%
+			+r(600)
+				width: 100%
 		&.s100
 			width: 100%
 		.text
@@ -3717,3 +3773,222 @@ a.text
 				bottom: 0
 				width: 1px
 				background-color: color(secondary)
+.special
+	.big-image-slider
+		&+ .modal-container-content
+			+rem(margin-top,-100px)
+			+r(1700)
+				+rem(margin-top,-70px)
+			+r(600)
+				+rem(margin-top,-40px)
+	.modal-container
+		padding: 0 !important
+		background: 0 0 !important
+		+rem(max-width,978px)
+		box-shadow: none
+		+r(1024)
+			padding: 10px !important
+		.small-link
+			+rem(top,-15px)
+			+r(1024)
+				right: 0
+		&-content 
+			margin-top: 0
+			background-color: color(white)
+			+rem(padding,40px 30px)
+			position: relative
+			z-index: 10%
+			+rem(max-width,688px)
+			margin-left: auto
+			box-shadow: 0 5px 11px 0 rgba(68,97,119,.2)
+			+r(1700)
+				+rem(padding,30px 20px)
+			+r(1024)
+				margin-right: auto
+				
+		&-arrows
+			+rem(width,180px)
+			display: inline-block
+			vertical-align: top
+			+r(600)
+				width: 100%
+				+rem(margin-bottom,20px)
+		&-slider
+			font-size: 0
+			display: inline-block
+			width: 100%
+
+			&-inner
+				width: calc(100% - 11.25rem)
+				display: inline-block
+				vertical-align: top
+				+r(600)
+					width: 100%
+				.title
+					font-weight: 600
+					+rem(margin-bottom,20px)
+				.text
+					line-height: 1.6
+					+cut(2)
+				.slide-links
+					font-size: 0
+					.download-link
+						display: inline-block
+						vertical-align: top
+						+rem(padding-right,20px)
+						padding-bottom: 0
+.big-image
+	&-slider
+		&-inner
+			height: 100%
+			&>*
+				height: 100%!important
+	&-item
+		// height: 100%
+		+vertical
+		height: 78vh
+		&-inner
+			display: inline-block
+			vertical-align: middle
+			width: 100%
+		img
+			+rem(max-width,540px)
+			// display: block
+			margin: auto
+			max-height: 100%
+			+r(1650)
+				+rem(max-width,400px)
+			+r(600)
+				max-width: 100%
+
+
+.raiting
+	border: none !important
+	font-size: 0
+	padding: 0 !important
+	+rem(margin-right,-15px)
+	display: block
+	width: auto !important
+	+rem(max-width,325px)
+	+r(600)
+		margin: 0 auto
+		transform: translateX(.47rem)
+	+r(380)
+		+rem(margin, 0 -15px 0 0px)
+		transform: none
+		max-width: 1000px
+	.input-raiting
+		display: inline-block
+		vertical-align: top
+		width: calc(20% - .9375rem) 
+		margin-bottom: 0
+		+rem(height,50px)
+		+rem(margin-right,15px)
+		cursor: pointer
+		// &:first-child
+		// 	+r(600)
+		// 		+rem(margin-left,15px)
+		&:hover
+			.input-raiting-checked
+				border-color: color(secondary)
+
+		&-main 
+			position: relative
+			
+		&-real
+			opacity: 0
+			visibility: hidden
+			+coverdiv
+			z-index: -1
+			&:checked + .input-raiting-checked
+				background-color: color(secondary)
+				border-color: color(secondary)
+				&:after
+					color: color(white)
+		&-checked
+			color: color(textblk)
+			+tr(color)
+			display: block
+			width: 100%
+			height: 100%
+			border: 1px solid color(bcolor)
+			border-radius: 4px
+			transition: color .3s, background-color .3s
+			+vertical
+			&:after
+				content: attr(data-text)
+				display: inline-block
+				vertical-align: middle
+				color: color(textblk)
+				+rem(font-size,14px)
+				+tr(color .3s)
+				+rem(padding-bottom,1px)
+
+.map
+	&-wrapper
+		position: relative
+		height: 0
+		padding-bottom: 34%
+		background-color: color(secondarybg)
+		z-index: 0
+		overflow: visible
+		+r(1300)
+			padding-bottom: 40%
+	&-img
+		position: absolute
+		right: 0
+		top: -10%
+		width: 36.5%
+		z-index: 2
+		&-inner
+			position: relative
+			z-index: 1
+			width: 100%
+			padding-bottom: 90%
+			background: color(primary)
+			+cover
+			box-shadow: 0 6px 27px 0 rgba(0,0,0,.15)
+	&-cont 
+		+coverdiv
+		z-index: 1
+	&-element
+		width: 100%
+		height: 100%
+	
+.tel-container
+	border: 1px solid color(hborder)
+	+rem(padding,30px 35px)
+	+rem(margin-bottom,25px)
+	.btn 
+		+rem(font-size,14px)
+		width: 100%
+		span 
+			+padlr(0)
+.contact-content
+	+rem(max-width,800px)
+	+rem(margin-top,20px)
+	+rem(padding-bottom,20px)
+	.desc-item
+		a 
+			display: inline-block
+			position: relative
+			+rem(font-size,14px)
+			color: color(secondary)
+			&:before
+				content: ''
+				display: inline-block
+				height: 1px
+				position: absolute
+				left: 0
+				right: 0
+				background-color: color(secondary)
+				bottom: 0
+		&.s100
+			+rem(max-width,450px)
+			display: block
+			.text
+				line-height: 1.7
+			.link-dotted
+				+rem(margin-top,20px)
+
+

@@ -105,22 +105,22 @@ block content
 									h2.title.h2 Заведующая клинико-диагностической лабораторией
 									.desc-wrap
 										.desc-item.s33
-											.text Специальность
+											.text-sm Специальность
 											.text.primary Врач-ренгенолог
 										.desc-item.s33
-											.text Учёная степень
+											.text-sm Учёная степень
 											.text.primary Кандидат медицинских наук
 										.desc-item.s33
-											.text Профессиональные достижения
+											.text-sm Профессиональные достижения
 											.text.primary Кандидат медицинских наук
 										.desc-item.s33
-											.text Стаж работы
+											.text-sm Стаж работы
 											.text.primary с 1987 года
 										.desc-item.s33
-											.text Категория
+											.text-sm Категория
 											.text.primary Высшая
 										.desc-item.s100
-											.text Образование
+											.text-sm Образование
 											.text.primary Первый московский государственный медицинский университет им. Сеченова. Прошла обучение в ординатуре по специальности «Урология» (клиническая больница №42)
 
 						.service-wrapper
@@ -192,23 +192,7 @@ block content
 		.box
 			.aside-wrapp
 				aside.aside-menu(data-sticky_parent)
-					.diplom-slider-content
-						.diplom-slider-inner
-							a(href="img/big.jpg",data-sub-html='<div class="text bold">Сертификат качества3</div><p class="text2">Выдан специалисту высшего разряда</p>').diplom-slider-inner-img
-								img(data-lazy="img/document.jpg", alt="fsdfsd")
-								.text-sm Лицензия на предоставление медицинских услуг
-							a(href="img/big.jpg",data-sub-html='<div class="text bold">Сертификат качества1</div><p class="text2">Выдан специалисту высшего разряда</p>').diplom-slider-inner-img
-								img(data-lazy="img/document.jpg", alt="fsdfsd")
-								.text-sm Лицензия на предоставление медицинских услуг
-							a(href="img/big.jpg",data-sub-html='<div class="text bold">Сертификат качества31</div><p class="text2">Выдан специалисту высшего разряда</p>').diplom-slider-inner-img
-								img(data-lazy="img/document.jpg", alt="fsdfsd")
-								.text-sm Лицензия на предоставление медицинских услуг
-						.arr-wrap
-							.arr-wrap-inner
-								.slider-counter
-									.slider-curr
-									.slider-divider /
-									.slider-total
+					include includes/_dipslider.pug
 
 				.aside-content
 					.content-element

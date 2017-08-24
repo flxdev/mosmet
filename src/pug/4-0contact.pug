@@ -1,0 +1,102 @@
+extends _layout
+
+block title
+	title Контакты
+block config
+	- var main = false
+block content
+	.wrapper.gray.page-head
+		.box
+			.page-head-content
+				.page-head-bg
+					.page-head-bg-inner
+						img(data-src="img/head/3.jpg", alt="").js-image
+				.page-head-container
+					.page-head-inner
+						h1.title.h1 Контакты
+						.bread-cont
+							a(href="#").bread-item Главная
+							a(href="#").bread-item Контакты
+					.page-head-button
+						.btn.secondary.js-popup-button(data-modal='callback')
+							span Форма обратной связи
+	.wrapper
+		.box
+			.content-element
+				.aside-wrapp
+					aside.aside-menu(data-sticky_parent)
+						.aside-menu-inner
+							.tel-container
+								.tel-wrap
+									.tel-item
+										a(href="tel:84959561767").text-sm Регистратура
+										a(href="tel:84959561767").tel-item-tel +7 (495) 956-17-67
+										a(href="tel:84959561767").tel-item-tel +7 (495) 956-17-67
+										a(href="tel:84959561767").tel-item-tel +7 (495) 956-17-67
+								.tel-wrap
+									.tel-item
+										a(href="tel:84959561767").text-sm Стоматология
+										a(href="tel:84959561767").tel-item-tel +7 (495) 956-17-67
+								.btn.js-popup-button(data-modal='callback')
+									span Обратный звонок
+					.aside-content
+						.contact-content
+							.desc-wrap
+								.desc-item.s33
+									.text-sm Адрес
+									.text.primary 119002, г. Москва ул. Арбат, 28/1, стр.1 
+										a(href="mailto:o_kadrov@mositalmed.ru") o_kadrov@mositalmed.ru
+								.desc-item.s50
+									.text-sm Режим работы
+									.text.primary Пн–Сб: 8:30–21:00 Вс: 9:00–20:00
+								.desc-item.s100
+									.text У нас удобное расположение, в шаговой доступности от двух станций метро, рядом две платные стоянки.
+									.link-dotted.metro.js-popup-button(data-modal='metro', data-href='/metro.html', data-slideTo='1').ajax-trigger
+										i 
+										span маршрут от ст.м. Смоленская
+									.link-dotted.metro.js-popup-button(data-modal='metro', data-href='/metro.html', data-slideTo='2').ajax-trigger
+										i 
+										span маршрут от ст.м. Смоленская
+
+	.wrapper.map-wrapper
+		.map-cont
+			#map.map-element(data-lat='55.749327',data-lon='37.590710',data-icon='/img/point.png')
+		.map-img
+			.map-img-inner(data-src='img/index/clinic.jpg').js-image.bg 
+
+
+
+		//- .box
+		//- 	a(href="#").btn
+		//- 		span Подробнее о клинике
+		//- 	a(href="#").btn.secondary
+		//- 		span Подробнее о клинике
+		//- 	a(href="#").btn.primary
+		//- 		span Подробнее о клинике
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
