@@ -104,7 +104,7 @@
                             <div class="dropdown-content"><a class="spec-link" href="#">
                                 <div class="spec-link-title dropdown">Записаться online</div>
                                 <div class="text">Записаться на прием самостоятельно, выбрав врача и удобное время в личном кабинете</div></a>
-                              <div class="spec-link js-popup-button" data-modal="zayavka">
+                              <div class="spec-link js-popup-button" data-modal="offer">
                                 <div class="spec-link-title dropdown">Оставить заявку</div>
                                 <div class="text">Оставить заявку на приём через форму на сайте (вам перезвонят, чтобы уточнить детали)</div>
                               </div>
@@ -865,7 +865,138 @@
           </div>
         </div>
       </div>
+      <div class="modal-layout js-popup-container" data-modal="obratka">
+        <div class="modal-container">
+          <div class="modal-container-inner">
+            <div class="modal-container-header">
+              <div class="title h2">Форма обратной связи</div><i class="small-link pop-close closePopup"></i>
+            </div>
+            <div class="modal-container-content">
+              <form class="form js-validate">
+                <div class="input-item s-50">
+                  <div class="input-wrapper req">
+                    <label>Ваше имя</label>
+                    <input class="input-main" type="text" placeholder="Имя" data-validation="length" data-validation-length="min2" data-validation-error-msg="Не заполнено">
+                  </div>
+                </div>
+                <div class="input-item s-50">
+                  <div class="input-wrapper req">
+                    <label>Фамилия</label>
+                    <input class="input-main" type="text" placeholder="Фамилия" data-validation="length" data-validation-length="min2" data-validation-error-msg="Не заполнено">
+                  </div>
+                </div>
+                <div class="input-item s-50">
+                  <div class="input-wrapper req">
+                    <label>Отчество</label>
+                    <input class="input-main" type="text" placeholder="Отчество" data-validation="length" data-validation-length="min2" data-validation-error-msg="Не заполнено">
+                  </div>
+                </div>
+                <div class="input-item s-50">
+                  <div class="input-wrapper req">
+                    <label>Телефон</label>
+                    <input class="input-main" type="tel" placeholder="Телефон" data-validation="custom" data-validation-regexp="^[-0-9()+ ]+$" data-validation-error-msg="Не заполнено">
+                  </div>
+                </div>
+                <div class="input-item s-50">
+                  <div class="input-wrapper req">
+                    <label>E-mail</label>
+                    <input class="input-main" type="email" placeholder="example@mail.com" data-validation="email" data-validation-error-msg="Не заполнено">
+                  </div>
+                </div>
+                <div class="input-item s-100 req">
+                  <div class="input-wrapper">
+                    <label>Ваше сообщение</label>
+                    <textarea class="input-main" rows="5" placeholder="Ваше сообщение" data-validation="length" data-validation-length="min2" data-validation-error-msg="Не заполнено"></textarea>
+                  </div>
+                </div>
+                <div class="input-item s-100">
+                  <div class="input-wrapper req">
+                    <div class="select-u-item">
+                      <label class="input_label"><span class="input_main">
+                          <input class="input-real" type="checkbox" name="rules" value="y" data-validation="required" data-validation-error-msg="Это обязательное поле"><span class="input-checked"></span></span><span class="input-text">Даю согласие на обработку моих <a href="#">персональных данных</a></span></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-footer">
+                  <div class="form-footer-notify">
+                    <div class="text">Поля обязательные для заполнения</div>
+                  </div>
+                  <button class="btn secondary" type="submit"><span>Отправить</span></button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!--контейнер ответа модалки -->
+        <div class="modal-container response" style="display: none;">
+          <div class="modal-container-inner">
+            <div class="modal-container-header">
+              <div class="title h2">Спасибо за обращение!</div><i class="small-link pop-close closePopup"></i>
+            </div>
+            <div class="modal-container-content">
+              <div class="text">Ваше сообщение успешно отправлено. Наш оператор свяжется с вами в ближайшее время для уточнения деталей.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-layout js-popup-container" data-modal="callback">
+        <div class="modal-container">
+          <div class="modal-container-inner">
+            <div class="modal-container-header">
+              <div class="title h2">Заказать обратный звонок</div><i class="small-link pop-close closePopup"></i>
+            </div>
+            <div class="modal-container-content">
+              <form class="form js-validate">
+                <div class="input-item s-50">
+                  <div class="input-wrapper req">
+                    <label>Ваше имя</label>
+                    <input class="input-main" type="text" placeholder="Имя" data-validation="length" data-validation-length="min2" data-validation-error-msg="Не заполнено">
+                  </div>
+                </div>
+                <div class="input-item s-50">
+                  <div class="input-wrapper req">
+                    <label>Телефон</label>
+                    <input class="input-main" type="tel" placeholder="Телефон" data-validation="custom" data-validation-regexp="^[-0-9()+ ]+$" data-validation-error-msg="Не заполнено">
+                  </div>
+                </div>
+                <div class="input-item s-100">
+                  <div class="input-wrapper">
+                    <label>Комментарий</label>
+                    <textarea class="input-main" rows="5" placeholder="Ваш Комментарий"></textarea>
+                  </div>
+                </div>
+                <div class="input-item s-100">
+                  <div class="input-wrapper req">
+                    <div class="select-u-item">
+                      <label class="input_label"><span class="input_main">
+                          <input class="input-real" type="checkbox" name="rules" value="y" data-validation="required" data-validation-error-msg="Это обязательное поле"><span class="input-checked"></span></span><span class="input-text">Даю согласие на обработку моих <a href="#">персональных данных</a></span></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-footer">
+                  <div class="form-footer-notify">
+                    <div class="text">Поля обязательные для заполнения</div>
+                  </div>
+                  <button class="btn secondary" type="submit"><span>Заказать звонок</span></button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!--контейнер ответа модалки -->
+        <div class="modal-container response" style="display: none;">
+          <div class="modal-container-inner">
+            <div class="modal-container-header">
+              <div class="title h2">Спасибо за обращение!</div><i class="small-link pop-close closePopup"></i>
+            </div>
+            <div class="modal-container-content">
+              <div class="text">Ваше сообщение успешно отправлено. Наш оператор свяжется с вами в ближайшее время для уточнения деталей.</div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="modal-layout js-popup-container special" data-modal="diplom"></div>
+      <div class="modal-layout js-popup-container special map" data-modal="metro"></div>
     </div>
     <!--END out-->
     <script src="js/lib.min.js"></script>

@@ -98,6 +98,7 @@
 				i.small-link.pop-close.closePopup
 			.modal-container-content
 				.text Ваше сообщение успешно отправлено. Наш оператор свяжется с вами в ближайшее время для уточнения деталей.
+
 .modal-layout(data-modal='feedback').js-popup-container
 	.modal-container
 		.modal-container-inner
@@ -180,4 +181,106 @@
 				i.small-link.pop-close.closePopup
 			.modal-container-content
 				.text Ваше сообщение успешно отправлено. Наш оператор свяжется с вами в ближайшее время для уточнения деталей.
+
+
+
+.modal-layout(data-modal='obratka').js-popup-container
+	.modal-container
+		.modal-container-inner
+			.modal-container-header
+				.title.h2 Форма обратной связи
+				i.small-link.pop-close.closePopup
+			.modal-container-content
+				form.form.js-validate
+					.input-item.s-50
+						.input-wrapper.req
+							label Ваше имя
+							input.input-main(type="text",placeholder='Имя',data-validation="length",data-validation-length='min2',data-validation-error-msg="Не заполнено")
+					.input-item.s-50
+						.input-wrapper.req
+							label Фамилия
+							input.input-main(type="text",placeholder='Фамилия',data-validation="length",data-validation-length='min2',data-validation-error-msg="Не заполнено")
+					.input-item.s-50
+						.input-wrapper.req
+							label Отчество
+							input.input-main(type="text",placeholder='Отчество',data-validation="length",data-validation-length='min2',data-validation-error-msg="Не заполнено")
+					.input-item.s-50
+						.input-wrapper.req
+							label Телефон
+							input.input-main(type="tel",placeholder='Телефон',data-validation="custom",data-validation-regexp="^[-0-9()+ ]+$",data-validation-error-msg="Не заполнено")
+					.input-item.s-50
+						.input-wrapper.req
+							label E-mail
+							input.input-main(type="email",placeholder='example@mail.com',data-validation="email",data-validation-error-msg="Не заполнено")
+					.input-item.s-100.req
+						.input-wrapper
+							label Ваше сообщение
+							textarea.input-main(rows='5',placeholder='Ваше сообщение',data-validation="length",data-validation-length='min2',data-validation-error-msg="Не заполнено")
+					.input-item.s-100
+						.input-wrapper.req
+							.select-u-item
+								label.input_label
+									span.input_main
+										input.input-real(type="checkbox",name='rules',value = 'y',data-validation="required",data-validation-error-msg="Это обязательное поле")
+										span.input-checked
+									span.input-text Даю согласие на обработку моих 
+										a(href="#") персональных данных
+					.form-footer
+						.form-footer-notify
+							.text Поля обязательные для заполнения
+						button(type='submit').btn.secondary
+							span Отправить
+	//контейнер ответа модалки 
+	.modal-container.response(style='display: none')
+		.modal-container-inner
+			.modal-container-header
+				.title.h2 Спасибо за обращение!
+				i.small-link.pop-close.closePopup
+			.modal-container-content
+				.text Ваше сообщение успешно отправлено. Наш оператор свяжется с вами в ближайшее время для уточнения деталей.
+
+.modal-layout(data-modal='callback').js-popup-container
+	.modal-container
+		.modal-container-inner
+			.modal-container-header
+				.title.h2 Заказать обратный звонок
+				i.small-link.pop-close.closePopup
+			.modal-container-content
+				form.form.js-validate
+					.input-item.s-50
+						.input-wrapper.req
+							label Ваше имя
+							input.input-main(type="text",placeholder='Имя',data-validation="length",data-validation-length='min2',data-validation-error-msg="Не заполнено")
+					.input-item.s-50
+						.input-wrapper.req
+							label Телефон
+							input.input-main(type="tel",placeholder='Телефон',data-validation="custom",data-validation-regexp="^[-0-9()+ ]+$",data-validation-error-msg="Не заполнено")
+					.input-item.s-100
+						.input-wrapper
+							label Комментарий
+							textarea.input-main(rows='5',placeholder='Ваш Комментарий')
+					.input-item.s-100
+						.input-wrapper.req
+							.select-u-item
+								label.input_label
+									span.input_main
+										input.input-real(type="checkbox",name='rules',value = 'y',data-validation="required",data-validation-error-msg="Это обязательное поле")
+										span.input-checked
+									span.input-text Даю согласие на обработку моих 
+										a(href="#") персональных данных
+					.form-footer
+						.form-footer-notify
+							.text Поля обязательные для заполнения
+						button(type='submit').btn.secondary
+							span Заказать звонок
+	//контейнер ответа модалки 
+	.modal-container.response(style='display: none')
+		.modal-container-inner
+			.modal-container-header
+				.title.h2 Спасибо за обращение!
+				i.small-link.pop-close.closePopup
+			.modal-container-content
+				.text Ваше сообщение успешно отправлено. Наш оператор свяжется с вами в ближайшее время для уточнения деталей.
+
 .modal-layout(data-modal='diplom').js-popup-container.special
+.modal-layout(data-modal='metro').js-popup-container.special.map

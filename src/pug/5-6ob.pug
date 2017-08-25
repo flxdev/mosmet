@@ -1,0 +1,89 @@
+extends _layout
+
+block title
+	title Вопрос-ответ
+block config
+	- var main = false
+block content
+	.wrapper.gray.page-head
+		.box
+			.page-head-content
+				.page-head-bg
+					.page-head-bg-inner
+						img(data-src="img/head/3.jpg", alt="").js-image
+				.page-head-container
+					.page-head-inner
+						h1.title.h1 Вопрос-ответ
+						.bread-cont
+							a(href="#").bread-item Главная
+							a(href="#").bread-item О клинике
+							a(href="#").bread-item Вопрос-ответ
+	.wrapper
+		.box
+			.content-element
+				.aside-wrapp
+					aside.aside-menu(data-sticky_parent)
+						.aside-menu-inner
+							.aside-menu-stick.js-stick.js-dropdown-parent
+								.aside-title.title.h3.js-dropdown.dropdown О клинике
+								ul.aside-nav.nav.js-dropdown-target
+									li.aside-nav-item
+										a.aside-nav-link(href="#") Медицинский центр
+									li.aside-nav-item
+										a.aside-nav-link(href="#") Руководство
+									li.aside-nav-item
+										a.aside-nav-link(href="#") Партнеры
+									li.aside-nav-item
+										a.aside-nav-link(href="#") Вакансии
+									li.aside-nav-item
+										a.aside-nav-link(href="#") Документы и лицензии
+									li.aside-nav-item
+										a.aside-nav-link(href="#") Органы власти
+									li.aside-nav-item.active
+										a.aside-nav-link(href="#") Вопрос-ответ
+									li.aside-nav-item
+										a.aside-nav-link(href="#") Отзывы
+									li.aside-nav-item
+										a.aside-nav-link(href="#") Аптека
+					.aside-content
+						.contact-content
+							.content-wrapper(data-id='#content')
+								
+				
+
+
+
+		//- .box
+		//- 	a(href="#").btn
+		//- 		span Подробнее о клинике
+		//- 	a(href="#").btn.secondary
+		//- 		span Подробнее о клинике
+		//- 	a(href="#").btn.primary
+		//- 		span Подробнее о клинике
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
