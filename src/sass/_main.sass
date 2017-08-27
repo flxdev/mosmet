@@ -2880,14 +2880,14 @@ body, .out
 			font-weight: 600
 		&:first-child
 			margin-top: 0
-	a 
-		color: color(secondary)
-		box-shadow: 0 -2px 0 0 transparent, 0 1px 0 0 color(secondary);
-		&:hover
-			+notouch
-			color: color(secondarya)
-		&:active
-			color: color(secondarya2)
+		a 
+			color: color(secondary)
+			box-shadow: 0 -2px 0 0 transparent, 0 1px 0 0 color(secondary);
+			&:hover
+				+notouch
+				color: color(secondarya)
+			&:active
+				color: color(secondarya2)
 	h4
 		+rem(font-size,18px)
 		color: color(textblk)
@@ -4073,3 +4073,227 @@ a.text
 				+rem(margin-top,30px)
 
 
+.col
+	&-wrapper
+		+rem(margin-right,-30px)
+		font-size: 0
+		.col-50,.col-33
+			display: inline-block
+			vertical-align: top
+			+rem(padding-right,30px)
+			.news-item
+				padding-right: 0
+				display: block
+				+rem(margin-right,-15px)
+				+rem(max-width,310px)
+				+r(500)
+					margin-left: auto
+					margin-right: auto
+					
+				&-image
+					height: auto
+					
+					&-inner
+						+rem(max-width,170px)
+				&-content
+					+rem(max-width,240px)
+					&-inner
+						z-index: 0
+						+rem(min-height,70px)
+			.vrach
+				&-wrap
+					padding: 0
+					width: 100%
+					margin: 0
+					+rem(margin-bottom,30px)
+					img 
+						filter: none
+				&-vrach
+					z-index: 0
+					&-name
+						z-index: 2
+						+rem(max-width,300px)
+						.tel-item
+							+rem(margin-bottom,10px)
+							a
+								color: color(textblk)
+								&:hover
+									color: color(secondary)
+
+						a 
+							box-shadow: none
+							cursor: pointer
+				&-vrach-inner
+					&:after
+						content: ''
+						position: absolute
+						+rem(height,100px)
+						left: 0
+						right: 0
+						display: inline-block
+						bottom: 0
+						background-image: linear-gradient(to top,color(secondarybg),rgba(255,255,255,0) 50%);
+				&-inner
+
+					&:hover
+						.vrach-vrach-name
+							opacity: 1
+							
+					&-block
+						justify-content: flex-start
+						pointer-events: none
+						&:before,&:after
+							display: none
+					&-title
+						color: color(textblk) !important
+						
+		.col-50
+			width: 50%
+			+r(600)
+				width: 100%
+		.col-33
+			width: 33.33%
+			+r(768)
+				width: 50%
+			+r(500)
+				width: 100%
+.partner
+		+rem(margin-right,-100px)
+		overflow: hidden
+		
+		+r(1200)
+			+rem(margin-right,-30px)
+		.col-50
+			&:nth-child(n+3)
+				.partner-block
+					+rem(padding-top,30px)
+		&-block
+			border-bottom: 1px solid color(hborder)
+			+rem(padding-bottom,30px)
+
+			&-inner
+				font-size: 0
+				// border-top: 1px solid color(hborder)
+				+rem(padding-bottom,50px )
+				display: inline-block
+				box-shadow: none
+				+r(600)
+					+rem(padding-bottom,15px)
+				.title
+					+tr(color .3s)
+					font-weight: 500
+				&:hover
+					.link:before
+						width: 0
+					// .title
+					// 	color: $hover
+
+
+			&-img,&-content
+				display: inline-block
+				vertical-align: top
+			&-img
+				width: 35%
+				padding-right: 7.5%
+				img
+					max-width: 100%
+					max-height: 100%
+					+rem(margin-top,5px)
+			&-content 
+				width: 65%
+				.partner-block-link
+					+rem(margin,8px 0 20px)
+				.text
+					// +rem(margin-right,-6px)
+					overflow: hidden
+					line-height: 1.6
+.content-column
+	&-wrap
+		display: flex
+		flex-flow: row nowrap
+		max-width: 100%
+		+r(991)
+			flex-direction: column
+	&-content
+		flex-grow: 1
+		display: flex
+		flex-flow: column nowrap
+		+rem(flex-basis,280px)
+
+		+r(991)
+			order: 2
+			display: block
+	&-right
+		+rem(width,350px)
+		flex-shrink: 0
+		justify-content: flex-end
+		text-align: right
+		+r(991)
+			margin-left: auto
+			margin-right: auto
+			text-align: center
+			
+		.caption-content
+			display: inline-block
+			+rem(width,260px)
+			+rem(padding,25px)
+			text-align: left
+			.text 
+				line-height: 1.3
+				+rem(margin-bottom,20px)
+			.tel-item
+				+rem(margin-top,20px)
+				+rem(margin-bottom,20px)
+		+r(991)
+			order: 1
+			flex-shrink: 1
+			flex-basis: 0
+		+r(735)
+			text-align: left
+.vacancy
+	&-wrapper
+	&-head
+		cursor: pointer
+		border-top: 1px solid color(hborder)
+		+nosel
+		&:last-of-type
+			border-top: 1px solid color(hborder)
+		.title
+			+rem(font-size,18px)
+			+tr(color .3s)
+			font-weight: 500
+			+rem(padding, 25px 30px 20px 0px)
+		.table-arr 
+			+rem(padding, 25px 15px 20px 15px)
+			+vertical
+		&:hover
+			.title	
+				color: color(secondary)
+		&.active
+			.title
+				color: color(secondarya)
+		&-inner
+			display: table
+			width: 100%
+			border-bottom: none
+			position: relative
+
+			&:after
+				content: ''
+				position: absolute
+				+rem(right,5px)
+				top: 40%
+				+rem(width,10px)
+				+rem(height,10px)
+			.title,.table-arr 
+				display: table-cell
+				vertical-align: middle
+				
+	&-body
+		+rem(padding-top,30px)
+		b
+			+rem(padding-left,24px)
+			+rem(font-size,14px)
+			+rem(margin,4px 0)
+			display: block
+			font-weight: 600

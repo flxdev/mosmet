@@ -46,10 +46,43 @@ block content
 									li.aside-nav-item
 										a.aside-nav-link(href="#") Аптека
 					.aside-content
-						.contact-content
-							.content-wrapper(data-id='#content')
-								
-				
+						.content-column-wrap.content-wrapper
+							mixin vacancy(name)
+								.vacancy-head.js-accordion-trigger
+									.vacancy-head-inner.table-item.dropdown
+										.title.h4 #{name}
+									.vacancy-body.js-accordion-body
+										p Медицинский Центр сейчас обладает весьма высоким потенциалом. Но подтверждением правильности  выбранной нами стратегии должен быть конкретный результат.
+										b Требования:
+										ul
+											li Высшее медицинское образование, диплом, действующий сертификат
+											li Опыт работы по специальности от 2 лет
+											li Навыки общения с клиентами
+											li Умение перенаправлять пациентов к другим специалистам
+											li Уверенный пользователь ПК
+										b Условия:
+										ul
+											li Официальное оформление согласно ТК РФ
+											li График работы - 6/1 утро/вечер
+											li На территории работодателя
+											li Заработная плата обсуждается на собеседовании
+											li Сменный график работы
+							.content-column-content
+								.vacancy-wrapper.offerlist-section.caption
+									+vacancy('Медицинская сестра общего профиля')
+									+vacancy('Медицинская сестра хирургического/эндоскопического профиля')
+									+vacancy('Медицинская сестра общего профиля')
+									+vacancy('Медицинская сестра общего профиля')
+
+
+							//div нужен
+							.content-column-right
+								.caption-content.bg-secondary
+									.text По вопросам трудоустройства звоните по телефону:
+									.tel-item
+										a(href="#").tel-item-tel +7 (495) 212-06-64
+									.text E-mail для резюме:
+									a(href="#").link kirillina@institut-krasoty.ru				
 
 
 

@@ -48,10 +48,34 @@ block content
 					.aside-content
 						.contact-content
 							.content-wrapper(data-id='#content')
-								
-				
-
-
+								h3 Генеральные партнеры
+								mixin partner2(img, name,link)
+									.partner-block
+										a(href="#").partner-block-inner
+											.partner-block-img
+												img(data-src="img/partner/"+img+".png", alt="5345").js-image
+											.partner-block-content
+												.title.h3 #{name}
+												.link.partner-block-link
+													span #{link}
+												.text Медицинский Центр сейчас обладает весьма высоким потенциалом. Но подтверждением правильности  выбранной нами стратегии должен быть конкретный результат.
+								.col-wrapper.partner
+									.col-50
+										+partner2(1,'MEDCИ','www.mybex.ru')
+									.col-50
+										+partner2(2,'Семейный доктор','www.fdoctor.ru')
+									.col-50
+										+partner2(3,'MIADENT','www.mia-dent.ru')
+									.col-50
+										+partner2(2,'Семейный доктор','www.fdoctor.ru')
+									.col-50
+										+partner2(1,'Nikemed','www.nikemed.ru')
+									.col-50
+										+partner2(4,'fijie','www.nikemed.ru')
+								h3 Страховые компании
+								.col-wrapper.partner
+									.col-50
+										+partner2(4,'Ингосстрах','www.ingos.ru')
 
 		//- .box
 		//- 	a(href="#").btn

@@ -48,10 +48,28 @@ block content
 					.aside-content
 						.contact-content
 							.content-wrapper(data-id='#content')
-								
-				
-
-
+								mixin vrach4(img,title,subtitle)
+									.vrach-wrap
+										.vrach-inner
+											.vrach-vrach
+												.vrach-vrach-inner
+													img(data-src="img/doctor/"+img+".png", alt=""+name+"").js-image
+													.vrach-vrach-name
+															.tel-item
+																a(href="tel:84959566095").tel-item-tel 8 (495) 956-60-95
+															.tel-item
+																a(href="tel:84959566095").tel-item-tel 8 (495) 956-60-95
+															a(href="mailto: koriod.olga@gmail.com").link koriod.olga@gmail.com
+											.vrach-inner-block
+												.vrach-inner-title #{title}
+												.text-sm  #{subtitle}
+								.col-wrapper
+									.col-50
+										+vrach4(1,'Короид Ольга Анатольевна','Главный врач')
+									.col-50
+										+vrach4(2,'Короид Ольга Анатольевна','Заведующая отделением физиотерапии')
+									.col-50
+										+vrach4(3,'Короид Ольга Анатольевна','Главный врач')
 
 		//- .box
 		//- 	a(href="#").btn
