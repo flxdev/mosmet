@@ -1,0 +1,85 @@
+extends _layout
+
+block title
+	title Новости и акции
+block config
+	- var main = false
+block content
+	.wrapper.gray.page-head
+		.box
+			.page-head-content
+				.page-head-bg
+					.page-head-bg-inner
+						img(data-src="img/head/3.jpg", alt="").js-image
+				.page-head-container
+					.page-head-inner
+						h1.title.h1 Новости и акции
+						.bread-cont
+							a(href="#").bread-item Главная
+							a(href="#").bread-item Новости и акции
+	.wrapper
+		.box
+			.content-element
+				.news-wrapper
+					.news-wrapper-head
+						.filter-wrapper
+							a(href="#").filter-item.btn
+								span Новости
+							a(href="#").filter-item.btn
+								span Акции
+							a(href="#").filter-item.btn
+								span Мероприятия
+					//.loading во время загрузки
+					.news-wrapper-body
+						mixin news(img,type,title,text)
+							.news-item
+								a(href="#").news-item-inner
+									.news-item-image
+										.news-item-image-inner
+											img(data-src="img/news/"+img+".jpg", alt=""+title+"").js-image
+										if type == 1
+											.news-type
+												span Новость
+										if type == 2
+											.news-type.sale
+												span Акция	
+										if type == 3
+											.news-type.dvij
+												span Мероприятие
+									.news-item-content
+										.news-item-content-inner
+											.text-sm 25 июня 2017
+											.title.h3 #{title}
+											.text #{text}
+						+news(1,1,'Первый визит в подарок!','При оплате первого визита, сумма оплаченная Вами, зачисляется на Ваш лицевой')
+						+news(2,2,'Лазерная коррекция зрения','Определения критической нагрузки на сердце')
+						+news(3,3,'Стресс-тест','Определения критической нагрузки на сердце')
+						+news(3,3,'Стресс-тест','Определения критической нагрузки на сердце')
+						+news(3,3,'Стресс-тест','Определения критической нагрузки на сердце')
+						+news(3,3,'Стресс-тест','Определения критической нагрузки на сердце')
+						+news(3,3,'Стресс-тест','Определения критической нагрузки на сердце')
+						+news(3,3,'Стресс-тест','Определения критической нагрузки на сердце')
+						+news(3,3,'Стресс-тест','Определения критической нагрузки на сердце')
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	

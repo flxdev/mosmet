@@ -46,9 +46,111 @@ block content
 									li.aside-nav-item
 										a.aside-nav-link(href="#") Аптека
 					.aside-content
-						.contact-content
-							.content-wrapper(data-id='#content')
-								
+						.content-wrapper(data-id='#content')
+							.content-wrapper
+								.form-element
+									h3 Оставить отзыв о клинике
+									form.form.js-validate
+										.input-item.s-100
+											.input-wrapper.req
+												label Заголовок
+												input.input-main(type="text",placeholder='Имя',data-validation="length",data-validation-length='min2',data-validation-error-msg="Не заполнено")
+										.input-item.s-50
+											.input-wrapper.req
+												label Ваше имя
+												input.input-main(type="text",placeholder='Имя',data-validation="length",data-validation-length='min2',data-validation-error-msg="Не заполнено")
+										.input-item.s-50
+											.input-wrapper
+												label Фамилия
+												input.input-main(type="text",placeholder='Фамилия')
+										.input-item.s-50
+											.input-wrapper
+												label Отчество
+												input.input-main(type="text",placeholder='Отчество')
+										.input-item.s-50
+											.input-wrapper.req
+												label Телефон
+												input.input-main(type="tel",placeholder='Телефон',data-validation="custom",data-validation-regexp="^[-0-9()+ ]+$",data-validation-error-msg="Не заполнено")
+										.input-item.s-50
+											.input-wrapper.req
+												label E-mail
+												input.input-main(type="email",placeholder='example@mail.com',data-validation="email",data-validation-error-msg="Не заполнено")
+										.input-item.s-50
+											.input-wrapper.req
+												.label Оценка
+												.input-main.raiting
+													label.input-raiting
+														span.input-raiting-main
+															input.input-raiting-real(type="radio",name='raiting1',value = '1',data-validation="required",data-validation-error-msg="Это обязательное поле")
+															span.input-raiting-checked
+																.like.yes
+																	+icon('like')
+													label.input-raiting
+														span.input-raiting-main
+															input.input-raiting-real(type="radio",name='raiting1',value = '2',data-validation="required",data-validation-error-msg="Это обязательное поле")
+															span.input-raiting-checked
+																.like.nope
+																	+icon('like')
+										.input-item.s-100.req
+											.input-wrapper
+												label Ваш вопрос
+												textarea.input-main(rows='5',placeholder='Вопрос',data-validation="length",data-validation-length='min2',data-validation-error-msg="Не заполнено")
+										.input-item.s-100
+											.input-wrapper.req
+												.select-u-item
+													label.input_label
+														span.input_main
+															input.input-real(type="checkbox",name='rules',value = 'y',data-validation="required",data-validation-error-msg="Это обязательное поле")
+															span.input-checked
+														span.input-text Даю согласие на обработку моих 
+															a(href="#") персональных данных
+										.form-footer
+											.form-footer-notify
+												.text Поля обязательные для заполнения
+											button(type='submit').btn.secondary
+												span Оставить отзыв
+								.feedback-wrapper
+									.feedback-inner
+										.feedback-item
+											.feedback-item-raiting
+												.like.yes
+													+icon('like')
+											.feedback-item-elem
+												.feedback-item-head
+													.title.h3 Отличная клиника
+												.feedback-item-who
+													.who-line
+														span.text.bold Клиент:
+														| Ольга
+												.feedback-item-content.js-coment
+													.feedback-item-content-inner.text
+														|Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. sdfsd sd fdsfdsfsdf s fsf sfsfdsfs fsd fsddsf dssssghf hdfshdfsdhf sfhjdf  shjdfsdfs  dfs dfsdfssdf s
+												.menu-nav-item.more
+													.link-dotted.js-list-more(data-alt-text='Свернуть') Читать полностью
+										.feedback-item
+											.feedback-item-raiting
+												.like.nope
+													+icon('like')
+											.feedback-item-elem
+												.feedback-item-head
+													.title.h3 Отличная клиника
+												.feedback-item-who
+													.who-line
+														span.text.bold Клиент:
+														| Кирилл Фидюлин
+												.feedback-item-content.js-coment
+													.feedback-item-content-inner.text
+														|Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. sdfsd sd fdsfdsfsdf s fsf sfsfdsfs fsd fsddsf dssssghf hdfshdfsdhf sfhjdf  shjdfsdfs  dfs dfsdfssdf s
+														|Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. sdfsd sd fdsfdsfsdf s fsf sfsfdsfs fsd fsddsf dssssghf hdfshdfsdhf sfhjdf  shjdfsdfs  dfs dfsdfssdf s
+												.menu-nav-item.more
+													.link-dotted.js-list-more(data-alt-text='Свернуть') Читать полностью
+												.feedback-item-reply
+													.text.bold Ответ:
+													.reply-content.text
+														| Ольга, спасибо Вам большое за пожелания!
+									//полагаю, что тут тоже вместо кнопки логичнее загрузку при скроле сделать
+									a(href="#").btn.light
+										span Читать все отзывы
 				
 
 

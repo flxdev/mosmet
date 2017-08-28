@@ -46,10 +46,47 @@ block content
 									li.aside-nav-item
 										a.aside-nav-link(href="#") Аптека
 					.aside-content
-						.contact-content
-							.content-wrapper(data-id='#content')
-								
-				
+						.content-wrapper(data-id='#content')
+							.organ-wrapper
+								mixin organ(img, title)
+									.organ-item
+										.organ-item-img
+											img(data-src="img/organ/"+img+".png", alt="").js-image
+										.organ-item-content
+											.organ-item-title 
+												.title.h3 #{title}
+											.desc-wrap
+												if block
+													block
+								+organ(1,'Федеральная служба по надзору в сфере защиты прав потребителей и благополучия человека')
+									.desc-item.s50
+										.text-sm Адрес:
+										.text.primary 127994, г. Москва, Вадковский переулок, дом 18, строение 5 и 7
+									.desc-item.s50
+										.text-sm Телефон:
+										a(href="tel:").text.primary +7 (499) 973-26-90
+								+organ(2,'Федеральная служба по надзору в сфере здравоохранения')
+									.desc-item.s50
+										.text-sm Адрес:
+										.text.primary 109074, Москва, Славянская площадь, д.4, стр.1
+									.desc-item.s50
+										.text-sm Телефон:
+										a(href="tel:").text.primary +7 (495) 698-45-38
+										a(href="tel:").text.primary +7 (499) 578-02-30
+								+organ(3,'Министерство здравоохранения Российской Федерации')
+									.desc-item.s50
+										.text-sm Адрес:
+										.text.primary 127994, ГСП-4, г. Москва, Рахмановский пер, д. 3
+									.desc-item.s50
+										.text-sm Телефон:
+										a(href="tel:").text.primary +7 (495) 628-44-53
+										a(href="tel:").text.primary +7 (495) 627-29-44
+									.desc-item.s50
+										.text-sm Многоканальный:
+										a(href="tel:").text.primary +7 (495) 627-29-44
+									.desc-item.s50
+										.text-sm Для обращения граждан:
+										a(href="tel:").text.primary +7 (495) 627-29-44
 
 
 

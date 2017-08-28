@@ -46,8 +46,110 @@ block content
 									li.aside-nav-item
 										a.aside-nav-link(href="#") Аптека
 					.aside-content
-						.contact-content
-							.content-wrapper(data-id='#content')
+						.content-wrapper
+							.form-element
+								h3 Задать вопрос специалисту
+								form.form.js-validate
+									.input-item.s-50
+										.input-wrapper.req
+											label Ваше имя
+											input.input-main(type="text",placeholder='Имя',data-validation="length",data-validation-length='min2',data-validation-error-msg="Не заполнено")
+									.input-item.s-50
+										.input-wrapper
+											label Фамилия
+											input.input-main(type="text",placeholder='Фамилия')
+									.input-item.s-50
+										.input-wrapper
+											label Отчество
+											input.input-main(type="text",placeholder='Отчество')
+									.input-item.s-50
+										.input-wrapper.req
+											label Телефон
+											input.input-main(type="tel",placeholder='Телефон',data-validation="custom",data-validation-regexp="^[-0-9()+ ]+$",data-validation-error-msg="Не заполнено")
+									.input-item.s-50
+										.input-wrapper.req
+											.label Категория
+											.select-check.js-select-custom
+												button.selects.dropdown(data-placeholder='Категория')
+													span.btn-text Категория
+												.dropdown-target
+													.dropdown-inner
+														.dropdown-content
+															.select-u-body.select-list
+																label.option
+																	input(type='radio', name='group42', value='val1')
+																	span Здоровье
+																label.option
+																	input(type='radio', name='group42', value='val2')
+																	span Клиника
+																label.option
+																	input(type='radio', name='group42', value='val3')
+																	span Специалисты
+									.input-item.s-50
+										.input-wrapper.req
+											label E-mail
+											input.input-main(type="email",placeholder='example@mail.com',data-validation="email",data-validation-error-msg="Не заполнено")
+									.input-item.s-100.req
+										.input-wrapper
+											label Ваш вопрос
+											textarea.input-main(rows='5',placeholder='Вопрос',data-validation="length",data-validation-length='min2',data-validation-error-msg="Не заполнено")
+									.input-item.s-100
+										.input-wrapper.req
+											.select-u-item
+												label.input_label
+													span.input_main
+														input.input-real(type="checkbox",name='rules',value = 'y',data-validation="required",data-validation-error-msg="Это обязательное поле")
+														span.input-checked
+													span.input-text Даю согласие на обработку моих 
+														a(href="#") персональных данных
+									.form-footer
+										.form-footer-notify
+											.text Поля обязательные для заполнения
+										button(type='submit').btn.secondary
+											span Задать вопрос
+							.feedback-wrapper
+								.filter-wrapper
+									a(href="#").filter-item.btn
+										span Здоровье
+									a(href="#").filter-item.btn
+										span Клиника
+									a(href="#").filter-item.btn
+										span Специалисты
+								.feedback-inner
+									.feedback-item
+										.feedback-item-elem
+											.text-sm 19 июня 2017
+											.feedback-item-head
+												.title.h3 Ольга Васелюк
+											.feedback-item-who
+												.who-line
+													span.text.bold Категория:
+													| Здоровье
+											.feedback-item-content.js-coment
+												.feedback-item-content-inner.text
+													|Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. sdfsd sd fdsfdsfsdf s fsf sfsfdsfs fsd fsddsf dssssghf hdfshdfsdhf sfhjdf  shjdfsdfs  dfs dfsdfssdf s
+											.menu-nav-item.more
+												.link-dotted.js-list-more(data-alt-text='Свернуть') Читать полностью
+									.feedback-item
+										.feedback-item-elem
+											.text-sm 19 июня 2017
+											.feedback-item-head
+												.title.h3 Григорий
+											.feedback-item-who
+												.who-line
+													span.text.bold Категория:
+													| Здоровье
+											.feedback-item-content.js-coment
+												.feedback-item-content-inner.text
+													|Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. sdfsd sd fdsfdsfsdf s fsf sfsfdsfs fsd fsddsf dssssghf hdfshdfsdhf sfhjdf  shjdfsdfs  dfs dfsdfssdf s
+													|Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. sdfsd sd fdsfdsfsdf s fsf sfsfdsfs fsd fsddsf dssssghf hdfshdfsdhf sfhjdf  shjdfsdfs  dfs dfsdfssdf s
+											.menu-nav-item.more
+												.link-dotted.js-list-more(data-alt-text='Свернуть') Читать полностью
+											.feedback-item-reply
+												.text.bold Ответ:
+												.reply-content.text
+													| Ольга, спасибо Вам большое за пожелания!
+											
 								
 				
 

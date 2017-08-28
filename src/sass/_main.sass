@@ -58,7 +58,6 @@ html
 body
 	background-color: #fff
 	background-attachment: fixed
-	+box
 	+font-smoothing
 	text-rendering: optimizeLegibility
 	font-family: $o
@@ -160,23 +159,6 @@ body, .out
 	overflow: hidden
 	&.gray 
 		background-color: color(bggray)
-		// &.special
-		// 	position: relative
-		// 	z-index: 0
-		// 	+rm(601)
-		// 		.box
-		// 			position: relative
-		// 			z-index: 1
-		// 		&:after
-		// 			content: ''
-		// 			z-index: -1
-		// 			position: absolute
-		// 			left: 0
-		// 			right: 0
-		// 			+rem(height,50px)
-		// 			bottom: 0
-		// 			background-color: #FFF
-
 
 .box
 	display: block
@@ -256,8 +238,8 @@ body, .out
 		position: relative
 		z-index: 0
 		transition: color .3s
-	&:hover
-		+notouch
+	+notouch
+		&:hover
 			background-color: color(secondary)
 			span 
 				color: color(white)
@@ -269,12 +251,12 @@ body, .out
 		background-color: color(secondary)
 		span
 			color: color(white)
-		&:hover
-			+notouch
+		+notouch
+			&:hover
 				background-color: color(secondarya)
 	&.light 
-		&:hover
-			+notouch
+		+notouch
+			&:hover
 				background-color: color(secondarybg)
 				span 
 					color: color(secondary)
@@ -283,11 +265,31 @@ body, .out
 		background-color: color(primary)
 		span
 			color: color(white)
-		&:hover
-			+notouch
+		+notouch
+			&:hover
 				background-color: color(primaryh)
 		&:active
 			background-color: color(primarya)
+	&.filter-item
+		border-color: color(hborder)
+		text-transform: uppercase
+		span 
+			color: color(textblk)
+			+rem(font-size,12px)
+			+rem(padding,14px 27px)
+			+r(600)
+				+rem(padding,12px 20px)
+		+notouch
+			&:hover
+				background-color: color(primary)
+				border-color: color(primary)
+				span
+					color: color(white)
+		&.active
+			border-color: color(primarya)
+			background-color: color(primarya)
+			span
+				color: color(white)
 	
 
 .text.blk
@@ -2088,6 +2090,7 @@ body, .out
 				position: relative
 				+rem(padding, 27px 22px 27px 27px)
 				+rem(min-height,180px)
+				z-index: 0
 				&:before
 					content: ''
 					box-shadow: 0px 10px 22px 0px rgba(68, 97, 119, 0.15);
@@ -3783,6 +3786,9 @@ a.text
 		+rem(max-width,740px)
 		&>.title
 			+rem(margin-bottom,22px)
+		.btn.light 
+			width: 100%
+			+rem(margin-top,25px)
 	&-item
 		+rem(padding,30px 0 50px)
 		font-size: 0
@@ -3972,7 +3978,8 @@ a.text
 		&:hover
 			.input-raiting-checked
 				border-color: color(secondary)
-
+			.like
+				color: color(secondary)
 		&-main 
 			position: relative
 			
@@ -3986,6 +3993,8 @@ a.text
 				border-color: color(secondary)
 				&:after
 					color: color(white)
+			&:checked + .input-raiting-checked .like
+				color: color(white)
 		&-checked
 			color: color(textblk)
 			+tr(color)
@@ -3996,6 +4005,10 @@ a.text
 			border-radius: 4px
 			transition: color .3s, background-color .3s
 			+vertical
+			.like
+				display: inline-block
+				vertical-align: middle
+				
 			&:after
 				content: attr(data-text)
 				display: inline-block
@@ -4297,3 +4310,231 @@ a.text
 			+rem(margin,4px 0)
 			display: block
 			font-weight: 600
+.organ
+	&-wrapper
+		+rem(max-width,690px)
+	&-item
+		font-size: 0
+		+rem(padding-bottom,75px)
+		border-bottom: 1px solid color(hborder)
+		+r(600)
+			+rem(padding-bottom,40px)	
+		&:not(:first-child)
+			+rem(padding-top,45px)
+			+r(600)
+				+rem(padding-top,25px)
+		&-img,&-content 
+			display: inline-block
+			vertical-align: top
+			min-height: 1px
+		&-img 
+			+rem(width,145px)
+			+rem(margin-top,-5px)
+			+r(600)
+				+rem(width,90px)
+				margin-top: 0
+				img 
+					+rem(max-width,70px)
+			img 
+				display: block
+				+rem(max-width,105px)
+				margin-right: auto
+				
+		&-content 
+			width: calc(100% - 9.0625rem)
+			+rem(padding-top,20px)
+			+r(600)
+				width: calc(100% - 5.625rem)
+			.desc
+				&-wrap
+					margin-right: 0
+					+rem(max-width,520px)
+				&-item
+					+rem(margin-top,30px)
+					margin-bottom: 0
+					.text.primary
+						color: color(textblk)
+						font-weight: 500
+						+rem(font-size,14px)
+						+rem(max-width,200px)
+						&:not(:nth-child(2))
+							+rem(margin-top,4px)
+					a.text.primary
+						display: block
+						&:hover
+							color: color(secondary)
+.form
+	&-element
+		+rem(max-width,740px)
+		border: 1px solid color(hborder)
+		+rem(padding,30px 40px)
+		+r(600)
+			+rem(padding,20px 20px)
+			+rem(margin,0 -10px)
+		&+.feedback-wrapper
+			+rem(margin-top,70px)
+
+.filter
+	&-wrapper
+		+rem(margin, 30px 0)
+	&-item
+		+rem(margin-top,10px)
+		+rem(margin-bottom,10px)
+		&:not(:last-child)
+			+rem(margin-right,20px)
+.like
+	+rem(max-width,20px)
+	+rem(max-height,20px)
+	svg
+		height: 100%
+		+rem(max-height,20px)
+		overflow: visible
+	&.nope
+		transform: scale(1,-1)
+._404
+	+rm(601)
+		+rem(padding-top,15px)
+	.link-back
+		+rm(601)
+			+rem(margin-top,210px)
+.search
+	&-element
+		.link-dotted
+			+rem(margin-top,10px)
+		&-body
+			&>h3
+				&:first-child
+					+rem(margin-top,40px)
+					+rem(margin-bottom,40px)
+	&-result
+		&-item
+			+rem(padding,35px 0 50px)
+			display: block
+			+r(600)
+				+rem(padding,20px 0 30px)	
+			&:not(:first-child)
+				border-top: 1px solid color(hborder)
+			&-head
+				display: table
+				.search-counter,.title
+					display: table-cell
+				.search-counter
+					+rem(font-size,18px)
+					font-weight: 400
+					color: #000
+					+rem(padding-right,3px)
+				.title
+					b 
+						color: color(secondary)
+			&-content 
+				+rem(margin-top,25px)
+				overflow: hidden
+				text-overflow: ellipsis
+				-webkit-line-clamp: 3
+				-webkit-box-orient: vertical
+				display: -webkit-box	
+				line-height: 1.7;
+				+r(600)
+					-webkit-line-clamp: 4	
+				b 
+					color: color(secondary)	
+					box-shadow:  0 -2px 0 0 #fff,  0 1px 0 0 color(secondary)
+.sitemap-wrap
+	.footer-links-add
+		+r(740)
+			display: inline-block
+			width: 50%!important
+			max-width: 50% !important
+	.footer-links-main
+		+r(740)
+			display: block
+			width: 100%
+			max-width: 100%
+			+rem(margin-bottom,20px)
+			li 
+				display: inline-block
+				vertical-align: top
+				width: 33.33%
+.news
+	&-wrapper
+		font-size: 0
+		&-head
+			.filter-wrapper
+				+rem(margin-top,25px)
+				+rem(margin-bottom,60px)
+				+r(600)
+					margin-top: 0
+		&-body
+			+rem(margin-right,-30px)
+			.news-item
+				width: 33.33%
+				+rem(margin-bottom,50px)
+				+r(850)
+					width: 50%
+				+r(600)
+					width: 100%
+
+.addnews
+	&-wrap
+		border-top: 1px solid color(hborder)
+		+rem(padding-top,40px)
+		+rem(padding-bottom,40px)
+	&-inner
+		+rem(max-width,1013px)
+		margin-left: auto
+		font-size: 0
+		+rem(margin-right,-30px)
+	&-item
+		display: inline-block
+		vertical-align: top
+		width: 50%
+		+rem(padding-right,30px)
+		+r(800)
+			width: 100%
+		&:first-child
+			.news-item-content-inner
+				.text-sm
+					+rem(padding-left,10px)
+					&:after
+						right: 0
+						left: 0
+						transform: scale(-1,1)
+		&-inner
+			display: block
+			&:hover
+				.title
+					color: color(secondary)
+		.news-item-image,.news-item-content
+			display: inline-block
+			vertical-align: top
+			margin-top: 0
+			width: 50%
+		.news-item-image
+			width: 45%
+		.news-item-content
+			width: 55%
+		.news-item-content-inner
+			padding-top: 0
+			padding-right: 0
+			+rem(padding-left,20px)
+			.text-sm 
+				text-transform: uppercase
+				+rem(font-size,10px)
+				position: relative
+				display: inline-block
+				
+				&:after
+					+rem(width,8px)
+					+rem(height,8px)
+					content: ''
+					position: absolute
+					+rem(top,1px)
+					transform: scale(1)
+					+rem(right,-10px)
+			.title.h3
+				+rem(margin-bottom,15px)
+				+tr(color .3s)
+		.news-item-image-inner
+			+rem(max-width,200px)
+		
+

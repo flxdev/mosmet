@@ -1,0 +1,72 @@
+extends _layout
+
+block title
+	title Ошибка 404
+block config
+	- var main = false
+block content
+	.wrapper.gray.page-head
+		.box
+			.page-head-content
+				.page-head-bg
+					.page-head-bg-inner
+						img(data-src="img/head/3.jpg", alt="").js-image
+				.page-head-container
+					.page-head-inner
+						h1.title.h1 Ошибка 404
+						.bread-cont
+							a(href="#").bread-item Главная
+							a(href="#").bread-item Ошибка 404
+	.wrapper
+		.box
+			.content-element
+				//модификатор .404
+				.aside-wrapp._404
+					aside.aside-menu(data-sticky_parent)
+						.aside-menu-inner
+							a(href="#").link-back.dropdown Главная
+					.aside-content
+						.content-wrapper(data-id='#content')
+							h3 Страница не найдена
+							p Такое иногда случается. Самые вероятные причины - устаревшая ссылка или страница была удалена автором. Перейдите на 
+								a(href="#") главную страницу
+								|  и попробуйте начать оттуда.
+						
+				
+
+
+
+		//- .box
+		//- 	a(href="#").btn
+		//- 		span Подробнее о клинике
+		//- 	a(href="#").btn.secondary
+		//- 		span Подробнее о клинике
+		//- 	a(href="#").btn.primary
+		//- 		span Подробнее о клинике
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	

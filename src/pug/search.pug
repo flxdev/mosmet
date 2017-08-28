@@ -1,0 +1,77 @@
+extends _layout
+
+block title
+	title Поиск
+block config
+	- var main = false
+block content
+	.wrapper.gray.page-head
+		.box
+			.page-head-content
+				.page-head-bg
+					.page-head-bg-inner
+						img(data-src="img/head/4.jpg", alt="").js-image
+				.page-head-container
+					.page-head-inner
+						h1.title.h1 Поиск
+						.bread-cont
+							a(href="#").bread-item Главная
+							a(href="#").bread-item Поиск
+	.wrapper
+		.box
+			.content-element
+				.aside-wrapp
+					aside.aside-menu(data-sticky_parent)
+						.aside-menu-inner
+					.aside-content
+						.content-wrapper(data-id='#content')
+							.search-element
+								.search-element-head
+									include includes/_form.pug
+								.search-element-body
+									h3 Найдено 12 результатов	
+									.search-element-result
+										a(href="#").search-result-item
+											.search-result-item-head
+												.search-counter 1.
+												.title.h3
+													b Медицинский 
+													|центр на арбате
+												
+											.search-result-item-content.text
+												b Медицинскому 
+												|Центру ОАО "МОСИТАЛМЕД" выпало счастье и высокая ответственность обосноваться на уникальной улице в уникальном здании, которое было построено в 1903 году по проекту молодого, но уже весьма авторитетного в Москве архитектора Анатолия Александровича Остроградского и существовало до 1926 года как доходный дом.
+										a(href="#").search-result-item
+											.search-result-item-head
+												.search-counter 2.
+												.title.h3
+													| Международный 
+													b Медицинский 
+													|Центр
+											.search-result-item-content.text
+												b Клиника 
+												| Активного долголетия «Институт Красоты на Арбате» занимается решением социально значимых задач в соответствии с Государственной программой города Москвы на среднесрочный период (2012-2016  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore incidunt quos atque porro sed eius, sint blanditiis. Amet suscipit, id quasi tenetur ea molestiae similique eos, blanditiis, et inventore voluptates!
+								.link-dotted 
+									span Показать больше
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
