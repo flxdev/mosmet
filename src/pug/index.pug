@@ -45,7 +45,7 @@ block content
 				.otdel-head
 					.otdel-head-search
 						//не более 1го на страницу
-						include includes/_formdropdown.pug
+						include includes/_suggest.pug
 					.otdel-head-title
 						h2.title.h2 Отделения
 						.arr-wrap-inner
@@ -54,22 +54,22 @@ block content
 					.otdel-slider.js-otdel
 						mixin vrach(img,title,name)
 							.vrach-wrap
-								a(href="#").vrach-inner
+								.vrach-inner
 									.vrach-vrach
 										.vrach-vrach-inner
 											img(data-lazy="img/doctor/"+img+".png", alt=""+name+"")
 											.vrach-vrach-name #{name}
 									.vrach-inner-block
-										.vrach-inner-wrap
+										a(href="#").vrach-inner-wrap
 											.vrach-inner-title #{title}
 												+icon('smallarr')
 											.text 118 услуг
 										.vrach-inner-add
-											.vrach-inner-add-item.text TENS-терапия
-											.vrach-inner-add-item.text Магнитотерапия
-											.vrach-inner-add-item.text СМТ-терапия
-											.vrach-inner-add-item.text Ультразвуковая терапия
-											.vrach-inner-add-item.text Фонофорез
+											a(href="#").vrach-inner-add-item.text TENS-терапия
+											a(href="#").vrach-inner-add-item.text Магнитотерапия
+											a(href="#").vrach-inner-add-item.text СМТ-терапия
+											a(href="#").vrach-inner-add-item.text Ультразвуковая терапия
+											a(href="#").vrach-inner-add-item.text Фонофорез
 						+vrach(1,'Клинико-диагностическая лаборатория ','Ирина Владимировна Мусатова')
 						+vrach(1,'Физиотерапия','Ирина Владимировна Мусатова')
 						+vrach(2,'Гинекология','Стелла Олеговна Солнцева')

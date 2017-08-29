@@ -4,56 +4,7 @@ $(window).on('load', function() {
 	vrachRait();
 });
 document.addEventListener("DOMContentLoaded", function() {
-	var elems = {
-			'section': [
-				{
-					'id': 1,
-					'name': 'Клинико-диагностическая лаборатория',
-					'link': '#',
-					'subsection' :[
-						{
-							'name': "Травматология",
-							'link': '#',
-							'letters': [
-								{
-									'letter': 'a',
-									'items': [
-										{
-											'name': 'Аэрозольтерапия через небулайзер (без препарата)',
-											'link': '#',
-										},
-										{
-											'name': 'Аэрозольтерапия через небулайзер (без препарата)',
-											'link': '#',
-										},
-										{
-											'name': 'Аэрозольтерапия через небулайзер (без препарата)',
-											'link': '#',
-										},
-										{
-											'name': 'Аэрозольтерапия через небулайзер (без препарата)',
-											'link': '#',
-										},
-										{
-											'name': 'Аэрозольтерапия через небулайзер (без препарата)',
-											'link': '#',
-										},
-										{
-											'name': 'Аэрозольтерапия через небулайзер (без препарата)',
-											'link': '#',
-										},
-										{
-											'name': 'Аэрозольтерапия через небулайзер (без препарата)',
-											'link': '#',
-										},
-									]
-								}
-							]
-						}
-					]	
-				},
-			],
-	};
+
 	var conf = {
 		body: $('body'),
 		header: $('.page__header'),
@@ -611,6 +562,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	var suggestin = document.querySelectorAll('.js-suggest');
 	suggesinput = new suggest(suggestin);
+
 	popUpsInit();
 	initCustomSelectList();
 	validateForms();
@@ -1527,7 +1479,100 @@ function isMobile()
 	 return (/Android|webOS|iPhone|iPod|BlackBerry|Windows Phone|iemobile/i.test(navigator.userAgent) );
 }
 
-var suburbs = ["Aberfeldy Township", "Altona", "Arthurs Creek", "Arthurs Seat", "Ashwood", "Bacchus Marsh Werribee River", "Ballan", "Beaconsfield Upper", "Beenak", "Berwick", "Blackburn", "Blackburn North", "Blue Mountain", "Box Hill", "Braeside", "Braeside Park", "Broadmeadows", "Brooklyn", "Bulla", "Bulla North", "Bulleen", "Bundoora", "Burnley", "Burwood East", "Cambarville", "Cardinia", "Caulfield", "Caulfield North", "Cement Creek", "Christmas Hills", "Clarkefield", "Clarkefield", "Clayton", "Clearwater Aqueduct", "Coburg", "Coldstream", "Collingwood", "Craigieburn", "Craigieburn East", "Cranbourne", "Dandenong", "Dandenong South", "Dandenong West", "Darraweit", "Deer Park", "Devilbend Reservoir", "Diggers Rest", "Dixons Creek", "Doncaster", "Doncaster East", "Drouin West", "Durdidwarrah", "Eastern G.C. Doncaster", "Elsternwick", "Eltham", "Emerald", "Epping", "Essendon", "Fairfield", "Fawkner", "Fiskville", "Flemington", "Footscray", "Frankston North", "Frankston Pier", "Gardiner", "Glen Forbes South", "Glen Waverley", "Graceburn", "Graceburn Creek Aqueduct", "Greensborough", "Greenvale Reservoir", "Groom's Hill", "Hampton", "Hampton Park", "Hawthorn", "Headworks", "Healesville", "Heathmont", "Heidelberg", "Hurstbridge", "Iona", "Ivanhoe", "Kangaroo Ground", "Keilor", "Keilor North", "Kew", "Keysborough", "Kinglake", "Knox", "Konagaderra", "Kooweerup", "Lake Borrie", "Lancefield", "Lancefield North", "Launching Place", "Lilydale Lake", "Little River", "Loch", "Longwarry North", "Lower Plenty", "Lyndhurst", "Lysterfield", "Maribyrnong", "Maroondah Reservoir", "Melton Reservoir", "Melton Sth Toolern Creek", "Mentone", "Mernda", "Millgrove", "Mitcham", "Montrose", "Mooroolbark", "Mornington", "Mount Dandenong", "Mount Evelyn", "Mount View", "Mt Blackwood", "Mt Bullengarook", "Mt Donna Buang", "Mt Evelyn Stringybark Creek", "Mt Gregory", "Mt Hope", "Mt Horsfall", "Mt Juliet", "Mt Macedon", "Mt St Gwinear", "Mt St Leonard", "Mt Waverley", "Myrrhee", "Narre Warren North", "Nayook", "Neerim South", "Neerim-Elton Rd", "Neerim-Neerim Creek", "Neerim-Tarago East Branch", "Neerim-Tarago West Branch", "North Wharf", "Northcote", "Notting Hill", "Nutfield", "O'Shannassy Reservoir", "Oakleigh South", "Officer", "Officer South", "Olinda", "Pakenham", "Pakenham East", "Pakenham West", "Parwon Parwan Creek", "Poley Tower", "Preston", "Reservoir", "Ringwood", "Rockbank", "Romsey", "Rosslynne Reservoir", "Rowville", "Sandringham", "Scoresby", "Seaford", "Seaford North", "Seville East", "Silvan", "Smiths Gully", "Somerton", "Southbank", "Spotswood", "Springvale", "St Albans", "St Kilda Marina", "Sunbury", "Sunshine", "Surrey Hills", "Tarago Reservoir", "Tarrawarra", "Templestowe", "The Basin", "Thomson Dam", "Tonimbuk", "Toolern Vale", "Torourrong Reservoir", "U/S Goodman Creek Lerderderg River", "Upper Lang Lang", "Upper Pakenham", "Upper Yarra Dam", "Wallaby Creek", "Wallan", "Wantirna South", "Warrandyte", "Williamstown", "Woori Yallock", "Woori Yallock Creek", "Wyndham Vale", "Yallock outflow Cora Lyn", "Yannathan", "Yarra Glen", "Yarra Glen Steels Creek", "Yarra Junction", "Yarra River downstream Doctors Creek", "Yellingbo", "Yering"];
+function Parse(items){
+	this.item = items;
+	this.container = document.querySelector('.service-items');
+	this.list;
+	if(this.container.length){
+		this.init();
+	}
+
+}
+
+
+Parse.prototype ={
+	init: function(){
+		this.list = this.item.section;
+		this.len = this.list.length;
+		this.parseSections();
+	},
+	parseSections: function(){
+		for(var i=0; i<this.len; i++){
+			var curr = this.list[i];
+			//фрагмент документа
+			var frag = document.createDocumentFragment();
+			// создаем первую обертку
+			var fragItem = document.createElement('div');
+			//создаем вторую обертку
+			
+			//даем этим оберткам классы и дата-атрибуты
+			fragItem.classList.add('service-item');
+			fragItem.setAttribute('data-id','#'+(i+1))
+			
+			// помещаем их во фрагмент
+			if(curr.name != null){
+				$(fragItem).append('<div class="service-item-title"><div class="title h2">'+curr.name+'</div></div>');
+			}
+			
+			frag.appendChild(fragItem);
+			// идем дальше
+			this.appendSubList(frag,curr.subsection)
+		}
+	},
+	appendSubList: function(fragment,list){
+		// создаем обертку списка
+		var lLen = list.length;
+
+		for(var i=0; i<lLen; i++){
+			var cur = list[i];
+			var fragCont = document.createElement('div');
+			fragCont.classList.add('service-item-container');
+			// если есть заголвок - пихаем перед списком
+			if(cur.name != null){
+				$(fragCont).append('<div class="service-item-subtitle"><div class="title h3">'+cur.name+'</div></div>');
+			}
+			$(fragCont).append(this.appendLetters(fragCont,cur.letters))
+			$(fragment).find('.service-item').append(fragCont);
+		}
+		this.container.append(fragment);
+
+	},
+	// возвращает секцию с буквой и списком ссылок, полученных из appendItems()
+	appendLetters: function(fragment,letters){
+
+		// забираем буквы
+		var letLen = letters.length;
+		//основной фрагмент, куда поместим все блоки с буквами
+		var letterFragment = document.createDocumentFragment();
+		for(var i=0; i<letLen; i++){
+			var cur = letters[i];
+			var fragIteminner = document.createElement('div');
+			fragIteminner.classList.add('service-item-item');
+
+			$(fragIteminner).append('<div class="service-item-letter" data-filter="'+cur.letter+'">'+cur.letter+'</div>').append(this.appendItems(fragIteminner,cur.items));
+			letterFragment.append(fragIteminner);
+		}
+		return letterFragment
+		
+	},
+	// возвращает список сформированных ссылок, для вставки в нужное место
+	appendItems: function(fragment,items){
+		var ilen = items.length;
+		var listwrap = document.createElement('ul');
+		var links = document.createDocumentFragment();
+
+		listwrap.classList.add('service-item-links');
+
+		for(var i=0; i<ilen; i++){
+			var cur = items[i];
+			var link = document.createElement('li');
+			$(link).append('<a class="text" href="'+cur.link+'">'+cur.name+'</a>');
+			links.append(link);
+		}
+		listwrap.append(links)
+		return listwrap
+	}
+}
 function suggest(el){
 	this.el = el;
 	this.options = {
@@ -1563,7 +1608,7 @@ suggest.prototype = {
 			this.seggestInner = this.elements[i].querySelectorAll('.suggest-list-inner');
 			$(this.suggest[0]).slideUp();
 			this.search[0].addEventListener('input', function(event){
-				self.dosearch(suburbs)
+				self.dosearch(searchArr.items)
 			});
 			this.search[0].addEventListener('keydown', function(event){
 				self.doKeypress(this.keys, event);
@@ -1573,8 +1618,8 @@ suggest.prototype = {
 	dosearch: function(array){
 		var query = this.search[0].value;
 		if(query.length >= 3){
-			var results = $.grep(suburbs, function(item) {
-				return item.search(RegExp("^" + query, "i")) != -1;
+			var results = $.grep(searchArr.items, function(item) {
+				return item.name.search(RegExp("^" + query, "i")) != -1;
 			});
 			if (results.length >= 1) {
 				/*Start things fresh by removing the suggestions div and emptying the live region before we start*/
@@ -1583,10 +1628,12 @@ suggest.prototype = {
 				counter = 1;
 			}
 
-			for (term in results) {
-				$(this.seggestInner).append("<div role='option' tabindex='-1' class='autocomplete-suggestion' id='suggestion-" + counter + "'>" + results[term] + "</div>");
+			for(var i=0; i< results.length;i++){
+				var cur = results[i];
+				$(this.seggestInner).append("<a href="+cur.link+" role='option' tabindex='-1' class='autocomplete-suggestion' id='suggestion-" + counter + "'>" + cur.name + "</a>");
 				counter = counter + 1;
 			}
+
 		}else{
 			this.removeChildren();
 			$(this.suggest[0]).slideUp();
@@ -1611,7 +1658,7 @@ suggest.prototype = {
 	doKeypress: function(keys, event){
 		var self = this;
 		var highligted = false;
-		highligted = $(this.seggestInner[0]).children('div').hasClass('highligt');
+		highligted = $(this.seggestInner[0]).children('a').hasClass('highligt');
 		switch (event.which) {
 
 			case this.keys.ESC:
@@ -1656,10 +1703,10 @@ suggest.prototype = {
 		var current;
 		if (highligted) {
 			current = $(this.seggestInner[0]).find('.highligt');
-			current.removeClass('highligt').prev('div').addClass('highligt');
+			current.removeClass('highligt').prev('a').addClass('highligt');
 			highligted = false;
 		} else {
-			current = $(this.seggestInner[0]).children().last('div');
+			current = $(this.seggestInner[0]).children().last('a');
 			current.addClass('highligt');
 		}
 	},
@@ -1667,17 +1714,20 @@ suggest.prototype = {
 		var current;
 		if (highligted) {
 			current = $(this.seggestInner[0]).find('.highligt');
-			current.removeClass('highligt').next('div').addClass('highligt');
+			current.removeClass('highligt').next('a').addClass('highligt');
 			highligted = false;
 		} else {
-			current = $(this.seggestInner[0]).children().first('div');
+			current = $(this.seggestInner[0]).children().first('a');
 			current.addClass('highligt');
 		}
 	},
 	selectOption: function(highligted){
 		var self = this;
 		if (highligted) {
-			$(this.search[0]).val($(this.seggestInner[0]).find('.highligt').text()).focus();
+			var target = $(this.seggestInner[0]).find('.highligt');
+			console.log(target.attr('href'))
+			$(this.search[0]).val(target.text()).focus();
+			window.location.replace(target.attr('href'))
 			self.removeChildren();
 			$(this.suggest[0]).slideUp();
 		} else {

@@ -290,9 +290,52 @@
                   <div class="otdel-head">
                     <div class="otdel-head-search">
                       <!--не более 1го на страницу-->
-                      <!--suggest component without logic-->
-                      <!--когда в инпут введено больше 3 симолов на .search-wrapper вешаем класс .focus-->
-                      <div class="search-wrapper suggest-wrapper">
+                      <!--suggest component-->
+                      <div class="search-wrapper suggest-wrapper js-suggest">
+                        <!-- с таней пришли к выводу, что этот поиск работает только по услугам которые есть, и ни в коем случае не редиректит на страницу поиска-->
+                        <!-- так что сюда плюем json следующего вида-->
+                        <script>
+                          var searchArr = {
+                          	'items': [
+                          		{
+                          			'name': 'Магнитно-резонансная ангиография интракраниальных сосудов',
+                          			'link': '#1',
+                          		},
+                          		{
+                          			'name': 'агнитно-резонансная томография всего позвоночника (всех отделов)',
+                          			'link': '#2',
+                          		},
+                          		{
+                          			'name': 'нитно-резонансная томография головного мозга',
+                          			'link': '3',
+                          		},
+                          		{
+                          			'name': 'гнитно-резонансная ангиография интракраниальных сосудов',
+                          			'link': '#4',
+                          		},
+                          		{
+                          			'name': 'итно-резонансная томография всего позвоночника (всех отделов)',
+                          			'link': '#4',
+                          		},
+                          		{
+                          			'name': 'Магнитно-резонансная томография головного мозга',
+                          			'link': '#5',
+                          		},
+                          		{
+                          			'name': 'Магнитно-резонансная томография грудного отдела позвоночника',
+                          			'link': '#5',
+                          		},
+                          		{
+                          			'name': 'Магнитно-резонансная томография мышц',
+                          			'link': '#6',
+                          		},
+                          		{
+                          			'name': 'Магнитно-резонансная томография одного голеностопного сустава',
+                          			'link': '#7',
+                          		},
+                          	]
+                          };
+                        </script>
                         <div class="suggest-wrapper-inner">
                           <form class="search-inner search-suggest">
                             <input class="search-input biginput" type="text" placeholder="1000 и одна услуга" required="required" autocomplete="off" aria-owns="res" aria-autocomplete="both">
@@ -302,7 +345,7 @@
                               </svg>
                             </button>
                           </form>
-                          <div class="suggest-list">
+                          <div class="suggest-list js-suggest-list">
                             <div class="suggest-list-inner"></div>
                           </div>
                         </div>
@@ -315,305 +358,240 @@
                   </div>
                   <div class="otdel-slider-wrap">
                     <div class="otdel-slider js-otdel">
-                                            <div class="vrach-wrap"><a class="vrach-inner" href="#">
+                                            <div class="vrach-wrap">
+                                              <div class="vrach-inner">
                                                 <div class="vrach-vrach">
                                                   <div class="vrach-vrach-inner"><img data-lazy="img/doctor/1.png" alt="Ирина Владимировна Мусатова">
                                                     <div class="vrach-vrach-name">Ирина Владимировна Мусатова</div>
                                                   </div>
                                                 </div>
-                                                <div class="vrach-inner-block">
-                                                  <div class="vrach-inner-wrap">
+                                                <div class="vrach-inner-block"><a class="vrach-inner-wrap" href="#">
                                                     <div class="vrach-inner-title">Клинико-диагностическая лаборатория 
                                                       <svg class="icon">
                                                         <use xlink:href="#smallarr" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
                                                       </svg>
                                                     </div>
-                                                    <div class="text">118 услуг</div>
-                                                  </div>
-                                                  <div class="vrach-inner-add">
-                                                    <div class="vrach-inner-add-item text">TENS-терапия</div>
-                                                    <div class="vrach-inner-add-item text">Магнитотерапия</div>
-                                                    <div class="vrach-inner-add-item text">СМТ-терапия</div>
-                                                    <div class="vrach-inner-add-item text">Ультразвуковая терапия</div>
-                                                    <div class="vrach-inner-add-item text">Фонофорез</div>
-                                                  </div>
-                                                </div></a></div>
-                                            <div class="vrach-wrap"><a class="vrach-inner" href="#">
+                                                    <div class="text">118 услуг</div></a>
+                                                  <div class="vrach-inner-add"><a class="vrach-inner-add-item text" href="#">TENS-терапия</a><a class="vrach-inner-add-item text" href="#">Магнитотерапия</a><a class="vrach-inner-add-item text" href="#">СМТ-терапия</a><a class="vrach-inner-add-item text" href="#">Ультразвуковая терапия</a><a class="vrach-inner-add-item text" href="#">Фонофорез</a></div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="vrach-wrap">
+                                              <div class="vrach-inner">
                                                 <div class="vrach-vrach">
                                                   <div class="vrach-vrach-inner"><img data-lazy="img/doctor/1.png" alt="Ирина Владимировна Мусатова">
                                                     <div class="vrach-vrach-name">Ирина Владимировна Мусатова</div>
                                                   </div>
                                                 </div>
-                                                <div class="vrach-inner-block">
-                                                  <div class="vrach-inner-wrap">
+                                                <div class="vrach-inner-block"><a class="vrach-inner-wrap" href="#">
                                                     <div class="vrach-inner-title">Физиотерапия
                                                       <svg class="icon">
                                                         <use xlink:href="#smallarr" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
                                                       </svg>
                                                     </div>
-                                                    <div class="text">118 услуг</div>
-                                                  </div>
-                                                  <div class="vrach-inner-add">
-                                                    <div class="vrach-inner-add-item text">TENS-терапия</div>
-                                                    <div class="vrach-inner-add-item text">Магнитотерапия</div>
-                                                    <div class="vrach-inner-add-item text">СМТ-терапия</div>
-                                                    <div class="vrach-inner-add-item text">Ультразвуковая терапия</div>
-                                                    <div class="vrach-inner-add-item text">Фонофорез</div>
-                                                  </div>
-                                                </div></a></div>
-                                            <div class="vrach-wrap"><a class="vrach-inner" href="#">
+                                                    <div class="text">118 услуг</div></a>
+                                                  <div class="vrach-inner-add"><a class="vrach-inner-add-item text" href="#">TENS-терапия</a><a class="vrach-inner-add-item text" href="#">Магнитотерапия</a><a class="vrach-inner-add-item text" href="#">СМТ-терапия</a><a class="vrach-inner-add-item text" href="#">Ультразвуковая терапия</a><a class="vrach-inner-add-item text" href="#">Фонофорез</a></div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="vrach-wrap">
+                                              <div class="vrach-inner">
                                                 <div class="vrach-vrach">
                                                   <div class="vrach-vrach-inner"><img data-lazy="img/doctor/2.png" alt="Стелла Олеговна Солнцева">
                                                     <div class="vrach-vrach-name">Стелла Олеговна Солнцева</div>
                                                   </div>
                                                 </div>
-                                                <div class="vrach-inner-block">
-                                                  <div class="vrach-inner-wrap">
+                                                <div class="vrach-inner-block"><a class="vrach-inner-wrap" href="#">
                                                     <div class="vrach-inner-title">Гинекология
                                                       <svg class="icon">
                                                         <use xlink:href="#smallarr" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
                                                       </svg>
                                                     </div>
-                                                    <div class="text">118 услуг</div>
-                                                  </div>
-                                                  <div class="vrach-inner-add">
-                                                    <div class="vrach-inner-add-item text">TENS-терапия</div>
-                                                    <div class="vrach-inner-add-item text">Магнитотерапия</div>
-                                                    <div class="vrach-inner-add-item text">СМТ-терапия</div>
-                                                    <div class="vrach-inner-add-item text">Ультразвуковая терапия</div>
-                                                    <div class="vrach-inner-add-item text">Фонофорез</div>
-                                                  </div>
-                                                </div></a></div>
-                                            <div class="vrach-wrap"><a class="vrach-inner" href="#">
+                                                    <div class="text">118 услуг</div></a>
+                                                  <div class="vrach-inner-add"><a class="vrach-inner-add-item text" href="#">TENS-терапия</a><a class="vrach-inner-add-item text" href="#">Магнитотерапия</a><a class="vrach-inner-add-item text" href="#">СМТ-терапия</a><a class="vrach-inner-add-item text" href="#">Ультразвуковая терапия</a><a class="vrach-inner-add-item text" href="#">Фонофорез</a></div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="vrach-wrap">
+                                              <div class="vrach-inner">
                                                 <div class="vrach-vrach">
                                                   <div class="vrach-vrach-inner"><img data-lazy="img/doctor/3.png" alt="Ирина Владимировна Мусатова">
                                                     <div class="vrach-vrach-name">Ирина Владимировна Мусатова</div>
                                                   </div>
                                                 </div>
-                                                <div class="vrach-inner-block">
-                                                  <div class="vrach-inner-wrap">
+                                                <div class="vrach-inner-block"><a class="vrach-inner-wrap" href="#">
                                                     <div class="vrach-inner-title">Стоматология
                                                       <svg class="icon">
                                                         <use xlink:href="#smallarr" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
                                                       </svg>
                                                     </div>
-                                                    <div class="text">118 услуг</div>
-                                                  </div>
-                                                  <div class="vrach-inner-add">
-                                                    <div class="vrach-inner-add-item text">TENS-терапия</div>
-                                                    <div class="vrach-inner-add-item text">Магнитотерапия</div>
-                                                    <div class="vrach-inner-add-item text">СМТ-терапия</div>
-                                                    <div class="vrach-inner-add-item text">Ультразвуковая терапия</div>
-                                                    <div class="vrach-inner-add-item text">Фонофорез</div>
-                                                  </div>
-                                                </div></a></div>
-                                            <div class="vrach-wrap"><a class="vrach-inner" href="#">
+                                                    <div class="text">118 услуг</div></a>
+                                                  <div class="vrach-inner-add"><a class="vrach-inner-add-item text" href="#">TENS-терапия</a><a class="vrach-inner-add-item text" href="#">Магнитотерапия</a><a class="vrach-inner-add-item text" href="#">СМТ-терапия</a><a class="vrach-inner-add-item text" href="#">Ультразвуковая терапия</a><a class="vrach-inner-add-item text" href="#">Фонофорез</a></div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="vrach-wrap">
+                                              <div class="vrach-inner">
                                                 <div class="vrach-vrach">
                                                   <div class="vrach-vrach-inner"><img data-lazy="img/doctor/4.png" alt="Ирина Владимировна Мусатова">
                                                     <div class="vrach-vrach-name">Ирина Владимировна Мусатова</div>
                                                   </div>
                                                 </div>
-                                                <div class="vrach-inner-block">
-                                                  <div class="vrach-inner-wrap">
+                                                <div class="vrach-inner-block"><a class="vrach-inner-wrap" href="#">
                                                     <div class="vrach-inner-title">Стоматолfsdf  fs огия
                                                       <svg class="icon">
                                                         <use xlink:href="#smallarr" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
                                                       </svg>
                                                     </div>
-                                                    <div class="text">118 услуг</div>
-                                                  </div>
-                                                  <div class="vrach-inner-add">
-                                                    <div class="vrach-inner-add-item text">TENS-терапия</div>
-                                                    <div class="vrach-inner-add-item text">Магнитотерапия</div>
-                                                    <div class="vrach-inner-add-item text">СМТ-терапия</div>
-                                                    <div class="vrach-inner-add-item text">Ультразвуковая терапия</div>
-                                                    <div class="vrach-inner-add-item text">Фонофорез</div>
-                                                  </div>
-                                                </div></a></div>
-                                            <div class="vrach-wrap"><a class="vrach-inner" href="#">
+                                                    <div class="text">118 услуг</div></a>
+                                                  <div class="vrach-inner-add"><a class="vrach-inner-add-item text" href="#">TENS-терапия</a><a class="vrach-inner-add-item text" href="#">Магнитотерапия</a><a class="vrach-inner-add-item text" href="#">СМТ-терапия</a><a class="vrach-inner-add-item text" href="#">Ультразвуковая терапия</a><a class="vrach-inner-add-item text" href="#">Фонофорез</a></div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="vrach-wrap">
+                                              <div class="vrach-inner">
                                                 <div class="vrach-vrach">
                                                   <div class="vrach-vrach-inner"><img data-lazy="img/doctor/4.png" alt="Ирина Владимировна Мусатова">
                                                     <div class="vrach-vrach-name">Ирина Владимировна Мусатова</div>
                                                   </div>
                                                 </div>
-                                                <div class="vrach-inner-block">
-                                                  <div class="vrach-inner-wrap">
+                                                <div class="vrach-inner-block"><a class="vrach-inner-wrap" href="#">
                                                     <div class="vrach-inner-title">Стоматолfsdf  fs огия
                                                       <svg class="icon">
                                                         <use xlink:href="#smallarr" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
                                                       </svg>
                                                     </div>
-                                                    <div class="text">118 услуг</div>
-                                                  </div>
-                                                  <div class="vrach-inner-add">
-                                                    <div class="vrach-inner-add-item text">TENS-терапия</div>
-                                                    <div class="vrach-inner-add-item text">Магнитотерапия</div>
-                                                    <div class="vrach-inner-add-item text">СМТ-терапия</div>
-                                                    <div class="vrach-inner-add-item text">Ультразвуковая терапия</div>
-                                                    <div class="vrach-inner-add-item text">Фонофорез</div>
-                                                  </div>
-                                                </div></a></div>
-                                            <div class="vrach-wrap"><a class="vrach-inner" href="#">
+                                                    <div class="text">118 услуг</div></a>
+                                                  <div class="vrach-inner-add"><a class="vrach-inner-add-item text" href="#">TENS-терапия</a><a class="vrach-inner-add-item text" href="#">Магнитотерапия</a><a class="vrach-inner-add-item text" href="#">СМТ-терапия</a><a class="vrach-inner-add-item text" href="#">Ультразвуковая терапия</a><a class="vrach-inner-add-item text" href="#">Фонофорез</a></div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="vrach-wrap">
+                                              <div class="vrach-inner">
                                                 <div class="vrach-vrach">
                                                   <div class="vrach-vrach-inner"><img data-lazy="img/doctor/2.png" alt="Стелла Олеговна Солнцева">
                                                     <div class="vrach-vrach-name">Стелла Олеговна Солнцева</div>
                                                   </div>
                                                 </div>
-                                                <div class="vrach-inner-block">
-                                                  <div class="vrach-inner-wrap">
+                                                <div class="vrach-inner-block"><a class="vrach-inner-wrap" href="#">
                                                     <div class="vrach-inner-title">Гинекология
                                                       <svg class="icon">
                                                         <use xlink:href="#smallarr" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
                                                       </svg>
                                                     </div>
-                                                    <div class="text">118 услуг</div>
-                                                  </div>
-                                                  <div class="vrach-inner-add">
-                                                    <div class="vrach-inner-add-item text">TENS-терапия</div>
-                                                    <div class="vrach-inner-add-item text">Магнитотерапия</div>
-                                                    <div class="vrach-inner-add-item text">СМТ-терапия</div>
-                                                    <div class="vrach-inner-add-item text">Ультразвуковая терапия</div>
-                                                    <div class="vrach-inner-add-item text">Фонофорез</div>
-                                                  </div>
-                                                </div></a></div>
-                                            <div class="vrach-wrap"><a class="vrach-inner" href="#">
+                                                    <div class="text">118 услуг</div></a>
+                                                  <div class="vrach-inner-add"><a class="vrach-inner-add-item text" href="#">TENS-терапия</a><a class="vrach-inner-add-item text" href="#">Магнитотерапия</a><a class="vrach-inner-add-item text" href="#">СМТ-терапия</a><a class="vrach-inner-add-item text" href="#">Ультразвуковая терапия</a><a class="vrach-inner-add-item text" href="#">Фонофорез</a></div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="vrach-wrap">
+                                              <div class="vrach-inner">
                                                 <div class="vrach-vrach">
                                                   <div class="vrach-vrach-inner"><img data-lazy="img/doctor/2.png" alt="Стелла Олеговна Солнцева">
                                                     <div class="vrach-vrach-name">Стелла Олеговна Солнцева</div>
                                                   </div>
                                                 </div>
-                                                <div class="vrach-inner-block">
-                                                  <div class="vrach-inner-wrap">
+                                                <div class="vrach-inner-block"><a class="vrach-inner-wrap" href="#">
                                                     <div class="vrach-inner-title">Гинекология
                                                       <svg class="icon">
                                                         <use xlink:href="#smallarr" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
                                                       </svg>
                                                     </div>
-                                                    <div class="text">118 услуг</div>
-                                                  </div>
-                                                  <div class="vrach-inner-add">
-                                                    <div class="vrach-inner-add-item text">TENS-терапия</div>
-                                                    <div class="vrach-inner-add-item text">Магнитотерапия</div>
-                                                    <div class="vrach-inner-add-item text">СМТ-терапия</div>
-                                                    <div class="vrach-inner-add-item text">Ультразвуковая терапия</div>
-                                                    <div class="vrach-inner-add-item text">Фонофорез</div>
-                                                  </div>
-                                                </div></a></div>
-                                            <div class="vrach-wrap"><a class="vrach-inner" href="#">
+                                                    <div class="text">118 услуг</div></a>
+                                                  <div class="vrach-inner-add"><a class="vrach-inner-add-item text" href="#">TENS-терапия</a><a class="vrach-inner-add-item text" href="#">Магнитотерапия</a><a class="vrach-inner-add-item text" href="#">СМТ-терапия</a><a class="vrach-inner-add-item text" href="#">Ультразвуковая терапия</a><a class="vrach-inner-add-item text" href="#">Фонофорез</a></div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="vrach-wrap">
+                                              <div class="vrach-inner">
                                                 <div class="vrach-vrach">
                                                   <div class="vrach-vrach-inner"><img data-lazy="img/doctor/2.png" alt="Стелла Олеговна Солнцева">
                                                     <div class="vrach-vrach-name">Стелла Олеговна Солнцева</div>
                                                   </div>
                                                 </div>
-                                                <div class="vrach-inner-block">
-                                                  <div class="vrach-inner-wrap">
+                                                <div class="vrach-inner-block"><a class="vrach-inner-wrap" href="#">
                                                     <div class="vrach-inner-title">Гинекология
                                                       <svg class="icon">
                                                         <use xlink:href="#smallarr" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
                                                       </svg>
                                                     </div>
-                                                    <div class="text">118 услуг</div>
-                                                  </div>
-                                                  <div class="vrach-inner-add">
-                                                    <div class="vrach-inner-add-item text">TENS-терапия</div>
-                                                    <div class="vrach-inner-add-item text">Магнитотерапия</div>
-                                                    <div class="vrach-inner-add-item text">СМТ-терапия</div>
-                                                    <div class="vrach-inner-add-item text">Ультразвуковая терапия</div>
-                                                    <div class="vrach-inner-add-item text">Фонофорез</div>
-                                                  </div>
-                                                </div></a></div>
-                                            <div class="vrach-wrap"><a class="vrach-inner" href="#">
+                                                    <div class="text">118 услуг</div></a>
+                                                  <div class="vrach-inner-add"><a class="vrach-inner-add-item text" href="#">TENS-терапия</a><a class="vrach-inner-add-item text" href="#">Магнитотерапия</a><a class="vrach-inner-add-item text" href="#">СМТ-терапия</a><a class="vrach-inner-add-item text" href="#">Ультразвуковая терапия</a><a class="vrach-inner-add-item text" href="#">Фонофорез</a></div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="vrach-wrap">
+                                              <div class="vrach-inner">
                                                 <div class="vrach-vrach">
                                                   <div class="vrach-vrach-inner"><img data-lazy="img/doctor/2.png" alt="Стелла Олеговна Солнцева">
                                                     <div class="vrach-vrach-name">Стелла Олеговна Солнцева</div>
                                                   </div>
                                                 </div>
-                                                <div class="vrach-inner-block">
-                                                  <div class="vrach-inner-wrap">
+                                                <div class="vrach-inner-block"><a class="vrach-inner-wrap" href="#">
                                                     <div class="vrach-inner-title">Гинекология
                                                       <svg class="icon">
                                                         <use xlink:href="#smallarr" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
                                                       </svg>
                                                     </div>
-                                                    <div class="text">118 услуг</div>
-                                                  </div>
-                                                  <div class="vrach-inner-add">
-                                                    <div class="vrach-inner-add-item text">TENS-терапия</div>
-                                                    <div class="vrach-inner-add-item text">Магнитотерапия</div>
-                                                    <div class="vrach-inner-add-item text">СМТ-терапия</div>
-                                                    <div class="vrach-inner-add-item text">Ультразвуковая терапия</div>
-                                                    <div class="vrach-inner-add-item text">Фонофорез</div>
-                                                  </div>
-                                                </div></a></div>
-                                            <div class="vrach-wrap"><a class="vrach-inner" href="#">
+                                                    <div class="text">118 услуг</div></a>
+                                                  <div class="vrach-inner-add"><a class="vrach-inner-add-item text" href="#">TENS-терапия</a><a class="vrach-inner-add-item text" href="#">Магнитотерапия</a><a class="vrach-inner-add-item text" href="#">СМТ-терапия</a><a class="vrach-inner-add-item text" href="#">Ультразвуковая терапия</a><a class="vrach-inner-add-item text" href="#">Фонофорез</a></div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="vrach-wrap">
+                                              <div class="vrach-inner">
                                                 <div class="vrach-vrach">
                                                   <div class="vrach-vrach-inner"><img data-lazy="img/doctor/3.png" alt="Ирина Владимировна Мусатова">
                                                     <div class="vrach-vrach-name">Ирина Владимировна Мусатова</div>
                                                   </div>
                                                 </div>
-                                                <div class="vrach-inner-block">
-                                                  <div class="vrach-inner-wrap">
+                                                <div class="vrach-inner-block"><a class="vrach-inner-wrap" href="#">
                                                     <div class="vrach-inner-title">Стоматология
                                                       <svg class="icon">
                                                         <use xlink:href="#smallarr" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
                                                       </svg>
                                                     </div>
-                                                    <div class="text">118 услуг</div>
-                                                  </div>
-                                                  <div class="vrach-inner-add">
-                                                    <div class="vrach-inner-add-item text">TENS-терапия</div>
-                                                    <div class="vrach-inner-add-item text">Магнитотерапия</div>
-                                                    <div class="vrach-inner-add-item text">СМТ-терапия</div>
-                                                    <div class="vrach-inner-add-item text">Ультразвуковая терапия</div>
-                                                    <div class="vrach-inner-add-item text">Фонофорез</div>
-                                                  </div>
-                                                </div></a></div>
-                                            <div class="vrach-wrap"><a class="vrach-inner" href="#">
+                                                    <div class="text">118 услуг</div></a>
+                                                  <div class="vrach-inner-add"><a class="vrach-inner-add-item text" href="#">TENS-терапия</a><a class="vrach-inner-add-item text" href="#">Магнитотерапия</a><a class="vrach-inner-add-item text" href="#">СМТ-терапия</a><a class="vrach-inner-add-item text" href="#">Ультразвуковая терапия</a><a class="vrach-inner-add-item text" href="#">Фонофорез</a></div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="vrach-wrap">
+                                              <div class="vrach-inner">
                                                 <div class="vrach-vrach">
                                                   <div class="vrach-vrach-inner"><img data-lazy="img/doctor/4.png" alt="Ирина Владимировна Мусатова">
                                                     <div class="vrach-vrach-name">Ирина Владимировна Мусатова</div>
                                                   </div>
                                                 </div>
-                                                <div class="vrach-inner-block">
-                                                  <div class="vrach-inner-wrap">
+                                                <div class="vrach-inner-block"><a class="vrach-inner-wrap" href="#">
                                                     <div class="vrach-inner-title">Стоматолfsdf  fs огия
                                                       <svg class="icon">
                                                         <use xlink:href="#smallarr" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
                                                       </svg>
                                                     </div>
-                                                    <div class="text">118 услуг</div>
-                                                  </div>
-                                                  <div class="vrach-inner-add">
-                                                    <div class="vrach-inner-add-item text">TENS-терапия</div>
-                                                    <div class="vrach-inner-add-item text">Магнитотерапия</div>
-                                                    <div class="vrach-inner-add-item text">СМТ-терапия</div>
-                                                    <div class="vrach-inner-add-item text">Ультразвуковая терапия</div>
-                                                    <div class="vrach-inner-add-item text">Фонофорез</div>
-                                                  </div>
-                                                </div></a></div>
-                                            <div class="vrach-wrap"><a class="vrach-inner" href="#">
+                                                    <div class="text">118 услуг</div></a>
+                                                  <div class="vrach-inner-add"><a class="vrach-inner-add-item text" href="#">TENS-терапия</a><a class="vrach-inner-add-item text" href="#">Магнитотерапия</a><a class="vrach-inner-add-item text" href="#">СМТ-терапия</a><a class="vrach-inner-add-item text" href="#">Ультразвуковая терапия</a><a class="vrach-inner-add-item text" href="#">Фонофорез</a></div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="vrach-wrap">
+                                              <div class="vrach-inner">
                                                 <div class="vrach-vrach">
                                                   <div class="vrach-vrach-inner"><img data-lazy="img/doctor/4.png" alt="Ирина Владимировна Мусатова">
                                                     <div class="vrach-vrach-name">Ирина Владимировна Мусатова</div>
                                                   </div>
                                                 </div>
-                                                <div class="vrach-inner-block">
-                                                  <div class="vrach-inner-wrap">
+                                                <div class="vrach-inner-block"><a class="vrach-inner-wrap" href="#">
                                                     <div class="vrach-inner-title">Стоматолfsdf  fs огия
                                                       <svg class="icon">
                                                         <use xlink:href="#smallarr" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
                                                       </svg>
                                                     </div>
-                                                    <div class="text">118 услуг</div>
-                                                  </div>
-                                                  <div class="vrach-inner-add">
-                                                    <div class="vrach-inner-add-item text">TENS-терапия</div>
-                                                    <div class="vrach-inner-add-item text">Магнитотерапия</div>
-                                                    <div class="vrach-inner-add-item text">СМТ-терапия</div>
-                                                    <div class="vrach-inner-add-item text">Ультразвуковая терапия</div>
-                                                    <div class="vrach-inner-add-item text">Фонофорез</div>
-                                                  </div>
-                                                </div></a></div>
+                                                    <div class="text">118 услуг</div></a>
+                                                  <div class="vrach-inner-add"><a class="vrach-inner-add-item text" href="#">TENS-терапия</a><a class="vrach-inner-add-item text" href="#">Магнитотерапия</a><a class="vrach-inner-add-item text" href="#">СМТ-терапия</a><a class="vrach-inner-add-item text" href="#">Ультразвуковая терапия</a><a class="vrach-inner-add-item text" href="#">Фонофорез</a></div>
+                                                </div>
+                                              </div>
+                                            </div>
                     </div>
                     <div class="dots-wrap"></div>
                     <div class="slider-counter">
