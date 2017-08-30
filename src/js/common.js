@@ -1636,6 +1636,7 @@ suggest.prototype = {
 				$(this.seggestInner).append("<a href="+cur.link+" role='option' tabindex='-1' class='autocomplete-suggestion' id='suggestion-" + counter + "'>" + cur.name + "</a>");
 				counter = counter + 1;
 			}
+			$(this.seggestInner).children().eq(0).addClass('highligt')
 
 		}else{
 			this.removeChildren();
@@ -1646,7 +1647,7 @@ suggest.prototype = {
 	addClickToItem: function(){
 		var self = this;
 		this.seggestInner[0].addEventListener('click',function(e){
-			if (e.target.matches('div')) {
+			if (e.target.matches('a')) {
 				var elem = e.target;
 				var val = elem.textContent;
 				self.search[0].value = val;
