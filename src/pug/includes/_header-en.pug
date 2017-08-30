@@ -1,0 +1,42 @@
+include _mixins.pug
+.header-mainwrap
+	.header-row-top
+		.box
+			.header-row-top-left
+				.lang-wrap
+					.lang-item.active.top-link
+						| Ru
+					a(href="#").lang-item.top-link
+						| En
+
+	.header-row-bottom
+		.box
+			.logo-wrapper
+				a(href="#").logo-inner
+					.logo
+					.logo-inner-text
+						.text-top Медицинский центр
+						.text-bottom Моситалмед
+			.header-row-tels
+				.tel-wrap
+					.tel-wrap-inner
+						.tel-item
+							.text-sm Stomatology
+							a(href="tel:+7 (495) 956-60-95").tel-item-tel +7 (495) 956-60-95
+					.tel-wrap-inner(onclick='')
+						.tel-item.main
+							svg(class="icon icon-phone")
+								use(xlink:href="#phone" xmlns:xlink="http://www.w3.org/1999/xlink")
+							.text-sm Registry
+							a(href="tel:+7 (495) 956-60-95").tel-item-tel +7 (495) 956-17-67
+
+						.dropdown-target
+							.dropdown-inner
+								.dropdown-content
+									.content-block
+										.text-sm Registry
+										a(href="tel:").tel-item-tel 8 (495) 956-60-95
+										a(href="tel:").tel-item-tel 8 (495) 956-60-95
+
+
+	

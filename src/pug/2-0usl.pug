@@ -4,6 +4,7 @@ block title
 	title Услуги
 block config
 	- var main = false
+	- var parse = true
 block content
 	.wrapper.gray.page-head
 		.box
@@ -1089,7 +1090,7 @@ block content
 															]
 														},
 														{
-															'letter': 'д',
+															'letter': 'р',
 															'items': [
 																{
 																	'name': 'Аэрозольт dfgd ерапия через небулайзер (без препарата)',
@@ -1122,7 +1123,7 @@ block content
 															]
 														},
 														{
-															'letter': 'м',
+															'letter': 'з',
 															'items': [
 																{
 																	'name': 'Магнитно-резонансная ангиография интракраниальных сосудов',
@@ -1167,9 +1168,33 @@ block content
 											]	
 										},
 									],
+									'activeLetters':[
+										{
+											'letter': 'а'
+										},
+										{
+											'letter': 'б'
+										},
+										{
+											'letter': 'ж'
+										},
+										{
+											'letter': 'д'
+										},
+										{
+											'letter': 'м'
+										},
+										{
+											'letter': 'р'
+										},
+										{
+											'letter': 'з'
+										},
+									]
 								};
-								var parseelement = new Parse(elems);
-							.service-items
+							// модификатор fullsize только на этой странице
+							.service-items.fullsize
+
 
 								//- .service-item(data-id='#1')
 								//- 	.service-item-title

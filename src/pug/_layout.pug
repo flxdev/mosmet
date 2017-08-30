@@ -20,11 +20,17 @@ html(lang="ru")
 					block config
 					header.page__header--wrap
 						.page__header.cd-auto-hide-header
-							include includes/_header.pug			
+							if en == true
+								include includes/_header-en.pug
+							else
+								include includes/_header.pug			
 					main.page__content
 						block content
 					footer.page__footer
-						include includes/_footer.pug
+						if en == true
+							include includes/_footer-en.pug
+						else
+							include includes/_footer.pug
 		.modals
 			include includes/_modals.pug
 		//END out
@@ -35,3 +41,11 @@ html(lang="ru")
 		script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDcFkgUmSnM7fy40cDnRn8BB_xu1cp7Ros&callback=initMap')
 		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.60/jquery.form-validator.min.js")
 		script(src="js/common.min.js")
+		if parse == true
+			// если есть услуги то выводим этот скрипт. Страница отделения, услуг и врача
+			script.
+				document.addEventListener("DOMContentLoaded", function() {
+					var parseelement = new Parse(elems);
+				});
+
+

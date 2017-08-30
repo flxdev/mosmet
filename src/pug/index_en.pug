@@ -1,0 +1,125 @@
+extends _layout
+
+block title
+	title Index
+block config
+	- var main = true
+	- var en = true
+block content
+	.wrapper.gray.page-head.eng
+		.box
+			.page-head-content
+				.page-head-container
+					.page-head-inner
+						h1.title.h1 Mositalmed
+					.page-head-text 
+						.text.primary Mositalmed was established in 1996. Our clinic is a result of the hard work of proficient doctors, that deserved trust of patients and high ratings among the other specialists
+	.wrapper
+		.box
+			.otdel
+				.otdel-head
+					.otdel-head-title
+						h2.title.h2 Departments
+						.arr-wrap-inner
+
+				.otdel-slider-wrap
+					.otdel-slider.js-otdel
+						mixin vrach(img,title,name)
+							.vrach-wrap
+								.vrach-inner
+									.vrach-vrach
+										.vrach-vrach-inner
+											img(data-lazy="img/doctor/"+img+".png", alt=""+name+"")
+											.vrach-vrach-name #{name}
+									.vrach-inner-block
+										a(href="#").vrach-inner-wrap
+											.vrach-inner-title #{title}
+												+icon('smallarr')
+											.text 118 services
+										.vrach-inner-add
+											.vrach-inner-add-item.text TENS-терапия
+											.vrach-inner-add-item.text Магнитотерапия
+											.vrach-inner-add-item.text СМТ-терапия
+											.vrach-inner-add-item.text Ультразвуковая терапия
+											.vrach-inner-add-item.text Фонофорез
+						+vrach(1,'Clinical diagnostic laboratory ','Irina Vladimirovna Musatova')
+						+vrach(1,'Physiotherapeutic ','Stella Olegovna Solntseva')
+						+vrach(2,'Gynecological ','Irina Vladimirovna Musatov')
+						+vrach(3,'Dental','Ирина Владимировна Мусатова')
+						+vrach(4,'Dental  fs огия','Ирина Владимировна Мусатова')
+						+vrach(4,'Dental  fs огия','Ирина Владимировна Мусатова')
+						+vrach(2,'Gynecological','Стелла Олеговна Солнцева')
+						+vrach(2,'Gynecological','Стелла Олеговна Солнцева')
+						+vrach(2,'Gynecological','Стелла Олеговна Солнцева')
+						+vrach(2,'Physiotherapeutic ','Стелла Олеговна Солнцева')
+						+vrach(3,'Physiotherapeutic ','Ирина Владимировна Мусатова')
+						+vrach(4,'Physiotherapeutic   fs огия','Ирина Владимировна Мусатова')
+						+vrach(4,'Physiotherapeutic   fs огия','Ирина Владимировна Мусатова')
+					.dots-wrap
+					.slider-counter
+						.slider-curr
+						.slider-divider /
+						.slider-total
+	.wrapper.gray.special
+		.box
+			.about-wrapper
+				.about-inner
+					.about-about
+						.about-about-inner
+							.about-about-col
+								.about-about-text
+									h2.title.h2 Mositalmed
+									p.text.primary MOSITALMED provides out-patient clinical care in 20 medical specialties. Medical assistance is provided both in voluntary insurance policies and on a fee basis, there are more than 160 000 patients who trust us to take care of their health
+							.about-about-col
+								.about-about-items
+									mixin aboutitem(num,text)
+										.about-item
+											.about-item-inner
+												.about-item-num #{num}
+												.about-item-text.text #{text}
+									+aboutitem('12','Departments')
+									+aboutitem('32','Doctor of Science')
+									+aboutitem('104','Professional doctors')
+									+aboutitem('160 000','Рatients who trust us')
+								.about-img
+									.video-container
+										.video-container-inner
+											//в этотм блоке может быть: видос <video>, айфрейм с ютуба,слайдер и просто картинка
+											img(data-src="img/index/slide.jpg", alt="").js-image
+	.wrapper.map-wrapper
+		.map-cont
+			#map.map-element(data-lat='55.749327',data-lon='37.590710',data-icon='/img/pin.png')
+		//- .box
+		//- 	a(href="#").btn
+		//- 		span Подробнее о клинике
+		//- 	a(href="#").btn.secondary
+		//- 		span Подробнее о клинике
+		//- 	a(href="#").btn.primary
+		//- 		span Подробнее о клинике
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
