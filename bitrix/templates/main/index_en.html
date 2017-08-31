@@ -11,6 +11,25 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="#d56c72">
     <meta name="format-detection" content="telephone=no">
     <meta name="format-detection" content="address=no">
+    <!--script.
+    function checkForFlex(){
+    	var curAddress = window.location.toString(),
+    		targetAddress = "/zagl.html";
+    	function NaiveFlexBoxSupport(d){
+    		var f = "flex", e = d.createElement('b');
+    		e.style.display = f;
+    		return e.style.display == f;
+    	}
+    	if( document.addEventListener ){
+    	}else{
+    		window.location.replace(targetAddress);
+    	}
+    	if (NaiveFlexBoxSupport(document) == false && (targetAddress.toString() != curAddress)) {
+    		window.location.replace(targetAddress);
+    	}
+    }checkForFlex();
+    	
+    -->
     <link rel="shortcut icon" href="img/fav/48x48.png" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="57x57" href="img/fav/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="img/fav/apple-touch-icon-60x60.png">
@@ -48,24 +67,29 @@
                   <div class="box">
                     <div class="header-row-top-left">
                       <div class="lang-wrap">
-                        <div class="lang-item active top-link">Ru</div><a class="lang-item top-link" href="#">En</a>
+                        <div class="lang-item active top-link">Ru</div>
+                        <a class="lang-item top-link" href="#">En</a>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="header-row-bottom">
                   <div class="box">
-                    <div class="logo-wrapper"><a class="logo-inner" href="#">
+                    <div class="logo-wrapper">
+                      <a class="logo-inner" href="#">
                         <div class="logo"></div>
                         <div class="logo-inner-text">
                           <div class="text-top">Медицинский центр</div>
                           <div class="text-bottom">Моситалмед</div>
-                        </div></a></div>
+                        </div>
+                      </a>
+                    </div>
                     <div class="header-row-tels">
                       <div class="tel-wrap">
                         <div class="tel-wrap-inner">
                           <div class="tel-item">
-                            <div class="text-sm">Stomatology</div><a class="tel-item-tel" href="tel:+7 (495) 956-60-95">+7 (495) 956-60-95</a>
+                            <div class="text-sm">Stomatology</div>
+                            <a class="tel-item-tel" href="tel:+7 (495) 956-60-95">+7 (495) 956-60-95</a>
                           </div>
                         </div>
                         <div class="tel-wrap-inner" onclick="">
@@ -73,13 +97,16 @@
                             <svg class="icon icon-phone">
                               <use xlink:href="#phone" xmlns:xlink="http://www.w3.org/1999/xlink"/>
                             </svg>
-                            <div class="text-sm">Registry</div><a class="tel-item-tel" href="tel:+7 (495) 956-60-95">+7 (495) 956-17-67</a>
+                            <div class="text-sm">Registry</div>
+                            <a class="tel-item-tel" href="tel:+7 (495) 956-60-95">+7 (495) 956-17-67</a>
                           </div>
                           <div class="dropdown-target">
                             <div class="dropdown-inner">
                               <div class="dropdown-content">
                                 <div class="content-block">
-                                  <div class="text-sm">Registry</div><a class="tel-item-tel" href="tel:">8 (495) 956-60-95</a><a class="tel-item-tel" href="tel:">8 (495) 956-60-95</a>
+                                  <div class="text-sm">Registry</div>
+                                  <a class="tel-item-tel" href="tel:">8 (495) 956-60-95</a>
+                                  <a class="tel-item-tel" href="tel:">8 (495) 956-60-95</a>
                                 </div>
                               </div>
                             </div>
@@ -121,17 +148,20 @@
                                             <div class="vrach-wrap">
                                               <div class="vrach-inner">
                                                 <div class="vrach-vrach">
-                                                  <div class="vrach-vrach-inner"><img data-lazy="img/doctor/1.png" alt="Irina Vladimirovna Musatova">
+                                                  <div class="vrach-vrach-inner">
+                                                    <img data-lazy="img/doctor/1.png" alt="Irina Vladimirovna Musatova">
                                                     <div class="vrach-vrach-name">Irina Vladimirovna Musatova</div>
                                                   </div>
                                                 </div>
-                                                <div class="vrach-inner-block"><a class="vrach-inner-wrap" href="#">
+                                                <div class="vrach-inner-block">
+                                                  <a class="vrach-inner-wrap" href="#">
                                                     <div class="vrach-inner-title">Clinical diagnostic laboratory 
                                                       <svg class="icon">
                                                         <use xlink:href="#smallarr" xmlns:xlink="http://www.w3.org/1999/xlink"/>
                                                       </svg>
                                                     </div>
-                                                    <div class="text">118 services</div></a>
+                                                    <div class="text">118 services</div>
+                                                  </a>
                                                   <div class="vrach-inner-add">
                                                     <div class="vrach-inner-add-item text">TENS-терапия</div>
                                                     <div class="vrach-inner-add-item text">Магнитотерапия</div>
@@ -145,17 +175,20 @@
                                             <div class="vrach-wrap">
                                               <div class="vrach-inner">
                                                 <div class="vrach-vrach">
-                                                  <div class="vrach-vrach-inner"><img data-lazy="img/doctor/1.png" alt="Stella Olegovna Solntseva">
+                                                  <div class="vrach-vrach-inner">
+                                                    <img data-lazy="img/doctor/1.png" alt="Stella Olegovna Solntseva">
                                                     <div class="vrach-vrach-name">Stella Olegovna Solntseva</div>
                                                   </div>
                                                 </div>
-                                                <div class="vrach-inner-block"><a class="vrach-inner-wrap" href="#">
+                                                <div class="vrach-inner-block">
+                                                  <a class="vrach-inner-wrap" href="#">
                                                     <div class="vrach-inner-title">Physiotherapeutic 
                                                       <svg class="icon">
                                                         <use xlink:href="#smallarr" xmlns:xlink="http://www.w3.org/1999/xlink"/>
                                                       </svg>
                                                     </div>
-                                                    <div class="text">118 services</div></a>
+                                                    <div class="text">118 services</div>
+                                                  </a>
                                                   <div class="vrach-inner-add">
                                                     <div class="vrach-inner-add-item text">TENS-терапия</div>
                                                     <div class="vrach-inner-add-item text">Магнитотерапия</div>
@@ -169,17 +202,20 @@
                                             <div class="vrach-wrap">
                                               <div class="vrach-inner">
                                                 <div class="vrach-vrach">
-                                                  <div class="vrach-vrach-inner"><img data-lazy="img/doctor/2.png" alt="Irina Vladimirovna Musatov">
+                                                  <div class="vrach-vrach-inner">
+                                                    <img data-lazy="img/doctor/2.png" alt="Irina Vladimirovna Musatov">
                                                     <div class="vrach-vrach-name">Irina Vladimirovna Musatov</div>
                                                   </div>
                                                 </div>
-                                                <div class="vrach-inner-block"><a class="vrach-inner-wrap" href="#">
+                                                <div class="vrach-inner-block">
+                                                  <a class="vrach-inner-wrap" href="#">
                                                     <div class="vrach-inner-title">Gynecological 
                                                       <svg class="icon">
                                                         <use xlink:href="#smallarr" xmlns:xlink="http://www.w3.org/1999/xlink"/>
                                                       </svg>
                                                     </div>
-                                                    <div class="text">118 services</div></a>
+                                                    <div class="text">118 services</div>
+                                                  </a>
                                                   <div class="vrach-inner-add">
                                                     <div class="vrach-inner-add-item text">TENS-терапия</div>
                                                     <div class="vrach-inner-add-item text">Магнитотерапия</div>
@@ -193,17 +229,20 @@
                                             <div class="vrach-wrap">
                                               <div class="vrach-inner">
                                                 <div class="vrach-vrach">
-                                                  <div class="vrach-vrach-inner"><img data-lazy="img/doctor/3.png" alt="Ирина Владимировна Мусатова">
+                                                  <div class="vrach-vrach-inner">
+                                                    <img data-lazy="img/doctor/3.png" alt="Ирина Владимировна Мусатова">
                                                     <div class="vrach-vrach-name">Ирина Владимировна Мусатова</div>
                                                   </div>
                                                 </div>
-                                                <div class="vrach-inner-block"><a class="vrach-inner-wrap" href="#">
+                                                <div class="vrach-inner-block">
+                                                  <a class="vrach-inner-wrap" href="#">
                                                     <div class="vrach-inner-title">Dental
                                                       <svg class="icon">
                                                         <use xlink:href="#smallarr" xmlns:xlink="http://www.w3.org/1999/xlink"/>
                                                       </svg>
                                                     </div>
-                                                    <div class="text">118 services</div></a>
+                                                    <div class="text">118 services</div>
+                                                  </a>
                                                   <div class="vrach-inner-add">
                                                     <div class="vrach-inner-add-item text">TENS-терапия</div>
                                                     <div class="vrach-inner-add-item text">Магнитотерапия</div>
@@ -217,17 +256,20 @@
                                             <div class="vrach-wrap">
                                               <div class="vrach-inner">
                                                 <div class="vrach-vrach">
-                                                  <div class="vrach-vrach-inner"><img data-lazy="img/doctor/4.png" alt="Ирина Владимировна Мусатова">
+                                                  <div class="vrach-vrach-inner">
+                                                    <img data-lazy="img/doctor/4.png" alt="Ирина Владимировна Мусатова">
                                                     <div class="vrach-vrach-name">Ирина Владимировна Мусатова</div>
                                                   </div>
                                                 </div>
-                                                <div class="vrach-inner-block"><a class="vrach-inner-wrap" href="#">
+                                                <div class="vrach-inner-block">
+                                                  <a class="vrach-inner-wrap" href="#">
                                                     <div class="vrach-inner-title">Dental  fs огия
                                                       <svg class="icon">
                                                         <use xlink:href="#smallarr" xmlns:xlink="http://www.w3.org/1999/xlink"/>
                                                       </svg>
                                                     </div>
-                                                    <div class="text">118 services</div></a>
+                                                    <div class="text">118 services</div>
+                                                  </a>
                                                   <div class="vrach-inner-add">
                                                     <div class="vrach-inner-add-item text">TENS-терапия</div>
                                                     <div class="vrach-inner-add-item text">Магнитотерапия</div>
@@ -241,17 +283,20 @@
                                             <div class="vrach-wrap">
                                               <div class="vrach-inner">
                                                 <div class="vrach-vrach">
-                                                  <div class="vrach-vrach-inner"><img data-lazy="img/doctor/4.png" alt="Ирина Владимировна Мусатова">
+                                                  <div class="vrach-vrach-inner">
+                                                    <img data-lazy="img/doctor/4.png" alt="Ирина Владимировна Мусатова">
                                                     <div class="vrach-vrach-name">Ирина Владимировна Мусатова</div>
                                                   </div>
                                                 </div>
-                                                <div class="vrach-inner-block"><a class="vrach-inner-wrap" href="#">
+                                                <div class="vrach-inner-block">
+                                                  <a class="vrach-inner-wrap" href="#">
                                                     <div class="vrach-inner-title">Dental  fs огия
                                                       <svg class="icon">
                                                         <use xlink:href="#smallarr" xmlns:xlink="http://www.w3.org/1999/xlink"/>
                                                       </svg>
                                                     </div>
-                                                    <div class="text">118 services</div></a>
+                                                    <div class="text">118 services</div>
+                                                  </a>
                                                   <div class="vrach-inner-add">
                                                     <div class="vrach-inner-add-item text">TENS-терапия</div>
                                                     <div class="vrach-inner-add-item text">Магнитотерапия</div>
@@ -265,17 +310,20 @@
                                             <div class="vrach-wrap">
                                               <div class="vrach-inner">
                                                 <div class="vrach-vrach">
-                                                  <div class="vrach-vrach-inner"><img data-lazy="img/doctor/2.png" alt="Стелла Олеговна Солнцева">
+                                                  <div class="vrach-vrach-inner">
+                                                    <img data-lazy="img/doctor/2.png" alt="Стелла Олеговна Солнцева">
                                                     <div class="vrach-vrach-name">Стелла Олеговна Солнцева</div>
                                                   </div>
                                                 </div>
-                                                <div class="vrach-inner-block"><a class="vrach-inner-wrap" href="#">
+                                                <div class="vrach-inner-block">
+                                                  <a class="vrach-inner-wrap" href="#">
                                                     <div class="vrach-inner-title">Gynecological
                                                       <svg class="icon">
                                                         <use xlink:href="#smallarr" xmlns:xlink="http://www.w3.org/1999/xlink"/>
                                                       </svg>
                                                     </div>
-                                                    <div class="text">118 services</div></a>
+                                                    <div class="text">118 services</div>
+                                                  </a>
                                                   <div class="vrach-inner-add">
                                                     <div class="vrach-inner-add-item text">TENS-терапия</div>
                                                     <div class="vrach-inner-add-item text">Магнитотерапия</div>
@@ -289,17 +337,20 @@
                                             <div class="vrach-wrap">
                                               <div class="vrach-inner">
                                                 <div class="vrach-vrach">
-                                                  <div class="vrach-vrach-inner"><img data-lazy="img/doctor/2.png" alt="Стелла Олеговна Солнцева">
+                                                  <div class="vrach-vrach-inner">
+                                                    <img data-lazy="img/doctor/2.png" alt="Стелла Олеговна Солнцева">
                                                     <div class="vrach-vrach-name">Стелла Олеговна Солнцева</div>
                                                   </div>
                                                 </div>
-                                                <div class="vrach-inner-block"><a class="vrach-inner-wrap" href="#">
+                                                <div class="vrach-inner-block">
+                                                  <a class="vrach-inner-wrap" href="#">
                                                     <div class="vrach-inner-title">Gynecological
                                                       <svg class="icon">
                                                         <use xlink:href="#smallarr" xmlns:xlink="http://www.w3.org/1999/xlink"/>
                                                       </svg>
                                                     </div>
-                                                    <div class="text">118 services</div></a>
+                                                    <div class="text">118 services</div>
+                                                  </a>
                                                   <div class="vrach-inner-add">
                                                     <div class="vrach-inner-add-item text">TENS-терапия</div>
                                                     <div class="vrach-inner-add-item text">Магнитотерапия</div>
@@ -313,17 +364,20 @@
                                             <div class="vrach-wrap">
                                               <div class="vrach-inner">
                                                 <div class="vrach-vrach">
-                                                  <div class="vrach-vrach-inner"><img data-lazy="img/doctor/2.png" alt="Стелла Олеговна Солнцева">
+                                                  <div class="vrach-vrach-inner">
+                                                    <img data-lazy="img/doctor/2.png" alt="Стелла Олеговна Солнцева">
                                                     <div class="vrach-vrach-name">Стелла Олеговна Солнцева</div>
                                                   </div>
                                                 </div>
-                                                <div class="vrach-inner-block"><a class="vrach-inner-wrap" href="#">
+                                                <div class="vrach-inner-block">
+                                                  <a class="vrach-inner-wrap" href="#">
                                                     <div class="vrach-inner-title">Gynecological
                                                       <svg class="icon">
                                                         <use xlink:href="#smallarr" xmlns:xlink="http://www.w3.org/1999/xlink"/>
                                                       </svg>
                                                     </div>
-                                                    <div class="text">118 services</div></a>
+                                                    <div class="text">118 services</div>
+                                                  </a>
                                                   <div class="vrach-inner-add">
                                                     <div class="vrach-inner-add-item text">TENS-терапия</div>
                                                     <div class="vrach-inner-add-item text">Магнитотерапия</div>
@@ -337,17 +391,20 @@
                                             <div class="vrach-wrap">
                                               <div class="vrach-inner">
                                                 <div class="vrach-vrach">
-                                                  <div class="vrach-vrach-inner"><img data-lazy="img/doctor/2.png" alt="Стелла Олеговна Солнцева">
+                                                  <div class="vrach-vrach-inner">
+                                                    <img data-lazy="img/doctor/2.png" alt="Стелла Олеговна Солнцева">
                                                     <div class="vrach-vrach-name">Стелла Олеговна Солнцева</div>
                                                   </div>
                                                 </div>
-                                                <div class="vrach-inner-block"><a class="vrach-inner-wrap" href="#">
+                                                <div class="vrach-inner-block">
+                                                  <a class="vrach-inner-wrap" href="#">
                                                     <div class="vrach-inner-title">Physiotherapeutic 
                                                       <svg class="icon">
                                                         <use xlink:href="#smallarr" xmlns:xlink="http://www.w3.org/1999/xlink"/>
                                                       </svg>
                                                     </div>
-                                                    <div class="text">118 services</div></a>
+                                                    <div class="text">118 services</div>
+                                                  </a>
                                                   <div class="vrach-inner-add">
                                                     <div class="vrach-inner-add-item text">TENS-терапия</div>
                                                     <div class="vrach-inner-add-item text">Магнитотерапия</div>
@@ -361,17 +418,20 @@
                                             <div class="vrach-wrap">
                                               <div class="vrach-inner">
                                                 <div class="vrach-vrach">
-                                                  <div class="vrach-vrach-inner"><img data-lazy="img/doctor/3.png" alt="Ирина Владимировна Мусатова">
+                                                  <div class="vrach-vrach-inner">
+                                                    <img data-lazy="img/doctor/3.png" alt="Ирина Владимировна Мусатова">
                                                     <div class="vrach-vrach-name">Ирина Владимировна Мусатова</div>
                                                   </div>
                                                 </div>
-                                                <div class="vrach-inner-block"><a class="vrach-inner-wrap" href="#">
+                                                <div class="vrach-inner-block">
+                                                  <a class="vrach-inner-wrap" href="#">
                                                     <div class="vrach-inner-title">Physiotherapeutic 
                                                       <svg class="icon">
                                                         <use xlink:href="#smallarr" xmlns:xlink="http://www.w3.org/1999/xlink"/>
                                                       </svg>
                                                     </div>
-                                                    <div class="text">118 services</div></a>
+                                                    <div class="text">118 services</div>
+                                                  </a>
                                                   <div class="vrach-inner-add">
                                                     <div class="vrach-inner-add-item text">TENS-терапия</div>
                                                     <div class="vrach-inner-add-item text">Магнитотерапия</div>
@@ -385,17 +445,20 @@
                                             <div class="vrach-wrap">
                                               <div class="vrach-inner">
                                                 <div class="vrach-vrach">
-                                                  <div class="vrach-vrach-inner"><img data-lazy="img/doctor/4.png" alt="Ирина Владимировна Мусатова">
+                                                  <div class="vrach-vrach-inner">
+                                                    <img data-lazy="img/doctor/4.png" alt="Ирина Владимировна Мусатова">
                                                     <div class="vrach-vrach-name">Ирина Владимировна Мусатова</div>
                                                   </div>
                                                 </div>
-                                                <div class="vrach-inner-block"><a class="vrach-inner-wrap" href="#">
+                                                <div class="vrach-inner-block">
+                                                  <a class="vrach-inner-wrap" href="#">
                                                     <div class="vrach-inner-title">Physiotherapeutic   fs огия
                                                       <svg class="icon">
                                                         <use xlink:href="#smallarr" xmlns:xlink="http://www.w3.org/1999/xlink"/>
                                                       </svg>
                                                     </div>
-                                                    <div class="text">118 services</div></a>
+                                                    <div class="text">118 services</div>
+                                                  </a>
                                                   <div class="vrach-inner-add">
                                                     <div class="vrach-inner-add-item text">TENS-терапия</div>
                                                     <div class="vrach-inner-add-item text">Магнитотерапия</div>
@@ -409,17 +472,20 @@
                                             <div class="vrach-wrap">
                                               <div class="vrach-inner">
                                                 <div class="vrach-vrach">
-                                                  <div class="vrach-vrach-inner"><img data-lazy="img/doctor/4.png" alt="Ирина Владимировна Мусатова">
+                                                  <div class="vrach-vrach-inner">
+                                                    <img data-lazy="img/doctor/4.png" alt="Ирина Владимировна Мусатова">
                                                     <div class="vrach-vrach-name">Ирина Владимировна Мусатова</div>
                                                   </div>
                                                 </div>
-                                                <div class="vrach-inner-block"><a class="vrach-inner-wrap" href="#">
+                                                <div class="vrach-inner-block">
+                                                  <a class="vrach-inner-wrap" href="#">
                                                     <div class="vrach-inner-title">Physiotherapeutic   fs огия
                                                       <svg class="icon">
                                                         <use xlink:href="#smallarr" xmlns:xlink="http://www.w3.org/1999/xlink"/>
                                                       </svg>
                                                     </div>
-                                                    <div class="text">118 services</div></a>
+                                                    <div class="text">118 services</div>
+                                                  </a>
                                                   <div class="vrach-inner-add">
                                                     <div class="vrach-inner-add-item text">TENS-терапия</div>
                                                     <div class="vrach-inner-add-item text">Магнитотерапия</div>
@@ -483,7 +549,8 @@
                           <div class="about-img">
                             <div class="video-container">
                               <div class="video-container-inner">
-                                <!--в этотм блоке может быть: видос <video>, айфрейм с ютуба,слайдер и просто картинка--><img class="js-image" data-src="img/index/slide.jpg" alt="">
+                                <!--в этотм блоке может быть: видос <video>, айфрейм с ютуба,слайдер и просто картинка-->
+                                <img class="js-image" data-src="img/index/slide.jpg" alt="">
                               </div>
                             </div>
                           </div>
@@ -505,7 +572,9 @@
               <div class="box">
                 <div class="footer-left">
                   <div class="footer-head">
-                    <div class="logo-wrap"><a class="logo" href="#"></a></div>
+                    <div class="logo-wrap">
+                      <a class="logo" href="#"></a>
+                    </div>
                     <div class="search-wrap">
                       <div class="title h2">Departments</div>
                     </div>
@@ -562,14 +631,24 @@
                   </div>
                   <div class="tel-wrap">
                     <div class="tel-item">
-                      <div class="text-sm">Registry</div><a class="tel-item-tel" href="tel:84959561767">8 (495) 956-17-67</a><a class="tel-item-tel" href="tel:84959561767">8 (495) 956-17-67</a><a class="tel-item-tel" href="tel:84959561767">8 (495) 956-17-67</a>
+                      <div class="text-sm">Registry</div>
+                      <a class="tel-item-tel" href="tel:84959561767">8 (495) 956-17-67</a>
+                      <a class="tel-item-tel" href="tel:84959561767">8 (495) 956-17-67</a>
+                      <a class="tel-item-tel" href="tel:84959561767">8 (495) 956-17-67</a>
                     </div>
                     <div class="tel-item">
-                      <div class="text-sm">Stomatology</div><a class="tel-item-tel" href="tel:84959566095">8 (495) 956-60-95</a>
+                      <div class="text-sm">Stomatology</div>
+                      <a class="tel-item-tel" href="tel:84959566095">8 (495) 956-60-95</a>
                     </div>
                   </div>
                   <div class="time-blk">
-                    <div class="text-sm">Working hours</div><span>Monday – Saturday from <br>8:30 a.m. to 9:00 p.m.</span><span>Sunday from <br>9:30 a.m. to 8:00 p.m.</span>
+                    <div class="text-sm">Working hours</div>
+                    <span>Monday – Saturday from 
+                      <br>8:30 a.m. to 9:00 p.m.
+                    </span>
+                    <span>Sunday from 
+                      <br>9:30 a.m. to 8:00 p.m.
+                    </span>
                   </div>
                 </div>
                 <div class="footer-footer">
@@ -577,11 +656,14 @@
                     <div class="footer-footer-desc">
                       <div class="text-light">© 2003–2017 ОАО «Моситалмед»</div>
                     </div>
-                    <div class="footer-footer-dev"><a class="dev-link" href="#">
+                    <div class="footer-footer-dev">
+                      <a class="dev-link" href="#">
                         <div class="text-light">Made in: </div>
                         <div class="dev-link-logo"><svg xmlns="http://www.w3.org/2000/svg" width="22.5px" height="22.5px" viewbox="0 0 55.4 54.7"><path d="M55.3 51.2V3.9c-.2-.8.3-6.4-4.8-2.7-5 3.3-18.6 12.4-18.6 12.4s-3.5 3.3-8.5 0C16.8 9.3 4.5 1.2 4.5 1.2S.2-2.3 0 3.6v48s0 4.1 3.7 2.8C5.4 53.3 7.3 52 8.9 51c2.6-2.2 2.6-5.5 2.6-5.5v-5.4c0-6 4-1.8 4-1.8s5.4 3.6 7.8 5.3c4.8 2.5 8 .2 8 .2s6.9-4.6 9.5-6.4c3.2-2.5 3 2.6 3 2.6v3.8s-.4 3.9 2.6 6.5c1.5 1.2 3.3 2.6 4.9 3.9 4.8 2.1 4-3 4-3zM41.2 26l-10.5 7s-3 1.9-6.5 0c-3.2-2.2-10.8-7.2-10.8-7.2s-2-.6-2-3.6v-2.6s-.2-3.9 2.8-1.5l9.9 6.6c3.1 2.4 6.7 0 6.7 0s6.8-4.6 11.1-7.5c1.9-1.4 1.6 1.1 1.6 1.1v3.2c0 .2.4 2.6-2.3 4.5z" class="flex"/></svg>
                           <div class="text bold">FLEX.MEDIA</div>
-                        </div></a></div>
+                        </div>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -595,7 +677,8 @@
         <div class="modal-container">
           <div class="modal-container-inner">
             <div class="modal-container-header">
-              <div class="title h2">Заявка на приём</div><i class="small-link pop-close closePopup"></i>
+              <div class="title h2">Заявка на приём</div>
+              <i class="small-link pop-close closePopup"></i>
             </div>
             <div class="modal-container-content">
               <form class="form js-validate">
@@ -603,46 +686,60 @@
                   <div class="input-wrapper req">
                     <div class="label">Специальность врача</div>
                     <div class="select-check js-select-custom">
-                      <button class="selects dropdown" data-placeholder="Специальность"><span class="btn-text">Специальность</span></button>
+                      <button class="selects dropdown" data-placeholder="Специальность">
+                        <span class="btn-text">Специальность</span>
+                      </button>
                       <div class="dropdown-target">
                         <div class="dropdown-inner">
                           <div class="dropdown-content">
                             <div class="select-u-body select-list">
                               <label class="option">
-                                <input type="radio" name="group4" value="val1"><span>Специалист1</span>
+                                <input type="radio" name="group4" value="val1">
+                                <span>Специалист1</span>
                               </label>
                               <label class="option">
-                                <input type="radio" name="group4" value="val2"><span>Специалист2</span>
+                                <input type="radio" name="group4" value="val2">
+                                <span>Специалист2</span>
                               </label>
                               <label class="option">
-                                <input type="radio" name="group4" value="val3"><span>Специалист 3</span>
+                                <input type="radio" name="group4" value="val3">
+                                <span>Специалист 3</span>
                               </label>
                               <label class="option">
-                                <input type="radio" name="group4" value="val4"><span>GHJGHJ</span>
+                                <input type="radio" name="group4" value="val4">
+                                <span>GHJGHJ</span>
                               </label>
                               <label class="option">
-                                <input type="radio" name="group4" value="val5"><span>GHJ</span>
+                                <input type="radio" name="group4" value="val5">
+                                <span>GHJ</span>
                               </label>
                               <label class="option">
-                                <input type="radio" name="group4" value="val6"><span>HGJGHJ</span>
+                                <input type="radio" name="group4" value="val6">
+                                <span>HGJGHJ</span>
                               </label>
                               <label class="option">
-                                <input type="radio" name="group4" value="val7"><span>GHJHG</span>
+                                <input type="radio" name="group4" value="val7">
+                                <span>GHJHG</span>
                               </label>
                               <label class="option">
-                                <input type="radio" name="group4" value="val8"><span>HGJG</span>
+                                <input type="radio" name="group4" value="val8">
+                                <span>HGJG</span>
                               </label>
                               <label class="option">
-                                <input type="radio" name="group4" value="val9"><span>3HGJ</span>
+                                <input type="radio" name="group4" value="val9">
+                                <span>3HGJ</span>
                               </label>
                               <label class="option">
-                                <input type="radio" name="group4" value="val10"><span>3HGJ</span>
+                                <input type="radio" name="group4" value="val10">
+                                <span>3HGJ</span>
                               </label>
                               <label class="option">
-                                <input type="radio" name="group4" value="val11"><span>3HGJ</span>
+                                <input type="radio" name="group4" value="val11">
+                                <span>3HGJ</span>
                               </label>
                               <label class="option">
-                                <input type="radio" name="group4" value="val12"><span>3HGJ</span>
+                                <input type="radio" name="group4" value="val12">
+                                <span>3HGJ</span>
                               </label>
                             </div>
                           </div>
@@ -684,8 +781,15 @@
                 <div class="input-item s-100">
                   <div class="input-wrapper req">
                     <div class="select-u-item">
-                      <label class="input_label"><span class="input_main">
-                          <input class="input-real" type="checkbox" name="rules" value="y" data-validation="required" data-validation-error-msg="Это обязательное поле"><span class="input-checked"></span></span><span class="input-text">Даю согласие на обработку моих <a href="#">персональных данных</a></span></label>
+                      <label class="input_label">
+                        <span class="input_main">
+                          <input class="input-real" type="checkbox" name="rules" value="y" data-validation="required" data-validation-error-msg="Это обязательное поле">
+                          <span class="input-checked"></span>
+                        </span>
+                        <span class="input-text">Даю согласие на обработку моих 
+                          <a href="#">персональных данных</a>
+                        </span>
+                      </label>
                     </div>
                   </div>
                 </div>
@@ -693,7 +797,9 @@
                   <div class="form-footer-notify">
                     <div class="text">Поля обязательные для заполнения</div>
                   </div>
-                  <button class="btn secondary" type="submit"><span>Оставить заявку</span></button>
+                  <button class="btn secondary" type="submit">
+                    <span>Оставить заявку</span>
+                  </button>
                 </div>
               </form>
             </div>
@@ -703,7 +809,8 @@
         <div class="modal-container response" style="display: none;">
           <div class="modal-container-inner">
             <div class="modal-container-header">
-              <div class="title h2">Спасибо за обращение!</div><i class="small-link pop-close closePopup"></i>
+              <div class="title h2">Спасибо за обращение!</div>
+              <i class="small-link pop-close closePopup"></i>
             </div>
             <div class="modal-container-content">
               <div class="text">Ваше сообщение успешно отправлено. Наш оператор свяжется с вами в ближайшее время для уточнения деталей.</div>
@@ -715,7 +822,8 @@
         <div class="modal-container">
           <div class="modal-container-inner">
             <div class="modal-container-header">
-              <div class="title h2">Оставить отзыв о клинике</div><i class="small-link pop-close closePopup"></i>
+              <div class="title h2">Оставить отзыв о клинике</div>
+              <i class="small-link pop-close closePopup"></i>
             </div>
             <div class="modal-container-content">
               <form class="form js-validate">
@@ -759,16 +867,36 @@
                   <div class="input-wrapper req">
                     <div class="label">Оценка</div>
                     <div class="input-main raiting">
-                      <label class="input-raiting"><span class="input-raiting-main">
-                          <input class="input-raiting-real" type="radio" name="raiting" value="1" data-validation="required" data-validation-error-msg="Это обязательное поле"><span class="input-raiting-checked" data-text="1"></span></span></label>
-                      <label class="input-raiting"><span class="input-raiting-main">
-                          <input class="input-raiting-real" type="radio" name="raiting" value="2" data-validation="required" data-validation-error-msg="Это обязательное поле"><span class="input-raiting-checked" data-text="2"></span></span></label>
-                      <label class="input-raiting"><span class="input-raiting-main">
-                          <input class="input-raiting-real" type="radio" name="raiting" value="3" data-validation="required" data-validation-error-msg="Это обязательное поле"><span class="input-raiting-checked" data-text="3"></span></span></label>
-                      <label class="input-raiting"><span class="input-raiting-main">
-                          <input class="input-raiting-real" type="radio" name="raiting" value="4" data-validation="required" data-validation-error-msg="Это обязательное поле"><span class="input-raiting-checked" data-text="4"></span></span></label>
-                      <label class="input-raiting"><span class="input-raiting-main">
-                          <input class="input-raiting-real" type="radio" name="raiting" value="5" data-validation="required" data-validation-error-msg="Это обязательное поле"><span class="input-raiting-checked" data-text="5"></span></span></label>
+                      <label class="input-raiting">
+                        <span class="input-raiting-main">
+                          <input class="input-raiting-real" type="radio" name="raiting" value="1" data-validation="required" data-validation-error-msg="Это обязательное поле">
+                          <span class="input-raiting-checked" data-text="1"></span>
+                        </span>
+                      </label>
+                      <label class="input-raiting">
+                        <span class="input-raiting-main">
+                          <input class="input-raiting-real" type="radio" name="raiting" value="2" data-validation="required" data-validation-error-msg="Это обязательное поле">
+                          <span class="input-raiting-checked" data-text="2"></span>
+                        </span>
+                      </label>
+                      <label class="input-raiting">
+                        <span class="input-raiting-main">
+                          <input class="input-raiting-real" type="radio" name="raiting" value="3" data-validation="required" data-validation-error-msg="Это обязательное поле">
+                          <span class="input-raiting-checked" data-text="3"></span>
+                        </span>
+                      </label>
+                      <label class="input-raiting">
+                        <span class="input-raiting-main">
+                          <input class="input-raiting-real" type="radio" name="raiting" value="4" data-validation="required" data-validation-error-msg="Это обязательное поле">
+                          <span class="input-raiting-checked" data-text="4"></span>
+                        </span>
+                      </label>
+                      <label class="input-raiting">
+                        <span class="input-raiting-main">
+                          <input class="input-raiting-real" type="radio" name="raiting" value="5" data-validation="required" data-validation-error-msg="Это обязательное поле">
+                          <span class="input-raiting-checked" data-text="5"></span>
+                        </span>
+                      </label>
                     </div>
                   </div>
                 </div>
@@ -781,8 +909,15 @@
                 <div class="input-item s-100">
                   <div class="input-wrapper req">
                     <div class="select-u-item">
-                      <label class="input_label"><span class="input_main">
-                          <input class="input-real" type="checkbox" name="rules" value="y" data-validation="required" data-validation-error-msg="Это обязательное поле"><span class="input-checked"></span></span><span class="input-text">Даю согласие на обработку моих <a href="#">персональных данных</a></span></label>
+                      <label class="input_label">
+                        <span class="input_main">
+                          <input class="input-real" type="checkbox" name="rules" value="y" data-validation="required" data-validation-error-msg="Это обязательное поле">
+                          <span class="input-checked"></span>
+                        </span>
+                        <span class="input-text">Даю согласие на обработку моих 
+                          <a href="#">персональных данных</a>
+                        </span>
+                      </label>
                     </div>
                   </div>
                 </div>
@@ -790,7 +925,9 @@
                   <div class="form-footer-notify">
                     <div class="text">Поля обязательные для заполнения</div>
                   </div>
-                  <button class="btn secondary" type="submit"><span>Оставить отзыв</span></button>
+                  <button class="btn secondary" type="submit">
+                    <span>Оставить отзыв</span>
+                  </button>
                 </div>
               </form>
             </div>
@@ -800,7 +937,8 @@
         <div class="modal-container response" style="display: none;">
           <div class="modal-container-inner">
             <div class="modal-container-header">
-              <div class="title h2">Спасибо за обращение!</div><i class="small-link pop-close closePopup"></i>
+              <div class="title h2">Спасибо за обращение!</div>
+              <i class="small-link pop-close closePopup"></i>
             </div>
             <div class="modal-container-content">
               <div class="text">Ваше сообщение успешно отправлено. Наш оператор свяжется с вами в ближайшее время для уточнения деталей.</div>
@@ -812,7 +950,8 @@
         <div class="modal-container">
           <div class="modal-container-inner">
             <div class="modal-container-header">
-              <div class="title h2">Форма обратной связи</div><i class="small-link pop-close closePopup"></i>
+              <div class="title h2">Форма обратной связи</div>
+              <i class="small-link pop-close closePopup"></i>
             </div>
             <div class="modal-container-content">
               <form class="form js-validate">
@@ -855,8 +994,15 @@
                 <div class="input-item s-100">
                   <div class="input-wrapper req">
                     <div class="select-u-item">
-                      <label class="input_label"><span class="input_main">
-                          <input class="input-real" type="checkbox" name="rules" value="y" data-validation="required" data-validation-error-msg="Это обязательное поле"><span class="input-checked"></span></span><span class="input-text">Даю согласие на обработку моих <a href="#">персональных данных</a></span></label>
+                      <label class="input_label">
+                        <span class="input_main">
+                          <input class="input-real" type="checkbox" name="rules" value="y" data-validation="required" data-validation-error-msg="Это обязательное поле">
+                          <span class="input-checked"></span>
+                        </span>
+                        <span class="input-text">Даю согласие на обработку моих 
+                          <a href="#">персональных данных</a>
+                        </span>
+                      </label>
                     </div>
                   </div>
                 </div>
@@ -864,7 +1010,9 @@
                   <div class="form-footer-notify">
                     <div class="text">Поля обязательные для заполнения</div>
                   </div>
-                  <button class="btn secondary" type="submit"><span>Отправить</span></button>
+                  <button class="btn secondary" type="submit">
+                    <span>Отправить</span>
+                  </button>
                 </div>
               </form>
             </div>
@@ -874,7 +1022,8 @@
         <div class="modal-container response" style="display: none;">
           <div class="modal-container-inner">
             <div class="modal-container-header">
-              <div class="title h2">Спасибо за обращение!</div><i class="small-link pop-close closePopup"></i>
+              <div class="title h2">Спасибо за обращение!</div>
+              <i class="small-link pop-close closePopup"></i>
             </div>
             <div class="modal-container-content">
               <div class="text">Ваше сообщение успешно отправлено. Наш оператор свяжется с вами в ближайшее время для уточнения деталей.</div>
@@ -886,7 +1035,8 @@
         <div class="modal-container">
           <div class="modal-container-inner">
             <div class="modal-container-header">
-              <div class="title h2">Заказать обратный звонок</div><i class="small-link pop-close closePopup"></i>
+              <div class="title h2">Заказать обратный звонок</div>
+              <i class="small-link pop-close closePopup"></i>
             </div>
             <div class="modal-container-content">
               <form class="form js-validate">
@@ -911,8 +1061,15 @@
                 <div class="input-item s-100">
                   <div class="input-wrapper req">
                     <div class="select-u-item">
-                      <label class="input_label"><span class="input_main">
-                          <input class="input-real" type="checkbox" name="rules" value="y" data-validation="required" data-validation-error-msg="Это обязательное поле"><span class="input-checked"></span></span><span class="input-text">Даю согласие на обработку моих <a href="#">персональных данных</a></span></label>
+                      <label class="input_label">
+                        <span class="input_main">
+                          <input class="input-real" type="checkbox" name="rules" value="y" data-validation="required" data-validation-error-msg="Это обязательное поле">
+                          <span class="input-checked"></span>
+                        </span>
+                        <span class="input-text">Даю согласие на обработку моих 
+                          <a href="#">персональных данных</a>
+                        </span>
+                      </label>
                     </div>
                   </div>
                 </div>
@@ -920,7 +1077,9 @@
                   <div class="form-footer-notify">
                     <div class="text">Поля обязательные для заполнения</div>
                   </div>
-                  <button class="btn secondary" type="submit"><span>Заказать звонок</span></button>
+                  <button class="btn secondary" type="submit">
+                    <span>Заказать звонок</span>
+                  </button>
                 </div>
               </form>
             </div>
@@ -930,7 +1089,8 @@
         <div class="modal-container response" style="display: none;">
           <div class="modal-container-inner">
             <div class="modal-container-header">
-              <div class="title h2">Спасибо за обращение!</div><i class="small-link pop-close closePopup"></i>
+              <div class="title h2">Спасибо за обращение!</div>
+              <i class="small-link pop-close closePopup"></i>
             </div>
             <div class="modal-container-content">
               <div class="text">Ваше сообщение успешно отправлено. Наш оператор свяжется с вами в ближайшее время для уточнения деталей.</div>

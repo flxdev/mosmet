@@ -6,6 +6,24 @@ meta(name='theme-color', content='#80baa6')
 meta(name="apple-mobile-web-app-status-bar-style" content="#d56c72")
 meta(name='format-detection', content='telephone=no')
 meta(name='format-detection', content='address=no')
+//script.
+	function checkForFlex(){
+		var curAddress = window.location.toString(),
+			targetAddress = "/zagl.html";
+		function NaiveFlexBoxSupport(d){
+			var f = "flex", e = d.createElement('b');
+			e.style.display = f;
+			return e.style.display == f;
+		}
+		if( document.addEventListener ){
+		}else{
+			window.location.replace(targetAddress);
+		}
+		if (NaiveFlexBoxSupport(document) == false && (targetAddress.toString() != curAddress)) {
+			window.location.replace(targetAddress);
+		}
+	}checkForFlex();
+		
 link(rel='shortcut icon', href='img/fav/48x48.png', type='image/x-icon')
 link(rel="apple-touch-icon", sizes="57x57", href="img/fav/apple-touch-icon-57x57.png")
 link(rel="apple-touch-icon", sizes="60x60", href="img/fav/apple-touch-icon-60x60.png")

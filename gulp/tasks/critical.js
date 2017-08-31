@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var config = require('../config');
 var critical = require('critical').stream;
-
+var notify = require('gulp-notify');
 
 // gulp.task("critical", function(){
 // 	critical.generate({
@@ -21,6 +21,10 @@ gulp.task("critical", function(){
 				minify: true,
 				css: [config.dest.css + "screen.css"]
 			}))
+			.on('error', notify.onError({
+	            title: 'Сука блять ебаный в рот',
+	            message: '<%= error.message %>'
+      		  }))
 			.pipe(gulp.dest(config.dest.html));
 });
 
