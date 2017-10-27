@@ -26,6 +26,7 @@ svg
     max-height: 100%
 button
     background: 0 0
+    outline: none !important
 a
     text-decoration: none
     transition: color .3s
@@ -194,8 +195,9 @@ body, .out
         display: inline-block
         position: absolute
         right: 0
-        top: 0
-        bottom: 0
+        +rem(top,10px)
+        // bottom: 0
+        +rem(height,50px)
         +rem(width,50px)
         +rem(border-radius, 45px)
         +vertical
@@ -603,7 +605,7 @@ body, .out
         &.fb 
             .soc-item-inner
                 background-color: #6279b2
-        &.inst 
+        &.ok 
             .soc-item-inner
                 background-color: #e68f4f
 .map-link
@@ -2970,17 +2972,17 @@ body, .out
                 color: color(secondarya)
             &:active
                 color: color(secondarya2)
-    h4
+    h4,h3
         +rem(font-size,18px)
         color: color(textblk)
         line-height: 1.556;
         font-weight: 600
-        +rem(margin,65px 0 45px)
+        +rem(margin,45px 0 25px)
         &:first-child
             margin-top: 0
         +r(900)
-            +rem(margin,45px 0 30px)
-    h3
+            +rem(margin,35px 0 20px)
+    h2
         font-family: $o
         color: color(textblk)
         line-height: 1.16;
@@ -3258,12 +3260,21 @@ hr
             +rem(font-size,24px)
             line-height: 1.167;
             font-weight: 600
-
+            i 
+                display: inline
+                svg 
+                    display: inline-block
+                    vertical-align: top
+                    +rem(height,28px)
+                    +rem(width,15px)
             &:not(.small)
                 +rem(margin-bottom,7px)
             &.small 
                 +rem(font-size,16px)
                 text-decoration: line-through
+                svg 
+                    +rem(height,15px)
+                    +rem(width,10px)
         &-content 
             +rem(margin-top,15px)
     &-footer
@@ -3336,6 +3347,9 @@ a.text
             transform: translateY(0)
             opacity: 1
             transition-delay: .2s
+    &>div 
+        display: inline-block
+        vertical-align: middle
     .modal-container
         display: inline-block
         vertical-align: middle 
@@ -4384,7 +4398,7 @@ a.text
     &-body
         +rem(padding-top,30px)
         b
-            +rem(padding-left,24px)
+            // +rem(padding-left,24px)
             +rem(font-size,14px)
             +rem(margin,4px 0)
             display: block

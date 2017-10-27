@@ -182,7 +182,8 @@ svg {
   max-height: 100%; }
 
 button {
-  background: 0 0; }
+  background: 0 0;
+  outline: none !important; }
 
 a {
   text-decoration: none;
@@ -405,8 +406,8 @@ body, .out {
   display: inline-block;
   position: absolute;
   right: 0;
-  top: 0;
-  bottom: 0;
+  top: 0.625rem;
+  height: 3.125rem;
   width: 3.125rem;
   border-radius: 2.8125rem;
   text-align: center;
@@ -761,7 +762,7 @@ body, .out {
     padding-left: 0.125rem; }
   .soc-item.fb .soc-item-inner {
     background-color: #6279b2; }
-  .soc-item.inst .soc-item-inner {
+  .soc-item.ok .soc-item-inner {
     background-color: #e68f4f; }
 
 .map-link {
@@ -3197,15 +3198,22 @@ body, .out {
         color: #b1474d;
         color: var(--color-secondarya2); }
   .content-wrapper h4 {
-    font-size: 1.125rem;
-    color: #323232;
-    color: var(--color-textblk);
-    line-height: 1.556;
-    font-weight: 600;
-    margin: 4.0625rem 0 2.8125rem; }
-    .content-wrapper h4:first-child {
-      margin-top: 0; }
+  font-size: 1.125rem;
+  color: #323232;
+  color: var(--color-textblk);
+  line-height: 1.556;
+  font-weight: 600;
+  margin: 2.8125rem 0 1.5625rem; }
   .content-wrapper h3 {
+  font-size: 1.125rem;
+  color: #323232;
+  color: var(--color-textblk);
+  line-height: 1.556;
+  font-weight: 600;
+  margin: 2.8125rem 0 1.5625rem; }
+    .content-wrapper h4:first-child, .content-wrapper h3:first-child {
+      margin-top: 0; }
+  .content-wrapper h2 {
     font-family: "Open Sans";
     color: #323232;
     color: var(--color-textblk);
@@ -3213,7 +3221,7 @@ body, .out {
     font-weight: 700;
     font-size: 2.25rem;
     margin: 5.625rem 0 3.75rem; }
-    .content-wrapper h3:first-child {
+    .content-wrapper h2:first-child {
       margin-top: 0; }
   .content-wrapper ul {
     font-size: 0.875rem;
@@ -3418,11 +3426,21 @@ hr {
     font-size: 1.5rem;
     line-height: 1.167;
     font-weight: 600; }
+    .offer-item-price i {
+      display: inline; }
+      .offer-item-price i svg {
+        display: inline-block;
+        vertical-align: top;
+        height: 1.75rem;
+        width: 0.9375rem; }
     .offer-item-price:not(.small) {
       margin-bottom: 0.4375rem; }
     .offer-item-price.small {
       font-size: 1rem;
       text-decoration: line-through; }
+      .offer-item-price.small svg {
+        height: 0.9375rem;
+        width: 0.625rem; }
   .offer-item-content {
     margin-top: 0.9375rem; }
 
@@ -3501,6 +3519,9 @@ a.text:active {
       opacity: 1;
       -webkit-transition-delay: .2s;
       transition-delay: .2s; }
+  .modal-layout > div {
+    display: inline-block;
+    vertical-align: middle; }
   .modal-layout .modal-container {
     display: inline-block;
     vertical-align: middle;
@@ -4661,7 +4682,6 @@ a.text:active {
 .vacancy-body {
   padding-top: 1.875rem; }
   .vacancy-body b {
-    padding-left: 1.5rem;
     font-size: 0.875rem;
     margin: 0.25rem 0;
     display: block;
@@ -5441,10 +5461,10 @@ a.text:active {
   .diplom-slider-content {
     margin-top: 1.25rem; }
 
-  .content-wrapper h4 {
-    margin: 2.8125rem 0 1.875rem; }
+  .content-wrapper h4, .content-wrapper h3 {
+    margin: 2.1875rem 0 1.25rem; }
 
-  .content-wrapper h3 {
+  .content-wrapper h2 {
     margin: 2.8125rem 0 1.875rem; } }
       @media only screen and (max-width: 850px) {
 

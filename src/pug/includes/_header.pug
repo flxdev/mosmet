@@ -30,7 +30,7 @@ include _mixins.pug
 					svg(class="icon icon-drop")
 						use(xlink:href="#login" xmlns:xlink="http://www.w3.org/1999/xlink")
 					span Личный кабинет
-				a(href="#").top-link.bold Как вызвать врача
+				.top-link.bold.js-popup-button(data-modal='howto') Как вызвать врача
 				.top-link.primary(onclick='') Записаться на приём
 					.dropdown-target
 						.dropdown-inner.spec

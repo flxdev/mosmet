@@ -17,7 +17,7 @@
 										.dropdown-content
 											.select-u-body.select-list
 												label.option
-													input(type='radio', name='group4', value='val1')
+													input(type='radio', name='group4', value='val1', data-validation='required')
 													span Специалист1
 												label.option
 													input(type='radio', name='group4', value='val2')
@@ -281,6 +281,23 @@
 				i.small-link.pop-close.closePopup
 			.modal-container-content
 				.text Ваше сообщение успешно отправлено. Наш оператор свяжется с вами в ближайшее время для уточнения деталей.
-
+.modal-layout(data-modal='howto').js-popup-container
+	//контейнер ответа модалки 
+	.modal-container
+		.modal-container-inner
+			.modal-container-header
+				.title.h2 Как вызвать врача
+				i.small-link.pop-close.closePopup
+			.modal-container-content
+				.content-wrapper
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis culpa odio odit aspernatur neque? Enim quisquam cupiditate rerum. Nulla enim, rerum odit cum atque error qui libero iste minus ratione! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis culpa odio odit aspernatur neque? Enim quisquam cupiditate rerum. Nulla enim, rerum odit cum atque error qui libero iste minus ratione!
+					ul
+						li  Lorem ipsum dolor sit amet.
+						li  Lorem ipsum dolor sit amet.
+						li  Lorem ipsum dolor sit amet.
+						li  Lorem ipsum dolor sit amet.
+						li  Lorem ipsum dolor sit amet.
+					p 
+						a(href="#") Понятнетько, уже звоню
 .modal-layout(data-modal='diplom').js-popup-container.special
 .modal-layout(data-modal='metro').js-popup-container.special.map

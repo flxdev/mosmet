@@ -194,6 +194,8 @@ document.addEventListener("DOMContentLoaded", function() {
 				accessibility: false,
 				lazyLoad: 'ondemand',
 				arrows: true,
+				autoplay: true,
+				autoplaySpeed: 8000,
 				dots: false,
 				fade: true,
 				touchMove: false,
@@ -1616,13 +1618,16 @@ suggest.prototype = {
 			this.search[0].addEventListener('keydown', function(event){
 				self.doKeypress(this.keys, event);
 			});
+			this.search[0].addEventListener('blur', function(event){
+				$(self.suggest[0]).slideUp();
+			});
 		}
 	},
 	dosearch: function(array){
 		var query = this.search[0].value;
 		if(query.length >= 3){
 			var results = $.grep(searchArr.items, function(item) {
-				return item.name.search(RegExp("^" + query, "i")) != -1;
+				return item.name.search(RegExp(query, "i")) != -1;
 			});
 			if (results.length >= 1) {
 				/*Start things fresh by removing the suggestions div and emptying the live region before we start*/
