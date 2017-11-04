@@ -406,7 +406,7 @@ body, .out {
   display: inline-block;
   position: absolute;
   right: 0;
-  top: 0.625rem;
+  top: 0;
   height: 3.125rem;
   width: 3.125rem;
   border-radius: 2.8125rem;
@@ -1510,7 +1510,7 @@ body, .out {
       .mainmenu-inner .box .text-sm {
         margin-bottom: 1.0625rem; }
       .mainmenu-inner .box .footer-right {
-        padding-top: 0 !important; }
+        padding-top: 1.25rem; }
         .mainmenu-inner .box .footer-right .tel-wrap {
           margin-top: 0; }
           .mainmenu-inner .box .footer-right .tel-wrap .tel-item {
@@ -1754,7 +1754,9 @@ body, .out {
       display: inline-block;
       vertical-align: middle;
       width: 2.9375rem;
-      height: 2.9375rem; }
+      height: 2.9375rem;
+      -moz-text-align-last: center !important;
+      text-align-last: center !important; }
       .arr-wrap-inner .slick-arrow .icon {
         display: inline-block;
         width: 100%;
@@ -1935,6 +1937,9 @@ body, .out {
     box-shadow: 0px 10px 22px 0px rgba(68, 97, 119, 0.2);
     -webkit-transition: opacity 0.3s;
     transition: opacity 0.3s; }
+  .vrach-inner-wrap {
+    display: block;
+    height: 100%; }
 
 .vrach-vrach {
   position: absolute;
@@ -3302,7 +3307,8 @@ hr {
     margin: 0 auto;
     text-align: center; }
   .specialist-wrap .otdel-head-title {
-    width: 25rem;
+    max-width: 25rem;
+    width: 100%;
     padding-bottom: 1.5625rem; }
   .specialist-wrap .vrach-inner-block:before, .specialist-wrap .vrach-inner-block:after {
     display: none; }
@@ -3975,6 +3981,8 @@ a.text:active {
   vertical-align: middle; }
   .docsearch-col .input-wrapper {
     margin-bottom: 0; }
+  .docsearch-col .search-submit {
+    top: 0.625rem; }
 
 .docsearch-head {
   font-size: 0;
@@ -5537,16 +5545,6 @@ a.text:active {
     width: 100%;
     padding-bottom: 2.5rem;
     padding-top: 1.25rem; } }
-      @media only screen and (max-width: 768px) {
-
-  .select-u-item .input-text {
-    font-size: 0.8125rem; }
-
-  .docsearch-container .vrach-wrap {
-    width: 50%; }
-
-  .col-wrapper .col-33 {
-    width: 50%; } }
       @media only screen and (min-width: 768px) {
 
   .page__content::-webkit-scrollbar {
@@ -5557,13 +5555,16 @@ a.text:active {
     border-radius: 0.1875rem;
     background: #888888;
     cursor: pointer; } }
-      @media only screen and (min-width: 740px) {
+      @media only screen and (max-width: 768px) {
 
-  .footer.eng .logo-wrap, .footer.eng .footer-links-main {
-    width: 15%; }
+  .select-u-item .input-text {
+    font-size: 0.8125rem; }
 
-  .footer.eng .footer-links-add {
-    width: 60%; } }
+  .docsearch-container .vrach-wrap {
+    width: 50%; }
+
+  .col-wrapper .col-33 {
+    width: 50%; } }
       @media only screen and (max-width: 740px) {
 
   .footer.eng .footer-links-main {
@@ -5660,6 +5661,13 @@ a.text:active {
     display: inline-block;
     vertical-align: top;
     width: 33.33%; } }
+      @media only screen and (min-width: 740px) {
+
+  .footer.eng .logo-wrap, .footer.eng .footer-links-main {
+    width: 15%; }
+
+  .footer.eng .footer-links-add {
+    width: 60%; } }
       @media only screen and (max-width: 735px) {
 
   .content-column-right {
@@ -5980,13 +5988,25 @@ a.text:active {
     display: none; }
 
   .specialist-wrap .vrach-wrap {
-    padding-right: 0; }
+    padding-right: 0.625rem; }
 
   .specialist-wrap .otdel-head-title {
-    padding-bottom: 0; }
+    padding-bottom: 0;
+    text-align: justify;
+    line-height: 0;
+    font-size: 0;
+    text-justify: newspaper;
+    zoom: 1;
+    -moz-text-align-last: justify;
+    text-align-last: justify; }
 
-  .specialist-wrap .otdel-head-title .title {
-    display: block; }
+  .specialist-wrap .otdel-head-title:after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 0px;
+    visibility: hidden;
+    overflow: hidden; }
 
   .specialist-wrap .otdel-head-title .arr-wrap-inner {
     padding-left: 0; }
@@ -6046,6 +6066,12 @@ a.text:active {
     -webkit-transform: translateX(0.47rem);
     -ms-transform: translateX(0.47rem);
     transform: translateX(0.47rem); }
+
+  .map-wrapper {
+    padding-bottom: 70%; }
+
+  .map-img {
+    width: 25.5%; }
 
   .col-wrapper .col-50 {
     width: 100%; }
@@ -6232,3 +6258,14 @@ a.text:active {
 
   .section-inner {
     padding: 1.3125rem 1.25rem 1.25rem; } }
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+
+  .index-slider-item-inner img {
+    height: 100%;
+    margin: 0 auto;
+    width: auto !important;
+    display: block;
+    right: 0; }
+
+  .promoslider-wrap .index-slider-item img {
+    right: auto; } }
