@@ -328,6 +328,8 @@ body, .out
                 width: 60%
             &:last-child
                 +r(740)
+                    ul 
+                        display: block !important   
                     display: inline-block
                     width: 100% !important
                     max-width: 100%
@@ -450,7 +452,8 @@ body, .out
             +r(740)
                 width: 60% !important
             +r(540)
-                display: none
+                ul
+                    display: none
                 
                 
             ul 
@@ -458,12 +461,15 @@ body, .out
                 .text
                     +rem(padding,9.5px 9px 9.5px 0)
                     line-height: 1.571;
+            &:nth-last-child(2)
+
             &:last-child
                 width: 46%
                 +r(1100)
                     width: 53%
                 +r(740)
-                    display: none
+                    ul
+                        display: none
                 ul 
                     display: inline-block
                     vertical-align: top
@@ -1300,7 +1306,9 @@ body, .out
                     +r(740)
                         display: inline-block
                     +r(600)
-                        display: none
+                        +rem(margin-bottom,20px)
+                        ul
+                            display: none
                         
                 .footer-links-main
                     width: 26%
@@ -1309,7 +1317,7 @@ body, .out
                         width: 35%
                     +r(600)
                         width: 100%
-                        +rem(margin-bottom,20px)
+                        
                         li 
                             display: inline-block
                             width: 50%
@@ -4561,6 +4569,8 @@ a.text
             display: inline-block
             width: 50%!important
             max-width: 50% !important
+            ul 
+                display: inline-block !important
     .footer-links-main
         +r(740)
             display: block

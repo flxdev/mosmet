@@ -5582,6 +5582,9 @@ a.text:active {
     width: 100% !important;
     max-width: 100%; }
 
+  .footer.eng .footer-links-add:last-child ul {
+    display: block !important; }
+
   .footer .box {
     position: relative;
     padding-top: 6.25rem; }
@@ -5624,7 +5627,7 @@ a.text:active {
   .footer-links-add {
     width: 60% !important; }
 
-  .footer-links-add:last-child {
+  .footer-links-add:last-child ul {
     display: none; }
 
   .mainmenu-inner .box .footer-links .footer-links-add {
@@ -5650,6 +5653,9 @@ a.text:active {
     display: inline-block;
     width: 50% !important;
     max-width: 50% !important; }
+
+  .sitemap-wrap .footer-links-add ul {
+    display: inline-block !important; }
 
   .sitemap-wrap .footer-links-main {
     display: block;
@@ -5811,11 +5817,13 @@ a.text:active {
     padding-bottom: 6.25rem; }
 
   .mainmenu-inner .box .footer-links .footer-links-add {
+    margin-bottom: 1.25rem; }
+
+  .mainmenu-inner .box .footer-links .footer-links-add ul {
     display: none; }
 
   .mainmenu-inner .box .footer-links .footer-links-main {
-    width: 100%;
-    margin-bottom: 1.25rem; }
+    width: 100%; }
 
   .mainmenu-inner .box .footer-links .footer-links-main li {
     display: inline-block;
@@ -6135,7 +6143,7 @@ a.text:active {
   .footer-links-main {
     width: 100%; }
 
-  .footer-links-add {
+  .footer-links-add ul {
     display: none; }
 
   .tel-item:not(:last-child) {
