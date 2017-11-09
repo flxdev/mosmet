@@ -37,8 +37,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	function focusInp(){
 		var inp = $('.biginput');
 		inp.each(function(){
-			var _ = $(this);
-			parent = _.closest('.suggest-wrapper')
+			var _ = $(this),
+				parent = _.closest('.suggest-wrapper');
 			_.on('input',function(){
 				var len = _.val().length;
 				if(len >= 3){
@@ -686,7 +686,7 @@ function lazyImage(){
 	}
 
 	var config = {
-		rootMargin: '0px 0px',
+		rootMargin: '-100px 0px',
 		threshold: 0.01
 	};
 
@@ -703,11 +703,13 @@ function lazyImage(){
 		observer = new IntersectionObserver(onIntersection, config);
 
 		for(var i = 0; i< imageCount; i++){
-			if (images[i].classList.contains('js-image-handled')) {
-				return;
-			}
 
-			observer.observe(images[i]);
+			if (images[i].classList.contains('js-image-handled')) {
+				// return;
+			}
+			else{
+				observer.observe(images[i]);
+			}
 		}
 	}
 
