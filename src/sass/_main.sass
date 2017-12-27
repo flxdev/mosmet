@@ -3022,7 +3022,6 @@ body, .out
         +rem(margin, 40px 0)
         &:first-child
             margin-top: 0
-
         li 
             position: relative
             +rem(margin,20px 0)
@@ -3037,6 +3036,27 @@ body, .out
                 position: absolute
                 left: 0
                 +rem(top,8px)
+    ol 
+        +rem(font-size,14px)
+        line-height: 1.75
+        color: color(textlist)
+        +rem(margin, 40px 0)
+        counter-reset: li-item
+        &:first-child
+            margin-top: 0
+        li 
+            position: relative
+            +rem(margin,20px 0)
+            +rem(padding-left,25px)
+            &:after
+                content: counter(li-item)'.'
+                counter-increment: li-item
+                display: inline-block
+                position: absolute
+                color: color(textlist)
+                left: 0
+                top: 0
+                font-weight: 600
     .about-about-items
         padding-top: 0 !important
         .about-item
